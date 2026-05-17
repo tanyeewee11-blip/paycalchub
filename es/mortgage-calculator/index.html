@@ -76,6 +76,22 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .art{margin-top:40px}.art h2{font-size:20px;font-weight:600;margin-bottom:12px}
 .art p{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:16px}
 .art ul{padding-left:20px;margin-bottom:16px}.art li{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:6px}
+
+  .lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 16px;
+    transition: background 0.2s;
+  }
+  .lang-toggle:hover { background: rgba(255,255,255,0.25); }
 </style>
   <meta property="og:image" content="https://paycalchub.com/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -87,7 +103,8 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   <link rel="alternate" hreflang="x-default" href="https://paycalchub.com/mortgage-calculator/">
 </head>
 <body>
-<nav><div class="nav-in"><a href="/" class="logo">Pay<span>Calc</span>Hub</a><div class="nav-links"><a href="/salary-calculator/" >Salario</a><a href="/mortgage-calculator/" class="active">Hipoteca</a><a href="/loan-calculator/" >Préstamo</a><a href="/hourly-to-salary/" >Por Hora</a></div></div></nav>
+<nav><div class="nav-in"><a href="/" class="logo">Pay<span>Calc</span>Hub</a><div class="nav-links"><a href="/salary-calculator/" >Salario</a><a href="/mortgage-calculator/" class="active">Hipoteca</a><a href="/loan-calculator/" >Préstamo</a><a href="/hourly-to-salary/" >Por Hora</a></div></div><a href="/mortgage-calculator/" class="lang-toggle" title="English version">🌐 EN</a>
+</nav>
 <div style="max-width:1100px;margin:16px auto 0;padding:0 24px"><div class="ad" style="min-height:90px">Advertisement</div></div>
 <div class="pg">
   <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; Hipoteca Calculator</div>
