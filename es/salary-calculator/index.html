@@ -95,6 +95,22 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .fl{display:flex;gap:20px}
 @media(max-width:800px){.lay{grid-template-columns:1fr}.sb{display:grid;grid-template-columns:1fr 1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}.cr{flex-direction:column}.ra{font-size:34px}}
 @media(max-width:480px){.sb{grid-template-columns:1fr}}
+
+  .lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 16px;
+    transition: background 0.2s;
+  }
+  .lang-toggle:hover { background: rgba(255,255,255,0.25); }
 </style>
   <meta property="og:image" content="https://paycalchub.com/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -109,7 +125,8 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 <nav><div class="nav-in">
   <a href="/" class="logo">Pay<span>Calc</span>Hub</a>
   <div class="nav-links"><a href="/salary-calculator/" class="active">Salary</a><a href="/mortgage-calculator/">Mortgage</a><a href="/loan-calculator/">Loan</a><a href="/hourly-to-salary/">Hourly</a></div>
-</div></nav>
+</div><a href="/salary-calculator/" class="lang-toggle" title="English version">🌐 EN</a>
+</nav>
 <div style="max-width:1100px;margin:16px auto 0;padding:0 24px"><div class="ad" style="min-height:90px">Advertisement</div></div>
 <div class="pg">
   <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; Salary Calculator</div>
