@@ -1,387 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="google-adsense-account" content="ca-pub-7723301737736770">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G36BWD37Y3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-G36BWD37Y3');
-</script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
-
-<title>PayCalcHub — Free Salary, Mortgage & Tax Calculators (2025)</title>
-
-<meta name="description" content="Free financial calculators for salary, mortgage, and loans. Updated 2025 tax rates for US, UK, Canada & Australia. Instant take-home pay results.">
-
-<link rel="canonical" href="https://paycalchub.com/">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "PayCalcHub Financial Tools",
-  "url": "https://paycalchub.com",
-  "description": "Calculate take-home pay, mortgage repayments, and loan interest instantly.",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Any",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
-}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
-
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
---bg:#f7f6f3;
---sur:#fff;
---bor:#e4e2dc;
---txt:#1a1915;
---mut:#6b6960;
---acc:#1e6b4a;
---alight:#e8f4ef;
---rad:12px;
---f:"DM Sans",sans-serif;
---mo:"DM Mono",monospace
-}
-
-body{
-font-family:var(--f);
-background:var(--bg);
-color:var(--txt);
-line-height:1.6
-}
-
-a{
-color:inherit;
-text-decoration:none
-}
-
-nav{
-background:var(--sur);
-border-bottom:1px solid var(--bor);
-position:sticky;
-top:0;
-z-index:100
-}
-
-.nav-in{
-max-width:1100px;
-margin:0 auto;
-padding:0 24px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-height:56px
-}
-
-.logo{
-font-weight:600;
-font-size:18px
-}
-
-.logo span{
-color:var(--acc)
-}
-
-.nav-links{
-display:flex;
-gap:24px;
-font-size:14px;
-color:var(--mut)
-}
-
-.hero{
-max-width:1100px;
-margin:0 auto;
-padding:56px 24px 40px
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:48px;
-align-items:center
-}
-
-.badge{
-display:inline-flex;
-align-items:center;
-background:var(--alight);
-color:var(--acc);
-font-size:12px;
-font-weight:600;
-padding:5px 12px;
-border-radius:99px;
-margin-bottom:18px
-}
-
-.hero h1{
-font-size:clamp(2rem,5vw,3rem);
-font-weight:600;
-line-height:1.15;
-letter-spacing:-.03em;
-margin-bottom:16px
-}
-
-.hero h1 em{
-font-style:normal;
-color:var(--acc)
-}
-
-.hero p{
-font-size:16px;
-color:var(--mut);
-margin-bottom:28px;
-max-width:440px
-}
-
-.btn-p{
-padding:12px 24px;
-background:var(--acc);
-color:#fff;
-border-radius:8px;
-font-weight:600
-}
-
-.preview{
-background:var(--sur);
-border:1px solid var(--bor);
-border-radius:16px;
-padding:24px;
-box-shadow:0 8px 32px rgba(0,0,0,.06)
-}
-
-.prev-lbl{
-font-size:12px;
-font-weight:600;
-color:var(--mut);
-text-transform:uppercase;
-margin-bottom:12px
-}
-
-.prev-res{
-background:var(--alight);
-border-radius:10px;
-padding:14px;
-display:flex;
-justify-content:space-between;
-align-items:center
-}
-
-.prev-res-v{
-font-family:var(--mo);
-font-size:22px;
-font-weight:500;
-color:var(--acc)
-}
-
-.sec{
-max-width:1100px;
-margin:0 auto;
-padding:40px 24px 60px
-}
-
-.sec-lbl{
-font-size:12px;
-font-weight:600;
-text-transform:uppercase;
-color:var(--mut);
-margin-bottom:20px
-}
-
-.tgrid{
-display:grid;
-grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
-gap:14px
-}
-
-.tc{
-background:var(--sur);
-border:1px solid var(--bor);
-border-radius:var(--rad);
-padding:22px;
-transition:all .15s
-}
-
-.tc:hover{
-border-color:var(--acc);
-transform:translateY(-2px)
-}
-
-.ti{
-font-size:28px;
-margin-bottom:10px
-}
-
-.tc h2{
-font-size:16px;
-margin-bottom:8px
-}
-
-.tc p{
-font-size:13px;
-color:var(--mut)
-}
-
-footer{
-border-top:1px solid var(--bor);
-background:var(--sur);
-padding:40px 24px
-}
-
-.fi{
-max-width:1100px;
-margin:0 auto;
-text-align:center;
-font-size:13px;
-color:var(--mut)
-}
-
-@media(max-width:800px){
-.hero-grid{
-grid-template-columns:1fr
-}
-.preview{
-display:none
-}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadoras Financieras Gratis 2025 | PayCalcHub en Español</title>
+  <meta name="description" content="Calculadoras financieras gratis en español: salario neto, hipoteca, préstamos y más. Tasas fiscales actualizadas para EE.UU., UK, Canadá y Australia.">
+  <link rel="canonical" href="https://paycalchub.com/es/">
+  <link rel="alternate" hreflang="en" href="https://paycalchub.com/">
+  <link rel="alternate" hreflang="es" href="https://paycalchub.com/es/">
+  <link rel="alternate" hreflang="x-default" href="https://paycalchub.com/">
+  <meta property="og:image" content="https://paycalchub.com/og-image.png">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Georgia,serif;background:#f7f6f3;color:#1a1915;min-height:100vh}
+    header{background:#1e6b4a;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+    .logo{color:#fff;font-size:1.2rem;font-weight:700;text-decoration:none}
+    .logo span{color:#7EC8A4}
+    nav a{color:rgba(255,255,255,0.8);text-decoration:none;margin-left:20px;font-size:14px}
+    nav a:hover{color:#fff}
+    .hero{padding:60px 24px 40px;max-width:860px;margin:0 auto;text-align:center}
+    .hero h1{font-size:2.4rem;font-weight:700;color:#1a1915;margin-bottom:12px}
+    .hero p{font-size:1.1rem;color:#6b6960;max-width:600px;margin:0 auto}
+    .tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:860px;margin:0 auto;padding:0 24px 60px}
+    .card{background:#fff;border:1px solid #e4e2dc;border-radius:12px;padding:28px 24px;text-decoration:none;color:inherit;transition:box-shadow .2s,transform .2s;display:block}
+    .card:hover{box-shadow:0 8px 24px rgba(30,107,74,0.12);transform:translateY(-2px)}
+    .card-icon{font-size:2rem;margin-bottom:12px}
+    .card h2{font-size:1.15rem;font-weight:700;color:#1a1915;margin-bottom:6px}
+    .card p{font-size:0.9rem;color:#6b6960;line-height:1.5}
+    .badge{display:inline-block;background:#e8f4ef;color:#1e6b4a;font-size:11px;padding:3px 10px;border-radius:10px;margin-top:10px;font-weight:500}
+    footer{background:#1a1915;color:rgba(255,255,255,0.5);text-align:center;padding:24px;font-size:13px}
+    footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 8px}
+  </style>
 </head>
-
 <body>
-
-<nav>
-<div class="nav-in">
-<div class="logo">Pay<span>Calc</span>Hub</div>
-
-<div class="nav-links">
-<a href="/salary-calculator/">Salary</a>
-<a href="/mortgage-calculator/">Mortgage</a>
-</div>
-</div>
-</nav>
+<header>
+  <a class="logo" href="/es/">Pay<span>CalcHub</span></a>
+  <nav>
+    <a href="/">English</a>
+    <a href="/es/salary-calculator/">Calculadora</a>
+  </nav>
+</header>
 
 <div class="hero">
-<div class="hero-grid">
-
-<div>
-<div class="badge">Updated for 2025 Tax Rates</div>
-
-<h1>Smart <em>Finance</em> Calculators</h1>
-
-<p>
-Estimate your take-home pay and loan costs instantly with our free tools.
-No sign-up. 100% Private.
-</p>
-
-<a href="/salary-calculator/" class="btn-p">
-Calculate Salary →
-</a>
+  <h1>Calculadoras Financieras Gratis</h1>
+  <p>Herramientas gratuitas para calcular tu salario neto, hipoteca y préstamos. Tasas fiscales 2025 actualizadas.</p>
 </div>
 
-<div class="preview">
-<div class="prev-lbl">Quick Paycheck Check</div>
-
-<div style="margin-bottom:15px">
-<input
-type="number"
-id="qs"
-value="60000"
-style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--bor)"
-oninput="qc()">
-</div>
-
-<div class="prev-res">
-<span style="color:var(--acc)">Monthly Take-Home</span>
-<span class="prev-res-v" id="qr">$3,867</span>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="sec">
-<div class="sec-lbl">All Financial Tools</div>
-
-<div class="tgrid">
-
-<a href="/salary-calculator/" class="tc">
-<div class="ti">💰</div>
-<h2>Salary Calculator</h2>
-<p>Full tax breakdown for US, UK, Canada & Australia 2025.</p>
-</a>
-
-<a href="/mortgage-calculator/" class="tc">
-<div class="ti">🏠</div>
-<h2>Mortgage Calculator</h2>
-<p>Estimate monthly payments and amortization schedules.</p>
-</a>
-
-<a href="/loan-calculator/" class="tc">
-<div class="ti">📝</div>
-<h2>Loan Calculator</h2>
-<p>Calculate total interest costs for personal or car loans.</p>
-</a>
-
-<a href="/hourly-to-salary/" class="tc">
-<div class="ti">⏳</div>
-<h2>Hourly to Salary</h2>
-<p>Convert hourly wages to annual or monthly income.</p>
-</a>
-
-<a href="/salary-calculator/" class="tc">
-<div class="ti">📊</div>
-<h2>Tax Estimator</h2>
-<p>See your marginal tax rate for the 2025 fiscal year.</p>
-</a>
-
-<a href="/mortgage-calculator/" class="tc">
-<div class="ti">🏛️</div>
-<h2>Affordability Check</h2>
-<p>Find out how much you can borrow based on your income.</p>
-</a>
-
-</div>
+<div class="tools">
+  <a class="card" href="/es/salary-calculator/">
+    <div class="card-icon">💰</div>
+    <h2>Calculadora de Salario Neto</h2>
+    <p>Calcula tu pago después de impuestos para EE.UU., UK, Canadá y Australia. Incluye 401(k) y seguro médico.</p>
+    <span class="badge">EE.UU. · UK · Canadá · Australia</span>
+  </a>
+  <a class="card" href="/mortgage-calculator/">
+    <div class="card-icon">🏠</div>
+    <h2>Calculadora de Hipoteca</h2>
+    <p>Calcula tus pagos mensuales de hipoteca, intereses totales y tabla de amortización.</p>
+    <span class="badge">Disponible en inglés</span>
+  </a>
+  <a class="card" href="/loan-calculator/">
+    <div class="card-icon">🏦</div>
+    <h2>Calculadora de Préstamo</h2>
+    <p>Calcula las cuotas mensuales de cualquier préstamo personal o estudiantil.</p>
+    <span class="badge">Disponible en inglés</span>
+  </a>
+  <a class="card" href="/hourly-to-salary/">
+    <div class="card-icon">⏱️</div>
+    <h2>Hourly a Salario Anual</h2>
+    <p>Convierte tu tarifa por hora a salario anual, mensual y semanal.</p>
+    <span class="badge">Disponible en inglés</span>
+  </a>
 </div>
 
 <footer>
-<div class="fi">
-© 2025 PayCalcHub.com |
-Disclaimer: Estimation purposes only. |
-<a href="/privacy/">Privacy Policy</a>
-</div>
+  <div>© 2025 PayCalcHub — Calculadoras Financieras Gratis</div>
+  <div style="margin-top:8px">
+    <a href="/">English</a>
+    <a href="/privacy/">Política de Privacidad</a>
+    <a href="/contact/">Contacto</a>
+  </div>
 </footer>
-
-<script>
-function qc(){
-const g=parseFloat(document.getElementById("qs").value)||0;
-
-if(!g){
-document.getElementById("qr").textContent="--";
-return;
-}
-
-const net=(g-(g*0.23))/12;
-
-document.getElementById("qr").textContent="$"+Math.round(net).toLocaleString();
-}
-</script>
-
 </body>
 </html>
