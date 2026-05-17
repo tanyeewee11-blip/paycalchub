@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<title>Salary Calculator - Free Take-Home Pay Calculator 2025 | PayCalcHub</title>
+<meta name="description" content="Free salary calculator with 401k and health insurance deductions. Free salary calculator for the US (all 50 states), UK, Canada, and Australia. Includes 401k, super, and health insurance deductions. Updated 2025 tax rates.. Live results, updated 2025 tax rates.">
+<link rel="canonical" href="https://paycalchub.com/salary-calculator/">
+<meta property="og:title" content="Free Salary Calculator 2025 | PayCalcHub">
+<meta property="og:url" content="https://paycalchub.com/salary-calculator/"><meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Salary Calculator","url":"https://paycalchub.com/salary-calculator/","description":"Free salary calculator for all 50 US states, UK, Canada, Australia. Includes 401k and health insurance deductions. Updated 2025 tax rates.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"PayCalcHub","url":"https://paycalchub.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does a 401k reduce my taxes?","acceptedAnswer":{"@type":"Answer","text":"Traditional 401k contributions reduce your taxable income dollar for dollar, lowering federal and state income tax. The 2025 limit is $23,500 under 50."}},{"@type":"Question","name":"Which states have no income tax?","acceptedAnswer":{"@type":"Answer","text":"Nine states have no income tax in 2025: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming."}},{"@type":"Question","name":"What is the difference between marginal and effective tax rate?","acceptedAnswer":{"@type":"Answer","text":"Your marginal rate is the rate on your last dollar. Your effective rate is total tax divided by gross income, always lower because progressive brackets apply incrementally."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--red:#dc2626;--ora:#d97706;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
+body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}
+.nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}
+.nav-links a:hover{color:var(--txt)}.nav-links a.active{color:var(--acc);font-weight:500}
+.ad{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);text-align:center;color:var(--mut);font-size:11px;letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;justify-content:center}
+.pg{max-width:1100px;margin:0 auto;padding:32px 24px 64px}
+.bc{font-size:13px;color:var(--mut);margin-bottom:12px}.bc a{color:var(--acc)}
+h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px}
+h1 em{font-style:normal;color:var(--acc)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:28px}
+.lay{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start}
+.card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);overflow:hidden}
+.tabs{display:flex;border-bottom:1px solid var(--bor);overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{padding:13px 18px;font-size:13px;font-weight:500;color:var(--mut);cursor:pointer;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;white-space:nowrap;flex-shrink:0;user-select:none}
+.tab:hover{color:var(--txt)}.tab.active{color:var(--acc);border-bottom-color:var(--acc)}
+.cb{padding:24px}
+.fp{animation:fi .18s ease}
+@keyframes fi{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.fr{margin-bottom:14px}
+.fr label{display:block;font-size:13px;font-weight:500;color:var(--mut);margin-bottom:5px}
+.iw{position:relative}
+.ip{position:absolute;left:11px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--mut);pointer-events:none;z-index:1}
+.is{position:absolute;right:11px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--mut);pointer-events:none}
+.fr input,.fr select{width:100%;padding:10px 14px;border:1px solid var(--bor);border-radius:8px;font-size:15px;font-family:var(--f);background:var(--bg);color:var(--txt);outline:none;transition:border-color .15s,background .15s;-moz-appearance:textfield}
+.fr input::-webkit-outer-spin-button,.fr input::-webkit-inner-spin-button{-webkit-appearance:none}
+.fr input:focus,.fr select:focus{border-color:var(--acc);background:#fff}
+.hp input{padding-left:28px}.hs input{padding-right:38px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fsec{margin:18px 0 14px;padding-top:18px;border-top:1px solid var(--bor)}
+.fsec-lbl{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--mut);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.opt{font-size:10px;font-weight:500;background:var(--bg);border:1px solid var(--bor);color:var(--mut);padding:1px 6px;border-radius:4px}
+.res{margin-top:20px;border-top:1px solid var(--bor);padding-top:20px;display:none}
+.res.show{display:block}
+.ptog{display:flex;gap:4px;background:var(--bg);border-radius:8px;padding:3px;margin-bottom:18px;border:1px solid var(--bor)}
+.pb{flex:1;padding:6px 4px;font-size:12px;font-weight:500;border:none;border-radius:6px;background:transparent;color:var(--mut);cursor:pointer;font-family:var(--f);transition:all .15s}
+.pb.active{background:var(--sur);color:var(--acc);box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.rh{background:var(--alight);border-radius:10px;padding:20px;text-align:center;margin-bottom:16px}
+.rl{font-size:11px;font-weight:600;color:var(--acc);letter-spacing:.06em;text-transform:uppercase}
+.ra{font-family:var(--mo);font-size:44px;font-weight:500;color:var(--acc);letter-spacing:-.02em;line-height:1.1;margin:4px 0 2px}
+.rp{font-size:13px;color:var(--mut)}.re{font-size:12px;color:var(--acc);margin-top:6px;font-weight:500}
+.cr{display:flex;gap:20px;align-items:center;margin-bottom:16px}
+.pl{display:flex;flex-direction:column;gap:7px;flex:1;min-width:0}
+.li{display:flex;align-items:center;gap:8px;font-size:13px}
+.ld{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.ll{color:var(--mut);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lp{font-family:var(--mo);font-size:12px;font-weight:500;color:var(--txt);flex-shrink:0}
+.bd{display:flex;flex-direction:column;gap:5px}
+.br{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:9px 13px;border-radius:8px;background:var(--bg)}
+.bl{color:var(--mut)}.bv{font-family:var(--mo);font-weight:500}
+.br.ded .bv{color:var(--red)}.br.pt .bv{color:var(--ora)}
+.br.net{background:var(--alight)}.br.net .bl{font-weight:600;color:var(--acc)}.br.net .bv{color:var(--acc);font-size:15px}
+.cpb{width:100%;margin-top:14px;padding:10px;background:var(--bg);border:1px solid var(--bor);border-radius:8px;font-size:13px;font-weight:500;color:var(--mut);cursor:pointer;font-family:var(--f);display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+.cpb:hover,.cpb.copied{border-color:var(--acc);color:var(--acc);background:var(--alight)}
+.sb{display:flex;flex-direction:column;gap:18px}
+.ic{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:18px}
+.ic h3{font-size:13px;font-weight:600;margin-bottom:10px}
+.ic ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.ic li{font-size:13px;color:var(--mut);display:flex;justify-content:space-between}
+.ic li span{font-family:var(--mo);font-size:12px;font-weight:500;color:var(--txt)}
+.ic a{color:var(--acc);font-size:13px;display:block;margin-bottom:6px}
+.tip{background:var(--alight);border-radius:8px;padding:12px 14px;font-size:13px;color:var(--acc);line-height:1.6}
+.art{margin-top:48px}.art h2{font-size:20px;font-weight:600;margin-bottom:12px}
+.art p{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:16px}
+.art ul{padding-left:20px;margin-bottom:16px}.art li{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:6px}
+.fqs{margin-top:40px}.fqs h2{font-size:20px;font-weight:600;margin-bottom:16px}
+.fqi{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);margin-bottom:8px;overflow:hidden}
+.fqq{padding:15px 18px;font-size:14px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.fqi-icon{font-size:20px;color:var(--mut);flex-shrink:0;transition:transform .2s}
+.fqq.open .fqi-icon{transform:rotate(45deg)}
+.fqa{font-size:14px;color:var(--mut);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .25s ease,padding .2s;padding:0 18px}
+.fqa.open{max-height:400px;padding:0 18px 16px}
+footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
+.fi{max-width:1100px;margin:0 auto;padding:24px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:13px;color:var(--mut)}
+.fl{display:flex;gap:20px}
+@media(max-width:800px){.lay{grid-template-columns:1fr}.sb{display:grid;grid-template-columns:1fr 1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}.cr{flex-direction:column}.ra{font-size:34px}}
+@media(max-width:480px){.sb{grid-template-columns:1fr}}
+</style>
+  <meta property="og:image" content="https://paycalchub.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://paycalchub.com/og-image.png">
+</head>
+<body>
+<nav><div class="nav-in">
+  <a href="/" class="logo">Pay<span>Calc</span>Hub</a>
+  <div class="nav-links"><a href="/salary-calculator/" class="active">Salary</a><a href="/mortgage-calculator/">Mortgage</a><a href="/loan-calculator/">Loan</a><a href="/hourly-to-salary/">Hourly</a></div>
+</div></nav>
+<div style="max-width:1100px;margin:16px auto 0;padding:0 24px"><div class="ad" style="min-height:90px">Advertisement</div></div>
+<div class="pg">
+  <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; Salary Calculator</div>
+  <h1>Free <em>Salary</em> Calculator</h1>
+  <p class="sub">Calculate your exact take-home pay after taxes, 401(k) and health insurance. All 50 US states. Updated for 2025-2026.</p>
+  <div class="lay">
+    <div>
+      <div class="card">
+        <div class="tabs" role="tablist">
+          <div class="tab active" role="tab" onclick="setC('us',this)">&#127482;&#127480; United States</div>
+          <div class="tab" role="tab" onclick="setC('uk',this)">&#127468;&#127463; United Kingdom</div>
+          <div class="tab" role="tab" onclick="setC('ca',this)">&#127464;&#127462; Canada</div>
+          <div class="tab" role="tab" onclick="setC('au',this)">&#127462;&#127482; Australia</div>
+        </div>
+        <div class="cb">
+          <div id="f-us" class="fp">
+            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">$</span><input type="number" id="us-sal" placeholder="60,000" oninput="calc()"></div></div>
+            <div class="fg">
+              <div class="fr"><label>Filing Status</label><select id="us-fil" onchange="calc()"><option value="single">Single</option><option value="married">Married Filing Jointly</option><option value="hoh">Head of Household</option></select></div>
+              <div class="fr"><label>State</label><select id="us-st" onchange="calc()">
+                <option value="0">Alaska - 0%</option><option value="5.0">Alabama - 5.0%</option><option value="2.5">Arizona - 2.5%</option><option value="4.7">Arkansas - 4.7%</option><option value="9.3">California - 9.3%</option><option value="4.4">Colorado - 4.4%</option><option value="6.99">Connecticut - 6.99%</option><option value="0">Delaware - 0%</option><option value="0">Florida - 0%</option><option value="5.49">Georgia - 5.49%</option><option value="8.25">Hawaii - 8.25%</option><option value="5.8">Idaho - 5.8%</option><option value="4.95">Illinois - 4.95%</option><option value="3.05">Indiana - 3.05%</option><option value="6.0">Iowa - 6.0%</option><option value="5.7">Kansas - 5.7%</option><option value="4.5">Kentucky - 4.5%</option><option value="4.25">Louisiana - 4.25%</option><option value="7.15">Maine - 7.15%</option><option value="5.75">Maryland - 5.75%</option><option value="5.0">Massachusetts - 5.0%</option><option value="4.25">Michigan - 4.25%</option><option value="9.85">Minnesota - 9.85%</option><option value="5.0">Mississippi - 5.0%</option><option value="4.95">Missouri - 4.95%</option><option value="5.9">Montana - 5.9%</option><option value="3.99">Nebraska - 3.99%</option><option value="0">Nevada - 0%</option><option value="0">New Hampshire - 0%</option><option value="10.75">New Jersey - 10.75%</option><option value="5.9">New Mexico - 5.9%</option><option value="6.85">New York - 6.85%</option><option value="4.75">North Carolina - 4.75%</option><option value="2.5">North Dakota - 2.5%</option><option value="3.99">Ohio - 3.99%</option><option value="4.75">Oklahoma - 4.75%</option><option value="9.9">Oregon - 9.9%</option><option value="3.07">Pennsylvania - 3.07%</option><option value="4.75">Rhode Island - 4.75%</option><option value="6.5">South Carolina - 6.5%</option><option value="0">South Dakota - 0%</option><option value="0">Tennessee - 0%</option><option value="0">Texas - 0%</option><option value="4.85">Utah - 4.85%</option><option value="8.75">Vermont - 8.75%</option><option value="5.75">Virginia - 5.75%</option><option value="0">Washington - 0%</option><option value="6.5">West Virginia - 6.5%</option><option value="7.65">Wisconsin - 7.65%</option><option value="0">Wyoming - 0%</option>
+              </select></div>
+            </div>
+            <div class="fr"><label>Pay Frequency</label><select id="us-frq" onchange="calc()"><option value="26">Bi-weekly (every 2 weeks)</option><option value="24">Semi-monthly (twice a month)</option><option value="12">Monthly</option><option value="52">Weekly</option></select></div>
+            <div class="fsec"><div class="fsec-lbl">Pre-Tax Deductions <span class="opt">Optional</span></div>
+              <div class="fg">
+                <div class="fr"><label>401(k) Contribution</label><div class="iw hs"><input type="number" id="us-401k" placeholder="0" min="0" max="23500" oninput="calc()"><span class="is">$/yr</span></div></div>
+                <div class="fr"><label>Health Insurance</label><div class="iw hs"><input type="number" id="us-hlt" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+                <div class="fr"><label>HSA Contribution</label><div class="iw hs"><input type="number" id="us-hsa" placeholder="0" min="0" max="4300" oninput="calc()"><span class="is">$/yr</span></div></div>
+                <div class="fr"><label>Other Pre-Tax</label><div class="iw hs"><input type="number" id="us-oth" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div id="f-uk" class="fp" style="display:none">
+            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">&#163;</span><input type="number" id="uk-sal" placeholder="35,000" oninput="calc()"></div></div>
+            <div class="fr"><label>Tax Code</label><select id="uk-tc" onchange="calc()"><option value="1257">1257L - Standard (12,570 allowance)</option><option value="0">BR - Basic Rate, no allowance</option><option value="500">500L - Reduced allowance</option></select></div>
+            <div class="fr"><label>Student Loan</label><select id="uk-sl" onchange="calc()"><option value="none">None</option><option value="plan1">Plan 1 - before Sep 2012</option><option value="plan2">Plan 2 - after Sep 2012</option><option value="plan4">Plan 4 - Scotland</option></select></div>
+            <div class="fsec"><div class="fsec-lbl">Pension <span class="opt">Optional</span></div>
+              <div class="fr"><label>Pension Contribution</label><div class="iw hs"><input type="number" id="uk-pen" placeholder="0" oninput="calc()"><span class="is">&#163;/yr</span></div></div>
+            </div>
+          </div>
+          <div id="f-ca" class="fp" style="display:none">
+            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">$</span><input type="number" id="ca-sal" placeholder="65,000" oninput="calc()"></div></div>
+            <div class="fr"><label>Province</label><select id="ca-pv" onchange="calc()"><option value="on">Ontario</option><option value="bc">British Columbia</option><option value="ab">Alberta</option><option value="qc">Quebec</option><option value="mb">Manitoba</option><option value="sk">Saskatchewan</option><option value="ns">Nova Scotia</option><option value="nb">New Brunswick</option><option value="nl">Newfoundland</option><option value="pe">PEI</option></select></div>
+            <div class="fsec"><div class="fsec-lbl">RRSP <span class="opt">Optional</span></div>
+              <div class="fr"><label>RRSP Contribution</label><div class="iw hs"><input type="number" id="ca-rr" placeholder="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+            </div>
+          </div>
+          <div id="f-au" class="fp" style="display:none">
+            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">$</span><input type="number" id="au-sal" placeholder="80,000" oninput="calc()"></div></div>
+            <div class="fr"><label>Medicare Levy</label><select id="au-med" onchange="calc()"><option value="yes">Include Medicare Levy (2%)</option><option value="no">Exempt from Medicare Levy</option></select></div>
+            <div class="fsec"><div class="fsec-lbl">Super <span class="opt">Optional</span></div>
+              <div class="fr"><label>Extra Super Contribution</label><div class="iw hs"><input type="number" id="au-sup" placeholder="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+            </div>
+          </div>
+          <div class="res" id="res">
+            <div class="ptog" role="group">
+              <button class="pb active" onclick="setPer('annual',this)">Annual</button>
+              <button class="pb" onclick="setPer('monthly',this)">Monthly</button>
+              <button class="pb" onclick="setPer('biweekly',this)">Bi-weekly</button>
+              <button class="pb" onclick="setPer('weekly',this)">Weekly</button>
+            </div>
+            <div class="rh"><div class="rl">Estimated Take-Home Pay</div><div class="ra" id="r-amt">$0</div><div class="rp" id="r-per">per year</div><div class="re" id="r-eff"></div></div>
+            <div class="cr"><canvas id="pie" width="120" height="120" style="flex-shrink:0" aria-label="Tax breakdown pie chart"></canvas><div class="pl" id="legend"></div></div>
+            <div class="bd" id="bdown"></div>
+            <button class="cpb" id="cpb" onclick="copyRes()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Copy Results
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="art">
+        <h2>How Does a 401(k) Reduce Your Taxes?</h2>
+        <p>A traditional 401(k) is a pre-tax deduction - it lowers your taxable income before federal and state taxes are calculated. If you earn $70,000 and contribute $7,000, you only pay income tax on $63,000. The 2025 limit is $23,500 (under 50) or $31,000 (age 50+).</p>
+        <p>Note: 401(k) contributions still have Social Security (6.2%) and Medicare (1.45%) applied. Health insurance premiums paid through a Section 125 plan are exempt from all payroll taxes, making them even more tax-efficient.</p>
+        <h2>2025 US Federal Tax Brackets</h2>
+        <p>10% up to $11,925 - 12% on $11,926-$48,475 - 22% on $48,476-$103,350 - 24% on $103,351-$197,300 - 32% on $197,301-$250,525 - 35% on $250,526-$626,350 - 37% above $626,350. Standard deduction: $15,000 (single), $30,000 (married jointly).</p>
+      </div>
+      <div class="fqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">How does a 401(k) reduce my taxes? <span class="fqi-icon">+</span></div><div class="fqa">Traditional 401(k) contributions reduce your taxable income dollar for dollar. If you earn $60,000 and contribute $6,000, you only pay income tax on $54,000. This lowers your federal and state income tax but not Social Security or Medicare taxes. The 2025 limit is $23,500 under 50.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">Which states have no income tax? <span class="fqi-icon">+</span></div><div class="fqa">Nine states have no income tax in 2025: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. Residents keep significantly more of their paycheck compared to high-tax states like California (9.3%) or New Jersey (10.75%).</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is marginal vs effective tax rate? <span class="fqi-icon">+</span></div><div class="fqa">Your marginal tax rate is the rate on your last dollar of income (e.g. 22%). Your effective tax rate is total tax divided by gross income - always lower because progressive brackets apply incrementally. This calculator shows both.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">How is take-home pay calculated? <span class="fqi-icon">+</span></div><div class="fqa">Take-home = Gross salary minus pre-tax deductions (401k, health, HSA) minus federal income tax minus Social Security (6.2%) minus Medicare (1.45%) minus state income tax. Pre-tax deductions reduce taxable income before income tax is applied.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">Why does my actual paycheck differ? <span class="fqi-icon">+</span></div><div class="fqa">Your paycheck may differ due to local city taxes, additional W-4 withholdings, Roth 401(k) contributions (post-tax), or employer-specific payroll calculations. This calculator provides a reliable baseline estimate based on standard federal and state rates.</div></div>
+      </div>
+    </div>
+    <div class="sb">
+      <div class="ad" style="min-height:250px">Advertisement</div>
+      <div class="ic"><h3>&#127482;&#127480; 2025 Federal Brackets</h3><ul><li>Up to $11,925<span>10%</span></li><li>$11,926-$48,475<span>12%</span></li><li>$48,476-$103,350<span>22%</span></li><li>$103,351-$197,300<span>24%</span></li><li>$197,301-$250,525<span>32%</span></li><li>$250,526-$626,350<span>35%</span></li><li>Over $626,350<span>37%</span></li></ul></div>
+      <div class="ic"><h3>&#128161; 2025 Contribution Limits</h3><ul><li>401(k) under 50<span>$23,500</span></li><li>401(k) age 50+<span>$31,000</span></li><li>HSA single<span>$4,300</span></li><li>HSA family<span>$8,550</span></li><li>IRA limit<span>$7,000</span></li></ul></div>
+      <div class="tip"><strong>&#128161; Tax tip:</strong> Contributing max 401(k) can reduce your federal tax bill by $2,350-$8,695 depending on your bracket.</div>
+      <div class="ic"><h3>&#128279; More Calculators</h3><a href="/mortgage-calculator/">&#127968; Mortgage Calculator</a><a href="/loan-calculator/">&#128203; Loan Calculator</a><a href="/hourly-to-salary/">&#9201; Hourly to Salary</a></div>
+      <div class="ad" style="min-height:250px">Advertisement</div>
+    </div>
+  </div>
+</div>
+<footer><div class="fi"><span>&#169; 2025 PayCalcHub.com - For informational purposes only. Not financial advice.</span><div class="fl"><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></div></div></footer>
+<script>
+var country="us",period="annual",last=null;
+var COLS=["#1e6b4a","#ef4444","#f59e0b","#3b82f6","#8b5cf6","#ec4899","#14b8a6"];
+var DIVS={annual:1,monthly:12,biweekly:26,weekly:52};
+var LABS={annual:"per year",monthly:"per month",biweekly:"every 2 weeks",weekly:"per week"};
+function setC(c,el){country=c;document.querySelectorAll(".tab").forEach(function(t){t.classList.remove("active");});el.classList.add("active");["us","uk","ca","au"].forEach(function(id){document.getElementById("f-"+id).style.display=id===c?"block":"none";});document.getElementById("res").classList.remove("show");last=null;calc();}
+function setPer(p,el){period=p;document.querySelectorAll(".pb").forEach(function(b){b.classList.remove("active");});el.classList.add("active");if(last)render(last);}
+function gv(id){return parseFloat(document.getElementById(id).value)||0;}
+function gs(id){return document.getElementById(id).value;}
+function calc(){var r=null;try{if(country==="us")r=calcUS();else if(country==="uk")r=calcUK();else if(country==="ca")r=calcCA();else r=calcAU();}catch(e){}if(!r||!r.gross){document.getElementById("res").classList.remove("show");return;}last=r;render(r);document.getElementById("res").classList.add("show");}
+function fmt(n,c){return c+Math.round(n).toLocaleString("en-US");}
+function render(r){
+  var d=DIVS[period];
+  document.getElementById("r-amt").textContent=fmt(r.net/d,r.cur);
+  document.getElementById("r-per").textContent=LABS[period];
+  var totalTax=r.ded.reduce(function(s,x){return s+x.a;},0);
+  var eff=((totalTax/r.gross)*100).toFixed(1);
+  var marg=r.marg?" - Marginal: "+r.marg+"%":"";
+  document.getElementById("r-eff").textContent="Effective tax rate: "+eff+"%"+marg;
+  var cv=document.getElementById("pie"),ctx=cv.getContext("2d");
+  ctx.clearRect(0,0,120,120);
+  var sl=(r.pt||[]).map(function(x,i){return{a:x.a,c:COLS[i+4]||"#94a3b8"};}).concat(r.ded.map(function(x,i){return{a:x.a,c:COLS[i+1]||"#94a3b8"};})).concat([{a:r.net,c:COLS[0]}]);
+  var st=-Math.PI/2;
+  sl.forEach(function(s){var ag=(s.a/r.gross)*2*Math.PI;ctx.beginPath();ctx.moveTo(60,60);ctx.arc(60,60,54,st,st+ag);ctx.closePath();ctx.fillStyle=s.c;ctx.fill();st+=ag;});
+  ctx.beginPath();ctx.arc(60,60,30,0,2*Math.PI);ctx.fillStyle="#fff";ctx.fill();
+  var lgsl=[{l:"Take-home",a:r.net,c:COLS[0]}].concat((r.pt||[]).map(function(x,i){return{l:x.l,a:x.a,c:COLS[i+4]||"#94a3b8"};})).concat(r.ded.map(function(x,i){return{l:x.l,a:x.a,c:COLS[i+1]||"#94a3b8"};}));
+  document.getElementById("legend").innerHTML=lgsl.map(function(x){return'<div class="li"><div class="ld" style="background:'+x.c+'"></div><span class="ll">'+x.l+'</span><span class="lp">'+((x.a/r.gross)*100).toFixed(1)+'%</span></div>';}).join("");
+  var h='<div class="br"><span class="bl">Gross Salary</span><span class="bv">'+fmt(r.gross/d,r.cur)+'</span></div>';
+  (r.pt||[]).forEach(function(x){h+='<div class="br pt"><span class="bl">'+x.l+' (pre-tax)</span><span class="bv">-'+fmt(x.a/d,r.cur)+'</span></div>';});
+  if(r.pt&&r.pt.length)h+='<div class="br"><span class="bl">Taxable Income</span><span class="bv">'+fmt(r.ti/d,r.cur)+'</span></div>';
+  r.ded.forEach(function(x){h+='<div class="br ded"><span class="bl">'+x.l+'</span><span class="bv">-'+fmt(x.a/d,r.cur)+'</span></div>';});
+  h+='<div class="br net"><span class="bl">Take-Home Pay</span><span class="bv">'+fmt(r.net/d,r.cur)+'</span></div>';
+  document.getElementById("bdown").innerHTML=h;
+}
+function copyRes(){
+  if(!last)return;
+  var d=DIVS[period];
+  var lines=["PayCalcHub Salary Estimate","Gross: "+fmt(last.gross/d,last.cur)+" "+LABS[period]];
+  (last.pt||[]).forEach(function(x){lines.push(x.l+": -"+fmt(x.a/d,last.cur));});
+  last.ded.forEach(function(x){lines.push(x.l+": -"+fmt(x.a/d,last.cur));});
+  lines.push("Take-Home: "+fmt(last.net/d,last.cur)+" "+LABS[period]);
+  lines.push("paycalchub.com/salary-calculator/");
+  navigator.clipboard.writeText(lines.join("\n")).then(function(){var b=document.getElementById("cpb");b.textContent="Copied!";b.classList.add("copied");setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy Results';b.classList.remove("copied");},2000);});
+}
+function calcUS(){
+  var g=gv("us-sal");if(!g)return null;
+  var fil=gs("us-fil"),stRate=parseFloat(gs("us-st"))||0;
+  var k=Math.min(gv("us-401k"),23500),hl=gv("us-hlt"),hsa=Math.min(gv("us-hsa"),4300),oth=gv("us-oth");
+  var totalPT=k+hl+hsa+oth;
+  var std=fil==="married"?30000:fil==="hoh"?22500:15000;
+  var bS=[[11925,.10],[48475,.12],[103350,.22],[197300,.24],[250525,.32],[626350,.35],[1e9,.37]];
+  var bM=[[23850,.10],[96950,.12],[206700,.22],[394600,.24],[501050,.32],[751600,.35],[1e9,.37]];
+  var bH=[[17000,.10],[64850,.12],[103350,.22],[197300,.24],[250500,.32],[626350,.35],[1e9,.37]];
+  var br=fil==="married"?bM:fil==="hoh"?bH:bS;
+  var ti=Math.max(0,g-totalPT),taxable=Math.max(0,ti-std);
+  var fed=0,prev=0,marg=10;
+  for(var i=0;i<br.length;i++){var lim=br[i][0],rate=br[i][1];if(taxable<=prev)break;fed+=(Math.min(taxable,lim)-prev)*rate;if(taxable>prev)marg=rate*100;prev=lim;}
+  var pb=Math.max(0,g-hl-hsa-oth);
+  var ss=Math.min(pb,176100)*0.062;
+  var med=pb*0.0145+(pb>200000?(pb-200000)*0.009:0);
+  var st=ti*(stRate/100);
+  var pt=[];
+  if(k>0)pt.push({l:"401(k) Contribution",a:k});
+  if(hl>0)pt.push({l:"Health Insurance",a:hl});
+  if(hsa>0)pt.push({l:"HSA Contribution",a:hsa});
+  if(oth>0)pt.push({l:"Other Pre-Tax",a:oth});
+  var ded=[{l:"Federal Income Tax",a:fed},{l:"Social Security (6.2%)",a:ss},{l:"Medicare (1.45%)",a:med}];
+  if(st>0)ded.push({l:"State Income Tax",a:st});
+  return{gross:g,ti:ti,net:g-totalPT-fed-ss-med-st,cur:"$",pt:pt,ded:ded,marg:marg};
+}
+function calcUK(){
+  var g=gv("uk-sal");if(!g)return null;
+  var pen=gv("uk-pen");
+  var pa=parseInt(gs("uk-tc"))*10;
+  var tg=Math.max(0,g-pen);
+  if(tg>100000)pa=Math.max(0,pa-Math.floor((tg-100000)/2));
+  var tx=Math.max(0,tg-pa);
+  var it=Math.min(tx,50270-12570)*.20+Math.max(0,Math.min(tx-(50270-12570),125140-50270))*.40+Math.max(0,tx-(125140-12570))*.45;
+  var ni=0;if(g>12570){ni=Math.min(g,50270)*.08-12570*.08;if(g>50270)ni+=(g-50270)*.02;}
+  var pl=gs("uk-sl"),th={plan1:24990,plan2:27295,plan4:31395};
+  var sl=pl!=="none"&&g>th[pl]?(g-th[pl])*.09:0;
+  var pt=pen>0?[{l:"Pension Contribution",a:pen}]:[];
+  var ded=[{l:"Income Tax",a:it},{l:"National Insurance",a:ni}];
+  if(sl>0)ded.push({l:"Student Loan ("+pl.toUpperCase()+")",a:sl});
+  return{gross:g,ti:tg,net:g-pen-it-ni-sl,cur:"£",pt:pt,ded:ded};
+}
+function calcCA(){
+  var g=gv("ca-sal");if(!g)return null;
+  var rr=gv("ca-rr"),tg=Math.max(0,g-rr);
+  var fb=[[57375,.15],[114750,.205],[158519,.26],[220000,.29],[1e9,.33]];
+  var bp=15705,tx=Math.max(0,tg-bp),fed=0,prev=0;
+  for(var i=0;i<fb.length;i++){var lim=fb[i][0],rate=fb[i][1];if(tx<=prev)break;fed+=(Math.min(tx,lim)-prev)*rate;prev=lim;}
+  fed=Math.max(0,fed-bp*.15);
+  var pr={on:.0505,bc:.0506,ab:.10,qc:.14,mb:.108,sk:.105,ns:.0879,nb:.094,nl:.087,pe:.098};
+  var pv=gs("ca-pv"),pvt=tg*(pr[pv]||.08);
+  var cpp=Math.min(Math.max(0,g-3500),68500)*.0595,ei=Math.min(g,63200)*.0166;
+  var pt=rr>0?[{l:"RRSP Contribution",a:rr}]:[];
+  var ded=[{l:"Federal Income Tax",a:fed},{l:"Provincial Tax",a:pvt},{l:"CPP (5.95%)",a:cpp},{l:"EI Premiums (1.66%)",a:ei}];
+  return{gross:g,ti:tg,net:g-rr-fed-pvt-cpp-ei,cur:"$",pt:pt,ded:ded};
+}
+function calcAU(){
+  var g=gv("au-sal");if(!g)return null;
+  var sup=gv("au-sup");
+  var br=[[18200,0],[45000,.19],[135000,.325],[190000,.37],[1e9,.45]];
+  var tax=0,prev=0;
+  for(var i=0;i<br.length;i++){var lim=br[i][0],rate=br[i][1];if(g<=prev)break;tax+=(Math.min(g,lim)-prev)*rate;prev=lim;}
+  var lito=g<=37500?700:g<=45000?700-(g-37500)*.05:g<=66667?325-(g-45000)*.015:0;
+  tax=Math.max(0,tax-lito);
+  var med=gs("au-med")==="yes"?g*.02:0;
+  var pt=sup>0?[{l:"Extra Super",a:sup}]:[];
+  var ded=[{l:"Income Tax",a:tax}];
+  if(med>0)ded.push({l:"Medicare Levy (2%)",a:med});
+  return{gross:g,ti:g,net:g-sup-tax-med,cur:"$",pt:pt,ded:ded};
+}
+function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
+window.addEventListener("load",function(){document.getElementById("us-sal").value=60000;calc();});
+</script>
+</body>
+</html>
