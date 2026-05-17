@@ -32,7 +32,23 @@
     .badge{display:inline-block;background:#e8f4ef;color:#1e6b4a;font-size:11px;padding:3px 10px;border-radius:10px;margin-top:10px;font-weight:500}
     footer{background:#1a1915;color:rgba(255,255,255,0.5);text-align:center;padding:24px;font-size:13px}
     footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 8px}
-  </style>
+  
+  .lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 16px;
+    transition: background 0.2s;
+  }
+  .lang-toggle:hover { background: rgba(255,255,255,0.25); }
+</style>
 </head>
 <body>
 <header>
@@ -43,7 +59,8 @@
     <a href="/es/mortgage-calculator/">Hipoteca</a>
     <a href="/es/loan-calculator/">Préstamo</a>
     <a href="/es/hourly-to-salary/">Por Hora</a>
-  </nav>
+  <a href="/" class="lang-toggle" title="English version">🌐 EN</a>
+</nav>
 </header>
 
 <div class="hero">
