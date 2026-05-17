@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
-<title>Loan Calculator &mdash; Monthly Repayment Calculator 2025 | PayCalcHub</title>
-<meta name="description" content="Free loan calculator. Calculate monthly repayments, total interest, and amortization schedule for personal, car, and student loans.">
-<link rel="canonical" href="https://paycalchub.com/loan-calculator/">
+<title>Calculadora de Préstamos Gratis 2025 | PayCalcHub</title>
+<meta name="description" content="Calculadora de préstamos gratis. Calcula cuotas mensuales, intereses totales y tabla de amortización para cualquier préstamo. Resultados instantáneos 2025.">
+<link rel="canonical" href="https://paycalchub.com/es/loan-calculator/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Loan Calculator","url":"https://paycalchub.com/loan-calculator/","description":"Free loan repayment calculator with amortization schedule.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
@@ -61,6 +61,22 @@ td:first-child{text-align:left;font-family:var(--f);color:var(--mut)}
 .art{margin-top:40px}.art h2{font-size:20px;font-weight:600;margin-bottom:12px}
 .art p{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:16px}
 @media(max-width:600px){.res-grid{grid-template-columns:1fr}}
+
+  .lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 16px;
+    transition: background 0.2s;
+  }
+  .lang-toggle:hover { background: rgba(255,255,255,0.25); }
 </style>
   <meta property="og:image" content="https://paycalchub.com/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -72,57 +88,58 @@ td:first-child{text-align:left;font-family:var(--f);color:var(--mut)}
   <link rel="alternate" hreflang="x-default" href="https://paycalchub.com/loan-calculator/">
 </head>
 <body>
-<nav><div class="nav-in"><a href="/" class="logo">Pay<span>Calc</span>Hub</a><div class="nav-links"><a href="/salary-calculator/" >Salary</a><a href="/mortgage-calculator/" >Mortgage</a><a href="/loan-calculator/" class="active">Loan</a><a href="/hourly-to-salary/" >Hourly</a></div></div></nav>
+<nav><div class="nav-in"><a href="/" class="logo">Pay<span>Calc</span>Hub</a><div class="nav-links"><a href="/salary-calculator/" >Salary</a><a href="/mortgage-calculator/" >Mortgage</a><a href="/loan-calculator/" class="active">Loan</a><a href="/hourly-to-salary/" >Hourly</a></div></div><a href="/loan-calculator/" class="lang-toggle" title="English version">🌐 EN</a>
+</nav>
 <div style="max-width:1100px;margin:16px auto 0;padding:0 24px"><div class="ad" style="min-height:90px">Advertisement</div></div>
 <div class="pg">
   <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; Loan Calculator</div>
   <h1>Free <em>Loan</em> Calculator</h1>
-  <p class="sub">Calculate monthly repayments and total interest for any loan. Instant results with full amortization schedule.</p>
+  <p class="sub">Calcula las cuotas mensuales e intereses totales de cualquier préstamo. Resultados instantáneos con tabla de amortización completa.</p>
   <div class="lay">
     <div>
       <div class="card">
         <div class="type-grid">
           <button class="tb active" onclick="setType(this,'Personal',8.5,5)">&#127968; Personal</button>
-          <button class="tb" onclick="setType(this,'Car Loan',6.5,5)">&#128663; Car Loan</button>
-          <button class="tb" onclick="setType(this,'Student',5.5,10)">&#127891; Student</button>
+          <button class="tb" onclick="setType(this,'Car Loan',6.5,5)">&#128663; Préstamo de Coche</button>
+          <button class="tb" onclick="setType(this,'Student',5.5,10)">&#127891; Estudiantil</button>
         </div>
-        <div class="fr"><label>Loan Amount</label><div class="iw hp"><span class="ip">$</span><input type="number" id="amt" placeholder="20,000" oninput="calc()"></div></div>
+        <div class="fr"><label>Monto del Préstamo</label><div class="iw hp"><span class="ip">$</span><input type="number" id="amt" placeholder="20,000" oninput="calc()"></div></div>
         <div class="fg">
-          <div class="fr"><label>Annual Interest Rate</label><div class="iw hs"><input type="number" id="rate" placeholder="8.5" step="0.1" oninput="calc()"><span class="is">%</span></div></div>
-          <div class="fr"><label>Loan Term</label><select id="term" onchange="calc()"><option value="1">1 year</option><option value="2">2 years</option><option value="3">3 years</option><option value="4">4 years</option><option value="5" selected>5 years</option><option value="7">7 years</option><option value="10">10 years</option><option value="15">15 years</option></select></div>
+          <div class="fr"><label>Tasa de Interés Anual</label><div class="iw hs"><input type="number" id="rate" placeholder="8.5" step="0.1" oninput="calc()"><span class="is">%</span></div></div>
+          <div class="fr"><label>Plazo del Préstamo</label><select id="term" onchange="calc()"><option value="1">1 año</option><option value="2">2 años</option><option value="3">3 años</option><option value="4">4 años</option><option value="5" selected>5 años</option><option value="7">7 años</option><option value="10">10 años</option><option value="15">15 años</option></select></div>
         </div>
         <div class="res" id="res">
           <div class="res-grid">
-            <div class="rb"><div class="rl">Monthly Payment</div><div class="rv" id="r-mo">$0</div></div>
-            <div class="rb"><div class="rl">Total Interest</div><div class="rv" id="r-int">$0</div></div>
-            <div class="rb"><div class="rl">Total Repayment</div><div class="rv" id="r-tot">$0</div></div>
+            <div class="rb"><div class="rl">Cuota Mensual</div><div class="rv" id="r-mo">$0</div></div>
+            <div class="rb"><div class="rl">Intereses Totales</div><div class="rv" id="r-int">$0</div></div>
+            <div class="rb"><div class="rl">Pago Total</div><div class="rv" id="r-tot">$0</div></div>
           </div>
           <div class="bd" id="bdown"></div>
-          <div class="amort-wrap"><h3>Yearly Amortization Schedule</h3>
+          <div class="amort-wrap"><h3>Tabla de Amortización Anual</h3>
             <table><thead><tr><th>Year</th><th>Principal</th><th>Interest</th><th>Balance</th></tr></thead><tbody id="amort"></tbody></table>
           </div>
         </div>
       </div>
       <div class="art">
-        <h2>How Is a Loan Repayment Calculated?</h2>
-        <p>Monthly repayments use the amortization formula: M = P[r(1+r)^n]/[(1+r)^n-1]. Each payment covers interest first, then reduces the principal. Early payments are mostly interest; later payments shift toward principal.</p>
-        <p>The amortization schedule above shows exactly how much of each year's payments go to principal vs interest, and your remaining balance at year end.</p>
+        <h2>¿Cómo se Calcula la Cuota de un Préstamo?</h2>
+        <p>Las cuotas mensuales usan la fórmula de amortización: M = P[r(1+r)^n]/[(1+r)^n-1]. Cada pago cubre primero los intereses y luego reduce el capital. Los primeros pagos son principalmente intereses; los posteriores se orientan más al capital.</p>
+        <p>La tabla de amortización muestra exactamente cuánto de los pagos de cada año va a capital e intereses, y el saldo restante al final del año.</p>
       </div>
-      <div class="fqs"><h2>Frequently Asked Questions</h2>
-        <div class="fqi"><div class="fqq" onclick="tFaq(this)">How is my loan repayment calculated? <span class="fqi-icon">+</span></div><div class="fqa">Monthly repayments use the standard amortization formula. Each payment covers the monthly interest on the outstanding balance, with the remainder reducing the principal. Over time, the interest portion decreases and the principal portion increases.</div></div>
-        <div class="fqi"><div class="fqq" onclick="tFaq(this)">Should I choose a shorter or longer loan term? <span class="fqi-icon">+</span></div><div class="fqa">Shorter terms mean higher monthly payments but significantly less total interest. Longer terms reduce monthly payments but you pay more overall. Use this calculator to compare scenarios side by side.</div></div>
-        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is a good personal loan interest rate in 2025? <span class="fqi-icon">+</span></div><div class="fqa">Personal loan rates in the US typically range from 6% to 25% depending on your credit score. Borrowers with 720+ credit scores can often get rates under 10%. Rates above 20% are generally considered high-cost — consider alternatives.</div></div>
+      <div class="fqs"><h2>Preguntas Frecuentes</h2>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Cómo se calcula mi cuota de préstamo? <span class="fqi-icon">+</span></div><div class="fqa">Las cuotas mensuales usan la fórmula estándar de amortización. Cada pago cubre los intereses mensuales del saldo pendiente y el resto reduce el capital. Con el tiempo, la parte de intereses disminuye y la parte de capital aumenta.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Debo elegir un plazo más corto o más largo? <span class="fqi-icon">+</span></div><div class="fqa">Los plazos más cortos implican cuotas más altas pero mucho menos intereses totales. Los plazos más largos reducen las cuotas pero pagas más en total. Usa esta calculadora para comparar escenarios.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Cuál es una buena tasa de interés para un préstamo personal en 2025? <span class="fqi-icon">+</span></div><div class="fqa">Las tasas de préstamos personales en EE.UU. van del 6% al 25% según tu historial crediticio. Los prestatarios con puntuación de 720 o más suelen conseguir tasas inferiores al 10%. Las tasas superiores al 20% se consideran generalmente costosas — considera alternativas.</div></div>
       </div>
     </div>
     <div class="sb">
       <div class="ad" style="min-height:250px">Advertisement</div>
-      <div class="ic"><h3>&#128202; Typical Loan Rates 2025</h3><ul><li>Personal loan<span>7&ndash;25%</span></li><li>Car loan (new)<span>5&ndash;8%</span></li><li>Car loan (used)<span>7&ndash;12%</span></li><li>Student (federal)<span>5.5&ndash;8%</span></li><li>Credit card<span>20&ndash;30%</span></li></ul></div>
-      <div class="ic"><h3>&#128279; More Calculators</h3><a href="/salary-calculator/">&#128176; Salary Calculator</a><a href="/mortgage-calculator/">&#127968; Mortgage Calculator</a><a href="/hourly-to-salary/">&#9201; Hourly to Salary</a></div>
+      <div class="ic"><h3>&#128202; Tasas Típicas de Préstamos 2025</h3><ul><li>Personal loan<span>7&ndash;25%</span></li><li>Car loan (new)<span>5&ndash;8%</span></li><li>Car loan (used)<span>7&ndash;12%</span></li><li>Student (federal)<span>5.5&ndash;8%</span></li><li>Credit card<span>20&ndash;30%</span></li></ul></div>
+      <div class="ic"><h3>&#128279; Más Calculadoras</h3><a href="/salary-calculator/">&#128176; Salary Calculator</a><a href="/mortgage-calculator/">&#127968; Mortgage Calculator</a><a href="/hourly-to-salary/">&#9201; Hourly to Salary</a></div>
       <div class="ad" style="min-height:250px">Advertisement</div>
     </div>
   </div>
 </div>
-<footer><div class="fi"><span>&copy; 2025 PayCalcHub.com &mdash; For informational purposes only. Not financial advice.</span><div class="fl"><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></div></div></footer>
+<footer><div class="fi"><span>&copy; 2025 PayCalcHub.com &mdash; Solo con fines informativos. No es asesoramiento financiero.</span><div class="fl"><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></div></div></footer>
 <script>
 function v(id){return parseFloat(document.getElementById(id).value)||0;}
 function fmt(n){return "$"+Math.round(n).toLocaleString("en-US");}
@@ -136,9 +153,9 @@ function calc(){
   document.getElementById("r-mo").textContent=fmt(mo);
   document.getElementById("r-int").textContent=fmt(int);
   document.getElementById("r-tot").textContent=fmt(tot);
-  let h=`<div class="br"><span class="bl">Loan Amount</span><span class="bv">${fmt(P)}</span></div>`;
+  let h=`<div class="br"><span class="bl">Monto del Préstamo</span><span class="bv">${fmt(P)}</span></div>`;
   h+=`<div class="br"><span class="bl">Interest Rate</span><span class="bv">${ar}% per year</span></div>`;
-  h+=`<div class="br"><span class="bl">Loan Term</span><span class="bv">${yrs} year${yrs>1?"s":""} (${n} payments)</span></div>`;
+  h+=`<div class="br"><span class="bl">Plazo del Préstamo</span><span class="bv">${yrs} year${yrs>1?"s":""} (${n} payments)</span></div>`;
   document.getElementById("bdown").innerHTML=h;
   let bal=P,tb="";
   for(let y=1;y<=yrs;y++){let yp=0,yi=0,ms=Math.min(12,n-(y-1)*12);for(let m=0;m<ms;m++){const ip=bal*r,pp=Math.min(mo-ip,bal);yi+=ip;yp+=pp;bal=Math.max(0,bal-pp);}tb+=`<tr><td>Year ${y}</td><td>${fmt(yp)}</td><td>${fmt(yi)}</td><td>${fmt(bal)}</td></tr>`;}
