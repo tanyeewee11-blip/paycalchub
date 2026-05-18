@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png">
+  <link rel="apple-touch-icon" href="/favicon_512x512.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -261,12 +265,28 @@ grid-template-columns:1fr
 display:none
 }
 }
+
+  .lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 16px;
+    transition: background 0.2s;
+  }
+  .lang-toggle:hover {
+    background: rgba(255,255,255,0.25);
+  }
 </style>
-  <meta property="og:image" content="https://paycalchub.com/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://paycalchub.com/og-image.png">
+  <link rel="alternate" hreflang="en" href="https://paycalchub.com/">
+  <link rel="alternate" hreflang="es" href="https://paycalchub.com/es/">
+  <link rel="alternate" hreflang="x-default" href="https://paycalchub.com/">
 </head>
 
 <body>
@@ -279,6 +299,7 @@ display:none
 <a href="/salary-calculator/">Salary</a>
 <a href="/mortgage-calculator/">Mortgage</a>
 </div>
+<a href="/es/" class="lang-toggle" title="Versión en Español">🌐 ES</a>
 </div>
 </nav>
 
