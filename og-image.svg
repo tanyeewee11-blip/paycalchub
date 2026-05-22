@@ -1,0 +1,70 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7f6f3"/>
+      <stop offset="100%" style="stop-color:#e8f4ef"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f0faf5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1050" cy="80" r="180" fill="#1e6b4a" opacity="0.06"/>
+  <circle cx="150" cy="550" r="120" fill="#1e6b4a" opacity="0.05"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="8" height="630" fill="#1e6b4a"/>
+
+  <!-- Logo area -->
+  <text x="80" y="100" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#1a1915">Pay<tspan fill="#1e6b4a">Calc</tspan>Hub</text>
+
+  <!-- Badge -->
+  <rect x="80" y="120" width="230" height="36" rx="18" fill="#e8f4ef"/>
+  <text x="195" y="144" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#1e6b4a" text-anchor="middle" letter-spacing="1">FREE · NO SIGN-UP</text>
+
+  <!-- Main headline -->
+  <text x="80" y="240" font-family="Georgia, serif" font-size="72" font-weight="700" fill="#1a1915">Smart Finance</text>
+  <text x="80" y="320" font-family="Georgia, serif" font-size="72" font-weight="700" fill="#1e6b4a">Calculators</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="380" font-family="Arial, sans-serif" font-size="26" fill="#6b6960">Salary · Mortgage · Loan · Hourly</text>
+  <text x="80" y="418" font-family="Arial, sans-serif" font-size="22" fill="#6b6960">Updated 2026 tax rates · US, UK, Canada &amp; Australia</text>
+
+  <!-- Tool cards -->
+  <!-- Card 1 -->
+  <rect x="80" y="470" width="240" height="100" rx="12" fill="url(#card)" stroke="#1e6b4a" stroke-width="1.5"/>
+  <text x="100" y="510" font-size="28">💰</text>
+  <text x="145" y="505" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1915">Salary</text>
+  <text x="145" y="525" font-family="Arial, sans-serif" font-size="13" fill="#6b6960">Take-home pay</text>
+  <text x="145" y="555" font-family="Arial, sans-serif" font-size="13" fill="#6b6960">All 50 US states</text>
+
+  <!-- Card 2 -->
+  <rect x="340" y="470" width="240" height="100" rx="12" fill="white" stroke="#e4e2dc" stroke-width="1.5"/>
+  <text x="360" y="510" font-size="28">🏠</text>
+  <text x="405" y="505" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1915">Mortgage</text>
+  <text x="405" y="525" font-family="Arial, sans-serif" font-size="13" fill="#6b6960">Monthly payments</text>
+  <text x="405" y="555" font-family="Arial, sans-serif" font-size="13" fill="#6b6960">Amortization chart</text>
+
+  <!-- Card 3 -->
+  <rect x="600" y="470" width="240" height="100" rx="12" fill="white" stroke="#e4e2dc" stroke-width="1.5"/>
+  <text x="620" y="510" font-size="28">📝</text>
+  <text x="665" y="505" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1915">Loan</text>
+  <text x="665" y="525" font-family="Arial, sans-serif" font-size="13" fill="#6b6960">Total interest cost</text>
+  <text x="665" y="555" font-family="Arial, sans-serif" font-size="13" fill="#6b6960">Repayment schedule</text>
+
+  <!-- Card 4 -->
+  <rect x="860" y="470" width="260" height="100" rx="12" fill="white" stroke="#e4e2dc" stroke-width="1.5"/>
+  <text x="880" y="510" font-size="28">⏱</text>
+  <text x="925" y="505" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1915">Hourly to Salary</text>
+  <text x="925" y="525" font-family="Arial, sans-serif" font-size="13" fill="#6b6960">Annual equivalent</text>
+  <text x="925" y="555" font-family="Arial, sans-serif" font-size="13" fill="#6b6960">All pay periods</text>
+
+  <!-- URL badge -->
+  <rect x="860" y="60" width="280" height="48" rx="24" fill="#1e6b4a"/>
+  <text x="1000" y="91" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="white" text-anchor="middle">paycalchub.com</text>
+</svg>
