@@ -125,7 +125,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 <body>
 <nav><div class="nav-in">
   <a href="/es/" class="logo">Pay<span>Calc</span>Hub</a>
-  <div class="nav-links"><a href="/salary-calculator/" class="active">Salary</a><a href="/mortgage-calculator/">Mortgage</a><a href="/loan-calculator/">Loan</a><a href="/hourly-to-salary/">Hourly</a></div>
+  <div class="nav-links"><a href="/es/salary-calculator/" class="active">Salario</a><a href="/es/mortgage-calculator/">Hipoteca</a><a href="/es/loan-calculator/">Préstamo</a><a href="/es/hourly-to-salary/">Por Hora</a></div>
 </div><div class="lang-wrap" id="langWrap">
   <button class="lang-btn" onclick="toggleLang()" aria-label="Seleccionar idioma" aria-expanded="false" aria-haspopup="listbox">
     <span style="font-size:16px">🇪🇸</span>
@@ -145,8 +145,8 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </nav>
 <div style="max-width:1100px;margin:16px auto 0;padding:0 24px"></div>
 <div class="pg">
-  <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; Salary Calculator</div>
-  <h1>Free <em>Salary</em> Calculator</h1>
+  <div class="bc"><a href="/es/">PayCalcHub</a> &rsaquo; Calculadora de Salario</div>
+  <h1>Calculadora de <em>Salario</em> Neto</h1>
   <p class="sub">Calcula tu salario neto exacto después de impuestos, 401(k) y seguro médico. Todos los estados de EE.UU. Actualizado para 2026-2026.</p>
   <div class="lay">
     <div>
@@ -166,7 +166,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
                 <option value="0">Alaska - 0%</option><option value="5.0">Alabama - 5.0%</option><option value="2.5">Arizona - 2.5%</option><option value="4.7">Arkansas - 4.7%</option><option value="9.3">California - 9.3%</option><option value="4.4">Colorado - 4.4%</option><option value="6.99">Connecticut - 6.99%</option><option value="0">Delaware - 0%</option><option value="0">Florida - 0%</option><option value="5.49">Georgia - 5.49%</option><option value="8.25">Hawaii - 8.25%</option><option value="5.8">Idaho - 5.8%</option><option value="4.95">Illinois - 4.95%</option><option value="3.05">Indiana - 3.05%</option><option value="6.0">Iowa - 6.0%</option><option value="5.7">Kansas - 5.7%</option><option value="4.5">Kentucky - 4.5%</option><option value="4.25">Louisiana - 4.25%</option><option value="7.15">Maine - 7.15%</option><option value="5.75">Maryland - 5.75%</option><option value="5.0">Massachusetts - 5.0%</option><option value="4.25">Michigan - 4.25%</option><option value="9.85">Minnesota - 9.85%</option><option value="5.0">Mississippi - 5.0%</option><option value="4.95">Missouri - 4.95%</option><option value="5.9">Montana - 5.9%</option><option value="3.99">Nebraska - 3.99%</option><option value="0">Nevada - 0%</option><option value="0">New Hampshire - 0%</option><option value="10.75">New Jersey - 10.75%</option><option value="5.9">New Mexico - 5.9%</option><option value="6.85">New York - 6.85%</option><option value="4.75">North Carolina - 4.75%</option><option value="2.5">North Dakota - 2.5%</option><option value="3.99">Ohio - 3.99%</option><option value="4.75">Oklahoma - 4.75%</option><option value="9.9">Oregon - 9.9%</option><option value="3.07">Pennsylvania - 3.07%</option><option value="4.75">Rhode Island - 4.75%</option><option value="6.5">South Carolina - 6.5%</option><option value="0">South Dakota - 0%</option><option value="0">Tennessee - 0%</option><option value="0">Texas - 0%</option><option value="4.85">Utah - 4.85%</option><option value="8.75">Vermont - 8.75%</option><option value="5.75">Virginia - 5.75%</option><option value="0">Washington - 0%</option><option value="6.5">West Virginia - 6.5%</option><option value="7.65">Wisconsin - 7.65%</option><option value="0">Wyoming - 0%</option>
               </select></div>
             </div>
-            <div class="fr"><label>Frecuencia de Pago</label><select id="us-frq" onchange="calc()"><option value="26">Bi-weekly (every 2 weeks)</option><option value="24">Semi-monthly (twice a month)</option><option value="12">Mensual</option><option value="52">Semanal</option></select></div>
+            <div class="fr"><label>Frecuencia de Pago</label><select id="us-frq" onchange="calc()"><option value="26">Quincenal (cada 2 semanas)</option><option value="24">Dos veces al mes</option><option value="12">Mensual</option><option value="52">Semanal</option></select></div>
             <div class="fsec"><div class="fsec-lbl">Pre-Tax Deductions <span class="opt">Opcional</span></div>
               <div class="fg">
                 <div class="fr"><label>Aportación 401(k)</label><div class="iw hs"><input type="number" id="us-401k" placeholder="0" min="0" max="23500" oninput="calc()"><span class="is">$/yr</span></div></div>
@@ -233,10 +233,10 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
     </div>
     <div class="sb">
       
-      <div class="ic"><h3>&#127482;&#127480; Tramos Federales 2026</h3><ul><li>Up to $11,925<span>10%</span></li><li>$11,926-$48,475<span>12%</span></li><li>$48,476-$103,350<span>22%</span></li><li>$103,351-$197,300<span>24%</span></li><li>$197,301-$250,525<span>32%</span></li><li>$250,526-$626,350<span>35%</span></li><li>Over $626,350<span>37%</span></li></ul></div>
-      <div class="ic"><h3>&#128161; 2026 Contribution Limits</h3><ul><li>401(k) under 50<span>$23,500</span></li><li>401(k) age 50+<span>$31,000</span></li><li>HSA single<span>$4,300</span></li><li>HSA family<span>$8,550</span></li><li>IRA limit<span>$7,000</span></li></ul></div>
-      <div class="tip"><strong>&#128161; Tax tip:</strong> Contributing max 401(k) can reduce your federal tax bill by $2,350-$8,695 depending on your bracket.</div>
-      <div class="ic"><h3>&#128279; More Calculators</h3><a href="/mortgage-calculator/">&#127968; Mortgage Calculator</a><a href="/loan-calculator/">&#128203; Loan Calculator</a><a href="/hourly-to-salary/">&#9201; Hourly to Salary</a></div>
+      <div class="ic"><h3>&#127482;&#127480; Tramos Federales 2026</h3><ul><li>Up to $11,925<span>10%</span></li><li>$11,926-$48,475<span>12%</span></li><li>$48,476-$103,350<span>22%</span></li><li>$103,351-$197,300<span>24%</span></li><li>$197,301-$250,525<span>32%</span></li><li>$250,526-$626,350<span>35%</span></li><li>Más de $626,350<span>37%</span></li></ul></div>
+      <div class="ic"><h3>&#128161; Límites de Aportación 2026</h3><ul><li>401(k) menores de 50<span>$23,500</span></li><li>401(k) mayores de 50<span>$31,000</span></li><li>HSA individual<span>$4,300</span></li><li>HSA familiar<span>$8,550</span></li><li>Límite IRA<span>$7,000</span></li></ul></div>
+      <div class="tip"><strong>&#128161; Consejo fiscal:</strong> Aportar el máximo al 401(k) puede reducir tu factura fiscal federal entre $2,350 y $8,695 según tu tramo impositivo.</div>
+      <div class="ic"><h3>&#128279; Más Calculadoras</h3><a href="/es/mortgage-calculator/">&#127968; Calculadora de Hipoteca</a><a href="/es/loan-calculator/">&#128203; Calculadora de Préstamos</a><a href="/es/hourly-to-salary/">&#9201; Por Hora a Salario</a></div>
       
     </div>
   </div>
@@ -246,7 +246,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 var country="us",period="annual",last=null;
 var COLS=["#1e6b4a","#ef4444","#f59e0b","#3b82f6","#8b5cf6","#ec4899","#14b8a6"];
 var DIVS={annual:1,monthly:12,biweekly:26,weekly:52};
-var LABS={annual:"per year",monthly:"per month",biweekly:"every 2 weeks",weekly:"per week"};
+var LABS={annual:"al año",monthly:"al mes",biweekly:"cada 2 semanas",weekly:"a la semana"};
 function setC(c,el){country=c;document.querySelectorAll(".tab").forEach(function(t){t.classList.remove("active");});el.classList.add("active");["us","uk","ca","au"].forEach(function(id){document.getElementById("f-"+id).style.display=id===c?"block":"none";});document.getElementById("res").classList.remove("show");last=null;calc();}
 function setPer(p,el){period=p;document.querySelectorAll(".pb").forEach(function(b){b.classList.remove("active");});el.classList.add("active");if(last)render(last);}
 function gv(id){return parseFloat(document.getElementById(id).value)||0;}
@@ -279,7 +279,7 @@ function render(r){
 function copyRes(){
   if(!last)return;
   var d=DIVS[period];
-  var lines=["PayCalcHub Salary Estimate","Gross: "+fmt(last.gross/d,last.cur)+" "+LABS[period]];
+  var lines=["Estimación de Salario PayCalcHub","Bruto: "+fmt(last.gross/d,last.cur)+" "+LABS[period]];
   (last.pt||[]).forEach(function(x){lines.push(x.l+": -"+fmt(x.a/d,last.cur));});
   last.ded.forEach(function(x){lines.push(x.l+": -"+fmt(x.a/d,last.cur));});
   lines.push("Take-Home: "+fmt(last.net/d,last.cur)+" "+LABS[period]);
