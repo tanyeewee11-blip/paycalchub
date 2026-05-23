@@ -100,21 +100,18 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 @media(max-width:800px){.lay{grid-template-columns:1fr}.sb{display:grid;grid-template-columns:1fr 1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}.cr{flex-direction:column}.ra{font-size:34px}}
 @media(max-width:480px){.sb{grid-template-columns:1fr}}
 
-  .lang-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    background: rgba(255,255,255,0.15);
-    color: #fff;
-    text-decoration: none;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 500;
-    margin-left: 16px;
-    transition: background 0.2s;
-  }
-  .lang-toggle:hover { background: rgba(255,255,255,0.25); }
+  
+.lang-wrap{position:relative;margin-left:8px}
+.lang-btn{display:flex;align-items:center;gap:6px;background:var(--alight);border:1px solid #c5e0d3;border-radius:8px;padding:5px 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--acc);transition:background .15s}
+.lang-btn:hover{background:#d4eddf}
+.lang-chevron{transition:transform .2s}
+.lang-wrap.open .lang-chevron{transform:rotate(180deg)}
+.lang-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:5px;min-width:148px;box-shadow:0 4px 20px rgba(0,0,0,0.08);z-index:200}
+.lang-wrap.open .lang-dropdown{display:block}
+.lang-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;font-size:13px;color:var(--txt);transition:background .1s;text-decoration:none}
+.lang-item:hover{background:var(--bg)}
+.lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
+.lang-item-flag{font-size:16px}
 </style>
   <meta property="og:image" content="https://paycalchub.com/og-image.svg">
   <meta property="og:image:width" content="1200">
@@ -127,9 +124,24 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </head>
 <body>
 <nav><div class="nav-in">
-  <a href="/" class="logo">Pay<span>Calc</span>Hub</a>
+  <a href="/es/" class="logo">Pay<span>Calc</span>Hub</a>
   <div class="nav-links"><a href="/salary-calculator/" class="active">Salary</a><a href="/mortgage-calculator/">Mortgage</a><a href="/loan-calculator/">Loan</a><a href="/hourly-to-salary/">Hourly</a></div>
-</div><a href="/salary-calculator/" class="lang-toggle" title="English version">🌐 EN</a>
+</div><div class="lang-wrap" id="langWrap">
+  <button class="lang-btn" onclick="toggleLang()" aria-label="Seleccionar idioma" aria-expanded="false" aria-haspopup="listbox">
+    <span style="font-size:16px">🇪🇸</span>
+    <span style="font-size:13px;font-weight:600">ES</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="listbox">
+    <a href="/" class="lang-item" role="option" aria-selected="false">
+      <span class="lang-item-flag">🇺🇸</span><span>English</span>
+    </a>
+    <div class="lang-item active" role="option" aria-selected="true">
+      <span class="lang-item-flag">🇪🇸</span><span>Español</span>
+      <svg style="margin-left:auto" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5l3.5 3.5 5.5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+</div>
 </nav>
 <div style="max-width:1100px;margin:16px auto 0;padding:0 24px"></div>
 <div class="pg">

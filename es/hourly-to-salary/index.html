@@ -55,21 +55,18 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .res-table tr.hi td{background:var(--alight)}
 .res-table tr.hi td:last-child{color:var(--acc)}
 
-  .lang-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    background: rgba(255,255,255,0.15);
-    color: #fff;
-    text-decoration: none;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 500;
-    margin-left: 16px;
-    transition: background 0.2s;
-  }
-  .lang-toggle:hover { background: rgba(255,255,255,0.25); }
+  
+.lang-wrap{position:relative;margin-left:8px}
+.lang-btn{display:flex;align-items:center;gap:6px;background:var(--alight);border:1px solid #c5e0d3;border-radius:8px;padding:5px 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--acc);transition:background .15s}
+.lang-btn:hover{background:#d4eddf}
+.lang-chevron{transition:transform .2s}
+.lang-wrap.open .lang-chevron{transform:rotate(180deg)}
+.lang-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:5px;min-width:148px;box-shadow:0 4px 20px rgba(0,0,0,0.08);z-index:200}
+.lang-wrap.open .lang-dropdown{display:block}
+.lang-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;font-size:13px;color:var(--txt);transition:background .1s;text-decoration:none}
+.lang-item:hover{background:var(--bg)}
+.lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
+.lang-item-flag{font-size:16px}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cómo convierto mi tarifa por hora a salario anual?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply your hourly wage by hours a la semana, then by weeks al año. For a standard full-time job: hourly rate × 40 hours × 52 semanas = annual salary. A $25/hour rate equals $52,000 al año working full-time."}}, {"@type": "Question", "name": "¿Cuánto equivale $15/hora al año?", "acceptedAnswer": {"@type": "Answer", "text": "$15/hour × 40 hours × 52 semanas = $31,200 al año before taxes. After federal taxes and Social Security/Medicare, take-home pay would be approximately $25,000–$26,000 annually depending on your state."}}, {"@type": "Question", "name": "¿Cuántas horas laborales hay en un año?", "acceptedAnswer": {"@type": "Answer", "text": "A standard full-time schedule is 2,080 hours al año (40 hours × 52 semanas). After accounting for 10 federal holidays and 2 weeks vacation, a typical work year is closer to 1,960 horas."}}]}</script>
   <meta property="og:image" content="https://paycalchub.com/og-image.svg">
@@ -82,7 +79,22 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   <link rel="alternate" hreflang="x-default" href="https://paycalchub.com/hourly-to-salary/">
 </head>
 <body>
-<nav><div class="nav-in"><a href="/" class="logo">Pay<span>Calc</span>Hub</a><div class="nav-links"><a href="/salary-calculator/" >Salary</a><a href="/mortgage-calculator/" >Mortgage</a><a href="/loan-calculator/" >Loan</a><a href="/hourly-to-salary/" class="active">Hourly</a></div></div><a href="/hourly-to-salary/" class="lang-toggle" title="English version">🌐 EN</a>
+<nav><div class="nav-in"><a href="/es/" class="logo">Pay<span>Calc</span>Hub</a><div class="nav-links"><a href="/salary-calculator/" >Salary</a><a href="/mortgage-calculator/" >Mortgage</a><a href="/loan-calculator/" >Loan</a><a href="/hourly-to-salary/" class="active">Hourly</a></div></div><div class="lang-wrap" id="langWrap">
+  <button class="lang-btn" onclick="toggleLang()" aria-label="Seleccionar idioma" aria-expanded="false" aria-haspopup="listbox">
+    <span style="font-size:16px">🇪🇸</span>
+    <span style="font-size:13px;font-weight:600">ES</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="listbox">
+    <a href="/" class="lang-item" role="option" aria-selected="false">
+      <span class="lang-item-flag">🇺🇸</span><span>English</span>
+    </a>
+    <div class="lang-item active" role="option" aria-selected="true">
+      <span class="lang-item-flag">🇪🇸</span><span>Español</span>
+      <svg style="margin-left:auto" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5l3.5 3.5 5.5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+</div>
 </nav>
 <div style="max-width:700px;margin:16px auto 0;padding:0 24px"></div>
 <div class="max-w">
