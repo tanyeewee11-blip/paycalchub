@@ -276,23 +276,20 @@ display:none
 }
 }
 
-  .lang-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    background: rgba(255,255,255,0.15);
-    color: #fff;
-    text-decoration: none;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 500;
-    margin-left: 16px;
-    transition: background 0.2s;
-  }
-  .lang-toggle:hover {
-    background: rgba(255,255,255,0.25);
-  }
+.lang-wrap{position:relative;margin-left:8px}
+.lang-btn{display:flex;align-items:center;gap:6px;background:var(--alight);border:1px solid #c5e0d3;border-radius:8px;padding:5px 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--acc);transition:background .15s}
+.lang-btn:hover{background:#d4eddf}
+.lang-flag{font-size:16px;line-height:1}
+.lang-code{font-size:13px;font-weight:600}
+.lang-chevron{font-size:11px;color:var(--mut);transition:transform .2s}
+.lang-wrap.open .lang-chevron{transform:rotate(180deg)}
+.lang-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:5px;min-width:148px;box-shadow:0 4px 20px rgba(0,0,0,0.08);z-index:200}
+.lang-wrap.open .lang-dropdown{display:block}
+.lang-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;font-size:13px;color:var(--txt);cursor:pointer;transition:background .1s}
+.lang-item:hover{background:var(--bg)}
+.lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
+.lang-item-flag{font-size:16px}
+.lang-item-check{margin-left:auto;font-size:13px;color:var(--acc)}
 </style>
   <link rel="alternate" hreflang="en" href="https://paycalchub.com/">
   <link rel="alternate" hreflang="es" href="https://paycalchub.com/es/">
@@ -336,7 +333,24 @@ display:none
 <a href="/loan-calculator/">Loan</a>
 <a href="/hourly-to-salary/">Hourly</a>
 </div>
-<a href="/es/" class="lang-toggle" title="Versión en Español">🌐 ES</a>
+<div class="lang-wrap" id="langWrap">
+  <button class="lang-btn" onclick="toggleLang()" aria-label="Select language" aria-expanded="false" aria-haspopup="listbox">
+    <span class="lang-flag">🇺🇸</span>
+    <span class="lang-code">EN</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="listbox">
+    <div class="lang-item active" role="option" aria-selected="true">
+      <span class="lang-item-flag">🇺🇸</span>
+      <span>English</span>
+      <svg class="lang-item-check" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5l3.5 3.5 5.5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <a href="/es/" class="lang-item" role="option" aria-selected="false">
+      <span class="lang-item-flag">🇪🇸</span>
+      <span>Español</span>
+    </a>
+  </div>
+</div>
 </div>
 </nav>
 
@@ -446,5 +460,26 @@ document.getElementById("qr").textContent="$"+Math.round(net).toLocaleString();
 }
 </script>
 
+
+<script>
+function toggleLang(){
+  var w=document.getElementById('langWrap');
+  var open=w.classList.toggle('open');
+  w.querySelector('.lang-btn').setAttribute('aria-expanded', open);
+}
+document.addEventListener('click',function(e){
+  var w=document.getElementById('langWrap');
+  if(w && !w.contains(e.target)){
+    w.classList.remove('open');
+    w.querySelector('.lang-btn').setAttribute('aria-expanded','false');
+  }
+});
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){
+    var w=document.getElementById('langWrap');
+    if(w){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}
+  }
+});
+</script>
 </body>
 </html>

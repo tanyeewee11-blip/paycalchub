@@ -114,6 +114,18 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .fi{max-width:1100px;margin:0 auto;padding:24px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:13px;color:var(--mut)}
 .fl{display:flex;gap:20px}
 @media(max-width:800px){.lay{grid-template-columns:1fr}.nav-links{display:none}.hero-amount{font-size:40px}}
+.lang-wrap{position:relative;margin-left:8px}
+.lang-btn{display:flex;align-items:center;gap:6px;background:var(--alight);border:1px solid #c5e0d3;border-radius:8px;padding:5px 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--acc);transition:background .15s}
+.lang-btn:hover{background:#d4eddf}
+.lang-chevron{font-size:11px;color:var(--mut);transition:transform .2s}
+.lang-wrap.open .lang-chevron{transform:rotate(180deg)}
+.lang-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:5px;min-width:148px;box-shadow:0 4px 20px rgba(0,0,0,0.08);z-index:200}
+.lang-wrap.open .lang-dropdown{display:block}
+.lang-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;font-size:13px;color:var(--txt);cursor:pointer;transition:background .1s}
+.lang-item:hover{background:var(--bg)}
+.lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
+.lang-item-flag{font-size:16px}
+.lang-item-check{margin-left:auto;font-size:13px;color:var(--acc)}
 </style>
 </head>
 <body>
@@ -247,6 +259,11 @@ function tFaq(el){
   document.querySelectorAll(".fqq.open").forEach(q=>{q.classList.remove("open");q.nextElementSibling.classList.remove("open");});
   if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}
 }
+</script>
+<script>
+function toggleLang(){{var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}}
+document.addEventListener('click',function(e){{var w=document.getElementById('langWrap');if(w&&!w.contains(e.target)){{w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}}});
+document.addEventListener('keydown',function(e){{if(e.key==='Escape'){{var w=document.getElementById('langWrap');if(w){{w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}}}}});
 </script>
 </body>
 </html>
