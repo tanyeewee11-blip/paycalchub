@@ -121,6 +121,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   <link rel="alternate" hreflang="en" href="https://paycalchub.com/salary-calculator/">
   <link rel="alternate" hreflang="es" href="https://paycalchub.com/es/salary-calculator/">
   <link rel="alternate" hreflang="x-default" href="https://paycalchub.com/salary-calculator/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PayCalcHub","item":"https://paycalchub.com/es/"},{"@type":"ListItem","position":2,"name":"Calculadora de Salario","item":"https://paycalchub.com/es/salary-calculator/"}]}</script>
 </head>
 <body>
 <nav><div class="nav-in">
@@ -168,7 +169,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
               </select></div>
             </div>
             <div class="fr"><label>Frecuencia de Pago</label><select id="us-frq" onchange="calc()"><option value="26">Quincenal (cada 2 semanas)</option><option value="24">Dos veces al mes</option><option value="12">Mensual</option><option value="52">Semanal</option></select></div>
-            <div class="fsec"><div class="fsec-lbl">Pre-Tax Deductions <span class="opt">Opcional</span></div>
+            <div class="fsec"><div class="fsec-lbl">Deducciones Pre-Impuesto <span class="opt">Opcional</span></div>
               <div class="fg">
                 <div class="fr"><label>Aportación 401(k)</label><div class="iw hs"><input type="number" id="us-401k" placeholder="0" min="0" max="23500" oninput="calc()"><span class="is">$/yr</span></div></div>
                 <div class="fr"><label>Seguro Médico</label><div class="iw hs"><input type="number" id="us-hlt" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
@@ -211,7 +212,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
             <div class="bd" id="bdown"></div>
             <button class="cpb" id="cpb" onclick="copyRes()">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-              Copy Results
+              Copiar Resultados
             </button>
           </div>
         </div>
@@ -272,7 +273,7 @@ function render(r){
   document.getElementById("legend").innerHTML=lgsl.map(function(x){return'<div class="li"><div class="ld" style="background:'+x.c+'"></div><span class="ll">'+x.l+'</span><span class="lp">'+((x.a/r.gross)*100).toFixed(1)+'%</span></div>';}).join("");
   var h='<div class="br"><span class="bl">Salario Bruto</span><span class="bv">'+fmt(r.gross/d,r.cur)+'</span></div>';
   (r.pt||[]).forEach(function(x){h+='<div class="br pt"><span class="bl">'+x.l+' (pre-tax)</span><span class="bv">-'+fmt(x.a/d,r.cur)+'</span></div>';});
-  if(r.pt&&r.pt.length)h+='<div class="br"><span class="bl">Taxable Income</span><span class="bv">'+fmt(r.ti/d,r.cur)+'</span></div>';
+  if(r.pt&&r.pt.length)h+='<div class="br"><span class="bl">Ingreso Gravable</span><span class="bv">'+fmt(r.ti/d,r.cur)+'</span></div>';
   r.ded.forEach(function(x){h+='<div class="br ded"><span class="bl">'+x.l+'</span><span class="bv">-'+fmt(x.a/d,r.cur)+'</span></div>';});
   h+='<div class="br net"><span class="bl">Salario Neto</span><span class="bv">'+fmt(r.net/d,r.cur)+'</span></div>';
   document.getElementById("bdown").innerHTML=h;
@@ -285,7 +286,7 @@ function copyRes(){
   last.ded.forEach(function(x){lines.push(x.l+": -"+fmt(x.a/d,last.cur));});
   lines.push("Take-Home: "+fmt(last.net/d,last.cur)+" "+LABS[period]);
   lines.push("paycalchub.com/salary-calculator/");
-  navigator.clipboard.writeText(lines.join("\n")).then(function(){var b=document.getElementById("cpb");b.textContent="Copied!";b.classList.add("copied");setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy Results';b.classList.remove("copied");},2000);});
+  navigator.clipboard.writeText(lines.join("\n")).then(function(){var b=document.getElementById("cpb");b.textContent="Copied!";b.classList.add("copied");setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copiar Resultados';b.classList.remove("copied");},2000);});
 }
 function calcUS(){
   var g=gv("us-sal");if(!g)return null;
