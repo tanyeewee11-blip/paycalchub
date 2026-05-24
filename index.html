@@ -61,234 +61,99 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
---bg:#f7f6f3;
---sur:#fff;
---bor:#e4e2dc;
---txt:#1a1915;
---mut:#6b6960;
---acc:#1e6b4a;
---alight:#e8f4ef;
---rad:12px;
---f:"DM Sans",sans-serif;
---mo:"DM Mono",monospace
+--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;
+--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;
+--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace
 }
-
-body{
-font-family:var(--f);
-background:var(--bg);
-color:var(--txt);
-line-height:1.6
-}
-
-a{
-color:inherit;
-text-decoration:none
-}
-
-nav{
-background:var(--sur);
-border-bottom:1px solid var(--bor);
-position:sticky;
-top:0;
-z-index:100
-}
-
-.nav-in{
-max-width:1100px;
-margin:0 auto;
-padding:0 24px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-height:56px
-}
-
-.logo{
-font-weight:600;
-font-size:18px
-}
-
-.logo span{
-color:var(--acc)
-}
-
-.nav-links{
-display:flex;
-gap:24px;
-font-size:14px;
-color:var(--mut)
-}
-
-.hero{
-max-width:1100px;
-margin:0 auto;
-padding:56px 24px 40px
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:48px;
-align-items:center
-}
-
-.badge{
-display:inline-flex;
-align-items:center;
-background:var(--alight);
-color:var(--acc);
-font-size:12px;
-font-weight:600;
-padding:5px 12px;
-border-radius:99px;
-margin-bottom:18px
-}
-
-.hero h1{
-font-size:clamp(2rem,5vw,3rem);
-font-weight:600;
-line-height:1.15;
-letter-spacing:-.03em;
-margin-bottom:16px
-}
-
-.hero h1 em{
-font-style:normal;
-color:var(--acc)
-}
-
-.hero p{
-font-size:16px;
-color:var(--mut);
-margin-bottom:28px;
-max-width:440px
-}
-
-.btn-p{
-padding:12px 24px;
-background:var(--acc);
-color:#fff;
-border-radius:8px;
-font-weight:600
-}
-
-.preview{
-background:var(--sur);
-border:1px solid var(--bor);
-border-radius:16px;
-padding:24px;
-box-shadow:0 8px 32px rgba(0,0,0,.06)
-}
-
-.prev-lbl{
-font-size:12px;
-font-weight:600;
-color:var(--mut);
-text-transform:uppercase;
-margin-bottom:12px
-}
-
-.prev-res{
-background:var(--alight);
-border-radius:10px;
-padding:14px;
-display:flex;
-justify-content:space-between;
-align-items:center
-}
-
-.prev-res-v{
-font-family:var(--mo);
-font-size:22px;
-font-weight:500;
-color:var(--acc)
-}
-
-.sec{
-max-width:1100px;
-margin:0 auto;
-padding:40px 24px 60px
-}
-
-.sec-lbl{
-font-size:12px;
-font-weight:600;
-text-transform:uppercase;
-color:var(--mut);
-margin-bottom:20px
-}
-
-.tgrid{
-display:grid;
-grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
-gap:14px
-}
-
-.tc{
-background:var(--sur);
-border:1px solid var(--bor);
-border-radius:var(--rad);
-padding:22px;
-transition:all .15s
-}
-
-.tc:hover{
-border-color:var(--acc);
-transform:translateY(-2px)
-}
-
-.ti{
-font-size:28px;
-margin-bottom:10px
-}
-
-.tc h2{
-font-size:16px;
-margin-bottom:8px
-}
-
-.tc p{
-font-size:13px;
-color:var(--mut)
-}
-
-footer{
-border-top:1px solid var(--bor);
-background:var(--sur);
-padding:40px 24px
-}
-
-.fi{
-max-width:1100px;
-margin:0 auto;
-text-align:center;
-font-size:13px;
-color:var(--mut)
-}
-
-@media(max-width:800px){
-.hero-grid{
-grid-template-columns:1fr
-}
-.preview{
-display:none
-}
-}
-
+body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}
+.nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}.nav-links a:hover{color:var(--txt)}
 .lang-wrap{position:relative;margin-left:8px}
 .lang-btn{display:flex;align-items:center;gap:6px;background:var(--alight);border:1px solid #c5e0d3;border-radius:8px;padding:5px 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--acc);transition:background .15s}
 .lang-btn:hover{background:#d4eddf}
-.lang-flag{font-size:16px;line-height:1}
-.lang-code{font-size:13px;font-weight:600}
+.lang-flag{font-size:16px;line-height:1}.lang-code{font-size:13px;font-weight:600}
 .lang-chevron{font-size:11px;color:var(--mut);transition:transform .2s}
 .lang-wrap.open .lang-chevron{transform:rotate(180deg)}
 .lang-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:5px;min-width:148px;box-shadow:0 4px 20px rgba(0,0,0,0.08);z-index:200}
 .lang-wrap.open .lang-dropdown{display:block}
 .lang-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;font-size:13px;color:var(--txt);cursor:pointer;transition:background .1s}
-.lang-item:hover{background:var(--bg)}
-.lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
-.lang-item-flag{font-size:16px}
-.lang-item-check{margin-left:auto;font-size:13px;color:var(--acc)}
+.lang-item:hover{background:var(--bg)}.lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
+.lang-item-flag{font-size:16px}.lang-item-check{margin-left:auto;font-size:13px;color:var(--acc)}
+
+/* Hero */
+.hero{max-width:1100px;margin:0 auto;padding:52px 24px 36px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.badge{display:inline-flex;align-items:center;background:var(--alight);color:var(--acc);font-size:12px;font-weight:600;padding:5px 12px;border-radius:99px;margin-bottom:18px;letter-spacing:.03em}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:600;line-height:1.15;letter-spacing:-.03em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero-sub{font-size:15px;color:var(--mut);margin-bottom:24px;max-width:440px;line-height:1.65}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn-p{padding:11px 22px;background:var(--acc);color:#fff;border-radius:8px;font-weight:600;font-size:14px;transition:opacity .15s}
+.btn-p:hover{opacity:.88}
+.btn-s{padding:11px 22px;background:var(--sur);color:var(--txt);border-radius:8px;font-weight:500;font-size:14px;border:1px solid var(--bor);transition:border-color .15s}
+.btn-s:hover{border-color:var(--acc);color:var(--acc)}
+
+/* Preview calculator */
+.preview{background:var(--sur);border:1px solid var(--bor);border-radius:16px;padding:22px;box-shadow:0 6px 24px rgba(0,0,0,.05)}
+.prev-lbl{font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+.prev-input{width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--bor);font-size:15px;font-family:var(--f);outline:none;margin-bottom:10px;background:var(--bg)}
+.prev-input:focus{border-color:var(--acc)}
+.prev-res{background:var(--alight);border-radius:10px;padding:13px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.prev-res-v{font-family:var(--mo);font-size:22px;font-weight:500;color:var(--acc)}
+.prev-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.prev-mini-card{background:var(--bg);border-radius:8px;padding:10px 12px}
+.prev-mini-lbl{font-size:11px;color:var(--mut);margin-bottom:3px}
+.prev-mini-val{font-family:var(--mo);font-size:14px;font-weight:500;color:var(--txt)}
+
+/* Stats bar */
+.stats-bar{max-width:1100px;margin:0 auto 0;padding:0 24px 32px}
+.stats-inner{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px 0;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{text-align:center;border-right:1px solid var(--bor);padding:0 16px}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:var(--mo);font-size:24px;font-weight:500;color:var(--acc);margin-bottom:4px}
+.stat-lbl{font-size:12px;color:var(--mut)}
+
+/* Tools */
+.sec{max-width:1100px;margin:0 auto;padding:0 24px 32px}
+.sec-lbl{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--mut);letter-spacing:.06em;margin-bottom:16px}
+.tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.tc{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:22px;transition:border-color .15s,transform .15s;display:block}
+.tc:hover{border-color:var(--acc);transform:translateY(-2px)}
+.ti{font-size:26px;margin-bottom:10px}
+.tc h2{font-size:15px;font-weight:600;margin-bottom:7px;color:var(--txt)}
+.tc p{font-size:13px;color:var(--mut);line-height:1.6;margin-bottom:12px}
+.tc-tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11px;font-weight:500;padding:3px 9px;border-radius:6px}
+.tag-green{background:var(--alight);color:var(--acc)}
+.tag-gray{background:var(--bg);color:var(--mut);border:1px solid var(--bor)}
+
+/* Popular searches */
+.pop{max-width:1100px;margin:0 auto;padding:0 24px 32px}
+.pop-inner{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px 24px}
+.pop-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pop-link{border:1px solid var(--bor);border-radius:8px;padding:7px 14px;font-size:13px;color:var(--acc);background:var(--sur);transition:background .12s,border-color .12s}
+.pop-link:hover{background:var(--alight);border-color:var(--acc)}
+
+/* Footer */
+footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;padding:28px 24px}
+.fi{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.fi-logo{font-weight:600;font-size:16px}.fi-logo span{color:var(--acc)}
+.fi-nav{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:var(--mut)}
+.fi-nav a:hover{color:var(--acc)}
+.fi-copy{font-size:12px;color:var(--mut)}
+
+@media(max-width:800px){
+.hero-grid,.tgrid{grid-template-columns:1fr}
+.preview{display:none}
+.stats-inner{grid-template-columns:repeat(2,1fr)}
+.stat-item:nth-child(2){border-right:none}
+.stat-item:nth-child(3){border-top:1px solid var(--bor);border-right:1px solid var(--bor)}
+.stat-item:nth-child(4){border-top:1px solid var(--bor)}
+.nav-links{display:none}
+}
 </style>
   <link rel="alternate" hreflang="en" href="https://paycalchub.com/">
   <link rel="alternate" hreflang="es" href="https://paycalchub.com/es/">
@@ -319,9 +184,7 @@ display:none
 }
 </script>
 </head>
-
 <body>
-
 <nav>
 <div class="nav-in">
 <div class="logo">Pay<span>Calc</span>Hub</div>
@@ -353,112 +216,138 @@ display:none
 </div>
 </nav>
 
+<!-- Hero -->
 <div class="hero">
 <div class="hero-grid">
-
 <div>
-<div class="badge">Updated for 2026 Tax Rates</div>
-
-<h1>Smart <em>Finance</em> Calculators</h1>
-
-<p>
-Estimate your take-home pay and loan costs instantly with our free tools.
-No sign-up. 100% Private.
-</p>
-
-<a href="/salary-calculator/" class="btn-p">
-Calculate Salary →
-</a>
+  <div class="badge">Updated for 2026 Tax Rates</div>
+  <h1>Smart <em>Finance</em><br>Calculators</h1>
+  <p class="hero-sub">Estimate take-home pay, mortgage payments, and loan costs instantly. No sign-up. 100% private.</p>
+  <div class="hero-btns">
+    <a href="/salary-calculator/" class="btn-p">Calculate salary &rarr;</a>
+    <a href="/mortgage-calculator/" class="btn-s">Mortgage &rarr;</a>
+  </div>
 </div>
-
 <div class="preview">
-<div class="prev-lbl">Quick Paycheck Check</div>
-
-<div style="margin-bottom:15px">
-<input
-type="number"
-id="qs"
-value="60000"
-style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--bor)"
-oninput="qc()">
+  <div class="prev-lbl">Quick Paycheck Check</div>
+  <input type="number" id="qs" value="60000" class="prev-input" oninput="qc()" placeholder="Annual salary">
+  <div class="prev-res">
+    <span style="font-size:13px;color:var(--acc)">Monthly take-home</span>
+    <span class="prev-res-v" id="qr">$3,867</span>
+  </div>
+  <div class="prev-mini">
+    <div class="prev-mini-card">
+      <div class="prev-mini-lbl">Annual net</div>
+      <div class="prev-mini-val" id="qa">$46,407</div>
+    </div>
+    <div class="prev-mini-card">
+      <div class="prev-mini-lbl">Effective rate</div>
+      <div class="prev-mini-val" id="qe">18.4%</div>
+    </div>
+  </div>
+</div>
+</div>
 </div>
 
-<div class="prev-res">
-<span style="color:var(--acc)">Monthly Take-Home</span>
-<span class="prev-res-v" id="qr">$3,867</span>
+<!-- Stats bar -->
+<div class="stats-bar">
+<div class="stats-inner">
+  <div class="stat-item"><div class="stat-num">50</div><div class="stat-lbl">US states covered</div></div>
+  <div class="stat-item"><div class="stat-num">4</div><div class="stat-lbl">Countries supported</div></div>
+  <div class="stat-item"><div class="stat-num">2026</div><div class="stat-lbl">Tax rates updated</div></div>
+  <div class="stat-item"><div class="stat-num">Free</div><div class="stat-lbl">No sign-up needed</div></div>
 </div>
 </div>
 
-</div>
-</div>
-
+<!-- Tools -->
 <div class="sec">
 <div class="sec-lbl">All Financial Tools</div>
-
 <div class="tgrid">
-
-<a href="/salary-calculator/" class="tc">
-<div class="ti">💰</div>
-<h2>Salary Calculator</h2>
-<p>Full tax breakdown for US, UK, Canada & Australia 2026.</p>
-</a>
-
-<a href="/mortgage-calculator/" class="tc">
-<div class="ti">🏠</div>
-<h2>Mortgage Calculator</h2>
-<p>Estimate monthly payments and amortization schedules.</p>
-</a>
-
-<a href="/loan-calculator/" class="tc">
-<div class="ti">📝</div>
-<h2>Loan Calculator</h2>
-<p>Calculate total interest costs for personal or car loans.</p>
-</a>
-
-<a href="/hourly-to-salary/" class="tc">
-<div class="ti">⏳</div>
-<h2>Hourly to Salary</h2>
-<p>Convert hourly wages to annual or monthly income.</p>
-</a>
-
-<a href="/salary-calculator/" class="tc">
-<div class="ti">📊</div>
-<h2>Tax Estimator</h2>
-<p>See your marginal tax rate for the 2026 fiscal year.</p>
-</a>
-
-<a href="/mortgage-calculator/" class="tc">
-<div class="ti">🏛️</div>
-<h2>Affordability Check</h2>
-<p>Find out how much you can borrow based on your income.</p>
-</a>
-
+  <a href="/salary-calculator/" class="tc">
+    <div class="ti">💰</div>
+    <h2>Salary Calculator</h2>
+    <p>Full tax breakdown for US (all 50 states), UK, Canada & Australia. Includes 401k, health insurance, and super deductions. Updated 2026 tax rates.</p>
+    <div class="tc-tags"><span class="tag tag-green">US · UK · Canada · AU</span><span class="tag tag-gray">All 50 states</span></div>
+  </a>
+  <a href="/mortgage-calculator/" class="tc">
+    <div class="ti">🏠</div>
+    <h2>Mortgage Calculator</h2>
+    <p>Monthly payment, total interest cost, and full amortization schedule. Adjust down payment, loan term, and interest rate instantly.</p>
+    <div class="tc-tags"><span class="tag tag-green">Amortization chart</span><span class="tag tag-gray">Instant results</span></div>
+  </a>
+  <a href="/loan-calculator/" class="tc">
+    <div class="ti">📝</div>
+    <h2>Loan Calculator</h2>
+    <p>Total interest cost, monthly repayment, and repayment schedule for any personal, auto, or student loan. Compare loan terms side by side.</p>
+    <div class="tc-tags"><span class="tag tag-green">Repayment schedule</span><span class="tag tag-gray">Any loan type</span></div>
+  </a>
+  <a href="/hourly-to-salary/" class="tc">
+    <div class="ti">⏱️</div>
+    <h2>Hourly to Salary</h2>
+    <p>Convert any hourly rate to annual, monthly, biweekly, and weekly salary. Supports full-time and part-time schedules with overtime.</p>
+    <div class="tc-tags"><span class="tag tag-green">All pay periods</span><span class="tag tag-gray">Part-time &amp; OT</span></div>
+  </a>
 </div>
 </div>
 
+<!-- Popular searches -->
+<div class="pop">
+<div class="pop-inner">
+  <div class="sec-lbl" style="margin-bottom:0">Popular searches</div>
+  <div class="pop-links">
+    <a href="/hourly-to-salary/20-dollars-an-hour/" class="pop-link">$20 an hour is how much a year?</a>
+    <a href="/hourly-to-salary/25-dollars-an-hour/" class="pop-link">$25 an hour annual salary</a>
+    <a href="/hourly-to-salary/15-dollars-an-hour/" class="pop-link">$15 an hour after taxes</a>
+    <a href="/salary-to-hourly/50k-a-year/" class="pop-link">$50,000 a year is how much an hour?</a>
+    <a href="/salary-to-hourly/60k-a-year/" class="pop-link">$60,000 a year after taxes</a>
+    <a href="/salary-to-hourly/100k-a-year/" class="pop-link">$100k a year hourly rate</a>
+    <a href="/salary-calculator/california/" class="pop-link">California salary calculator</a>
+    <a href="/salary-calculator/texas/" class="pop-link">Texas salary calculator</a>
+    <a href="/salary-calculator/new-york/" class="pop-link">New York salary calculator</a>
+    <a href="/salary-calculator/florida/" class="pop-link">Florida salary calculator</a>
+  </div>
+</div>
+</div>
+
+<!-- Footer -->
 <footer>
 <div class="fi">
-© 2026 PayCalcHub.com |
-Disclaimer: Estimation purposes only. |
-<a href="/privacy/">Privacy Policy</a>
+  <span class="fi-logo">Pay<span>Calc</span>Hub</span>
+  <nav class="fi-nav" aria-label="Footer navigation">
+    <a href="/salary-calculator/">Salary</a>
+    <a href="/mortgage-calculator/">Mortgage</a>
+    <a href="/loan-calculator/">Loan</a>
+    <a href="/hourly-to-salary/">Hourly</a>
+    <a href="/salary-to-hourly/">Salary to Hourly</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/contact/">Contact</a>
+    <a href="/es/">Español</a>
+  </nav>
+  <span class="fi-copy">&copy; 2026 PayCalcHub.com &mdash; For informational purposes only.</span>
 </div>
 </footer>
 
 <script>
 function qc(){
-const g=parseFloat(document.getElementById("qs").value)||0;
-
-if(!g){
-document.getElementById("qr").textContent="--";
-return;
+  var g=parseFloat(document.getElementById('qs').value)||0;
+  if(!g){
+    document.getElementById('qr').textContent='--';
+    document.getElementById('qa').textContent='--';
+    document.getElementById('qe').textContent='--';
+    return;
+  }
+  var std=15000,taxable=Math.max(0,g-std);
+  var br=[[11925,.10],[36550,.12],[54875,.22],[93950,.24],[53225,.32],[375825,.35],[1e9,.37]];
+  var fed=0,rem=taxable;
+  for(var i=0;i<br.length;i++){var c=Math.min(rem,br[i][0]);fed+=c*br[i][1];rem-=c;if(rem<=0)break;}
+  var fica=g*0.0765,net=g-fed-fica;
+  var eff=((fed+fica)/g*100).toFixed(1);
+  document.getElementById('qr').textContent='$'+Math.round(net/12).toLocaleString();
+  document.getElementById('qa').textContent='$'+Math.round(net).toLocaleString();
+  document.getElementById('qe').textContent=eff+'%';
 }
-
-const net=(g-(g*0.23))/12;
-
-document.getElementById("qr").textContent="$"+Math.round(net).toLocaleString();
-}
+qc();
 </script>
-
 
 <script>
 function toggleLang(){
@@ -479,6 +368,7 @@ document.addEventListener('keydown',function(e){
     if(w){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}
   }
 });
+</script>
 </script>
 </body>
 </html>
