@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png">
+<link rel="apple-touch-icon" href="/favicon_512x512.png">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-7723301737736770">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<title>UK Salary Calculator — Take-Home Pay 2026 | PayCalcHub</title>
+<meta name="description" content="Free UK salary calculator. See your take-home pay after income tax and National Insurance for the 2026/27 tax year.">
+<link rel="canonical" href="https://paycalchub.com/salary-calculator/united-kingdom/">
+<meta property="og:title" content="UK Salary Calculator — Take-Home Pay 2026 | PayCalcHub">
+<meta property="og:description" content="Free UK salary calculator. See your take-home pay after income tax and National Insurance for the 2026/27 tax year.">
+<meta property="og:url" content="https://paycalchub.com/salary-calculator/united-kingdom/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://paycalchub.com/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;
+--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;
+--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace
+}
+body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}
+.nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}.nav-links a:hover{color:var(--txt)}
+.lang-wrap{position:relative;margin-left:8px}
+.lang-btn{display:flex;align-items:center;gap:6px;background:var(--alight);border:1px solid #c5e0d3;border-radius:8px;padding:5px 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--acc);transition:background .15s}
+.lang-btn:hover{background:#d4eddf}
+.lang-flag{font-size:16px;line-height:1}.lang-code{font-size:13px;font-weight:600}
+.lang-chevron{font-size:11px;color:var(--mut);transition:transform .2s}
+.lang-wrap.open .lang-chevron{transform:rotate(180deg)}
+.lang-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:5px;min-width:148px;box-shadow:0 4px 20px rgba(0,0,0,0.08);z-index:200}
+.lang-wrap.open .lang-dropdown{display:block}
+.lang-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;font-size:13px;color:var(--txt);cursor:pointer;transition:background .1s}
+.lang-item:hover{background:var(--bg)}.lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
+.lang-item-flag{font-size:16px}.lang-item-check{margin-left:auto;font-size:13px;color:var(--acc)}
+
+/* Hero */
+.hero{max-width:1100px;margin:0 auto;padding:52px 24px 36px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.badge{display:inline-flex;align-items:center;background:var(--alight);color:var(--acc);font-size:12px;font-weight:600;padding:5px 12px;border-radius:99px;margin-bottom:18px;letter-spacing:.03em}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:600;line-height:1.15;letter-spacing:-.03em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero-sub{font-size:15px;color:var(--mut);margin-bottom:24px;max-width:440px;line-height:1.65}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn-p{padding:11px 22px;background:var(--acc);color:#fff;border-radius:8px;font-weight:600;font-size:14px;transition:opacity .15s}
+.btn-p:hover{opacity:.88}
+.btn-s{padding:11px 22px;background:var(--sur);color:var(--txt);border-radius:8px;font-weight:500;font-size:14px;border:1px solid var(--bor);transition:border-color .15s}
+.btn-s:hover{border-color:var(--acc);color:var(--acc)}
+
+/* Preview calculator */
+.preview{background:var(--sur);border:1px solid var(--bor);border-radius:16px;padding:22px;box-shadow:0 6px 24px rgba(0,0,0,.05)}
+.prev-lbl{font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+.prev-input{width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--bor);font-size:15px;font-family:var(--f);outline:none;margin-bottom:10px;background:var(--bg)}
+.prev-input:focus{border-color:var(--acc)}
+.prev-res{background:var(--alight);border-radius:10px;padding:13px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.prev-res-v{font-family:var(--mo);font-size:22px;font-weight:500;color:var(--acc)}
+.prev-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.prev-mini-card{background:var(--bg);border-radius:8px;padding:10px 12px}
+.prev-mini-lbl{font-size:11px;color:var(--mut);margin-bottom:3px}
+.prev-mini-val{font-family:var(--mo);font-size:14px;font-weight:500;color:var(--txt)}
+
+/* Stats bar */
+.stats-bar{max-width:1100px;margin:0 auto 0;padding:0 24px 32px}
+.stats-inner{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px 0;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{text-align:center;border-right:1px solid var(--bor);padding:0 16px}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:var(--mo);font-size:24px;font-weight:500;color:var(--acc);margin-bottom:4px}
+.stat-lbl{font-size:12px;color:var(--mut)}
+
+/* Tools */
+.sec{max-width:1100px;margin:0 auto;padding:0 24px 32px}
+.sec-lbl{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--mut);letter-spacing:.06em;margin-bottom:16px}
+.tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.tc{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:22px;transition:border-color .15s,transform .15s;display:block}
+.tc:hover{border-color:var(--acc);transform:translateY(-2px)}
+.ti{font-size:26px;margin-bottom:10px}
+.tc h2{font-size:15px;font-weight:600;margin-bottom:7px;color:var(--txt)}
+.tc p{font-size:13px;color:var(--mut);line-height:1.6;margin-bottom:12px}
+.tc-tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11px;font-weight:500;padding:3px 9px;border-radius:6px}
+.tag-green{background:var(--alight);color:var(--acc)}
+.tag-gray{background:var(--bg);color:var(--mut);border:1px solid var(--bor)}
+
+/* Popular searches */
+.pop{max-width:1100px;margin:0 auto;padding:0 24px 32px}
+.pop-inner{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px 24px}
+.pop-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pop-link{border:1px solid var(--bor);border-radius:8px;padding:7px 14px;font-size:13px;color:var(--acc);background:var(--sur);transition:background .12s,border-color .12s}
+.pop-link:hover{background:var(--alight);border-color:var(--acc)}
+
+/* Footer */
+footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;padding:28px 24px}
+.fi{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.fi-logo{font-weight:600;font-size:16px}.fi-logo span{color:var(--acc)}
+.fi-nav{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:var(--mut)}
+.fi-nav a:hover{color:var(--acc)}
+.fi-copy{font-size:12px;color:var(--mut)}
+
+@media(max-width:800px){
+.hero-grid,.tgrid{grid-template-columns:1fr}
+.preview{display:none}
+.stats-inner{grid-template-columns:repeat(2,1fr)}
+.stat-item:nth-child(2){border-right:none}
+.stat-item:nth-child(3){border-top:1px solid var(--bor);border-right:1px solid var(--bor)}
+.stat-item:nth-child(4){border-top:1px solid var(--bor)}
+.nav-links{display:none}
+}
+
+.country-hero{background:var(--alight);border-radius:16px;padding:28px;margin-bottom:24px;border:1px solid #c5e0d3;display:flex;align-items:center;gap:20px}
+.country-flag{font-size:48px;line-height:1}
+.country-info h2{font-size:20px;font-weight:600;margin-bottom:4px}
+.country-info p{font-size:14px;color:var(--mut)}
+.country-badge{display:inline-block;background:var(--sur);border:1px solid var(--bor);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:600;color:var(--acc);margin-top:8px}
+</style>
+</head>
+<body>
+<nav><div class="nav-in">
+  <a href="/" class="logo">Pay<span>Calc</span>Hub</a>
+  <div class="nav-links">
+    <a href="/salary-calculator/"class='active'>Salary</a>
+    <a href="/mortgage-calculator/">Mortgage</a>
+    <a href="/loan-calculator/">Loan</a>
+    <a href="/hourly-to-salary/">Hourly</a>
+  </div>
+  <div class="lang-wrap" id="langWrap">
+    <button class="lang-btn" onclick="toggleLang()" aria-label="Select language" aria-expanded="false">
+      <span class="lang-flag">🇺🇸</span><span class="lang-code">EN</span>
+      <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="lang-dropdown">
+      <div class="lang-item active"><span class="lang-item-flag">🇺🇸</span><span>English</span>
+        <svg class="lang-item-check" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5l3.5 3.5 5.5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <a href="/es/" class="lang-item"><span class="lang-item-flag">🇪🇸</span><span>Español</span></a>
+      <a href="/pt/" class="lang-item"><span class="lang-item-flag">🇧🇷</span><span>Português</span></a>
+    </div>
+  </div>
+</div></nav>
+
+<div class="pg">
+  <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; <a href="/salary-calculator/">Salary Calculator</a> &rsaquo; United Kingdom</div>
+  <h1><em>UK</em> Salary Calculator</h1>
+  <p class="sub">Calculate your take-home pay after UK income tax, National Insurance, and other deductions. Updated for 2026/27 tax year.</p>
+
+  <div class="country-hero">
+    <div class="country-flag">🇬🇧</div>
+    <div class="country-info">
+      <h2>United Kingdom Tax Overview</h2>
+      <p>Personal Allowance: £12,570 &nbsp;|&nbsp; Basic rate: 20% (up to £50,270) &nbsp;|&nbsp; Higher rate: 40% (up to £125,140) &nbsp;|&nbsp; Additional rate: 45%</p>
+      <span class="country-badge">National Insurance included</span>
+    </div>
+  </div>
+
+  <div class="lay">
+    <div>
+      <!-- Quick Calculator -->
+      <div class="calc-box">
+        <h3>Quick UK Take-Home Calculator</h3>
+        <div class="crow"><label>Annual Salary (£)</label><input type="number" id="uk-sal" placeholder="e.g. 45000" oninput="calcUK()"></div>
+        <div id="uk-res" class="res-box">
+          <div class="res-amount" id="uk-amt"></div>
+          <div class="res-label">estimated take-home per year</div>
+          <div id="uk-rows"></div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="card">
+        <div class="card-title">📊 UK Take-Home Pay by Salary (2026/27 Tax Year)</div>
+        <table>
+          <tr><th>Salary</th><th>Hourly</th><th>Monthly Net</th><th>Eff. Rate</th></tr>
+          <tr><td>£20,000</td><td>£9.62/hr</td><td>£1,493/mo</td><td>10.4%</td></tr>
+<tr><td>£30,000</td><td>£14.42/hr</td><td>£2,093/mo</td><td>16.3%</td></tr>
+<tr><td>£40,000</td><td>£19.23/hr</td><td>£2,693/mo</td><td>19.2%</td></tr>
+<tr><td>£50,000</td><td>£24.04/hr</td><td>£3,293/mo</td><td>21.0%</td></tr>
+<tr><td>£60,000</td><td>£28.85/hr</td><td>£3,780/mo</td><td>24.4%</td></tr>
+<tr><td>£80,000</td><td>£38.46/hr</td><td>£4,746/mo</td><td>28.8%</td></tr>
+<tr><td>£100,000</td><td>£48.08/hr</td><td>£5,713/mo</td><td>31.4%</td></tr>
+
+        </table>
+      </div>
+
+      <div class="tip">⚠️ Estimates include income tax and National Insurance only. Student loan repayments, pension contributions, and other deductions will further reduce take-home pay. Use the full <a href="/salary-calculator/">Salary Calculator</a> for a detailed UK breakdown.</div>
+
+      <div class="art">
+        <h2>How UK Income Tax Works (2026/27)</h2>
+        <p>In the UK, income tax is calculated on earnings above the Personal Allowance of £12,570. The basic rate of 20% applies on income between £12,571 and £50,270. The higher rate of 40% applies from £50,271 to £125,140, and the additional rate of 45% applies above £125,140.</p>
+        <p>National Insurance (NI) is a separate deduction. For employees, Class 1 NI is charged at 8% on earnings between £12,570 and £50,270, and 2% above £50,270. NI goes toward the state pension and social security benefits.</p>
+        <h2>How Much is £50,000 After Tax in the UK?</h2>
+        <p>A UK employee earning £50,000 per year takes home approximately <strong>£39,520 per year</strong> (£3,293/month) after income tax and National Insurance. The effective combined rate is 21.0%.</p>
+      </div>
+
+      <div class="fqs"><h2>Frequently Asked Questions</h2><div class="fqi"><div class="fqq" onclick="tFaq(this)">How much is £60,000 after tax in the UK? <span class="fqi-icon">+</span></div><div class="fqa">A UK employee earning £60,000 takes home approximately £45,357 per year (£3,780/month) after income tax (£11,432) and National Insurance (£3,211). The effective tax rate is 24.4%.</div></div><div class="fqi"><div class="fqq" onclick="tFaq(this)">What is the UK Personal Allowance for 2026/27? <span class="fqi-icon">+</span></div><div class="fqa">The UK Personal Allowance is £12,570. This is the amount of income you can earn each year without paying income tax. The Personal Allowance is reduced by £1 for every £2 of income above £100,000.</div></div><div class="fqi"><div class="fqq" onclick="tFaq(this)">How is National Insurance calculated in the UK? <span class="fqi-icon">+</span></div><div class="fqa">Class 1 National Insurance is charged at 8% on earnings between £12,570 and £50,270 per year, and 2% on earnings above £50,270. Employees earning below £12,570 pay no National Insurance.</div></div><div class="fqi"><div class="fqq" onclick="tFaq(this)">What is the higher rate tax threshold in the UK? <span class="fqi-icon">+</span></div><div class="fqa">The higher rate (40%) applies to income between £50,271 and £125,140 for the 2026/27 tax year. Income above £125,140 is taxed at the additional rate of 45%.</div></div></div>
+
+      <div style="margin-top:32px">
+        <h2 style="font-size:18px;font-weight:600;margin-bottom:12px">Other Country Calculators</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <a href="/salary-calculator/canada/" class="sal-btn">🇨🇦 Canada</a>
+          <a href="/salary-calculator/australia/" class="sal-btn">🇦🇺 Australia</a>
+          <a href="/salary-calculator/" class="sal-btn">🇺🇸 United States →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sb">
+      <div class="ic">
+        <h3>🇬🇧 UK Tax Facts 2026/27</h3>
+        <ul>
+          <li>Personal Allowance<span>£12,570</span></li>
+          <li>Basic rate (20%)<span>£12,571–£50,270</span></li>
+          <li>Higher rate (40%)<span>£50,271–£125,140</span></li>
+          <li>Additional rate (45%)<span>£125,141+</span></li>
+          <li>NI rate<span>8% / 2%</span></li>
+          <li>Currency<span>GBP (£)</span></li>
+        </ul>
+      </div>
+      <div class="ic">
+        <h3>🔗 More Calculators</h3>
+        <a href="/salary-calculator/">💰 US Salary Calculator</a>
+        <a href="/mortgage-calculator/">🏠 Mortgage Calculator</a>
+        <a href="/loan-calculator/">📝 Loan Calculator</a>
+        <a href="/hourly-to-salary/">⏱ Hourly to Salary</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function calcUK(){
+  var s=parseFloat(document.getElementById('uk-sal').value)||0;
+  if(!s){document.getElementById('uk-res').classList.remove('show');return;}
+  var pa=12570, tax=0;
+  var taxable=Math.max(0,s-pa);
+  if(taxable<=37700) tax=taxable*.20;
+  else if(taxable<=112570) tax=37700*.20+(taxable-37700)*.40;
+  else tax=37700*.20+74870*.40+(taxable-112570)*.45;
+  var ni=s<=12570?0:s<=50270?(s-12570)*.08:(50270-12570)*.08+(s-50270)*.02;
+  var net=s-tax-ni;
+  document.getElementById('uk-amt').textContent='£'+Math.round(net).toLocaleString();
+  var rows=[['Income Tax','-£'+Math.round(tax).toLocaleString()],['National Insurance','-£'+Math.round(ni).toLocaleString()],['Take-Home (Annual)','£'+Math.round(net).toLocaleString()],['Take-Home (Monthly)','£'+Math.round(net/12).toLocaleString()]];
+  document.getElementById('uk-rows').innerHTML=rows.map(function(r){return'<div class="res-row"><span>'+r[0]+'</span><span>'+r[1]+'</span></div>';}).join('');
+  document.getElementById('uk-res').classList.add('show');
+}
+</script>
+<script>
+function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
+</script>
+<footer>
+<div class="fi">
+  <span class="fi-logo">Pay<span>Calc</span>Hub</span>
+  <nav class="fi-nav">
+    <a href="/salary-calculator/">Salary</a>
+    <a href="/mortgage-calculator/">Mortgage</a>
+    <a href="/loan-calculator/">Loan</a>
+    <a href="/hourly-to-salary/">Hourly</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+  <span class="fi-copy">&copy; 2026 PayCalcHub.com &mdash; For informational purposes only.</span>
+</div>
+</footer>
+<script>
+function toggleLang(){var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}
+document.addEventListener('click',function(e){var w=document.getElementById('langWrap');if(w&&!w.contains(e.target)){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var w=document.getElementById('langWrap');if(w){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}});
+</script>
+</body></html>
