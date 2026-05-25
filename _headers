@@ -1,8 +1,44 @@
+# ── HTML pages — cache 2 hours, revalidate ────────────────────────────────
 /*
   X-Robots-Tag: index, follow
+  Cache-Control: public, max-age=7200, stale-while-revalidate=86400
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
 
+# ── Static assets — cache 1 month ────────────────────────────────────────
+/*.svg
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.ico
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.png
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.js
+  Cache-Control: public, max-age=86400
+
+/*.css
+  Cache-Control: public, max-age=86400
+
+# ── SEO files ─────────────────────────────────────────────────────────────
 /sitemap.xml
   Content-Type: application/xml; charset=UTF-8
+  Cache-Control: public, max-age=86400
 
 /robots.txt
   Content-Type: text/plain; charset=UTF-8
+  Cache-Control: public, max-age=86400
+
+/ads.txt
+  Cache-Control: public, max-age=86400
