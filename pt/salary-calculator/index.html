@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png">
+<link rel="apple-touch-icon" href="/favicon_512x512.png">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-7723301737736770">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<title>Calculadora de Salário Líquido 2026 | PayCalcHub</title>
+<meta name="description" content="Calcule seu salário líquido após impostos para os EUA, UK, Canadá e Austrália. Taxas 2026 atualizadas. Inclui 401k e plano de saúde.">
+<link rel="canonical" href="https://paycalchub.com/pt/salary-calculator/">
+<link rel="alternate" hreflang="en" href="https://paycalchub.com/">
+<link rel="alternate" hreflang="es" href="https://paycalchub.com/es/">
+<link rel="alternate" hreflang="pt" href="https://paycalchub.com/pt/salary-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://paycalchub.com/">
+<meta property="og:title" content="Calculadora de Salário Líquido 2026 | PayCalcHub">
+<meta property="og:description" content="Calcule seu salário líquido após impostos para os EUA, UK, Canadá e Austrália. Taxas 2026 atualizadas. Inclui 401k e plano de saúde.">
+<meta property="og:url" content="https://paycalchub.com/pt/salary-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://paycalchub.com/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;
+--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;
+--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace
+}
+body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}
+.nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}.nav-links a:hover{color:var(--txt)}
+.lang-wrap{position:relative;margin-left:8px}
+.lang-btn{display:flex;align-items:center;gap:6px;background:var(--alight);border:1px solid #c5e0d3;border-radius:8px;padding:5px 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--acc);transition:background .15s}
+.lang-btn:hover{background:#d4eddf}
+.lang-flag{font-size:16px;line-height:1}.lang-code{font-size:13px;font-weight:600}
+.lang-chevron{font-size:11px;color:var(--mut);transition:transform .2s}
+.lang-wrap.open .lang-chevron{transform:rotate(180deg)}
+.lang-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:5px;min-width:148px;box-shadow:0 4px 20px rgba(0,0,0,0.08);z-index:200}
+.lang-wrap.open .lang-dropdown{display:block}
+.lang-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;font-size:13px;color:var(--txt);cursor:pointer;transition:background .1s}
+.lang-item:hover{background:var(--bg)}.lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
+.lang-item-flag{font-size:16px}.lang-item-check{margin-left:auto;font-size:13px;color:var(--acc)}
+
+/* Hero */
+.hero{max-width:1100px;margin:0 auto;padding:52px 24px 36px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.badge{display:inline-flex;align-items:center;background:var(--alight);color:var(--acc);font-size:12px;font-weight:600;padding:5px 12px;border-radius:99px;margin-bottom:18px;letter-spacing:.03em}
+.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:600;line-height:1.15;letter-spacing:-.03em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero-sub{font-size:15px;color:var(--mut);margin-bottom:24px;max-width:440px;line-height:1.65}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn-p{padding:11px 22px;background:var(--acc);color:#fff;border-radius:8px;font-weight:600;font-size:14px;transition:opacity .15s}
+.btn-p:hover{opacity:.88}
+.btn-s{padding:11px 22px;background:var(--sur);color:var(--txt);border-radius:8px;font-weight:500;font-size:14px;border:1px solid var(--bor);transition:border-color .15s}
+.btn-s:hover{border-color:var(--acc);color:var(--acc)}
+
+/* Preview calculator */
+.preview{background:var(--sur);border:1px solid var(--bor);border-radius:16px;padding:22px;box-shadow:0 6px 24px rgba(0,0,0,.05)}
+.prev-lbl{font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+.prev-input{width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--bor);font-size:15px;font-family:var(--f);outline:none;margin-bottom:10px;background:var(--bg)}
+.prev-input:focus{border-color:var(--acc)}
+.prev-res{background:var(--alight);border-radius:10px;padding:13px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.prev-res-v{font-family:var(--mo);font-size:22px;font-weight:500;color:var(--acc)}
+.prev-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.prev-mini-card{background:var(--bg);border-radius:8px;padding:10px 12px}
+.prev-mini-lbl{font-size:11px;color:var(--mut);margin-bottom:3px}
+.prev-mini-val{font-family:var(--mo);font-size:14px;font-weight:500;color:var(--txt)}
+
+/* Stats bar */
+.stats-bar{max-width:1100px;margin:0 auto 0;padding:0 24px 32px}
+.stats-inner{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px 0;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{text-align:center;border-right:1px solid var(--bor);padding:0 16px}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:var(--mo);font-size:24px;font-weight:500;color:var(--acc);margin-bottom:4px}
+.stat-lbl{font-size:12px;color:var(--mut)}
+
+/* Tools */
+.sec{max-width:1100px;margin:0 auto;padding:0 24px 32px}
+.sec-lbl{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--mut);letter-spacing:.06em;margin-bottom:16px}
+.tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.tc{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:22px;transition:border-color .15s,transform .15s;display:block}
+.tc:hover{border-color:var(--acc);transform:translateY(-2px)}
+.ti{font-size:26px;margin-bottom:10px}
+.tc h2{font-size:15px;font-weight:600;margin-bottom:7px;color:var(--txt)}
+.tc p{font-size:13px;color:var(--mut);line-height:1.6;margin-bottom:12px}
+.tc-tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11px;font-weight:500;padding:3px 9px;border-radius:6px}
+.tag-green{background:var(--alight);color:var(--acc)}
+.tag-gray{background:var(--bg);color:var(--mut);border:1px solid var(--bor)}
+
+/* Popular searches */
+.pop{max-width:1100px;margin:0 auto;padding:0 24px 32px}
+.pop-inner{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px 24px}
+.pop-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pop-link{border:1px solid var(--bor);border-radius:8px;padding:7px 14px;font-size:13px;color:var(--acc);background:var(--sur);transition:background .12s,border-color .12s}
+.pop-link:hover{background:var(--alight);border-color:var(--acc)}
+
+/* Footer */
+footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;padding:28px 24px}
+.fi{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.fi-logo{font-weight:600;font-size:16px}.fi-logo span{color:var(--acc)}
+.fi-nav{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:var(--mut)}
+.fi-nav a:hover{color:var(--acc)}
+.fi-copy{font-size:12px;color:var(--mut)}
+
+@media(max-width:800px){
+.hero-grid,.tgrid{grid-template-columns:1fr}
+.preview{display:none}
+.stats-inner{grid-template-columns:repeat(2,1fr)}
+.stat-item:nth-child(2){border-right:none}
+.stat-item:nth-child(3){border-top:1px solid var(--bor);border-right:1px solid var(--bor)}
+.stat-item:nth-child(4){border-top:1px solid var(--bor)}
+.nav-links{display:none}
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PayCalcHub","item":"https://paycalchub.com/pt/"},{"@type":"ListItem","position":2,"name":"Calculadora de Salário","item":"https://paycalchub.com/pt/salary-calculator/"}]}</script>
+</head>
+<body>
+<nav><div class="nav-in">
+  <a href="/pt/" class="logo">Pay<span>Calc</span>Hub</a>
+  <div class="nav-links"><a href="/pt/salary-calculator/" class="active">Salário</a><a href="/pt/mortgage-calculator/">Hipoteca</a><a href="/pt/loan-calculator/">Empréstimo</a><a href="/pt/hourly-to-salary/">Por Hora</a></div>
+  <div class="lang-wrap" id="langWrap">
+    <button class="lang-btn" onclick="toggleLang()" aria-label="Selecionar idioma" aria-expanded="false" aria-haspopup="listbox">
+      <span class="lang-flag">🇧🇷</span><span class="lang-code">PT</span>
+      <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="lang-dropdown" role="listbox">
+      <a href="/salary-calculator/" class="lang-item"><span class="lang-item-flag">🇺🇸</span><span>English</span></a>
+      <a href="/es/salary/" class="lang-item"><span class="lang-item-flag">🇪🇸</span><span>Español</span></a>
+      <div class="lang-item active"><span class="lang-item-flag">🇧🇷</span><span>Português</span>
+        <svg class="lang-item-check" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5l3.5 3.5 5.5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+  </div>
+</div>
+</nav>
+<div style="max-width:1100px;margin:16px auto 0;padding:0 24px"></div>
+<div class="pg">
+  <div class="bc"><a href="/pt/">PayCalcHub</a> &rsaquo; Calculadora de Salário</div>
+  <h1>Calculadora de <em>Salário</em> Grátis</h1>
+  <p class="sub">Calcular your exact take-home pay after taxes, 401(k) and health insurance. All 50 US states. Updated for 2026.</p>
+  <div class="lay">
+    <div>
+      <div class="card">
+        <div class="tabs" role="tablist">
+          <div class="tab active" role="tab" onclick="setC('us',this)">&#127482;&#127480; United States</div>
+          <div class="tab" role="tab" onclick="setC('uk',this)">&#127468;&#127463; United Kingdom</div>
+          <div class="tab" role="tab" onclick="setC('ca',this)">&#127464;&#127462; Canada</div>
+          <div class="tab" role="tab" onclick="setC('au',this)">&#127462;&#127482; Australia</div>
+        </div>
+        <div class="cb">
+          <div id="f-us" class="fp">
+            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">$</span><input type="number" id="us-sal" placeholder="60,000" oninput="calc()"></div></div>
+            <div class="fg">
+              <div class="fr"><label>Estado Civil Fiscal</label><select id="us-fil" onchange="calc()"><option value="single">Solteiro/a</option><option value="married">Casado (declaração conjunta)</option><option value="hoh">Head of Household</option></select></div>
+              <div class="fr"><label>State</label><select id="us-st" onchange="calc()">
+                <option value="0">Alaska - 0%</option><option value="5.0">Alabama - 5.0%</option><option value="2.5">Arizona - 2.5%</option><option value="4.7">Arkansas - 4.7%</option><option value="9.3">California - 9.3%</option><option value="4.4">Colorado - 4.4%</option><option value="6.99">Connecticut - 6.99%</option><option value="0">Delaware - 0%</option><option value="0">Florida - 0%</option><option value="5.49">Georgia - 5.49%</option><option value="8.25">Hawaii - 8.25%</option><option value="5.8">Idaho - 5.8%</option><option value="4.95">Illinois - 4.95%</option><option value="3.05">Indiana - 3.05%</option><option value="6.0">Iowa - 6.0%</option><option value="5.7">Kansas - 5.7%</option><option value="4.5">Kentucky - 4.5%</option><option value="4.25">Louisiana - 4.25%</option><option value="7.15">Maine - 7.15%</option><option value="5.75">Maryland - 5.75%</option><option value="5.0">Massachusetts - 5.0%</option><option value="4.25">Michigan - 4.25%</option><option value="9.85">Minnesota - 9.85%</option><option value="5.0">Mississippi - 5.0%</option><option value="4.95">Missouri - 4.95%</option><option value="5.9">Montana - 5.9%</option><option value="3.99">Nebraska - 3.99%</option><option value="0">Nevada - 0%</option><option value="0">New Hampshire - 0%</option><option value="10.75">New Jersey - 10.75%</option><option value="5.9">New Mexico - 5.9%</option><option value="6.85">New York - 6.85%</option><option value="4.75">North Carolina - 4.75%</option><option value="2.5">North Dakota - 2.5%</option><option value="3.99">Ohio - 3.99%</option><option value="4.75">Oklahoma - 4.75%</option><option value="9.9">Oregon - 9.9%</option><option value="3.07">Pennsylvania - 3.07%</option><option value="4.75">Rhode Island - 4.75%</option><option value="6.5">South Carolina - 6.5%</option><option value="0">South Dakota - 0%</option><option value="0">Tennessee - 0%</option><option value="0">Texas - 0%</option><option value="4.85">Utah - 4.85%</option><option value="8.75">Vermont - 8.75%</option><option value="5.75">Virginia - 5.75%</option><option value="0">Washington - 0%</option><option value="6.5">West Virginia - 6.5%</option><option value="7.65">Wisconsin - 7.65%</option><option value="0">Wyoming - 0%</option>
+              </select></div>
+            </div>
+            <div class="fr"><label>Frequência de Pagamento</label><select id="us-frq" onchange="calc()"><option value="26">Quinzenal (a cada 2 semanas)</option><option value="24">Duas vezes por mês</option><option value="12">Monthly</option><option value="52">Weekly</option></select></div>
+            <div class="fsec"><div class="fsec-lbl">Deduções Pré-Imposto <span class="opt">Optional</span></div>
+              <div class="fg">
+                <div class="fr"><label>Contribuição 401(k)</label><div class="iw hs"><input type="number" id="us-401k" placeholder="0" min="0" max="23500" oninput="calc()"><span class="is">$/yr</span></div></div>
+                <div class="fr"><label>Plano de Saúde</label><div class="iw hs"><input type="number" id="us-hlt" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+                <div class="fr"><label>Contribuição HSA</label><div class="iw hs"><input type="number" id="us-hsa" placeholder="0" min="0" max="4300" oninput="calc()"><span class="is">$/yr</span></div></div>
+                <div class="fr"><label>Other Pre-Tax</label><div class="iw hs"><input type="number" id="us-oth" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div id="f-uk" class="fp" style="display:none">
+            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">&#163;</span><input type="number" id="uk-sal" placeholder="35,000" oninput="calc()"></div></div>
+            <div class="fr"><label>Tax Code</label><select id="uk-tc" onchange="calc()"><option value="1257">1257L - Standard (12,570 allowance)</option><option value="0">BR - Basic Rate, no allowance</option><option value="500">500L - Reduced allowance</option></select></div>
+            <div class="fr"><label>Student Loan</label><select id="uk-sl" onchange="calc()"><option value="none">None</option><option value="plan1">Plan 1 - before Sep 2012</option><option value="plan2">Plan 2 - after Sep 2012</option><option value="plan4">Plan 4 - Scotland</option></select></div>
+            <div class="fsec"><div class="fsec-lbl">Pension <span class="opt">Optional</span></div>
+              <div class="fr"><label>Pension Contribution</label><div class="iw hs"><input type="number" id="uk-pen" placeholder="0" oninput="calc()"><span class="is">&#163;/yr</span></div></div>
+            </div>
+          </div>
+          <div id="f-ca" class="fp" style="display:none">
+            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">$</span><input type="number" id="ca-sal" placeholder="65,000" oninput="calc()"></div></div>
+            <div class="fr"><label>Province</label><select id="ca-pv" onchange="calc()"><option value="on">Ontario</option><option value="bc">British Columbia</option><option value="ab">Alberta</option><option value="qc">Quebec</option><option value="mb">Manitoba</option><option value="sk">Saskatchewan</option><option value="ns">Nova Scotia</option><option value="nb">New Brunswick</option><option value="nl">Newfoundland</option><option value="pe">PEI</option></select></div>
+            <div class="fsec"><div class="fsec-lbl">RRSP <span class="opt">Optional</span></div>
+              <div class="fr"><label>RRSP Contribution</label><div class="iw hs"><input type="number" id="ca-rr" placeholder="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+            </div>
+          </div>
+          <div id="f-au" class="fp" style="display:none">
+            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">$</span><input type="number" id="au-sal" placeholder="80,000" oninput="calc()"></div></div>
+            <div class="fr"><label>Medicare Levy</label><select id="au-med" onchange="calc()"><option value="yes">Include Medicare Levy (2%)</option><option value="no">Exempt from Medicare Levy</option></select></div>
+            <div class="fsec"><div class="fsec-lbl">Super <span class="opt">Optional</span></div>
+              <div class="fr"><label>Extra Super Contribution</label><div class="iw hs"><input type="number" id="au-sup" placeholder="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+            </div>
+          </div>
+          <div class="res" id="res">
+            <div class="ptog" role="group">
+              <button class="pb active" onclick="setPer('annual',this)">Annual</button>
+              <button class="pb" onclick="setPer('monthly',this)">Monthly</button>
+              <button class="pb" onclick="setPer('biweekly',this)">Bi-weekly</button>
+              <button class="pb" onclick="setPer('weekly',this)">Weekly</button>
+            </div>
+            <div class="rh"><div class="rl">Estimated Take-Home Pay</div><div class="ra" id="r-amt">$0</div><div class="rp" id="r-per">per year</div><div class="re" id="r-eff"></div></div>
+            <div class="cr"><canvas id="pie" width="120" height="120" style="flex-shrink:0" aria-label="Tax breakdown pie chart"></canvas><div class="pl" id="legend"></div></div>
+            <div class="bd" id="bdown"></div>
+            <button class="cpb" id="cpb" onclick="copyRes()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Copiar Resultados
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="art">
+        <h2>How Does a 401(k) Reduce Your Taxes?</h2>
+        <p>A traditional 401(k) is a pre-tax deduction - it lowers your taxable income before federal and state taxes are calculated. If you earn $70,000 and contribute $7,000, you only pay income tax on $63,000. The 2026 limit is $23,500 (under 50) or $31,000 (age 50+).</p>
+        <p>Note: 401(k) contributions still have Social Security (6.2%) and Medicare (1.45%) applied. Health insurance premiums paid through a Section 125 plan are exempt from all payroll taxes, making them even more tax-efficient.</p>
+        <h2>2026 US Federal Tax Brackets</h2>
+        <p>10% up to $11,925 - 12% on $11,926-$48,475 - 22% on $48,476-$103,350 - 24% on $103,351-$197,300 - 32% on $197,301-$250,525 - 35% on $250,526-$626,350 - 37% above $626,350. Standard deduction: $15,000 (single), $30,000 (married jointly).</p>
+      </div>
+      <div class="fqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">How does a 401(k) reduce my taxes? <span class="fqi-icon">+</span></div><div class="fqa">Traditional 401(k) contributions reduce your taxable income dollar for dollar. If you earn $60,000 and contribute $6,000, you only pay income tax on $54,000. This lowers your federal and state income tax but not Social Security or Medicare taxes. The 2026 limit is $23,500 under 50.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">Which states have no income tax? <span class="fqi-icon">+</span></div><div class="fqa">Nine states have no income tax in 2026: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. Residents keep significantly more of their paycheck compared to high-tax states like California (9.3%) or New Jersey (10.75%).</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is marginal vs effective tax rate? <span class="fqi-icon">+</span></div><div class="fqa">Your marginal tax rate is the rate on your last dollar of income (e.g. 22%). Your effective tax rate is total tax divided by gross income - always lower because progressive brackets apply incrementally. This calculator shows both.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">How is take-home pay calculated? <span class="fqi-icon">+</span></div><div class="fqa">Take-home = Gross salary minus pre-tax deductions (401k, health, HSA) minus federal income tax minus Social Security (6.2%) minus Medicare (1.45%) minus state income tax. Pre-tax deductions reduce taxable income before income tax is applied.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">Why does my actual paycheck differ? <span class="fqi-icon">+</span></div><div class="fqa">Your paycheck may differ due to local city taxes, additional W-4 withholdings, Roth 401(k) contributions (post-tax), or employer-specific payroll calculations. This calculator provides a reliable baseline estimate based on standard federal and state rates.</div></div>
+      </div>
+    </div>
+    <div class="sb">
+      
+      <div class="ic"><h3>&#127482;&#127480; 2026 Federal Brackets</h3><ul><li>Up to $11,925<span>10%</span></li><li>$11,926-$48,475<span>12%</span></li><li>$48,476-$103,350<span>22%</span></li><li>$103,351-$197,300<span>24%</span></li><li>$197,301-$250,525<span>32%</span></li><li>$250,526-$626,350<span>35%</span></li><li>Acima de $626.350<span>37%</span></li></ul></div>
+      <div class="ic"><h3>&#128161; Limites de Contribuição 2026</h3><ul><li>401(k) menores de 50<span>$23,500</span></li><li>401(k) maiores de 50<span>$31,000</span></li><li>HSA individual<span>$4,300</span></li><li>HSA familiar<span>$8,550</span></li><li>Limite IRA<span>$7,000</span></li></ul></div>
+      <div class="tip"><strong>&#128161; Dica fiscal:</strong> Contribuir ao máximo no 401(k) pode reduzir sua conta fiscal federal entre $2.350 e $8.695, dependendo da sua faixa.</div>
+      <div class="ic"><h3>&#128279; Mais Calculadoras</h3><a href="/pt/mortgage-calculator/">&#127968; Calculadora de Hipoteca</a><a href="/pt/loan-calculator/">&#128203; Calculadora de Empréstimo</a><a href="/pt/hourly-to-salary/">&#9201; Hora para Salário</a></div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="st-section">
+  <h2>Calculadora de Salário by State</h2>
+  <p class="st-sub">Select your state for a personalized take-home pay estimate including state income tax.</p>
+  <div class="st-grid"><a href="/salary-calculator/alabama/" class="st-card"><div class="st-name">Alabama</div><span class="st-badge tax">⚡ 5.0%</span></a>
+<a href="/salary-calculator/alaska/" class="st-card"><div class="st-name">Alaska</div><span class="st-badge no-tax">✅ No tax</span></a>
+<a href="/salary-calculator/arizona/" class="st-card"><div class="st-name">Arizona</div><span class="st-badge tax">⚡ 2.5%</span></a>
+<a href="/salary-calculator/arkansas/" class="st-card"><div class="st-name">Arkansas</div><span class="st-badge tax">⚡ 4.7%</span></a>
+<a href="/salary-calculator/california/" class="st-card"><div class="st-name">California</div><span class="st-badge tax">⚡ 9.3%</span></a>
+<a href="/salary-calculator/colorado/" class="st-card"><div class="st-name">Colorado</div><span class="st-badge tax">⚡ 4.4%</span></a>
+<a href="/salary-calculator/connecticut/" class="st-card"><div class="st-name">Connecticut</div><span class="st-badge tax">⚡ 6.99%</span></a>
+<a href="/salary-calculator/delaware/" class="st-card"><div class="st-name">Delaware</div><span class="st-badge tax">⚡ 6.6%</span></a>
+<a href="/salary-calculator/florida/" class="st-card"><div class="st-name">Florida</div><span class="st-badge no-tax">✅ No tax</span></a>
+<a href="/salary-calculator/georgia/" class="st-card"><div class="st-name">Georgia</div><span class="st-badge tax">⚡ 5.49%</span></a>
+<a href="/salary-calculator/hawaii/" class="st-card"><div class="st-name">Hawaii</div><span class="st-badge tax">⚡ 8.25%</span></a>
+<a href="/salary-calculator/idaho/" class="st-card"><div class="st-name">Idaho</div><span class="st-badge tax">⚡ 5.8%</span></a>
+<a href="/salary-calculator/illinois/" class="st-card"><div class="st-name">Illinois</div><span class="st-badge tax">⚡ 4.95%</span></a>
+<a href="/salary-calculator/indiana/" class="st-card"><div class="st-name">Indiana</div><span class="st-badge tax">⚡ 3.05%</span></a>
+<a href="/salary-calculator/iowa/" class="st-card"><div class="st-name">Iowa</div><span class="st-badge tax">⚡ 6.0%</span></a>
+<a href="/salary-calculator/kansas/" class="st-card"><div class="st-name">Kansas</div><span class="st-badge tax">⚡ 5.7%</span></a>
+<a href="/salary-calculator/kentucky/" class="st-card"><div class="st-name">Kentucky</div><span class="st-badge tax">⚡ 4.5%</span></a>
+<a href="/salary-calculator/louisiana/" class="st-card"><div class="st-name">Louisiana</div><span class="st-badge tax">⚡ 4.25%</span></a>
+<a href="/salary-calculator/maine/" class="st-card"><div class="st-name">Maine</div><span class="st-badge tax">⚡ 7.15%</span></a>
+<a href="/salary-calculator/maryland/" class="st-card"><div class="st-name">Maryland</div><span class="st-badge tax">⚡ 5.75%</span></a>
+<a href="/salary-calculator/massachusetts/" class="st-card"><div class="st-name">Massachusetts</div><span class="st-badge tax">⚡ 5.0%</span></a>
+<a href="/salary-calculator/michigan/" class="st-card"><div class="st-name">Michigan</div><span class="st-badge tax">⚡ 4.25%</span></a>
+<a href="/salary-calculator/minnesota/" class="st-card"><div class="st-name">Minnesota</div><span class="st-badge tax">⚡ 9.85%</span></a>
+<a href="/salary-calculator/mississippi/" class="st-card"><div class="st-name">Mississippi</div><span class="st-badge tax">⚡ 5.0%</span></a>
+<a href="/salary-calculator/missouri/" class="st-card"><div class="st-name">Missouri</div><span class="st-badge tax">⚡ 4.95%</span></a>
+<a href="/salary-calculator/montana/" class="st-card"><div class="st-name">Montana</div><span class="st-badge tax">⚡ 5.9%</span></a>
+<a href="/salary-calculator/nebraska/" class="st-card"><div class="st-name">Nebraska</div><span class="st-badge tax">⚡ 3.99%</span></a>
+<a href="/salary-calculator/nevada/" class="st-card"><div class="st-name">Nevada</div><span class="st-badge no-tax">✅ No tax</span></a>
+<a href="/salary-calculator/new-hampshire/" class="st-card"><div class="st-name">New Hampshire</div><span class="st-badge no-tax">✅ No tax</span></a>
+<a href="/salary-calculator/new-jersey/" class="st-card"><div class="st-name">New Jersey</div><span class="st-badge tax">⚡ 10.75%</span></a>
+<a href="/salary-calculator/new-mexico/" class="st-card"><div class="st-name">New Mexico</div><span class="st-badge tax">⚡ 5.9%</span></a>
+<a href="/salary-calculator/new-york/" class="st-card"><div class="st-name">New York</div><span class="st-badge tax">⚡ 6.85%</span></a>
+<a href="/salary-calculator/north-carolina/" class="st-card"><div class="st-name">North Carolina</div><span class="st-badge tax">⚡ 4.75%</span></a>
+<a href="/salary-calculator/north-dakota/" class="st-card"><div class="st-name">North Dakota</div><span class="st-badge tax">⚡ 2.5%</span></a>
+<a href="/salary-calculator/ohio/" class="st-card"><div class="st-name">Ohio</div><span class="st-badge tax">⚡ 3.99%</span></a>
+<a href="/salary-calculator/oklahoma/" class="st-card"><div class="st-name">Oklahoma</div><span class="st-badge tax">⚡ 4.75%</span></a>
+<a href="/salary-calculator/oregon/" class="st-card"><div class="st-name">Oregon</div><span class="st-badge tax">⚡ 9.9%</span></a>
+<a href="/salary-calculator/pennsylvania/" class="st-card"><div class="st-name">Pennsylvania</div><span class="st-badge tax">⚡ 3.07%</span></a>
+<a href="/salary-calculator/rhode-island/" class="st-card"><div class="st-name">Rhode Island</div><span class="st-badge tax">⚡ 4.75%</span></a>
+<a href="/salary-calculator/south-carolina/" class="st-card"><div class="st-name">South Carolina</div><span class="st-badge tax">⚡ 6.5%</span></a>
+<a href="/salary-calculator/south-dakota/" class="st-card"><div class="st-name">South Dakota</div><span class="st-badge no-tax">✅ No tax</span></a>
+<a href="/salary-calculator/tennessee/" class="st-card"><div class="st-name">Tennessee</div><span class="st-badge no-tax">✅ No tax</span></a>
+<a href="/salary-calculator/texas/" class="st-card"><div class="st-name">Texas</div><span class="st-badge no-tax">✅ No tax</span></a>
+<a href="/salary-calculator/utah/" class="st-card"><div class="st-name">Utah</div><span class="st-badge tax">⚡ 4.85%</span></a>
+<a href="/salary-calculator/vermont/" class="st-card"><div class="st-name">Vermont</div><span class="st-badge tax">⚡ 8.75%</span></a>
+<a href="/salary-calculator/virginia/" class="st-card"><div class="st-name">Virginia</div><span class="st-badge tax">⚡ 5.75%</span></a>
+<a href="/salary-calculator/washington/" class="st-card"><div class="st-name">Washington</div><span class="st-badge no-tax">✅ No tax</span></a>
+<a href="/salary-calculator/west-virginia/" class="st-card"><div class="st-name">West Virginia</div><span class="st-badge tax">⚡ 6.5%</span></a>
+<a href="/salary-calculator/wisconsin/" class="st-card"><div class="st-name">Wisconsin</div><span class="st-badge tax">⚡ 7.65%</span></a>
+<a href="/salary-calculator/wyoming/" class="st-card"><div class="st-name">Wyoming</div><span class="st-badge no-tax">✅ No tax</span></a>
+</div>
+</div>
+</div>
+<footer>
+<div class="fi">
+  <span class="fi-logo">Pay<span>Calc</span>Hub</span>
+  <nav class="fi-nav" aria-label="Navegação rodapé">
+    <a href="/pt/salary-calculator/">Salário</a>
+    <a href="/pt/mortgage-calculator/">Hipoteca</a>
+    <a href="/pt/loan-calculator/">Empréstimo</a>
+    <a href="/pt/hourly-to-salary/">Por Hora</a>
+    <a href="/privacy/">Privacidade</a>
+    <a href="/contact/">Contato</a>
+    <a href="/">English</a>
+  </nav>
+  <span class="fi-copy">&copy; 2026 PayCalcHub.com &mdash; Apenas para fins informativos.</span>
+</div>
+</footer>
+<script>
+var country="us",period="annual",last=null;
+var COLS=["#1e6b4a","#ef4444","#f59e0b","#3b82f6","#8b5cf6","#ec4899","#14b8a6"];
+var DIVS={annual:1,monthly:12,biweekly:26,weekly:52};
+var LABS={annual:"per year",monthly:"per month",biweekly:"every 2 weeks",weekly:"per week"};
+function setC(c,el){country=c;document.querySelectorAll(".tab").forEach(function(t){t.classList.remove("active");});el.classList.add("active");["us","uk","ca","au"].forEach(function(id){document.getElementById("f-"+id).style.display=id===c?"block":"none";});document.getElementById("res").classList.remove("show");last=null;calc();}
+function setPer(p,el){period=p;document.querySelectorAll(".pb").forEach(function(b){b.classList.remove("active");});el.classList.add("active");if(last)render(last);}
+function gv(id){return parseFloat(document.getElementById(id).value)||0;}
+function gs(id){return document.getElementById(id).value;}
+function calc(){var r=null;try{if(country==="us")r=calcUS();else if(country==="uk")r=calcUK();else if(country==="ca")r=calcCA();else r=calcAU();}catch(e){}if(!r||!r.gross){document.getElementById("res").classList.remove("show");return;}last=r;render(r);document.getElementById("res").classList.add("show");}
+function fmt(n,c){return c+Math.round(n).toLocaleString("en-US");}
+function render(r){
+  var d=DIVS[period];
+  document.getElementById("r-amt").textContent=fmt(r.net/d,r.cur);
+  document.getElementById("r-per").textContent=LABS[period];
+  var totalTax=r.ded.reduce(function(s,x){return s+x.a;},0);
+  var eff=((totalTax/r.gross)*100).toFixed(1);
+  var marg=r.marg?" - Marginal: "+r.marg+"%":"";
+  document.getElementById("r-eff").textContent="Effective tax rate: "+eff+"%"+marg;
+  var cv=document.getElementById("pie"),ctx=cv.getContext("2d");
+  ctx.clearRect(0,0,120,120);
+  var sl=(r.pt||[]).map(function(x,i){return{a:x.a,c:COLS[i+4]||"#94a3b8"};}).concat(r.ded.map(function(x,i){return{a:x.a,c:COLS[i+1]||"#94a3b8"};})).concat([{a:r.net,c:COLS[0]}]);
+  var st=-Math.PI/2;
+  sl.forEach(function(s){var ag=(s.a/r.gross)*2*Math.PI;ctx.beginPath();ctx.moveTo(60,60);ctx.arc(60,60,54,st,st+ag);ctx.closePath();ctx.fillStyle=s.c;ctx.fill();st+=ag;});
+  ctx.beginPath();ctx.arc(60,60,30,0,2*Math.PI);ctx.fillStyle="#fff";ctx.fill();
+  var lgsl=[{l:"Take-home",a:r.net,c:COLS[0]}].concat((r.pt||[]).map(function(x,i){return{l:x.l,a:x.a,c:COLS[i+4]||"#94a3b8"};})).concat(r.ded.map(function(x,i){return{l:x.l,a:x.a,c:COLS[i+1]||"#94a3b8"};}));
+  document.getElementById("legend").innerHTML=lgsl.map(function(x){return'<div class="li"><div class="ld" style="background:'+x.c+'"></div><span class="ll">'+x.l+'</span><span class="lp">'+((x.a/r.gross)*100).toFixed(1)+'%</span></div>';}).join("");
+  var h='<div class="br"><span class="bl">Gross Salary</span><span class="bv">'+fmt(r.gross/d,r.cur)+'</span></div>';
+  (r.pt||[]).forEach(function(x){h+='<div class="br pt"><span class="bl">'+x.l+' (pre-tax)</span><span class="bv">-'+fmt(x.a/d,r.cur)+'</span></div>';});
+  if(r.pt&&r.pt.length)h+='<div class="br"><span class="bl">Taxable Income</span><span class="bv">'+fmt(r.ti/d,r.cur)+'</span></div>';
+  r.ded.forEach(function(x){h+='<div class="br ded"><span class="bl">'+x.l+'</span><span class="bv">-'+fmt(x.a/d,r.cur)+'</span></div>';});
+  h+='<div class="br net"><span class="bl">Take-Home Pay</span><span class="bv">'+fmt(r.net/d,r.cur)+'</span></div>';
+  document.getElementById("bdown").innerHTML=h;
+}
+function copyRes(){
+  if(!last)return;
+  var d=DIVS[period];
+  var lines=["PayCalcHub Salary Estimate","Gross: "+fmt(last.gross/d,last.cur)+" "+LABS[period]];
+  (last.pt||[]).forEach(function(x){lines.push(x.l+": -"+fmt(x.a/d,last.cur));});
+  last.ded.forEach(function(x){lines.push(x.l+": -"+fmt(x.a/d,last.cur));});
+  lines.push("Take-Home: "+fmt(last.net/d,last.cur)+" "+LABS[period]);
+  lines.push("paycalchub.com/salary-calculator/");
+  navigator.clipboard.writeText(lines.join("\n")).then(function(){var b=document.getElementById("cpb");b.textContent="Copied!";b.classList.add("copied");setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copiar Resultados';b.classList.remove("copied");},2000);});
+}
+function calcUS(){
+  var g=gv("us-sal");if(!g)return null;
+  var fil=gs("us-fil"),stRate=parseFloat(gs("us-st"))||0;
+  var k=Math.min(gv("us-401k"),23500),hl=gv("us-hlt"),hsa=Math.min(gv("us-hsa"),4300),oth=gv("us-oth");
+  var totalPT=k+hl+hsa+oth;
+  var std=fil==="married"?30000:fil==="hoh"?22500:15000;
+  var bS=[[11925,.10],[48475,.12],[103350,.22],[197300,.24],[250525,.32],[626350,.35],[1e9,.37]];
+  var bM=[[23850,.10],[96950,.12],[206700,.22],[394600,.24],[501050,.32],[751600,.35],[1e9,.37]];
+  var bH=[[17000,.10],[64850,.12],[103350,.22],[197300,.24],[250500,.32],[626350,.35],[1e9,.37]];
+  var br=fil==="married"?bM:fil==="hoh"?bH:bS;
+  var ti=Math.max(0,g-totalPT),taxable=Math.max(0,ti-std);
+  var fed=0,prev=0,marg=10;
+  for(var i=0;i<br.length;i++){var lim=br[i][0],rate=br[i][1];if(taxable<=prev)break;fed+=(Math.min(taxable,lim)-prev)*rate;if(taxable>prev)marg=rate*100;prev=lim;}
+  var pb=Math.max(0,g-hl-hsa-oth);
+  var ss=Math.min(pb,176100)*0.062;
+  var med=pb*0.0145+(pb>200000?(pb-200000)*0.009:0);
+  var st=ti*(stRate/100);
+  var pt=[];
+  if(k>0)pt.push({l:"Contribuição 401(k)",a:k});
+  if(hl>0)pt.push({l:"Plano de Saúde",a:hl});
+  if(hsa>0)pt.push({l:"Contribuição HSA",a:hsa});
+  if(oth>0)pt.push({l:"Other Pre-Tax",a:oth});
+  var ded=[{l:"Federal Income Tax",a:fed},{l:"Social Security (6.2%)",a:ss},{l:"Medicare (1.45%)",a:med}];
+  if(st>0)ded.push({l:"State Income Tax",a:st});
+  return{gross:g,ti:ti,net:g-totalPT-fed-ss-med-st,cur:"$",pt:pt,ded:ded,marg:marg};
+}
+function calcUK(){
+  var g=gv("uk-sal");if(!g)return null;
+  var pen=gv("uk-pen");
+  var pa=parseInt(gs("uk-tc"))*10;
+  var tg=Math.max(0,g-pen);
+  if(tg>100000)pa=Math.max(0,pa-Math.floor((tg-100000)/2));
+  var tx=Math.max(0,tg-pa);
+  var it=Math.min(tx,50270-12570)*.20+Math.max(0,Math.min(tx-(50270-12570),125140-50270))*.40+Math.max(0,tx-(125140-12570))*.45;
+  var ni=0;if(g>12570){ni=Math.min(g,50270)*.08-12570*.08;if(g>50270)ni+=(g-50270)*.02;}
+  var pl=gs("uk-sl"),th={plan1:24990,plan2:27295,plan4:31395};
+  var sl=pl!=="none"&&g>th[pl]?(g-th[pl])*.09:0;
+  var pt=pen>0?[{l:"Pension Contribution",a:pen}]:[];
+  var ded=[{l:"Income Tax",a:it},{l:"National Insurance",a:ni}];
+  if(sl>0)ded.push({l:"Student Loan ("+pl.toUpperCase()+")",a:sl});
+  return{gross:g,ti:tg,net:g-pen-it-ni-sl,cur:"£",pt:pt,ded:ded};
+}
+function calcCA(){
+  var g=gv("ca-sal");if(!g)return null;
+  var rr=gv("ca-rr"),tg=Math.max(0,g-rr);
+  var fb=[[57375,.15],[114750,.205],[158519,.26],[220000,.29],[1e9,.33]];
+  var bp=15705,tx=Math.max(0,tg-bp),fed=0,prev=0;
+  for(var i=0;i<fb.length;i++){var lim=fb[i][0],rate=fb[i][1];if(tx<=prev)break;fed+=(Math.min(tx,lim)-prev)*rate;prev=lim;}
+  fed=Math.max(0,fed-bp*.15);
+  var pr={on:.0505,bc:.0506,ab:.10,qc:.14,mb:.108,sk:.105,ns:.0879,nb:.094,nl:.087,pe:.098};
+  var pv=gs("ca-pv"),pvt=tg*(pr[pv]||.08);
+  var cpp=Math.min(Math.max(0,g-3500),68500)*.0595,ei=Math.min(g,63200)*.0166;
+  var pt=rr>0?[{l:"RRSP Contribution",a:rr}]:[];
+  var ded=[{l:"Federal Income Tax",a:fed},{l:"Provincial Tax",a:pvt},{l:"CPP (5.95%)",a:cpp},{l:"EI Premiums (1.66%)",a:ei}];
+  return{gross:g,ti:tg,net:g-rr-fed-pvt-cpp-ei,cur:"$",pt:pt,ded:ded};
+}
+function calcAU(){
+  var g=gv("au-sal");if(!g)return null;
+  var sup=gv("au-sup");
+  var br=[[18200,0],[45000,.19],[135000,.325],[190000,.37],[1e9,.45]];
+  var tax=0,prev=0;
+  for(var i=0;i<br.length;i++){var lim=br[i][0],rate=br[i][1];if(g<=prev)break;tax+=(Math.min(g,lim)-prev)*rate;prev=lim;}
+  var lito=g<=37500?700:g<=45000?700-(g-37500)*.05:g<=66667?325-(g-45000)*.015:0;
+  tax=Math.max(0,tax-lito);
+  var med=gs("au-med")==="yes"?g*.02:0;
+  var pt=sup>0?[{l:"Extra Super",a:sup}]:[];
+  var ded=[{l:"Income Tax",a:tax}];
+  if(med>0)ded.push({l:"Medicare Levy (2%)",a:med});
+  return{gross:g,ti:g,net:g-sup-tax-med,cur:"$",pt:pt,ded:ded};
+}
+function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
+window.addEventListener("load",function(){document.getElementById("us-sal").value=60000;calc();});
+</script>
+<script>
+function toggleLang(){{var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}}
+document.addEventListener('click',function(e){{var w=document.getElementById('langWrap');if(w&&!w.contains(e.target)){{w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}}});
+document.addEventListener('keydown',function(e){{if(e.key==='Escape'){{var w=document.getElementById('langWrap');if(w){{w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}}}}});
+</script>
+</body>
+</html>
