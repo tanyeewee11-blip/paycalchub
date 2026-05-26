@@ -158,7 +158,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
         </div>
         <div class="cb">
           <div id="f-us" class="fp">
-            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">$</span><input type="number" id="us-sal" placeholder="60,000" oninput="calc()"></div></div>
+            <div class="fr"><label>Annual Salário Bruto</label><div class="iw hp"><span class="ip">$</span><input type="number" id="us-sal" placeholder="60,000" oninput="calc()"></div></div>
             <div class="fg">
               <div class="fr"><label>Estado Civil Fiscal</label><select id="us-fil" onchange="calc()"><option value="single">Solteiro/a</option><option value="married">Casado (declaração conjunta)</option><option value="hoh">Head of Household</option></select></div>
               <div class="fr"><label>State</label><select id="us-st" onchange="calc()">
@@ -176,7 +176,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
             </div>
           </div>
           <div id="f-uk" class="fp" style="display:none">
-            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">&#163;</span><input type="number" id="uk-sal" placeholder="35,000" oninput="calc()"></div></div>
+            <div class="fr"><label>Annual Salário Bruto</label><div class="iw hp"><span class="ip">&#163;</span><input type="number" id="uk-sal" placeholder="35,000" oninput="calc()"></div></div>
             <div class="fr"><label>Tax Code</label><select id="uk-tc" onchange="calc()"><option value="1257">1257L - Standard (12,570 allowance)</option><option value="0">BR - Basic Rate, no allowance</option><option value="500">500L - Reduced allowance</option></select></div>
             <div class="fr"><label>Student Loan</label><select id="uk-sl" onchange="calc()"><option value="none">None</option><option value="plan1">Plan 1 - before Sep 2012</option><option value="plan2">Plan 2 - after Sep 2012</option><option value="plan4">Plan 4 - Scotland</option></select></div>
             <div class="fsec"><div class="fsec-lbl">Pension <span class="opt">Optional</span></div>
@@ -184,14 +184,14 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
             </div>
           </div>
           <div id="f-ca" class="fp" style="display:none">
-            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">$</span><input type="number" id="ca-sal" placeholder="65,000" oninput="calc()"></div></div>
+            <div class="fr"><label>Annual Salário Bruto</label><div class="iw hp"><span class="ip">$</span><input type="number" id="ca-sal" placeholder="65,000" oninput="calc()"></div></div>
             <div class="fr"><label>Province</label><select id="ca-pv" onchange="calc()"><option value="on">Ontario</option><option value="bc">British Columbia</option><option value="ab">Alberta</option><option value="qc">Quebec</option><option value="mb">Manitoba</option><option value="sk">Saskatchewan</option><option value="ns">Nova Scotia</option><option value="nb">New Brunswick</option><option value="nl">Newfoundland</option><option value="pe">PEI</option></select></div>
             <div class="fsec"><div class="fsec-lbl">RRSP <span class="opt">Optional</span></div>
               <div class="fr"><label>RRSP Contribution</label><div class="iw hs"><input type="number" id="ca-rr" placeholder="0" oninput="calc()"><span class="is">$/yr</span></div></div>
             </div>
           </div>
           <div id="f-au" class="fp" style="display:none">
-            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">$</span><input type="number" id="au-sal" placeholder="80,000" oninput="calc()"></div></div>
+            <div class="fr"><label>Annual Salário Bruto</label><div class="iw hp"><span class="ip">$</span><input type="number" id="au-sal" placeholder="80,000" oninput="calc()"></div></div>
             <div class="fr"><label>Medicare Levy</label><select id="au-med" onchange="calc()"><option value="yes">Include Medicare Levy (2%)</option><option value="no">Exempt from Medicare Levy</option></select></div>
             <div class="fsec"><div class="fsec-lbl">Super <span class="opt">Optional</span></div>
               <div class="fr"><label>Extra Super Contribution</label><div class="iw hs"><input type="number" id="au-sup" placeholder="0" oninput="calc()"><span class="is">$/yr</span></div></div>
@@ -204,7 +204,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
               <button class="pb" onclick="setPer('biweekly',this)">Bi-weekly</button>
               <button class="pb" onclick="setPer('weekly',this)">Weekly</button>
             </div>
-            <div class="rh"><div class="rl">Estimated Take-Home Pay</div><div class="ra" id="r-amt">$0</div><div class="rp" id="r-per">per year</div><div class="re" id="r-eff"></div></div>
+            <div class="rh"><div class="rl">Estimated Salário Líquido</div><div class="ra" id="r-amt">$0</div><div class="rp" id="r-per">per year</div><div class="re" id="r-eff"></div></div>
             <div class="cr"><canvas id="pie" width="120" height="120" style="flex-shrink:0" aria-label="Tax breakdown pie chart"></canvas><div class="pl" id="legend"></div></div>
             <div class="bd" id="bdown"></div>
             <button class="cpb" id="cpb" onclick="copyRes()">
@@ -339,11 +339,11 @@ function render(r){
   ctx.beginPath();ctx.arc(60,60,30,0,2*Math.PI);ctx.fillStyle="#fff";ctx.fill();
   var lgsl=[{l:"Take-home",a:r.net,c:COLS[0]}].concat((r.pt||[]).map(function(x,i){return{l:x.l,a:x.a,c:COLS[i+4]||"#94a3b8"};})).concat(r.ded.map(function(x,i){return{l:x.l,a:x.a,c:COLS[i+1]||"#94a3b8"};}));
   document.getElementById("legend").innerHTML=lgsl.map(function(x){return'<div class="li"><div class="ld" style="background:'+x.c+'"></div><span class="ll">'+x.l+'</span><span class="lp">'+((x.a/r.gross)*100).toFixed(1)+'%</span></div>';}).join("");
-  var h='<div class="br"><span class="bl">Gross Salary</span><span class="bv">'+fmt(r.gross/d,r.cur)+'</span></div>';
+  var h='<div class="br"><span class="bl">Salário Bruto</span><span class="bv">'+fmt(r.gross/d,r.cur)+'</span></div>';
   (r.pt||[]).forEach(function(x){h+='<div class="br pt"><span class="bl">'+x.l+' (pre-tax)</span><span class="bv">-'+fmt(x.a/d,r.cur)+'</span></div>';});
   if(r.pt&&r.pt.length)h+='<div class="br"><span class="bl">Taxable Income</span><span class="bv">'+fmt(r.ti/d,r.cur)+'</span></div>';
   r.ded.forEach(function(x){h+='<div class="br ded"><span class="bl">'+x.l+'</span><span class="bv">-'+fmt(x.a/d,r.cur)+'</span></div>';});
-  h+='<div class="br net"><span class="bl">Take-Home Pay</span><span class="bv">'+fmt(r.net/d,r.cur)+'</span></div>';
+  h+='<div class="br net"><span class="bl">Salário Líquido</span><span class="bv">'+fmt(r.net/d,r.cur)+'</span></div>';
   document.getElementById("bdown").innerHTML=h;
 }
 function copyRes(){

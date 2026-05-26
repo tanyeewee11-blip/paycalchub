@@ -122,6 +122,12 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
 .lang-item-flag{font-size:16px}
 .lang-item-check{margin-left:auto;font-size:13px;color:var(--acc)}
+
+.country-card{background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:20px 16px;display:block;text-align:center;transition:border-color .15s,box-shadow .15s;text-decoration:none}
+.country-card:hover{border-color:var(--acc);box-shadow:0 2px 12px rgba(30,107,74,.08)}
+.country-card-flag{font-size:36px;margin-bottom:10px;line-height:1}
+.country-card-name{font-size:14px;font-weight:600;color:var(--txt);margin-bottom:4px}
+.country-card-sub{font-size:12px;color:var(--mut)}
 </style>
   <meta property="og:image" content="https://paycalchub.com/og-image.svg">
   
@@ -238,30 +244,29 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
     <div class="sb">
       
       <div class="ic"><h3>&#127482;&#127480; 2026 Federal Brackets</h3><ul><li>Up to $11,925<span>10%</span></li><li>$11,926-$48,475<span>12%</span></li><li>$48,476-$103,350<span>22%</span></li><li>$103,351-$197,300<span>24%</span></li><li>$197,301-$250,525<span>32%</span></li><li>$250,526-$626,350<span>35%</span></li><li>Over $626,350<span>37%</span></li></ul></div>
-      <div class="ic"><h3>&#128161; 2026 Contribution Limits</h3><ul><li>401(k) under 50<span>$23,500</span></li><li>401(k) age 50+<span>$31,000</span></li><li>HSA single<span>$4,300</span></li><li>HSA family<span>$8,550</span></li><li>IRA limit<span>$7,000</span></li></ul></div>
-      <div class="tip"><strong>&#128161; Tax tip:</strong> Contributing max 401(k) can reduce your federal tax bill by $2,350-$8,695 depending on your bracket.</div>
-      <div class="ic"><h3>&#128279; More Calculators</h3><a href="/mortgage-calculator/">&#127968; Mortgage Calculator</a><a href="/loan-calculator/">&#128203; Loan Calculator</a><a href="/hourly-to-salary/">&#9201; Hourly to Salary</a></div>
-      
-    </div>
+      <div class="ic"><h3>&#128161; 2026 Contribution Limits</h3><ul><li>401(k) under 50<span>$23,500</span></li><li>401(k) age 50+<span>$31,000</span></li><li>HSA single<span>$4,300</span></li><li>HSA family<span>$8,550</span></li><<div class="st-section" style="margin-top:40px">
+  <h2>Salary Calculator by Country</h2>
+  <p class="st-sub">Select your country for a take-home pay estimate including local taxes.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px;max-width:700px">
+    <a href="/salary-calculator/united-kingdom/" class="country-card">
+      <div class="country-card-flag">🇬🇧</div>
+      <div class="country-card-name">United Kingdom</div>
+      <div class="country-card-sub">Income tax + NI</div>
+    </a>
+    <a href="/salary-calculator/canada/" class="country-card">
+      <div class="country-card-flag">🇨🇦</div>
+      <div class="country-card-name">Canada</div>
+      <div class="country-card-sub">Federal + CPP + EI</div>
+    </a>
+    <a href="/salary-calculator/australia/" class="country-card">
+      <div class="country-card-flag">🇦🇺</div>
+      <div class="country-card-name">Australia</div>
+      <div class="country-card-sub">Income tax + Medicare</div>
+    </a>
   </div>
 </div>
 
-
-<div class="st-section" style="margin-top:32px">
-  <h2>Salary Calculator by Country</h2>
-  <p class="st-sub">Select your country for a tailored take-home pay estimate including local taxes.</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:16px">
-    <a href="/salary-calculator/united-kingdom/" style="background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:16px;display:block;transition:border-color .15s" onmouseover="this.style.borderColor='var(--acc)'" onmouseout="this.style.borderColor='var(--bor)'">
-      <div style="font-size:28px;margin-bottom:8px">🇬🇧</div>
-      <div style="font-size:14px;font-weight:600;color:var(--txt)">United Kingdom</div>
-      <div style="font-size:12px;color:var(--mut);margin-top:3px">Income tax + NI</div>
-    </a>
-    <a href="/salary-calculator/canada/" style="background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:16px;display:block;transition:border-color .15s" onmouseover="this.style.borderColor='var(--acc)'" onmouseout="this.style.borderColor='var(--bor)'">
-      <div style="font-size:28px;margin-bottom:8px">🇨🇦</div>
-      <div style="font-size:14px;font-weight:600;color:var(--txt)">Canada</div>
-      <div style="font-size:12px;color:var(--mut);margin-top:3px">Federal tax + CPP + EI</div>
-    </a>
-    <a href="/salary-calculator/australia/" style="background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:16px;display:block;transition:border-color .15s" onmouseover="this.style.borderColor='var(--acc)'" onmouseout="this.style.borderColor='var(--bor)'">
+<div class="st-section">le="background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:16px;display:block;transition:border-color .15s" onmouseover="this.style.borderColor='var(--acc)'" onmouseout="this.style.borderColor='var(--bor)'">
       <div style="font-size:28px;margin-bottom:8px">🇦🇺</div>
       <div style="font-size:14px;font-weight:600;color:var(--txt)">Australia</div>
       <div style="font-size:12px;color:var(--mut);margin-top:3px">Income tax + Medicare</div>
