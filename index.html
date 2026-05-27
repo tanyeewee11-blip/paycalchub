@@ -184,6 +184,12 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
   ]
 }
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"How accurate are these calculators?","acceptedAnswer":{"@type":"Answer","text":"All calculators use the latest 2026 federal tax brackets, FICA rates, and standard deductions. Results are estimates based on your filing status and income."}},
+  {"@type":"Question","name":"Which salary calculator is best for me?","acceptedAnswer":{"@type":"Answer","text":"If you earn an hourly wage, use the Hourly to Salary Calculator. For annual salary take-home pay, use the Salary Calculator covering all 50 US states plus UK, Canada, and Australia."}},
+  {"@type":"Question","name":"How much house can I afford on my salary?","acceptedAnswer":{"@type":"Answer","text":"The standard rule limits housing costs to 28% of gross monthly income. See our full affordability guide at paycalchub.com/how-much-house-can-i-afford/ for your exact salary."}},
+  {"@type":"Question","name":"Are these calculators free?","acceptedAnswer":{"@type":"Answer","text":"Yes — all PayCalcHub calculators are completely free. No sign-up, no account, and no data is stored or sent to our servers."}}
+]}</script>
 </head>
 <body>
 <nav>
@@ -321,6 +327,33 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
 </div>
 
 <!-- Footer -->
+
+<!-- FAQ Section -->
+<div class="sec" style="padding-bottom:16px">
+  <div class="sec-lbl">Common Questions</div>
+  <div class="fqs" style="margin-top:0">
+    <div class="fqi">
+      <div class="fqq" onclick="tFaq(this)">How accurate are these calculators? <span class="fqi-icon">+</span></div>
+      <div class="fqa">All calculators use the latest 2026 federal tax brackets, FICA rates, and standard deductions. State tax rates are updated annually. Results are estimates — your actual take-home pay will depend on your specific deductions, filing status, and employer benefits. Use our <a href="/salary-calculator/" style="color:var(--acc)">Salary Calculator</a> for a detailed breakdown including 401k and health insurance.</div>
+    </div>
+    <div class="fqi">
+      <div class="fqq" onclick="tFaq(this)">Which salary calculator is best for me? <span class="fqi-icon">+</span></div>
+      <div class="fqa">If you earn an hourly wage, start with the <a href="/hourly-to-salary/" style="color:var(--acc)">Hourly to Salary Calculator</a>. If you have an annual salary and want to know your take-home pay after taxes, use the <a href="/salary-calculator/" style="color:var(--acc)">Salary Calculator</a> — it covers all 50 US states plus UK, Canada, and Australia.</div>
+    </div>
+    <div class="fqi">
+      <div class="fqq" onclick="tFaq(this)">How much house can I afford on my salary? <span class="fqi-icon">+</span></div>
+      <div class="fqa">The standard rule is that housing costs should not exceed 28% of your gross monthly income. On a $60,000 salary, that is about $1,400/month for mortgage, taxes, and insurance — supporting a home price around $185,000–$230,000 depending on your down payment and rate. See our full <a href="/how-much-house-can-i-afford/" style="color:var(--acc)">affordability guide</a> for your exact salary.</div>
+    </div>
+    <div class="fqi">
+      <div class="fqq" onclick="tFaq(this)">What is the difference between gross and net salary? <span class="fqi-icon">+</span></div>
+      <div class="fqa">Gross salary is your total pay before any deductions. Net salary (take-home pay) is what you receive after federal income tax, FICA (Social Security + Medicare), state tax, and any voluntary deductions like 401k or health insurance are subtracted. For most Americans, net pay is 70–85% of gross pay depending on income level and state.</div>
+    </div>
+    <div class="fqi">
+      <div class="fqq" onclick="tFaq(this)">Are these calculators free to use? <span class="fqi-icon">+</span></div>
+      <div class="fqa">Yes — all PayCalcHub calculators are completely free. No sign-up, no account, no data stored. Your calculations stay in your browser and are never sent to our servers.</div>
+    </div>
+  </div>
+</div>
 <footer>
 <div class="fi">
   <span class="fi-logo">Pay<span>Calc</span>Hub</span>
@@ -330,11 +363,13 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
     <a href="/loan-calculator/">Loan</a>
     <a href="/hourly-to-salary/">Hourly</a>
     <a href="/salary-to-hourly/">Salary to Hourly</a>
+    <a href="/how-much-house-can-i-afford/">Affordability</a>
+    <a href="/mortgage-per-month/">Mortgage Guide</a>
+    <a href="/about/">About</a>
     <a href="/privacy/">Privacy</a>
     <a href="/contact/">Contact</a>
-    <a href="/es/">Español</a>
   </nav>
-  <span class="fi-copy">&copy; 2026 PayCalcHub.com &mdash; For informational purposes only.</span>
+  <span class="fi-copy">&copy; 2026 PayCalcHub.com &mdash; For informational purposes only. Not financial advice.</span>
 </div>
 </footer>
 
@@ -380,6 +415,9 @@ document.addEventListener('keydown',function(e){
   }
 });
 </script>
+</script>
+<script>
+function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
 </script>
 </body>
 </html>
