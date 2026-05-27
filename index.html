@@ -138,12 +138,10 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .pop-link:hover{background:var(--alight);border-color:var(--acc)}
 
 /* Footer */
-footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;padding:28px 24px}
-.fi{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
-.fi-logo{font-weight:600;font-size:16px}.fi-logo span{color:var(--acc)}
-.fi-nav{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:var(--mut)}
+.fi-logo span{color:var(--acc)}
+
 .fi-nav a:hover{color:var(--acc)}
-.fi-copy{font-size:12px;color:var(--mut)}
+
 
 @media(max-width:800px){
 .hero-grid,.tgrid{grid-template-columns:1fr}
@@ -154,6 +152,31 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
 .stat-item:nth-child(4){border-top:1px solid var(--bor)}
 .nav-links{display:none}
 }
+
+
+.fi-logo span{color:var(--acc)}
+
+.fi-nav a{color:var(--mut);text-decoration:none;transition:color .15s}
+.fi-nav a:hover{color:var(--acc)}
+
+@media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}}
+
+footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
+.fi{max-width:1100px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:16px 32px;align-items:center}
+.fi-logo{font-weight:600;font-size:16px;color:var(--txt);text-decoration:none;white-space:nowrap}
+.fi-logo span{color:var(--acc)}
+.fi-nav{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;justify-content:center}
+.fi-nav a{color:var(--mut);text-decoration:none;transition:color .15s}
+.fi-nav a:hover{color:var(--acc)}
+.fi-copy{font-size:12px;color:var(--mut);white-space:nowrap;text-align:right}
+@media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-copy{text-align:center}.fi-nav{justify-content:center}}
+.fqi{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);overflow:hidden}
+.fqq{padding:15px 18px;font-size:14px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}
+.fqq:hover{background:var(--bg)}
+.fqi-icon{font-size:18px;color:var(--mut);flex-shrink:0;transition:transform .2s;font-weight:300}
+.fqq.open .fqi-icon{transform:rotate(45deg)}
+.fqa{font-size:14px;color:var(--mut);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .2s;padding:0 18px}
+.fqa.open{max-height:400px;padding:0 18px 16px}
 </style>
   <link rel="alternate" hreflang="en" href="https://paycalchub.com/">
   <link rel="alternate" hreflang="es" href="https://paycalchub.com/es/">
@@ -329,47 +352,69 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
 <!-- Footer -->
 
 <!-- FAQ Section -->
-<div class="sec" style="padding-bottom:16px">
+<div class="sec">
   <div class="sec-lbl">Common Questions</div>
-  <div class="fqs" style="margin-top:0">
+  <div style="margin-top:16px;display:flex;flex-direction:column;gap:8px">
+
     <div class="fqi">
-      <div class="fqq" onclick="tFaq(this)">How accurate are these calculators? <span class="fqi-icon">+</span></div>
-      <div class="fqa">All calculators use the latest 2026 federal tax brackets, FICA rates, and standard deductions. State tax rates are updated annually. Results are estimates — your actual take-home pay will depend on your specific deductions, filing status, and employer benefits. Use our <a href="/salary-calculator/" style="color:var(--acc)">Salary Calculator</a> for a detailed breakdown including 401k and health insurance.</div>
+      <div class="fqq" onclick="tFaq(this)">
+        <span>How accurate are these calculators?</span>
+        <span class="fqi-icon">+</span>
+      </div>
+      <div class="fqa">All calculators use the latest 2026 federal tax brackets, FICA rates, and standard deductions. State tax rates are updated annually. Results are estimates — your actual take-home pay depends on your specific deductions, filing status, and employer benefits. Use our <a href="/salary-calculator/" style="color:var(--acc)">Salary Calculator</a> for a detailed breakdown including 401k and health insurance.</div>
     </div>
+
     <div class="fqi">
-      <div class="fqq" onclick="tFaq(this)">Which salary calculator is best for me? <span class="fqi-icon">+</span></div>
-      <div class="fqa">If you earn an hourly wage, start with the <a href="/hourly-to-salary/" style="color:var(--acc)">Hourly to Salary Calculator</a>. If you have an annual salary and want to know your take-home pay after taxes, use the <a href="/salary-calculator/" style="color:var(--acc)">Salary Calculator</a> — it covers all 50 US states plus UK, Canada, and Australia.</div>
+      <div class="fqq" onclick="tFaq(this)">
+        <span>Which calculator should I start with?</span>
+        <span class="fqi-icon">+</span>
+      </div>
+      <div class="fqa">If you earn an hourly wage, start with the <a href="/hourly-to-salary/" style="color:var(--acc)">Hourly to Salary Calculator</a>. For an annual salary take-home estimate, use the <a href="/salary-calculator/" style="color:var(--acc)">Salary Calculator</a> — it covers all 50 US states plus UK, Canada, and Australia. For homebuying, try the <a href="/how-much-house-can-i-afford/" style="color:var(--acc)">Affordability Calculator</a>.</div>
     </div>
+
     <div class="fqi">
-      <div class="fqq" onclick="tFaq(this)">How much house can I afford on my salary? <span class="fqi-icon">+</span></div>
-      <div class="fqa">The standard rule is that housing costs should not exceed 28% of your gross monthly income. On a $60,000 salary, that is about $1,400/month for mortgage, taxes, and insurance — supporting a home price around $185,000–$230,000 depending on your down payment and rate. See our full <a href="/how-much-house-can-i-afford/" style="color:var(--acc)">affordability guide</a> for your exact salary.</div>
+      <div class="fqq" onclick="tFaq(this)">
+        <span>How much house can I afford on my salary?</span>
+        <span class="fqi-icon">+</span>
+      </div>
+      <div class="fqa">The standard rule is that housing costs should not exceed 28% of your gross monthly income. On a $60,000 salary that is about $1,400/month — supporting a home price around $184,000–$276,000 depending on your down payment and rate. See our full <a href="/how-much-house-can-i-afford/" style="color:var(--acc)">affordability guide</a> for your exact salary.</div>
     </div>
+
     <div class="fqi">
-      <div class="fqq" onclick="tFaq(this)">What is the difference between gross and net salary? <span class="fqi-icon">+</span></div>
-      <div class="fqa">Gross salary is your total pay before any deductions. Net salary (take-home pay) is what you receive after federal income tax, FICA (Social Security + Medicare), state tax, and any voluntary deductions like 401k or health insurance are subtracted. For most Americans, net pay is 70–85% of gross pay depending on income level and state.</div>
+      <div class="fqq" onclick="tFaq(this)">
+        <span>What is the difference between gross and net salary?</span>
+        <span class="fqi-icon">+</span>
+      </div>
+      <div class="fqa">Gross salary is your total pay before any deductions. Net salary (take-home pay) is what you receive after federal income tax, FICA (Social Security + Medicare), state income tax, and voluntary deductions like 401k or health insurance. For most Americans, net pay is 70–85% of gross pay depending on income level and state.</div>
     </div>
+
     <div class="fqi">
-      <div class="fqq" onclick="tFaq(this)">Are these calculators free to use? <span class="fqi-icon">+</span></div>
-      <div class="fqa">Yes — all PayCalcHub calculators are completely free. No sign-up, no account, no data stored. Your calculations stay in your browser and are never sent to our servers.</div>
+      <div class="fqq" onclick="tFaq(this)">
+        <span>Are these calculators free?</span>
+        <span class="fqi-icon">+</span>
+      </div>
+      <div class="fqa">Yes — every PayCalcHub calculator is completely free. No sign-up, no account required, and no data is ever stored or sent to our servers. All calculations happen entirely in your browser.</div>
     </div>
+
   </div>
 </div>
-<footer>
+
+<footer><footer>
 <div class="fi">
-  <span class="fi-logo">Pay<span>Calc</span>Hub</span>
+  <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>
   <nav class="fi-nav" aria-label="Footer navigation">
     <a href="/salary-calculator/">Salary</a>
     <a href="/mortgage-calculator/">Mortgage</a>
     <a href="/loan-calculator/">Loan</a>
     <a href="/hourly-to-salary/">Hourly</a>
-    <a href="/salary-to-hourly/">Salary to Hourly</a>
+    <a href="/salary-to-hourly/">Salary &rarr; Hourly</a>
     <a href="/how-much-house-can-i-afford/">Affordability</a>
     <a href="/mortgage-per-month/">Mortgage Guide</a>
     <a href="/about/">About</a>
     <a href="/privacy/">Privacy</a>
     <a href="/contact/">Contact</a>
   </nav>
-  <span class="fi-copy">&copy; 2026 PayCalcHub.com &mdash; For informational purposes only. Not financial advice.</span>
+  <span class="fi-copy">&copy; 2026 PayCalcHub.com &mdash; For informational purposes only.</span>
 </div>
 </footer>
 

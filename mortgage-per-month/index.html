@@ -90,12 +90,10 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .pop-link:hover{background:var(--alight);border-color:var(--acc)}
 
 /* Footer */
-footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;padding:28px 24px}
-.fi{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
-.fi-logo{font-weight:600;font-size:16px}.fi-logo span{color:var(--acc)}
-.fi-nav{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:var(--mut)}
+.fi-logo span{color:var(--acc)}
+
 .fi-nav a:hover{color:var(--acc)}
-.fi-copy{font-size:12px;color:var(--mut)}
+
 
 @media(max-width:800px){
 .hero-grid,.tgrid{grid-template-columns:1fr}
@@ -112,6 +110,16 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
 .sal-card:hover{border-color:var(--acc)}
 .sal-amount{font-family:var(--mo);font-size:20px;font-weight:500;color:var(--acc);margin-bottom:4px}
 .sal-hourly{font-size:12px;color:var(--mut)}
+
+footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
+.fi{max-width:1100px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:16px 32px;align-items:center}
+.fi-logo{font-weight:600;font-size:16px;color:var(--txt);text-decoration:none;white-space:nowrap}
+.fi-logo span{color:var(--acc)}
+.fi-nav{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;justify-content:center}
+.fi-nav a{color:var(--mut);text-decoration:none;transition:color .15s}
+.fi-nav a:hover{color:var(--acc)}
+.fi-copy{font-size:12px;color:var(--mut);white-space:nowrap;text-align:right}
+@media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-copy{text-align:center}.fi-nav{justify-content:center}}
 </style>
 </head>
 <body>
@@ -150,11 +158,18 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
 </div>
 <footer>
 <div class="fi">
-  <span class="fi-logo">Pay<span>Calc</span>Hub</span>
-  <nav class="fi-nav">
-    <a href="/mortgage-calculator/">Mortgage</a><a href="/salary-calculator/">Salary</a>
+  <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>
+  <nav class="fi-nav" aria-label="Footer navigation">
+    <a href="/salary-calculator/">Salary</a>
+    <a href="/mortgage-calculator/">Mortgage</a>
+    <a href="/loan-calculator/">Loan</a>
+    <a href="/hourly-to-salary/">Hourly</a>
+    <a href="/salary-to-hourly/">Salary &rarr; Hourly</a>
     <a href="/how-much-house-can-i-afford/">Affordability</a>
-    <a href="/privacy/">Privacy</a><a href="/contact/">Contact</a>
+    <a href="/mortgage-per-month/">Mortgage Guide</a>
+    <a href="/about/">About</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/contact/">Contact</a>
   </nav>
   <span class="fi-copy">&copy; 2026 PayCalcHub.com &mdash; For informational purposes only.</span>
 </div>

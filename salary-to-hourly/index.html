@@ -26,9 +26,7 @@ h1{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:600;letter-spacing:-.02em;marg
 .sal-card:hover{border-color:var(--acc);box-shadow:0 2px 10px rgba(30,107,74,.08)}
 .sal-amount{font-family:var(--mo);font-size:18px;font-weight:500;color:var(--acc);margin-bottom:4px}
 .sal-hourly{font-size:13px;color:var(--mut)}
-footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
-.fi{max-width:1100px;margin:0 auto;padding:24px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:13px;color:var(--mut)}
-.fl{display:flex;gap:20px}
+
 @media(max-width:600px){.nav-links{display:none}}
 .lang-wrap{position:relative;margin-left:8px}
 .lang-btn{display:flex;align-items:center;gap:6px;background:var(--alight);border:1px solid #c5e0d3;border-radius:8px;padding:5px 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--acc)}
@@ -37,6 +35,16 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .lang-wrap.open .lang-dropdown{display:block}
 .lang-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;font-size:13px;color:var(--txt);text-decoration:none}
 .lang-item:hover{background:var(--bg)}.lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
+
+footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
+.fi{max-width:1100px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:16px 32px;align-items:center}
+.fi-logo{font-weight:600;font-size:16px;color:var(--txt);text-decoration:none;white-space:nowrap}
+.fi-logo span{color:var(--acc)}
+.fi-nav{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;justify-content:center}
+.fi-nav a{color:var(--mut);text-decoration:none;transition:color .15s}
+.fi-nav a:hover{color:var(--acc)}
+.fi-copy{font-size:12px;color:var(--mut);white-space:nowrap;text-align:right}
+@media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-copy{text-align:center}.fi-nav{justify-content:center}}
 </style>
 </head>
 <body>
@@ -53,10 +61,24 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   <p class="sub">Select a salary to see the full hourly, monthly, and 2026 after-tax breakdown.</p>
   <div class="grid"><a href="/salary-to-hourly/25k-a-year/" class="sal-card"><div class="sal-amount">$25,000/yr</div><div class="sal-hourly">$12.02/hr</div></a><a href="/salary-to-hourly/30k-a-year/" class="sal-card"><div class="sal-amount">$30,000/yr</div><div class="sal-hourly">$14.42/hr</div></a><a href="/salary-to-hourly/35k-a-year/" class="sal-card"><div class="sal-amount">$35,000/yr</div><div class="sal-hourly">$16.83/hr</div></a><a href="/salary-to-hourly/40k-a-year/" class="sal-card"><div class="sal-amount">$40,000/yr</div><div class="sal-hourly">$19.23/hr</div></a><a href="/salary-to-hourly/45k-a-year/" class="sal-card"><div class="sal-amount">$45,000/yr</div><div class="sal-hourly">$21.63/hr</div></a><a href="/salary-to-hourly/50k-a-year/" class="sal-card"><div class="sal-amount">$50,000/yr</div><div class="sal-hourly">$24.04/hr</div></a><a href="/salary-to-hourly/55k-a-year/" class="sal-card"><div class="sal-amount">$55,000/yr</div><div class="sal-hourly">$26.44/hr</div></a><a href="/salary-to-hourly/60k-a-year/" class="sal-card"><div class="sal-amount">$60,000/yr</div><div class="sal-hourly">$28.85/hr</div></a><a href="/salary-to-hourly/65k-a-year/" class="sal-card"><div class="sal-amount">$65,000/yr</div><div class="sal-hourly">$31.25/hr</div></a><a href="/salary-to-hourly/70k-a-year/" class="sal-card"><div class="sal-amount">$70,000/yr</div><div class="sal-hourly">$33.65/hr</div></a><a href="/salary-to-hourly/75k-a-year/" class="sal-card"><div class="sal-amount">$75,000/yr</div><div class="sal-hourly">$36.06/hr</div></a><a href="/salary-to-hourly/80k-a-year/" class="sal-card"><div class="sal-amount">$80,000/yr</div><div class="sal-hourly">$38.46/hr</div></a><a href="/salary-to-hourly/90k-a-year/" class="sal-card"><div class="sal-amount">$90,000/yr</div><div class="sal-hourly">$43.27/hr</div></a><a href="/salary-to-hourly/100k-a-year/" class="sal-card"><div class="sal-amount">$100,000/yr</div><div class="sal-hourly">$48.08/hr</div></a><a href="/salary-to-hourly/110k-a-year/" class="sal-card"><div class="sal-amount">$110,000/yr</div><div class="sal-hourly">$52.88/hr</div></a><a href="/salary-to-hourly/120k-a-year/" class="sal-card"><div class="sal-amount">$120,000/yr</div><div class="sal-hourly">$57.69/hr</div></a><a href="/salary-to-hourly/150k-a-year/" class="sal-card"><div class="sal-amount">$150,000/yr</div><div class="sal-hourly">$72.12/hr</div></a></div>
 </div>
-<footer><div class="fi">
-  <span>&copy; 2026 PayCalcHub.com &mdash; For informational purposes only.</span>
-  <div class="fl"><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></div>
-</div></footer>
+<footer>
+<div class="fi">
+  <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>
+  <nav class="fi-nav" aria-label="Footer navigation">
+    <a href="/salary-calculator/">Salary</a>
+    <a href="/mortgage-calculator/">Mortgage</a>
+    <a href="/loan-calculator/">Loan</a>
+    <a href="/hourly-to-salary/">Hourly</a>
+    <a href="/salary-to-hourly/">Salary &rarr; Hourly</a>
+    <a href="/how-much-house-can-i-afford/">Affordability</a>
+    <a href="/mortgage-per-month/">Mortgage Guide</a>
+    <a href="/about/">About</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+  <span class="fi-copy">&copy; 2026 PayCalcHub.com &mdash; For informational purposes only.</span>
+</div>
+</footer>
 <script>
 function toggleLang(){var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}
 document.addEventListener('click',function(e){var w=document.getElementById('langWrap');if(w&&!w.contains(e.target)){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}});
