@@ -7,7 +7,6 @@
 <link rel="apple-touch-icon" href="/favicon_512x512.png">
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-adsense-account" content="ca-pub-7723301737736770">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <title>$10 an Hour is How Much a Year? | 2026 Salary Breakdown | PayCalcHub</title>
 <meta name="description" content="$10 an hour is $20,800 a year before taxes (40 hrs/week, 52 weeks). See monthly, biweekly, weekly pay and 2026 after-tax take-home estimates.">
 <link rel="canonical" href="https://paycalchub.com/hourly-to-salary/10-dollars-an-hour/">
@@ -15,7 +14,7 @@
 <meta property="og:description" content="$10/hr = $20,800/yr gross. See full 2026 after-tax breakdown.">
 <meta property="og:url" content="https://paycalchub.com/hourly-to-salary/10-dollars-an-hour/">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://paycalchub.com/og-image.svg">
+<meta property="og:image" content="https://paycalchub.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{
   "@context":"https://schema.org","@type":"FAQPage",
@@ -118,6 +117,14 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .fi-nav-row a:hover{color:var(--acc)}
 .fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.6;padding-top:2px}
 @media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
+.mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
+.mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu.open{display:block}
+@media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
 </style>
 </head>
 <body>
@@ -147,7 +154,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
     <div>
       <div class="card">
         <div class="card-title">💵 Pay Breakdown — All Periods (Gross)</div>
-        <table>
+        <div style="overflow-x:auto"><table>
           <tr><td>Hourly</td><td>$10.00</td></tr>
           <tr><td>Daily (8 hrs)</td><td>$80.00</td></tr>
           <tr><td>Weekly (40 hrs)</td><td>$400</td></tr>
@@ -155,7 +162,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
           <tr><td>Semi-monthly</td><td>$867</td></tr>
           <tr><td>Monthly</td><td>$1,733</td></tr>
           <tr class="hl"><td>Annual</td><td>$20,800</td></tr>
-        </table>
+        </table></div>
       </div>
 
       <div class="card">
@@ -174,13 +181,13 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 
       <div class="card">
         <div class="card-title">⏱ Part-Time vs Full-Time at $10/hr</div>
-        <table>
+        <div style="overflow-x:auto"><table>
           <tr><td>20 hrs/week (part-time)</td><td>$10,400/yr</td></tr>
           <tr><td>30 hrs/week</td><td>$15,600/yr</td></tr>
           <tr class="hl"><td>40 hrs/week (full-time)</td><td>$20,800/yr</td></tr>
           <tr><td>45 hrs/week (5 hrs OT)</td><td>$24,700/yr</td></tr>
           <tr><td>Overtime rate (1.5×)</td><td>$15.0/hr</td></tr>
-        </table>
+        </table></div>
       </div>
 
       <div class="art">
@@ -264,5 +271,10 @@ function tFaq(el){const o=el.classList.contains("open");document.querySelectorAl
 function toggleLang(){{var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}}
 document.addEventListener('click',function(e){{var w=document.getElementById('langWrap');if(w&&!w.contains(e.target)){{w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}}});
 document.addEventListener('keydown',function(e){{if(e.key==='Escape'){{var w=document.getElementById('langWrap');if(w){{w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}}}}});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script>
+function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
+document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
 </script>
 </body></html>

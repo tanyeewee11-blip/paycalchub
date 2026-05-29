@@ -7,7 +7,6 @@
 <link rel="apple-touch-icon" href="/favicon_512x512.png">
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-adsense-account" content="ca-pub-7723301737736770">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <title>Ohio Salary Calculator — Take-Home Pay 2026 | PayCalcHub</title>
 <meta name="description" content="Free Ohio salary calculator. See your exact take-home pay after 3.99% state income tax, federal tax, and FICA. Updated 2026 tax rates, instant results.">
 <link rel="canonical" href="https://paycalchub.com/salary-calculator/ohio/">
@@ -15,7 +14,7 @@
 <meta property="og:description" content="Calculate your Ohio take-home pay after state and federal taxes. 3.99% state income tax. Free and instant.">
 <meta property="og:url" content="https://paycalchub.com/salary-calculator/ohio/">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://paycalchub.com/og-image.svg">
+<meta property="og:image" content="https://paycalchub.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much is $50,000 after taxes in Ohio?","acceptedAnswer":{"@type":"Answer","text":"A single filer earning $50,000 in Ohio takes home approximately $40,218 per year ($3,352/month) after federal income tax, FICA, and Ohio state income tax."}},{"@type":"Question","name":"Does Ohio have a state income tax?","acceptedAnswer":{"@type":"Answer","text":"Yes. Ohio has a state income tax (progressive up to 3.99%). This is deducted from your paycheck in addition to federal income tax and FICA."}},{"@type":"Question","name":"What is the effective tax rate in Ohio on $75,000?","acceptedAnswer":{"@type":"Answer","text":"For a single filer earning $75,000 in Ohio, the combined effective rate is approximately 22.5%, leaving a take-home of $58,156 per year."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PayCalcHub","item":"https://paycalchub.com/"},{"@type":"ListItem","position":2,"name":"Salary Calculator","item":"https://paycalchub.com/salary-calculator/"},{"@type":"ListItem","position":3,"name":"Ohio","item":"https://paycalchub.com/salary-calculator/ohio/"}]}</script>
@@ -103,6 +102,14 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .fi-nav-row a:hover{color:var(--acc)}
 .fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.6;padding-top:2px}
 @media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
+.mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
+.mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu.open{display:block}
+@media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
 </style>
 </head>
 <body>
@@ -133,13 +140,13 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
       </div>
       <div class="card">
         <div class="card-title">📊 Ohio Take-Home Pay by Salary (2026, Single Filer)</div>
-        <table><tr><th>Salary</th><th>Hourly</th><th>Monthly Net</th><th>Eff. Rate</th></tr>
+        <div style="overflow-x:auto"><table><tr><th>Salary</th><th>Hourly</th><th>Monthly Net</th><th>Eff. Rate</th></tr>
         <tr><td>$40,000</td><td>$19.23/hr</td><td>$2,715/mo</td><td>18.5%</td></tr>
 <tr><td>$50,000</td><td>$24.04/hr</td><td>$3,352/mo</td><td>19.6%</td></tr>
 <tr><td>$60,000</td><td>$28.85/hr</td><td>$3,988/mo</td><td>20.2%</td></tr>
 <tr><td>$75,000</td><td>$36.06/hr</td><td>$4,846/mo</td><td>22.5%</td></tr>
 <tr><td>$100,000</td><td>$48.08/hr</td><td>$6,229/mo</td><td>25.3%</td></tr>
-</table>
+</table></div>
       </div>
       <div class="tip">⚠️ Estimates use a flat approximation of Ohio state tax. Actual liability may vary. Use the <a href="/salary-calculator/">full Salary Calculator</a> for a detailed breakdown.</div>
       <div class="art">
@@ -234,5 +241,10 @@ function go(){
 function toggleLang(){{var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}}
 document.addEventListener('click',function(e){{var w=document.getElementById('langWrap');if(w&&!w.contains(e.target)){{w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}}});
 document.addEventListener('keydown',function(e){{if(e.key==='Escape'){{var w=document.getElementById('langWrap');if(w){{w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}}}}});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script>
+function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
+document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
 </script>
 </body></html>

@@ -7,7 +7,6 @@
 <link rel="apple-touch-icon" href="/favicon_512x512.png">
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-adsense-account" content="ca-pub-7723301737736770">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <title>About PayCalcHub — Free Financial Calculators</title>
 <meta name="description" content="PayCalcHub provides free, accurate salary, mortgage, and loan calculators updated for 2026. No sign-up required. Learn about our tools and data sources.">
 <link rel="canonical" href="https://paycalchub.com/about/">
@@ -15,7 +14,7 @@
 <meta property="og:description" content="Free salary, mortgage, and loan calculators updated for 2026. No sign-up. 100% private.">
 <meta property="og:url" content="https://paycalchub.com/about/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://paycalchub.com/og-image.svg">
+<meta property="og:image" content="https://paycalchub.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,6 +94,14 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 
 @media(max-width:800px){.pillars{grid-template-columns:repeat(2,1fr)}.tools-list{grid-template-columns:1fr}.nav-links{display:none}}
 @media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
+.mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
+.mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu.open{display:block}
+@media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
 </style>
 </head>
 <body>
@@ -156,7 +163,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
     <h2>Data sources &amp; methodology</h2>
     <p>All calculations use publicly available data from official government sources, updated for 2026:</p>
     <div class="card">
-      <table class="data-table">
+      <div style="overflow-x:auto"><table class="data-table">
         <tr><td>US Federal Tax Brackets</td><td>IRS Revenue Procedure 2025-28</td></tr>
         <tr><td>Social Security (FICA)</td><td>6.2% on wages up to $176,100</td></tr>
         <tr><td>Medicare (FICA)</td><td>1.45% on all wages</td></tr>
@@ -210,5 +217,10 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 function toggleLang(){var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}
 document.addEventListener('click',function(e){var w=document.getElementById('langWrap');if(w&&!w.contains(e.target)){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var w=document.getElementById('langWrap');if(w){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script>
+function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
+document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
 </script>
 </body></html>

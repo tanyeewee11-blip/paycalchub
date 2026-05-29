@@ -7,7 +7,6 @@
 <link rel="apple-touch-icon" href="/favicon_512x512.png">
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-adsense-account" content="ca-pub-7723301737736770">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <title>Calculadora de Hora para Salário 2026 | PayCalcHub</title>
 <meta name="description" content="Converta qualquer valor por hora em salário anual, mensal, quinzenal e semanal. Suporta tempo integral e parcial.">
 <link rel="canonical" href="https://paycalchub.com/pt/hourly-to-salary/">
@@ -19,7 +18,7 @@
 <meta property="og:description" content="Converta qualquer valor por hora em salário anual, mensal, quinzenal e semanal. Suporta tempo integral e parcial.">
 <meta property="og:url" content="https://paycalchub.com/pt/hourly-to-salary/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://paycalchub.com/og-image.svg">
+<meta property="og:image" content="https://paycalchub.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,6 +119,14 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
 .stat-item:nth-child(4){border-top:1px solid var(--bor)}
 .nav-links{display:none}
 }
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
+.mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
+.mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu.open{display:block}
+@media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"PayCalcHub","item":"https://paycalchub.com/pt/"},{"@type":"ListItem","position":2,"name":"Calculadora de Salário","item":"https://paycalchub.com/pt/hourly-to-salary/"}]}</script>
 </head>
@@ -153,7 +160,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
       <div class="fr"><label>Horas por Semana</label><select id="hrs" onchange="calc()"><option value="20">20 hrs (part-time)</option><option value="30">30 hours</option><option value="40" selected>40 hrs (full-time)</option><option value="45">45 hours</option><option value="50">50 hours</option><option value="60">60 hours</option></select></div>
       <div class="fr"><label>Weeks per Ano</label><select id="wks" onchange="calc()"><option value="52" selected>52 weeks</option><option value="50">50 weeks (2 wks unpaid)</option><option value="48">48 weeks (4 wks unpaid)</option></select></div>
     </div>
-    <table class="res-table" id="res">
+    <div style="overflow-x:auto"><table class="res-table" id="res">
       <tbody>
         <tr><td>Hourly</td><td id="r-h"></td></tr>
         <tr><td>Daily (8 hrs)</td><td id="r-d"></td></tr>
@@ -163,7 +170,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
         <tr><td>Monthly</td><td id="r-mo"></td></tr>
         <tr class="hi"><td><strong>Salário Anual</strong></td><td id="r-yr"></td></tr>
       </tbody>
-    </table>
+    </table></div>
   </div>
   <div class="art" style="margin-top:40px">
     <h2>How to Convert Hourly Wage to Salário Anual</h2>
@@ -221,6 +228,11 @@ function tFaq(el){const o=el.classList.contains("open");document.querySelectorAl
 function toggleLang(){{var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}}
 document.addEventListener('click',function(e){{var w=document.getElementById('langWrap');if(w&&!w.contains(e.target)){{w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}}});
 document.addEventListener('keydown',function(e){{if(e.key==='Escape'){{var w=document.getElementById('langWrap');if(w){{w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}}}}});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script>
+function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
+document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
 </script>
 </body>
 </html>

@@ -6,7 +6,6 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png">
   <link rel="apple-touch-icon" href="/favicon_512x512.png">
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <title>Calculadora de Préstamos Gratis 2026 | PayCalcHub</title>
 <meta name="description" content="Calculadora de préstamos gratis. Calcula cuotas mensuales, intereses totales y tabla de amortización para cualquier préstamo. Resultados instantáneos 2026.">
 <link rel="canonical" href="https://paycalchub.com/es/loan-calculator/">
@@ -78,12 +77,20 @@ td:first-child{text-align:left;font-family:var(--f);color:var(--mut)}
 .lang-item:hover{background:var(--bg)}
 .lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
 .lang-item-flag{font-size:16px}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
+.mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
+.mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu.open{display:block}
+@media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
 </style>
-  <meta property="og:image" content="https://paycalchub.com/og-image.svg">
+  <meta property="og:image" content="https://paycalchub.com/og-image.png">
   
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://paycalchub.com/og-image.svg">
+  <meta name="twitter:image" content="https://paycalchub.com/og-image.png">
   <link rel="alternate" hreflang="en" href="https://paycalchub.com/loan-calculator/">
   <link rel="alternate" hreflang="es" href="https://paycalchub.com/es/loan-calculator/">
   <link rel="alternate" hreflang="x-default" href="https://paycalchub.com/loan-calculator/">
@@ -135,7 +142,7 @@ td:first-child{text-align:left;font-family:var(--f);color:var(--mut)}
           </div>
           <div class="bd" id="bdown"></div>
           <div class="amort-wrap"><h3>Tabla de Amortización Anual</h3>
-            <table><thead><tr><th>Year</th><th>Principal</th><th>Interest</th><th>Balance</th></tr></thead><tbody id="amort"></tbody></table>
+            <div style="overflow-x:auto"><table><thead><tr><th>Year</th><th>Principal</th><th>Interest</th><th>Balance</th></tr></thead><tbody id="amort"></tbody></table></div>
           </div>
         </div>
       </div>
@@ -183,6 +190,11 @@ function calc(){
 }
 function tFaq(el){const o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(q=>{q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
 window.addEventListener("load",()=>{document.getElementById("amt").value=20000;document.getElementById("rate").value=8.5;calc();});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script>
+function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
+document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
 </script>
 </body>
 </html>

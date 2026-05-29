@@ -7,7 +7,6 @@
 <link rel="apple-touch-icon" href="/favicon_512x512.png">
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-adsense-account" content="ca-pub-7723301737736770">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <title>Canada Salary Calculator — Take-Home Pay 2026 | PayCalcHub</title>
 <meta name="description" content="Free Canada salary calculator. See your take-home pay after federal income tax, CPP, and EI for 2026.">
 <link rel="canonical" href="https://paycalchub.com/salary-calculator/canada/">
@@ -15,7 +14,7 @@
 <meta property="og:description" content="Free Canada salary calculator. See your take-home pay after federal income tax, CPP, and EI for 2026.">
 <meta property="og:url" content="https://paycalchub.com/salary-calculator/canada/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://paycalchub.com/og-image.svg">
+<meta property="og:image" content="https://paycalchub.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -133,6 +132,14 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .fi-nav-row a:hover{color:var(--acc)}
 .fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.6;padding-top:2px}
 @media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
+.mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
+.mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu.open{display:block}
+@media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
 </style>
 </head>
 <body>
@@ -188,7 +195,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 
       <div class="card">
         <div class="card-title">📊 Canada Take-Home Pay by Salary (2026, Federal Only)</div>
-        <table>
+        <div style="overflow-x:auto"><table>
           <tr><th>Salary</th><th>Hourly</th><th>Monthly Net</th><th>Eff. Rate</th></tr>
           <tr><td>C$40,000</td><td>C$19.23/hr</td><td>C$2,794/mo</td><td>16.2%</td></tr>
 <tr><td>C$55,000</td><td>C$26.44/hr</td><td>C$3,762/mo</td><td>17.9%</td></tr>
@@ -198,7 +205,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 <tr><td>C$120,000</td><td>C$57.69/hr</td><td>C$8,073/mo</td><td>19.3%</td></tr>
 <tr><td>C$150,000</td><td>C$72.12/hr</td><td>C$9,971/mo</td><td>20.2%</td></tr>
 
-        </table>
+        </table></div>
       </div>
 
       <div class="tip">⚠️ Federal tax, CPP, and EI only. Provincial income tax (5.05%–17.5% depending on province) will further reduce take-home pay. Use the full <a href="/salary-calculator/">Salary Calculator</a> for a combined federal + provincial breakdown.</div>
@@ -292,5 +299,10 @@ function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(
 function toggleLang(){var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}
 document.addEventListener('click',function(e){var w=document.getElementById('langWrap');if(w&&!w.contains(e.target)){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var w=document.getElementById('langWrap');if(w){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script>
+function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
+document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
 </script>
 </body></html>

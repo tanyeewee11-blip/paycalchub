@@ -6,7 +6,6 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png">
   <link rel="apple-touch-icon" href="/favicon_512x512.png">
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <title>Calculadora de Salario por Hora 2026 | PayCalcHub</title>
 <meta name="description" content="Convierte tu tarifa por hora a salario anual, mensual, quincenal y semanal al instante. Gratis, sin registro. Actualizado 2026.">
 <link rel="canonical" href="https://paycalchub.com/es/hourly-to-salary/">
@@ -67,13 +66,21 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .lang-item:hover{background:var(--bg)}
 .lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
 .lang-item-flag{font-size:16px}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
+.mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
+.mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu.open{display:block}
+@media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cómo convierto mi tarifa por hora a salario anual?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply your hourly wage by hours a la semana, then by weeks al año. For a standard full-time job: hourly rate × 40 hours × 52 semanas = annual salary. A $25/hour rate equals $52,000 al año working full-time."}}, {"@type": "Question", "name": "¿Cuánto equivale $15/hora al año?", "acceptedAnswer": {"@type": "Answer", "text": "$15/hour × 40 hours × 52 semanas = $31,200 al año before taxes. After federal taxes and Social Security/Medicare, take-home pay would be approximately $25,000–$26,000 annually depending on your state."}}, {"@type": "Question", "name": "¿Cuántas horas laborales hay en un año?", "acceptedAnswer": {"@type": "Answer", "text": "A standard full-time schedule is 2,080 hours al año (40 hours × 52 semanas). After accounting for 10 federal holidays and 2 weeks vacation, a typical work year is closer to 1,960 horas."}}]}</script>
-  <meta property="og:image" content="https://paycalchub.com/og-image.svg">
+  <meta property="og:image" content="https://paycalchub.com/og-image.png">
   
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://paycalchub.com/og-image.svg">
+  <meta name="twitter:image" content="https://paycalchub.com/og-image.png">
   <link rel="alternate" hreflang="en" href="https://paycalchub.com/hourly-to-salary/">
   <link rel="alternate" hreflang="es" href="https://paycalchub.com/es/hourly-to-salary/">
   <link rel="alternate" hreflang="x-default" href="https://paycalchub.com/hourly-to-salary/">
@@ -110,7 +117,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
       <div class="fr"><label>Horas por Semana</label><select id="hrs" onchange="calc()"><option value="20">20 horas (parcial)</option><option value="30">30 horas</option><option value="40" selected>40 horas (completo)</option><option value="45">45 horas</option><option value="50">50 horas</option><option value="60">60 horas</option></select></div>
       <div class="fr"><label>Semanas por Año</label><select id="wks" onchange="calc()"><option value="52" selected>52 semanas</option><option value="50">50 semanas (2 sem. sin sueldo)</option><option value="48">48 semanas (4 sem. sin sueldo)</option></select></div>
     </div>
-    <table class="res-table" id="res">
+    <div style="overflow-x:auto"><table class="res-table" id="res">
       <tbody>
         <tr><td>Por hora</td><td id="r-h"></td></tr>
         <tr><td>Diario (8 hrs)</td><td id="r-d"></td></tr>
@@ -120,7 +127,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
         <tr><td>Mensual</td><td id="r-mo"></td></tr>
         <tr class="hi"><td><strong>Salario Anual</strong></td><td id="r-yr"></td></tr>
       </tbody>
-    </table>
+    </table></div>
   </div>
   <div class="fqs" style="margin-top:32px"><h2>Preguntas Frecuentes</h2>
     <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Cómo convierto mi tarifa por hora a salario anual? <span class="fqi-icon">+</span></div><div class="fqa">Multiply your hourly wage by hours a la semana, then by weeks al año. For a standard full-time job: hourly rate &times; 40 hours &times; 52 semanas = annual salary. A $25/hour rate equals $52,000 al año working full-time.</div></div>
@@ -146,6 +153,11 @@ function calc(){
   document.getElementById("res").classList.add("show");
 }
 function tFaq(el){const o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(q=>{q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script>
+function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
+document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
 </script>
 </body>
 </html>
