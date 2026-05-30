@@ -1,190 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png">
-<link rel="apple-touch-icon" href="/favicon_512x512.png">
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-adsense-account" content="ca-pub-7723301737736770">
-<title>About PayCalcHub — Free Financial Calculators</title>
-<meta name="description" content="PayCalcHub provides free, accurate salary, mortgage, and loan calculators updated for 2026. No sign-up required. Learn about our tools and data sources.">
-<link rel="canonical" href="https://paycalchub.com/about/">
-<meta property="og:title" content="About PayCalcHub">
-<meta property="og:description" content="Free salary, mortgage, and loan calculators updated for 2026. No sign-up. 100% private.">
-<meta property="og:url" content="https://paycalchub.com/about/">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://paycalchub.com/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;
-  --acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;
-  --f:"DM Sans",sans-serif;--mo:"DM Mono",monospace
-}
-body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}
-a{color:inherit;text-decoration:none}
-nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
-.nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
-.logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}
-.nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}.nav-links a:hover{color:var(--txt)}
-.lang-wrap{position:relative;margin-left:8px}
-.lang-btn{display:flex;align-items:center;gap:6px;background:var(--alight);border:1px solid #c5e0d3;border-radius:8px;padding:5px 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--acc);transition:background .15s}
-.lang-btn:hover{background:#d4eddf}
-.lang-flag{font-size:16px;line-height:1}.lang-code{font-size:13px;font-weight:600}
-.lang-chevron{transition:transform .2s}
-.lang-wrap.open .lang-chevron{transform:rotate(180deg)}
-.lang-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:5px;min-width:148px;box-shadow:0 4px 20px rgba(0,0,0,0.08);z-index:200}
-.lang-wrap.open .lang-dropdown{display:block}
-.lang-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;font-size:13px;color:var(--txt);cursor:pointer;transition:background .1s}
-.lang-item:hover{background:var(--bg)}.lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
-.lang-item-flag{font-size:16px}.lang-item-check{margin-left:auto}
-
-/* Page layout */
-.pg{max-width:860px;margin:0 auto;padding:40px 24px 64px}
-.bc{font-size:13px;color:var(--mut);margin-bottom:14px}
-.bc a{color:var(--acc)}
-h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px}
-h1 em{font-style:italic;color:var(--acc)}
-.sub{font-size:15px;color:var(--mut);margin-bottom:32px;line-height:1.65}
-.card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);overflow:hidden}
-
-/* About specific */
-.about-mission{background:var(--alight);border:1px solid #c5e0d3;border-radius:16px;padding:28px 32px;margin-bottom:32px}
-.about-mission p{font-size:15px;color:var(--mut);line-height:1.8}
-.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:36px}
-.pillar{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px 16px}
-.pillar-icon{font-size:26px;margin-bottom:10px}
-.pillar h3{font-size:13px;font-weight:600;margin-bottom:6px}
-.pillar p{font-size:12px;color:var(--mut);line-height:1.6}
-.about-sec{margin-bottom:32px}
-.about-sec h2{font-size:17px;font-weight:600;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--bor)}
-.about-sec p{font-size:14px;color:var(--mut);line-height:1.75;margin-bottom:12px}
-.about-sec ul{padding-left:18px;margin-bottom:12px}
-.about-sec li{font-size:14px;color:var(--mut);line-height:1.75;margin-bottom:5px}
-.about-sec a{color:var(--acc)}
-.data-table{width:100%;border-collapse:collapse}
-.data-table td{padding:10px 14px;font-size:13px;border-bottom:1px solid var(--bor)}
-.data-table td:first-child{color:var(--mut);width:48%}
-.data-table td:last-child{font-weight:500;color:var(--txt)}
-.data-table tr:last-child td{border-bottom:none}
-.tools-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0}
-.tool-item{background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:14px 16px;display:flex;align-items:flex-start;gap:12px;text-decoration:none;transition:border-color .15s}
-.tool-item:hover{border-color:var(--acc)}
-.tool-item-icon{font-size:20px;flex-shrink:0;margin-top:1px}
-.tool-item-body h4{font-size:14px;font-weight:600;color:var(--txt);margin-bottom:3px}
-.tool-item-body p{font-size:12px;color:var(--mut);line-height:1.5}
-.notice{background:var(--bg);border:1px solid var(--bor);border-radius:var(--rad);padding:16px 18px;font-size:13px;color:var(--mut);line-height:1.7}
-
-/* Footer */
-footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
-.fi{max-width:1100px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:20px 40px;align-items:start}
-.fi-logo{font-weight:600;font-size:16px;color:var(--txt);text-decoration:none;white-space:nowrap;padding-top:2px}
-.fi-logo span{color:var(--acc)}
-.fi-mid{display:flex;flex-direction:column;gap:8px}
-.fi-nav-row{display:flex;align-items:center;gap:4px 16px;flex-wrap:wrap;font-size:13px}
-.fi-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);min-width:72px;opacity:.6}
-.fi-nav-row a{color:var(--mut);text-decoration:none;transition:color .15s}
-.fi-nav-row a:hover{color:var(--acc)}
-.fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.6;padding-top:2px}
-
-@media(max-width:800px){.pillars{grid-template-columns:repeat(2,1fr)}.tools-list{grid-template-columns:1fr}.nav-links{display:none}}
-@media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
-
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
-.hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
-.mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
-.mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
-.mobile-menu a:last-child{border-bottom:none}
-.mobile-menu.open{display:block}
-@media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
-</style>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png">
+  <link rel="apple-touch-icon" href="/favicon_512x512.png">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-7723301737736770">
+  <title>About PayCalcHub — Free Financial Calculators | Methodology & Mission</title>
+  <meta name="description" content="PayCalcHub provides free, accurate salary, mortgage, and tax calculators for US workers. Learn about our methodology, data sources, and commitment to financial transparency.">
+  <link rel="canonical" href="https://paycalchub.com/about/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
+  body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}a{color:inherit;text-decoration:none}
+  nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
+  .nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
+  .logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}
+  .nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}.nav-links a:hover{color:var(--txt)}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+  .hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
+  .mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
+  .mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
+  .mobile-menu a:last-child{border-bottom:none}.mobile-menu.open{display:block}
+  @media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
+  .pg{max-width:860px;margin:0 auto;padding:40px 24px 80px}
+  .bc{font-size:13px;color:var(--mut);margin-bottom:14px}.bc a{color:var(--acc)}
+  h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:10px}
+  h1 em{font-style:normal;color:var(--acc)}
+  .sub{font-size:15px;color:var(--mut);margin-bottom:36px;line-height:1.65}
+  .mission{background:var(--alight);border:1px solid #c5e0d3;border-radius:16px;padding:28px 32px;margin-bottom:36px}
+  .mission p{font-size:15px;color:#2d6b4a;line-height:1.8}
+  .pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:40px}
+  .pillar{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:22px 20px}
+  .pillar-icon{font-size:28px;margin-bottom:12px}
+  .pillar h3{font-size:14px;font-weight:600;margin-bottom:8px}
+  .pillar p{font-size:13px;color:var(--mut);line-height:1.65}
+  .sec{margin-bottom:40px}
+  .sec h2{font-size:20px;font-weight:600;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--bor)}
+  .sec h3{font-size:16px;font-weight:600;margin-bottom:10px;margin-top:22px}
+  .sec p{font-size:14px;color:var(--mut);line-height:1.8;margin-bottom:14px}
+  .sec ul{padding-left:20px;margin-bottom:14px}
+  .sec li{font-size:14px;color:var(--mut);line-height:1.75;margin-bottom:7px}
+  .sec a{color:var(--acc)}
+  .sec strong{color:var(--txt)}
+  .data-table{width:100%;border-collapse:collapse;margin:14px 0}
+  .data-table td{padding:11px 14px;font-size:13px;border-bottom:1px solid var(--bor)}
+  .data-table td:first-child{color:var(--mut);width:45%}
+  .data-table td:last-child{font-weight:500;color:var(--txt)}
+  .data-table tr:last-child td{border-bottom:none}
+  .tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+  .tool-card{background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:16px 18px;text-decoration:none;transition:border-color .15s;display:block}
+  .tool-card:hover{border-color:var(--acc)}
+  .tool-card-icon{font-size:22px;margin-bottom:8px}
+  .tool-card h4{font-size:14px;font-weight:600;color:var(--txt);margin-bottom:4px}
+  .tool-card p{font-size:12px;color:var(--mut);line-height:1.55}
+  .notice{background:var(--bg);border:1px solid var(--bor);border-radius:var(--rad);padding:16px 20px;font-size:13px;color:var(--mut);line-height:1.75;margin-top:32px}
+  .team-card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:24px;margin-bottom:16px;display:flex;gap:20px;align-items:flex-start}
+  .team-avatar{width:52px;height:52px;border-radius:50%;background:var(--alight);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+  .team-info h3{font-size:15px;font-weight:600;margin-bottom:3px}
+  .team-info .role{font-size:12px;color:var(--acc);font-weight:600;margin-bottom:8px}
+  .team-info p{font-size:13px;color:var(--mut);line-height:1.65}
+  footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
+  .fi{max-width:1100px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:20px 40px;align-items:start}
+  .fi-logo{font-weight:600;font-size:16px;color:var(--txt)}.fi-logo span{color:var(--acc)}
+  .fi-mid{display:flex;flex-direction:column;gap:8px}
+  .fi-nav-row{display:flex;align-items:center;gap:4px 16px;flex-wrap:wrap;font-size:13px}
+  .fi-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);min-width:72px;opacity:.6}
+  .fi-nav-row a{color:var(--mut)}.fi-nav-row a:hover{color:var(--acc)}
+  .fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.6}
+  @media(max-width:700px){.pillars{grid-template-columns:1fr}.tools-grid{grid-template-columns:1fr}.team-card{flex-direction:column}.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
+  </style>
 </head>
 <body>
-<nav>
-<div class="nav-in">
+<nav><div class="nav-in">
   <a href="/" class="logo">Pay<span>Calc</span>Hub</a>
   <div class="nav-links">
     <a href="/salary-calculator/">Salary</a>
     <a href="/mortgage-calculator/">Mortgage</a>
     <a href="/loan-calculator/">Loan</a>
     <a href="/hourly-to-salary/">Hourly</a>
-    <a href="/about/" style="color:var(--acc);font-weight:500">About</a>
+    <a href="/about/" class="active">About</a>
   </div>
-  <div class="lang-wrap" id="langWrap">
-    <button class="lang-btn" onclick="toggleLang()" aria-label="Select language" aria-expanded="false">
-      <span class="lang-flag">🇺🇸</span><span class="lang-code">EN</span>
-      <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <div class="lang-dropdown">
-      <div class="lang-item active"><span class="lang-item-flag">🇺🇸</span><span>English</span>
-        <svg class="lang-item-check" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5l3.5 3.5 5.5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <a href="/es/" class="lang-item"><span class="lang-item-flag">🇪🇸</span><span>Español</span></a>
-      <a href="/pt/" class="lang-item"><span class="lang-item-flag">🇧🇷</span><span>Português</span></a>
-    </div>
-  </div>
+  <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-expanded="false" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/salary-calculator/">Salary Calculator</a>
+  <a href="/mortgage-calculator/">Mortgage Calculator</a>
+  <a href="/loan-calculator/">Loan Calculator</a>
+  <a href="/hourly-to-salary/">Hourly to Salary</a>
+  <a href="/about/">About</a>
 </div>
 </nav>
 
 <div class="pg">
   <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; About</div>
   <h1>About <em>PayCalcHub</em></h1>
-  <p class="sub">Free, accurate financial calculators — no sign-up, no tracking, no ads before you get your answer.</p>
+  <p class="sub">Free, accurate financial calculators for US workers — built on transparent methodology, updated annually, and designed to give you real answers without the noise.</p>
 
-  <div class="about-mission" style="margin-bottom:32px">
-    <p>PayCalcHub exists to give everyone instant, honest answers to financial questions — <em>how much will I take home? Can I afford this house? What will my mortgage cost?</em> We believe financial clarity shouldn't require an account, a subscription, or wading through advertising.</p>
+  <div class="mission">
+    <p><strong>Our mission:</strong> PayCalcHub exists to make financial clarity accessible to everyone. Understanding your take-home pay, what a mortgage will actually cost you, or how your income compares across states shouldn't require a finance degree or an accountant. We build the tools that give workers, job-seekers, and homebuyers the numbers they need — instantly, accurately, and for free.</p>
   </div>
 
   <div class="pillars">
-    <div class="pillar"><div class="pillar-icon">💰</div><h3>Free forever</h3><p>Every calculator is free with no hidden fees, premium tiers, or required sign-up.</p></div>
-    <div class="pillar"><div class="pillar-icon">🔒</div><h3>100% private</h3><p>All calculations happen in your browser. We never store, transmit, or sell your data.</p></div>
-    <div class="pillar"><div class="pillar-icon">📅</div><h3>Updated for 2026</h3><p>Tax brackets, contribution limits, and rates are reviewed and updated each tax year.</p></div>
-    <div class="pillar"><div class="pillar-icon">🌍</div><h3>Multi-country</h3><p>US (all 50 states), United Kingdom, Canada, and Australia — each with local tax rules.</p></div>
-  </div>
-
-  <div class="about-sec">
-    <h2>Our calculators</h2>
-    <div class="tools-list">
-      <a href="/salary-calculator/" class="tool-item"><span class="tool-item-icon">💰</span><div class="tool-item-body"><h4>Salary Calculator</h4><p>Take-home pay after federal, state & FICA taxes. All 50 US states + UK, Canada, Australia.</p></div></a>
-      <a href="/mortgage-calculator/" class="tool-item"><span class="tool-item-icon">🏠</span><div class="tool-item-body"><h4>Mortgage Calculator</h4><p>Monthly payment, total interest & amortization schedule for any loan amount and rate.</p></div></a>
-      <a href="/loan-calculator/" class="tool-item"><span class="tool-item-icon">📝</span><div class="tool-item-body"><h4>Loan Calculator</h4><p>Monthly repayment and total cost for personal, auto, and student loans.</p></div></a>
-      <a href="/hourly-to-salary/" class="tool-item"><span class="tool-item-icon">⏱️</span><div class="tool-item-body"><h4>Hourly to Salary</h4><p>Convert any hourly rate to annual, monthly, biweekly, and weekly pay equivalents.</p></div></a>
-      <a href="/how-much-house-can-i-afford/" class="tool-item"><span class="tool-item-icon">🏡</span><div class="tool-item-body"><h4>Home Affordability</h4><p>How much house you can afford based on salary, down payment, and DTI.</p></div></a>
-      <a href="/mortgage-per-month/" class="tool-item"><span class="tool-item-icon">📊</span><div class="tool-item-body"><h4>Mortgage Per Month</h4><p>Monthly cost of any mortgage amount at every rate from 5.5%–8%.</p></div></a>
+    <div class="pillar">
+      <div class="pillar-icon">🎯</div>
+      <h3>Accuracy First</h3>
+      <p>All calculators are updated annually with the latest federal and state tax rates, IRS brackets, FICA rates, and standard deduction amounts. We document our methodology so you can verify every calculation.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">🔓</div>
+      <h3>Always Free</h3>
+      <p>No paywalls, no registration required, no hidden fees. Every calculator, every guide, and every data table on PayCalcHub is free to use. We believe financial information should be a public good.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">📊</div>
+      <h3>Transparent Methodology</h3>
+      <p>We explain how each estimate is calculated, what assumptions are used, and where our data comes from. We never hide uncertainty — when estimates are approximate, we say so clearly.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">🔄</div>
+      <h3>Regularly Updated</h3>
+      <p>Tax laws change. Minimum wages change. Mortgage rates change. We review and update all calculators at the start of each calendar year, and update critical data (like mortgage rates) throughout the year.</p>
     </div>
   </div>
 
-  <div class="about-sec">
-    <h2>Data sources &amp; methodology</h2>
-    <p>All calculations use publicly available data from official government sources, updated for 2026:</p>
-    <div class="card">
-      <div style="overflow-x:auto"><table class="data-table">
-        <tr><td>US Federal Tax Brackets</td><td>IRS Revenue Procedure 2025-28</td></tr>
-        <tr><td>Social Security (FICA)</td><td>6.2% on wages up to $176,100</td></tr>
-        <tr><td>Medicare (FICA)</td><td>1.45% on all wages</td></tr>
-        <tr><td>Standard Deduction (Single)</td><td>$15,000</td></tr>
-        <tr><td>401(k) Contribution Limit</td><td>$23,500 (under 50) / $31,000 (50+)</td></tr>
-        <tr><td>UK Tax Year</td><td>2026/27 &mdash; HMRC published rates</td></tr>
-        <tr><td>Canada Federal Tax</td><td>CPP 5.95% &mdash; CRA 2026</td></tr>
-        <tr><td>Australia Financial Year</td><td>2025&ndash;26 &mdash; ATO published rates</td></tr>
-      </table>
+  <div class="sec">
+    <h2>Our Calculators</h2>
+    <p>PayCalcHub offers a suite of financial calculators designed for everyday American workers and homebuyers. Each tool is built for clarity and real-world accuracy.</p>
+    <div class="tools-grid">
+      <a href="/salary-calculator/" class="tool-card">
+        <div class="tool-card-icon">💰</div>
+        <h4>Salary Calculator</h4>
+        <p>Calculates take-home pay for all 50 US states plus DC, Canada, the UK, and Australia. Covers federal tax, state tax, FICA, and common deduction scenarios.</p>
+      </a>
+      <a href="/mortgage-calculator/" class="tool-card">
+        <div class="tool-card-icon">🏠</div>
+        <h4>Mortgage Calculator</h4>
+        <p>Full PITI mortgage calculator with amortization schedule, PMI estimates, and affordability modeling. Supports 10, 15, and 30-year terms.</p>
+      </a>
+      <a href="/loan-calculator/" class="tool-card">
+        <div class="tool-card-icon">📝</div>
+        <h4>Loan Calculator</h4>
+        <p>Monthly payment and total interest for auto loans, personal loans, and other fixed-rate installment loans. Includes an amortization breakdown.</p>
+      </a>
+      <a href="/hourly-to-salary/" class="tool-card">
+        <div class="tool-card-icon">⏱</div>
+        <h4>Hourly to Salary</h4>
+        <p>Converts any hourly wage to annual, monthly, and bi-weekly equivalents — with after-tax estimates, overtime calculations, and part-time scenarios.</p>
+      </a>
     </div>
-    <p style="margin-top:12px">US state income tax rates are sourced from each state's department of revenue. Rates marked <em>progressive</em> apply bracket-based calculations; rates marked <em>flat</em> apply a single rate to all taxable income.</p>
   </div>
 
-  <div class="about-sec">
-    <h2>Disclaimer</h2>
-    <div class="notice">PayCalcHub calculators are for informational and educational purposes only. Results are estimates and should not be the sole basis for financial decisions. Tax situations vary based on individual deductions, credits, and local taxes not captured by these tools. For personalized financial, tax, or legal advice, consult a qualified professional. PayCalcHub is not affiliated with the IRS, HMRC, CRA, ATO, or any government agency.</div>
+  <div class="sec">
+    <h2>Our Methodology</h2>
+
+    <h3>Federal Income Tax Calculations</h3>
+    <p>PayCalcHub uses the official IRS tax brackets and standard deduction amounts for the current tax year. For 2026, the standard deduction is <strong>$15,000 for single filers</strong> and <strong>$30,000 for married filing jointly</strong>. Federal income tax is calculated by applying the applicable marginal rates to taxable income (gross income minus the standard deduction).</p>
+    <p>We use the following 2026 federal income tax brackets for single filers:</p>
+    <table class="data-table">
+      <tr><td>10%</td><td>$0 – $11,925</td></tr>
+      <tr><td>12%</td><td>$11,926 – $48,475</td></tr>
+      <tr><td>22%</td><td>$48,476 – $103,350</td></tr>
+      <tr><td>24%</td><td>$103,351 – $197,300</td></tr>
+      <tr><td>32%</td><td>$197,301 – $250,525</td></tr>
+      <tr><td>35%</td><td>$250,526 – $626,350</td></tr>
+      <tr><td>37%</td><td>Over $626,350</td></tr>
+    </table>
+
+    <h3>FICA Taxes</h3>
+    <p>All wage earners pay FICA taxes: <strong>Social Security at 6.2%</strong> (on wages up to $176,100 in 2026) and <strong>Medicare at 1.45%</strong> (no wage cap), for a combined employee rate of <strong>7.65%</strong>. Self-employed individuals pay the full 15.3% rate. An additional 0.9% Medicare surtax applies to wages over $200,000 (single filers).</p>
+
+    <h3>State Income Tax Estimates</h3>
+    <p>State income tax estimates are based on each state's published 2026 tax rates and brackets. For states with graduated rates, we apply the actual bracket structure. For states with flat rates, we apply the rate to all taxable income. State standard deductions vary significantly and are incorporated where applicable.</p>
+    <p>Important caveats: local income taxes (such as NYC's city tax or Philadelphia's wage tax), state-specific credits, and non-standard deductions are not included in our standard estimates. Our estimates are intended as a reasonable approximation — not a substitute for tax preparation software or a certified tax professional.</p>
+
+    <h3>Mortgage Calculations</h3>
+    <p>Monthly mortgage payments are calculated using the standard amortization formula: <strong>M = P[r(1+r)^n]/[(1+r)^n-1]</strong>, where P is the loan principal, r is the monthly interest rate (annual rate ÷ 12), and n is the number of payments. This formula produces the fixed monthly principal-and-interest payment. Property tax and insurance estimates are based on national averages and clearly labeled as estimates.</p>
+
+    <h3>Data Sources</h3>
+    <ul>
+      <li>Federal tax brackets and standard deductions: <strong>IRS Publication 15-T and Rev. Proc. 2025-x</strong></li>
+      <li>State income tax rates: <strong>Individual state Department of Revenue publications</strong></li>
+      <li>FICA rates and Social Security wage base: <strong>Social Security Administration</strong></li>
+      <li>State minimum wages: <strong>US Department of Labor Wage and Hour Division</strong></li>
+      <li>Conforming loan limits: <strong>Federal Housing Finance Agency (FHFA)</strong></li>
+      <li>Median household income data: <strong>US Census Bureau American Community Survey</strong></li>
+      <li>Median wage data: <strong>Bureau of Labor Statistics Occupational Employment and Wage Statistics</strong></li>
+    </ul>
   </div>
 
-  <div class="about-sec">
-    <h2>Get in touch</h2>
-    <p>Found an error in our data? Have a suggestion for a new calculator? Visit our <a href="/contact/">Contact page</a> — we'd love to hear from you.</p>
+  <div class="sec">
+    <h2>The Team</h2>
+    <p>PayCalcHub was built by a small team of developers and financial content specialists passionate about making financial information accessible to everyone.</p>
+
+    <div class="team-card">
+      <div class="team-avatar">📊</div>
+      <div class="team-info">
+        <h3>Editorial &amp; Research Team</h3>
+        <div class="role">Financial Content &amp; Methodology</div>
+        <p>Our editorial team includes writers and researchers with backgrounds in personal finance, tax policy, and consumer financial education. All calculator logic and editorial content is reviewed annually for accuracy. We cross-reference IRS publications, state revenue department bulletins, and BLS data before publishing any figures.</p>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-avatar">⚙️</div>
+      <div class="team-info">
+        <h3>Engineering Team</h3>
+        <div class="role">Calculator Development &amp; Maintenance</div>
+        <p>Our calculators are built for speed, accuracy, and accessibility. All calculations run client-side (in your browser) — your salary and financial data never leaves your device. We prioritize accessibility standards (WCAG 2.1 AA compliance) and mobile-first design so that our tools work equally well on any device.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>Frequently Asked Questions About PayCalcHub</h2>
+
+    <h3>Are PayCalcHub's calculations accurate?</h3>
+    <p>Our calculations are designed to be accurate approximations based on published tax rates and standard assumptions. For federal income tax, we use actual IRS bracket structures. For state taxes, we use published rate schedules. However, individual tax situations vary — tax credits, itemized deductions, investment income, self-employment, and other factors can significantly affect your actual tax liability. <strong>Our calculators should be used for planning purposes, not for filing your taxes.</strong></p>
+
+    <h3>How often is the data updated?</h3>
+    <p>We update all tax rates, standard deductions, FICA limits, and minimum wage data at the start of each calendar year. Mortgage rate reference figures are updated quarterly. If you notice data that appears outdated, please use our <a href="/contact/">Contact page</a> to let us know.</p>
+
+    <h3>Is PayCalcHub a financial advisor?</h3>
+    <p>No. PayCalcHub provides informational tools and educational content only. Nothing on this site constitutes financial, tax, legal, or investment advice. For decisions involving significant financial consequences — including mortgage applications, tax planning, or retirement savings strategies — we strongly recommend consulting a licensed professional (CPA, CFP, or attorney as appropriate).</p>
+
+    <h3>Does PayCalcHub collect my financial data?</h3>
+    <p>No. All calculator computations run entirely in your browser. We do not collect, store, or transmit the salary or financial figures you enter into our calculators. We use standard website analytics (Google Analytics) to understand aggregate traffic patterns — this does not include any personally identifiable information or financial data. See our <a href="/privacy/">Privacy Policy</a> for full details.</p>
+
+    <h3>Why are some of my state's rates different from what I actually paid?</h3>
+    <p>Several factors commonly create differences: (1) local income taxes not captured in our state-level estimates, (2) state-specific credits or deductions you qualify for, (3) investment income, self-employment income, or multiple income sources, (4) changes in tax law mid-year, or (5) filing status differences. For precise figures, use tax preparation software (TurboTax, H&R Block, FreeTaxUSA) or consult a CPA.</p>
+  </div>
+
+  <div class="notice">
+    <strong>Disclaimer:</strong> PayCalcHub provides financial calculators and educational content for informational purposes only. All figures are estimates based on published tax rates and standard assumptions. Actual results will vary based on individual circumstances. This content does not constitute financial, tax, legal, or investment advice. Always consult a qualified professional for decisions involving significant financial consequences. Last updated: January 2026.
   </div>
 </div>
 
@@ -194,33 +248,21 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   <div class="fi-mid">
     <div class="fi-nav-row">
       <span class="fi-group-lbl">Calculators</span>
-      <a href="/salary-calculator/">Salary</a>
-      <a href="/mortgage-calculator/">Mortgage</a>
-      <a href="/loan-calculator/">Loan</a>
-      <a href="/hourly-to-salary/">Hourly</a>
+      <a href="/salary-calculator/">Salary</a><a href="/mortgage-calculator/">Mortgage</a>
+      <a href="/loan-calculator/">Loan</a><a href="/hourly-to-salary/">Hourly</a>
     </div>
     <div class="fi-nav-row">
-      <span class="fi-group-lbl">Guides</span>
-      <a href="/salary-to-hourly/">Salary &rarr; Hourly</a>
-      <a href="/how-much-house-can-i-afford/">Affordability</a>
-      <a href="/mortgage-per-month/">Mortgage Guide</a>
-      <a href="/about/">About</a>
-      <a href="/privacy/">Privacy</a>
-      <a href="/contact/">Contact</a>
+      <span class="fi-group-lbl">Site</span>
+      <a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a>
     </div>
   </div>
-  <span class="fi-copy">&copy; 2026 PayCalcHub.com<br>For informational purposes only.</span>
+  <span class="fi-copy">&copy; 2026 PayCalcHub.com<br>Informational purposes only.<br>Not financial advice.</span>
 </div>
 </footer>
-
-<script>
-function toggleLang(){var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}
-document.addEventListener('click',function(e){var w=document.getElementById('langWrap');if(w&&!w.contains(e.target)){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){var w=document.getElementById('langWrap');if(w){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}});
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <script>
 function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
 document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
 </script>
-</body></html>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+</body>
+</html>
