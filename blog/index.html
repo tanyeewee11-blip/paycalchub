@@ -7,16 +7,18 @@
   <link rel="apple-touch-icon" href="/favicon_512x512.png">
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-adsense-account" content="ca-pub-7723301737736770">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
   <title>PayCalcHub Blog — Salary, Tax & Personal Finance Guides (2026)</title>
-  <meta name="description" content="Free guides on salary, taxes, budgeting, and home buying. Expert articles covering take-home pay, state tax comparisons, mortgage affordability, and more.">
+  <meta name="description" content="Free guides on salary, taxes, budgeting, mortgages, and personal finance. Expert articles updated for 2026 — covering take-home pay, state tax, home buying, and more.">
   <link rel="canonical" href="https://paycalchub.com/blog/">
-  <meta property="og:title" content="PayCalcHub Blog — Salary, Tax & Personal Finance Guides">
+  <meta property="og:title" content="PayCalcHub Blog — Salary, Tax & Personal Finance Guides 2026">
+  <meta property="og:description" content="In-depth guides on salary, taxes, budgeting, and home buying for US workers. Updated for 2026.">
   <meta property="og:url" content="https://paycalchub.com/blog/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://paycalchub.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
   <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;--f:"DM Sans",sans-serif}
@@ -24,24 +26,46 @@
   nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
   .nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
   .logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}
-  .nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}.nav-links a:hover{color:var(--txt)}
+  .nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}.nav-links a:hover,.nav-links a.active{color:var(--txt)}
   .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
   .hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
   .mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
   .mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
   .mobile-menu a:last-child{border-bottom:none}.mobile-menu.open{display:block}
   @media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
-  .pg{max-width:900px;margin:0 auto;padding:40px 24px 80px}
+  .pg{max-width:1000px;margin:0 auto;padding:40px 24px 80px}
+  .bc{font-size:13px;color:var(--mut);margin-bottom:14px}.bc a{color:var(--acc)}
   h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:10px}
   h1 em{font-style:normal;color:var(--acc)}
-  .sub{font-size:15px;color:var(--mut);margin-bottom:40px;line-height:1.65}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:24px;display:block;transition:border-color .15s}
-  .card:hover{border-color:var(--acc)}
+  .sub{font-size:15px;color:var(--mut);margin-bottom:14px;line-height:1.65}
+  .stats{display:flex;gap:24px;font-size:13px;color:var(--mut);margin-bottom:40px;flex-wrap:wrap}
+  .stats span{background:var(--sur);border:1px solid var(--bor);border-radius:99px;padding:4px 14px}
+  .section-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mut);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--bor)}
+  .featured{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:48px}
+  .card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:24px;display:block;transition:border-color .15s,box-shadow .15s}
+  .card:hover{border-color:var(--acc);box-shadow:0 4px 16px rgba(30,107,74,.08)}
   .card-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc);margin-bottom:10px}
   .card h2{font-size:17px;font-weight:600;line-height:1.35;margin-bottom:10px;color:var(--txt)}
   .card p{font-size:13px;color:var(--mut);line-height:1.65}
-  .card-meta{font-size:12px;color:var(--mut);margin-top:12px;display:flex;gap:14px}
+  .card-meta{font-size:12px;color:var(--mut);margin-top:14px;display:flex;gap:14px;align-items:center}
+  .card-meta .read{background:var(--alight);color:var(--acc);padding:2px 8px;border-radius:99px;font-size:11px;font-weight:600}
+  .list-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:48px}
+  .list-card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:18px 20px;display:flex;gap:14px;align-items:flex-start;transition:border-color .15s}
+  .list-card:hover{border-color:var(--acc)}
+  .list-card-icon{font-size:24px;flex-shrink:0;margin-top:2px}
+  .list-card-body h3{font-size:15px;font-weight:600;color:var(--txt);line-height:1.3;margin-bottom:6px}
+  .list-card-body p{font-size:13px;color:var(--mut);line-height:1.55}
+  .list-card-body .meta{font-size:12px;color:var(--mut);margin-top:8px;display:flex;gap:10px}
+  .topics{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:48px}
+  .topic-pill{background:var(--sur);border:1px solid var(--bor);border-radius:99px;padding:7px 16px;font-size:13px;color:var(--mut);transition:all .15s}
+  .topic-pill:hover{border-color:var(--acc);color:var(--acc);background:var(--alight)}
+  .cta-box{background:var(--alight);border:1px solid #c5e0d3;border-radius:16px;padding:28px 32px;text-align:center;margin-bottom:48px}
+  .cta-box h2{font-size:20px;font-weight:600;margin-bottom:8px}
+  .cta-box p{font-size:14px;color:var(--mut);margin-bottom:20px;line-height:1.65}
+  .cta-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .cta-btn{background:var(--acc);color:#fff;padding:10px 22px;border-radius:99px;font-size:13px;font-weight:600;transition:opacity .15s}
+  .cta-btn:hover{opacity:.85}
+  .cta-btn.sec{background:var(--sur);color:var(--acc);border:1px solid #c5e0d3}
   footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   .fi{max-width:1100px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:20px 40px;align-items:start}
   .fi-logo{font-weight:600;font-size:16px;color:var(--txt)}.fi-logo span{color:var(--acc)}
@@ -50,7 +74,8 @@
   .fi-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);min-width:72px;opacity:.6}
   .fi-nav-row a{color:var(--mut)}.fi-nav-row a:hover{color:var(--acc)}
   .fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.6}
-  @media(max-width:700px){.grid{grid-template-columns:1fr}.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
+  @media(max-width:800px){.featured,.list-grid{grid-template-columns:1fr}}
+  @media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
   </style>
 </head>
 <body>
@@ -61,7 +86,6 @@
     <a href="/mortgage-calculator/">Mortgage</a>
     <a href="/loan-calculator/">Loan</a>
     <a href="/hourly-to-salary/">Hourly</a>
-    <a href="/blog/" class="active">Blog</a>
   </div>
   <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-expanded="false" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -75,43 +99,171 @@
   <a href="/about/">About</a>
 </div>
 </nav>
+
 <div class="pg">
+  <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; Blog</div>
   <h1>PayCalcHub <em>Blog</em></h1>
   <p class="sub">In-depth guides on salary, taxes, budgeting, and home buying — written for real US workers, updated for 2026.</p>
+  <div class="stats">
+    <span>📝 10 articles</span>
+    <span>📅 Updated January–February 2026</span>
+    <span>🇺🇸 US-focused</span>
+    <span>🆓 Always free</span>
+  </div>
 
-  <div class="grid">
-    <a href="/blog/how-to-budget-on-15-dollars-an-hour/" class="card">
-      <div class="card-tag">Budgeting</div>
-      <h2>How to Budget on $15 an Hour: A Complete 2026 Guide</h2>
-      <p>Your take-home, a realistic monthly budget, strategies for rent, food, and transport, and how to build savings on $31,200/year.</p>
-      <div class="card-meta"><span>January 2026</span><span>12 min read</span></div>
+  <!-- Featured Articles -->
+  <div class="section-label">Featured Guides</div>
+  <div class="featured">
+    <a href="/blog/how-to-read-your-pay-stub/" class="card">
+      <div class="card-tag">Paycheck Guide</div>
+      <h2>How to Read Your Pay Stub: Every Line Explained</h2>
+      <p>Gross pay, federal tax, FICA, state tax, pre-tax vs post-tax deductions — everything on your pay stub explained with a real worked example for a $55,000 salary.</p>
+      <div class="card-meta"><span>February 2026</span><span class="read">10 min</span></div>
     </a>
-    <a href="/blog/minimum-wage-by-state-2026/" class="card">
-      <div class="card-tag">Wages &amp; Pay</div>
-      <h2>Minimum Wage by State 2026 — Complete US Guide</h2>
-      <p>Every state's minimum wage, the annual income it produces, scheduled increases, and how it compares to a real living wage.</p>
-      <div class="card-meta"><span>January 2026</span><span>10 min read</span></div>
+    <a href="/blog/what-is-a-good-salary-in-2026/" class="card">
+      <div class="card-tag">Salary Guide</div>
+      <h2>What is a Good Salary in 2026? US Benchmarks by Age, State &amp; Industry</h2>
+      <p>Median wages, income percentiles, living wage standards, and what "good pay" actually means depending on where you live, your career stage, and your industry.</p>
+      <div class="card-meta"><span>February 2026</span><span class="read">12 min</span></div>
     </a>
     <a href="/blog/federal-vs-state-tax-explained/" class="card">
       <div class="card-tag">Tax Guide</div>
       <h2>Federal vs State Tax: What's Actually Taken from Your Paycheck</h2>
-      <p>A plain-English breakdown of every paycheck deduction — federal brackets, FICA, state tax, pre-tax deductions, and real examples.</p>
-      <div class="card-meta"><span>January 2026</span><span>11 min read</span></div>
+      <p>Every deduction explained in plain English — federal brackets, FICA, state rates, standard deduction, pre-tax vs post-tax — with real examples at three income levels.</p>
+      <div class="card-meta"><span>January 2026</span><span class="read">11 min</span></div>
     </a>
     <a href="/blog/how-much-house-can-i-afford-on-my-salary/" class="card">
       <div class="card-tag">Mortgage &amp; Housing</div>
       <h2>How Much House Can You Afford on Your Salary? 2026 Guide</h2>
-      <p>The 28% rule, back-end DTI, affordability by income level, down payment strategies, and tips to expand your buying power.</p>
-      <div class="card-meta"><span>January 2026</span><span>13 min read</span></div>
-    </a>
-    <a href="/blog/best-states-for-take-home-pay-2026/" class="card">
-      <div class="card-tag">State Tax</div>
-      <h2>Best States for Take-Home Pay in 2026: No Income Tax States Ranked</h2>
-      <p>All 9 zero-income-tax states ranked with real dollar comparisons, hidden costs, and analysis of which state is best for your situation.</p>
-      <div class="card-meta"><span>January 2026</span><span>11 min read</span></div>
+      <p>The 28% rule, back-end DTI, income requirements at every salary level, down payment options, and five strategies to increase your buying power in 2026.</p>
+      <div class="card-meta"><span>January 2026</span><span class="read">13 min</span></div>
     </a>
   </div>
+
+  <!-- All Articles List -->
+  <div class="section-label">All Articles</div>
+  <div class="list-grid">
+
+    <a href="/blog/how-to-read-your-pay-stub/" class="list-card">
+      <div class="list-card-icon">🧾</div>
+      <div class="list-card-body">
+        <h3>How to Read Your Pay Stub: Every Line Explained</h3>
+        <p>A full guide to gross pay, taxes, pre-tax deductions, post-tax deductions, and net pay — with a real pay stub example.</p>
+        <div class="meta"><span>February 2026</span><span>10 min read</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/what-is-fica-tax/" class="list-card">
+      <div class="list-card-icon">📋</div>
+      <div class="list-card-body">
+        <h3>What is FICA Tax and Why Do I Pay It?</h3>
+        <p>Social Security, Medicare, 2026 rates, the wage base cap, self-employment tax, and what these taxes fund for you in retirement.</p>
+        <div class="meta"><span>February 2026</span><span>9 min read</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/50000-a-year-is-how-much-an-hour/" class="list-card">
+      <div class="list-card-icon">💵</div>
+      <div class="list-card-body">
+        <h3>$50,000 a Year is How Much an Hour?</h3>
+        <p>$24.04/hour. Full breakdown: every pay period, after-tax take-home by state, sample monthly budget, and how to grow beyond $50k.</p>
+        <div class="meta"><span>February 2026</span><span>10 min read</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/how-much-emergency-savings/" class="list-card">
+      <div class="list-card-icon">🏦</div>
+      <div class="list-card-body">
+        <h3>How Much Should I Have in Emergency Savings?</h3>
+        <p>The 3–6 month rule, how to calculate your personal target, the best accounts in 2026, and a step-by-step plan to build your fund faster.</p>
+        <div class="meta"><span>February 2026</span><span>11 min read</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/what-is-a-good-salary-in-2026/" class="list-card">
+      <div class="list-card-icon">📊</div>
+      <div class="list-card-body">
+        <h3>What is a Good Salary in 2026?</h3>
+        <p>Median wages, income percentiles, living wage benchmarks, and what "good pay" means by age group, industry, and location.</p>
+        <div class="meta"><span>February 2026</span><span>12 min read</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/best-states-for-take-home-pay-2026/" class="list-card">
+      <div class="list-card-icon">🗺️</div>
+      <div class="list-card-body">
+        <h3>Best States for Take-Home Pay in 2026</h3>
+        <p>All 9 zero-income-tax states ranked with real dollar comparisons, hidden costs (property tax, sales tax), and who benefits most from each.</p>
+        <div class="meta"><span>January 2026</span><span>11 min read</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/how-to-budget-on-15-dollars-an-hour/" class="list-card">
+      <div class="list-card-icon">📒</div>
+      <div class="list-card-body">
+        <h3>How to Budget on $15 an Hour</h3>
+        <p>A real monthly budget on $2,259 take-home — rent strategies, food savings, emergency fund plan, and paths to higher wages.</p>
+        <div class="meta"><span>January 2026</span><span>12 min read</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/minimum-wage-by-state-2026/" class="list-card">
+      <div class="list-card-icon">⚖️</div>
+      <div class="list-card-body">
+        <h3>Minimum Wage by State 2026 — Complete Guide</h3>
+        <p>Every state's 2026 minimum wage, annual income produced, scheduled increases through 2027, and comparison to living wage benchmarks.</p>
+        <div class="meta"><span>January 2026</span><span>10 min read</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/federal-vs-state-tax-explained/" class="list-card">
+      <div class="list-card-icon">🏛️</div>
+      <div class="list-card-body">
+        <h3>Federal vs State Tax Explained</h3>
+        <p>Every paycheck deduction in plain English — brackets, FICA, state rates, W-4 withholding, and pre-tax vs post-tax deductions.</p>
+        <div class="meta"><span>January 2026</span><span>11 min read</span></div>
+      </div>
+    </a>
+
+    <a href="/blog/how-much-house-can-i-afford-on-my-salary/" class="list-card">
+      <div class="list-card-icon">🏠</div>
+      <div class="list-card-body">
+        <h3>How Much House Can You Afford on Your Salary?</h3>
+        <p>The 28% rule, back-end DTI, affordability at every income level from $40k to $150k, and strategies to maximize buying power.</p>
+        <div class="meta"><span>January 2026</span><span>13 min read</span></div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Topic Pills -->
+  <div class="section-label">Browse by Topic</div>
+  <div class="topics">
+    <a href="/blog/how-to-read-your-pay-stub/" class="topic-pill">Paycheck &amp; Pay Stubs</a>
+    <a href="/blog/federal-vs-state-tax-explained/" class="topic-pill">Income Tax</a>
+    <a href="/blog/what-is-fica-tax/" class="topic-pill">FICA &amp; Social Security</a>
+    <a href="/blog/what-is-a-good-salary-in-2026/" class="topic-pill">Salary Benchmarks</a>
+    <a href="/blog/how-to-budget-on-15-dollars-an-hour/" class="topic-pill">Budgeting</a>
+    <a href="/blog/how-much-emergency-savings/" class="topic-pill">Emergency Fund</a>
+    <a href="/blog/how-much-house-can-i-afford-on-my-salary/" class="topic-pill">Mortgage &amp; Home Buying</a>
+    <a href="/blog/best-states-for-take-home-pay-2026/" class="topic-pill">State Tax Comparison</a>
+    <a href="/blog/minimum-wage-by-state-2026/" class="topic-pill">Minimum Wage</a>
+    <a href="/blog/50000-a-year-is-how-much-an-hour/" class="topic-pill">Salary to Hourly</a>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h2>Calculate Your Exact Take-Home Pay</h2>
+    <p>Use our free calculators to see exactly what you keep after taxes — federal, state, and FICA — for any salary or hourly rate, in any US state.</p>
+    <div class="cta-row">
+      <a href="/salary-calculator/" class="cta-btn">Salary Calculator</a>
+      <a href="/hourly-to-salary/" class="cta-btn sec">Hourly to Annual</a>
+      <a href="/mortgage-calculator/" class="cta-btn sec">Mortgage Calculator</a>
+    </div>
+  </div>
+
 </div>
+
 <footer>
 <div class="fi">
   <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>
