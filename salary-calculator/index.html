@@ -62,12 +62,28 @@ h1 em{font-style:normal;color:var(--acc)}
 .rl{font-size:11px;font-weight:600;color:var(--acc);letter-spacing:.06em;text-transform:uppercase}
 .ra{font-family:var(--mo);font-size:44px;font-weight:500;color:var(--acc);letter-spacing:-.02em;line-height:1.1;margin:4px 0 2px}
 .rp{font-size:13px;color:var(--mut)}.re{font-size:12px;color:var(--acc);margin-top:6px;font-weight:500}
-.cr{display:flex;gap:20px;align-items:center;margin-bottom:16px}
-.pl{display:flex;flex-direction:column;gap:7px;flex:1;min-width:0}
-.li{display:flex;align-items:center;gap:8px;font-size:13px}
-.ld{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.ll{color:var(--mut);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.lp{font-family:var(--mo);font-size:12px;font-weight:500;color:var(--txt);flex-shrink:0}
+/* Stacked bar chart */
+.sbar-wrap{margin-bottom:18px}
+.sbar-track{display:flex;height:28px;border-radius:8px;overflow:hidden;width:100%;margin-bottom:12px}
+.sbar-seg{height:100%;transition:width .35s ease;position:relative}
+.sbar-legend{display:flex;flex-direction:column;gap:6px}
+.sbar-row{display:flex;align-items:center;gap:8px;font-size:13px}
+.sbar-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.sbar-lbl{color:var(--mut);flex:1}
+.sbar-pct{font-family:var(--mo);font-size:12px;font-weight:500;color:var(--txt);min-width:38px;text-align:right}
+.sbar-amt{font-family:var(--mo);font-size:12px;color:var(--mut);min-width:64px;text-align:right}
+/* Salary slider */
+.sal-slider-wrap{margin-top:8px;padding:2px 0 6px}
+.sal-slider{width:100%;-webkit-appearance:none;appearance:none;height:4px;border-radius:2px;background:var(--bor);outline:none;cursor:pointer}
+.sal-slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.sal-slider::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.sal-range-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--mut);margin-top:4px}
+/* Deductions toggle */
+.ded-toggle{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--acc);cursor:pointer;padding:10px 0;border:none;background:none;font-family:var(--f);width:100%}
+.ded-toggle-icon{font-size:16px;transition:transform .2s;line-height:1}
+.ded-toggle.open .ded-toggle-icon{transform:rotate(45deg)}
+.ded-body{display:none}.ded-body.open{display:block}
+/* Breakdown rows */
 .bd{display:flex;flex-direction:column;gap:5px}
 .br{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:9px 13px;border-radius:8px;background:var(--bg)}
 .bl{color:var(--mut)}.bv{font-family:var(--mo);font-weight:500}
@@ -94,7 +110,7 @@ h1 em{font-style:normal;color:var(--acc)}
 .fqa{font-size:14px;color:var(--mut);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .25s ease,padding .2s;padding:0 18px}
 .fqa.open{max-height:400px;padding:0 18px 16px}
 
-@media(max-width:800px){.lay{grid-template-columns:1fr}.sb{display:grid;grid-template-columns:1fr 1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}.cr{flex-direction:column}.ra{font-size:34px}}
+@media(max-width:800px){.lay{grid-template-columns:1fr}.sb{display:grid;grid-template-columns:1fr 1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}.ra{font-size:34px}}
 @media(max-width:480px){.sb{grid-template-columns:1fr}}
 
 .st-section{margin-top:48px;width:100%}
@@ -188,7 +204,12 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
         </div>
         <div class="cb">
           <div id="f-us" class="fp">
-            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">$</span><input type="number" id="us-sal" placeholder="60,000" oninput="calc()"></div></div>
+            <div class="fr"><label>Annual Gross Salary</label><div class="iw hp"><span class="ip">$</span><input type="number" id="us-sal" placeholder="60,000" oninput="syncSlider(this.value);calc()"></div>
+              <div class="sal-slider-wrap">
+                <input type="range" class="sal-slider" id="us-sal-slider" min="20000" max="300000" step="1000" value="60000" oninput="syncInput(this.value);calc()">
+                <div class="sal-range-labels"><span>$20k</span><span>$300k</span></div>
+              </div>
+            </div>
             <div class="fg">
               <div class="fr"><label>Filing Status</label><select id="us-fil" onchange="calc()"><option value="single">Single</option><option value="married">Married Filing Jointly</option><option value="hoh">Head of Household</option></select></div>
               <div class="fr"><label>State</label><select id="us-st" onchange="calc()">
@@ -196,12 +217,17 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
               </select></div>
             </div>
             <div class="fr"><label>Pay Frequency</label><select id="us-frq" onchange="calc()"><option value="26">Bi-weekly (every 2 weeks)</option><option value="24">Semi-monthly (twice a month)</option><option value="12">Monthly</option><option value="52">Weekly</option></select></div>
-            <div class="fsec"><div class="fsec-lbl">Pre-Tax Deductions <span class="opt">Optional</span></div>
-              <div class="fg">
-                <div class="fr"><label>401(k) Contribution</label><div class="iw hs"><input type="number" id="us-401k" placeholder="0" min="0" max="23500" oninput="calc()"><span class="is">$/yr</span></div></div>
-                <div class="fr"><label>Health Insurance</label><div class="iw hs"><input type="number" id="us-hlt" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
-                <div class="fr"><label>HSA Contribution</label><div class="iw hs"><input type="number" id="us-hsa" placeholder="0" min="0" max="4300" oninput="calc()"><span class="is">$/yr</span></div></div>
-                <div class="fr"><label>Other Pre-Tax</label><div class="iw hs"><input type="number" id="us-oth" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+            <div class="fsec" style="margin-bottom:0;padding-bottom:0">
+              <button class="ded-toggle" id="ded-btn" onclick="toggleDed()">
+                <span class="ded-toggle-icon">+</span> Pre-Tax Deductions <span class="opt">Optional</span>
+              </button>
+              <div class="ded-body" id="ded-body">
+                <div class="fg" style="margin-top:10px">
+                  <div class="fr"><label>401(k) Contribution</label><div class="iw hs"><input type="number" id="us-401k" placeholder="0" min="0" max="23500" oninput="calc()"><span class="is">$/yr</span></div></div>
+                  <div class="fr"><label>Health Insurance</label><div class="iw hs"><input type="number" id="us-hlt" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+                  <div class="fr"><label>HSA Contribution</label><div class="iw hs"><input type="number" id="us-hsa" placeholder="0" min="0" max="4300" oninput="calc()"><span class="is">$/yr</span></div></div>
+                  <div class="fr"><label>Other Pre-Tax</label><div class="iw hs"><input type="number" id="us-oth" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -235,7 +261,10 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
               <button class="pb" onclick="setPer('weekly',this)">Weekly</button>
             </div>
             <div class="rh"><div class="rl">Estimated Take-Home Pay</div><div class="ra" id="r-amt">$0</div><div class="rp" id="r-per">per year</div><div class="re" id="r-eff"></div></div>
-            <div class="cr"><canvas id="pie" width="120" height="120" style="flex-shrink:0" aria-label="Tax breakdown pie chart"></canvas><div class="pl" id="legend"></div></div>
+            <div class="sbar-wrap">
+              <div class="sbar-track" id="sbar-track"></div>
+              <div class="sbar-legend" id="sbar-legend"></div>
+            </div>
             <div class="bd" id="bdown"></div>
             <button class="cpb" id="cpb" onclick="copyRes()">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
@@ -390,16 +419,23 @@ function render(r){
   document.getElementById("r-per").textContent=LABS[period];
   var totalTax=r.ded.reduce(function(s,x){return s+x.a;},0);
   var eff=((totalTax/r.gross)*100).toFixed(1);
-  var marg=r.marg?" - Marginal: "+r.marg+"%":"";
-  document.getElementById("r-eff").textContent="Effective tax rate: "+eff+"%"+marg;
-  var cv=document.getElementById("pie"),ctx=cv.getContext("2d");
-  ctx.clearRect(0,0,120,120);
-  var sl=(r.pt||[]).map(function(x,i){return{a:x.a,c:COLS[i+4]||"#94a3b8"};}).concat(r.ded.map(function(x,i){return{a:x.a,c:COLS[i+1]||"#94a3b8"};})).concat([{a:r.net,c:COLS[0]}]);
-  var st=-Math.PI/2;
-  sl.forEach(function(s){var ag=(s.a/r.gross)*2*Math.PI;ctx.beginPath();ctx.moveTo(60,60);ctx.arc(60,60,54,st,st+ag);ctx.closePath();ctx.fillStyle=s.c;ctx.fill();st+=ag;});
-  ctx.beginPath();ctx.arc(60,60,30,0,2*Math.PI);ctx.fillStyle="#fff";ctx.fill();
-  var lgsl=[{l:"Take-home",a:r.net,c:COLS[0]}].concat((r.pt||[]).map(function(x,i){return{l:x.l,a:x.a,c:COLS[i+4]||"#94a3b8"};})).concat(r.ded.map(function(x,i){return{l:x.l,a:x.a,c:COLS[i+1]||"#94a3b8"};}));
-  document.getElementById("legend").innerHTML=lgsl.map(function(x){return'<div class="li"><div class="ld" style="background:'+x.c+'"></div><span class="ll">'+x.l+'</span><span class="lp">'+((x.a/r.gross)*100).toFixed(1)+'%</span></div>';}).join("");
+  var marg=r.marg?" · Marginal: "+r.marg+"%":"";
+  document.getElementById("r-eff").textContent="Effective rate: "+eff+"%"+marg;
+  // Stacked bar segments: pre-tax deductions, tax deductions, take-home
+  var segs=[{l:"Take-home",a:r.net,c:COLS[0]}]
+    .concat((r.pt||[]).map(function(x,i){return{l:x.l,a:x.a,c:COLS[i+4]||"#94a3b8"};}))
+    .concat(r.ded.map(function(x,i){return{l:x.l,a:x.a,c:COLS[i+1]||"#94a3b8"};}));
+  var trackHTML=segs.map(function(s){
+    var pct=Math.max((s.a/r.gross)*100,0.5).toFixed(2);
+    return '<div class="sbar-seg" style="width:'+pct+'%;background:'+s.c+'" title="'+s.l+'"></div>';
+  }).join("");
+  var legendHTML=segs.map(function(s){
+    var pct=((s.a/r.gross)*100).toFixed(1);
+    var amt=fmt(s.a/d,r.cur);
+    return '<div class="sbar-row"><div class="sbar-dot" style="background:'+s.c+'"></div><span class="sbar-lbl">'+s.l+'</span><span class="sbar-pct">'+pct+'%</span><span class="sbar-amt">'+amt+'</span></div>';
+  }).join("");
+  document.getElementById("sbar-track").innerHTML=trackHTML;
+  document.getElementById("sbar-legend").innerHTML=legendHTML;
   var h='<div class="br"><span class="bl">Gross Salary</span><span class="bv">'+fmt(r.gross/d,r.cur)+'</span></div>';
   (r.pt||[]).forEach(function(x){h+='<div class="br pt"><span class="bl">'+x.l+' (pre-tax)</span><span class="bv">-'+fmt(x.a/d,r.cur)+'</span></div>';});
   if(r.pt&&r.pt.length)h+='<div class="br"><span class="bl">Taxable Income</span><span class="bv">'+fmt(r.ti/d,r.cur)+'</span></div>';
@@ -488,7 +524,10 @@ function calcAU(){
   return{gross:g,ti:g,net:g-sup-tax-med,cur:"$",pt:pt,ded:ded};
 }
 function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
-window.addEventListener("load",function(){document.getElementById("us-sal").value=60000;calc();});
+function syncSlider(val){var v=parseInt(val)||0;var slider=document.getElementById("us-sal-slider");if(slider){slider.value=Math.min(Math.max(v,20000),300000);}}
+function syncInput(val){var input=document.getElementById("us-sal");if(input){input.value=val;}}
+function toggleDed(){var btn=document.getElementById("ded-btn");var body=document.getElementById("ded-body");btn.classList.toggle("open");body.classList.toggle("open");}
+window.addEventListener("load",function(){var salInput=document.getElementById("us-sal");salInput.value=60000;document.getElementById("us-sal-slider").value=60000;calc();});
 </script>
 <script>
 function toggleLang(){{var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}}
