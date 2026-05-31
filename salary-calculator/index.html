@@ -83,21 +83,48 @@ h1 em{font-style:normal;color:var(--acc)}
 .ded-toggle-icon{font-size:16px;transition:transform .2s;line-height:1}
 .ded-toggle.open .ded-toggle-icon{transform:rotate(45deg)}
 .ded-body{display:none}.ded-body.open{display:block}
-/* Breakdown rows */
+/* Calculate button */
+.calc-btn{width:100%;padding:12px;background:var(--acc);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;font-family:var(--f);cursor:pointer;margin-top:16px;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .15s;letter-spacing:-.01em}
+.calc-btn:hover{opacity:.88}
+.calc-btn:active{opacity:.75}
+/* Copy + Share row */
+.action-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.cpb{width:100%;padding:10px;background:var(--bg);border:1px solid var(--bor);border-radius:8px;font-size:13px;font-weight:500;color:var(--mut);cursor:pointer;font-family:var(--f);display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+.cpb:hover,.cpb.copied{border-color:var(--acc);color:var(--acc);background:var(--alight)}
+.shb{width:100%;padding:10px;background:var(--bg);border:1px solid var(--bor);border-radius:8px;font-size:13px;font-weight:500;color:var(--mut);cursor:pointer;font-family:var(--f);display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+.shb:hover,.shb.shared{border-color:var(--acc);color:var(--acc);background:var(--alight)}
+/* Mobile sidebar accordion */
+@media(max-width:800px){
+  .sb{display:flex;flex-direction:column;gap:0;border:1px solid var(--bor);border-radius:var(--rad);overflow:hidden;background:var(--sur)}
+  .ic{border-radius:0;border:none;border-bottom:1px solid var(--bor);padding:0}
+  .ic:last-child{border-bottom:none}
+  .ic-header{display:flex;justify-content:space-between;align-items:center;padding:13px 16px;cursor:pointer;user-select:none}
+  .ic-header h3{margin:0;font-size:13px;font-weight:600}
+  .ic-chevron{font-size:12px;color:var(--mut);transition:transform .2s}
+  .ic.open .ic-chevron{transform:rotate(180deg)}
+  .ic-body{display:none;padding:0 16px 14px}
+  .ic.open .ic-body{display:block}
+}
+@media(min-width:801px){
+  .ic-header{pointer-events:none}
+  .ic-chevron{display:none}
+  .ic-body{display:block!important}
+  .ic h3{margin-bottom:10px}
+}
 .bd{display:flex;flex-direction:column;gap:5px}
 .br{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:9px 13px;border-radius:8px;background:var(--bg)}
 .bl{color:var(--mut)}.bv{font-family:var(--mo);font-weight:500}
 .br.ded .bv{color:var(--red)}.br.pt .bv{color:var(--ora)}
 .br.net{background:var(--alight)}.br.net .bl{font-weight:600;color:var(--acc)}.br.net .bv{color:var(--acc);font-size:15px}
-.cpb{width:100%;margin-top:14px;padding:10px;background:var(--bg);border:1px solid var(--bor);border-radius:8px;font-size:13px;font-weight:500;color:var(--mut);cursor:pointer;font-family:var(--f);display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
-.cpb:hover,.cpb.copied{border-color:var(--acc);color:var(--acc);background:var(--alight)}
+/* sb/ic base — desktop defaults, overridden by mobile accordion media query above */
 .sb{display:flex;flex-direction:column;gap:18px}
-.ic{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:18px}
-.ic h3{font-size:13px;font-weight:600;margin-bottom:10px}
+.ic{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad)}
 .ic ul{list-style:none;display:flex;flex-direction:column;gap:5px}
 .ic li{font-size:13px;color:var(--mut);display:flex;justify-content:space-between}
 .ic li span{font-family:var(--mo);font-size:12px;font-weight:500;color:var(--txt)}
 .ic a{color:var(--acc);font-size:13px;display:block;margin-bottom:6px}
+/* Desktop: ic-body always visible with padding */
+@media(min-width:801px){.ic-body{padding:0 18px 18px}.ic-header{padding:14px 18px 4px}}
 .tip{background:var(--alight);border-radius:8px;padding:12px 14px;font-size:13px;color:var(--acc);line-height:1.6}
 .art{margin-top:48px}.art h2{font-size:20px;font-weight:600;margin-bottom:12px}
 .art p{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:16px}
@@ -110,8 +137,7 @@ h1 em{font-style:normal;color:var(--acc)}
 .fqa{font-size:14px;color:var(--mut);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .25s ease,padding .2s;padding:0 18px}
 .fqa.open{max-height:400px;padding:0 18px 16px}
 
-@media(max-width:800px){.lay{grid-template-columns:1fr}.sb{display:grid;grid-template-columns:1fr 1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}.ra{font-size:34px}}
-@media(max-width:480px){.sb{grid-template-columns:1fr}}
+@media(max-width:800px){.lay{grid-template-columns:1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}.ra{font-size:34px}}
 
 .st-section{margin-top:48px;width:100%}
 .st-section h2{font-size:22px;font-weight:600;margin-bottom:8px}
@@ -252,6 +278,10 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
             <div class="fsec"><div class="fsec-lbl">Super <span class="opt">Optional</span></div>
               <div class="fr"><label>Extra Super Contribution</label><div class="iw hs"><input type="number" id="au-sup" placeholder="0" oninput="calc()"><span class="is">$/yr</span></div></div>
             </div>
+            <button class="calc-btn" onclick="calc()">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              Calculate Take-Home Pay
+            </button>
           </div>
           <div class="res" id="res">
             <div class="ptog" role="group">
@@ -266,10 +296,16 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
               <div class="sbar-legend" id="sbar-legend"></div>
             </div>
             <div class="bd" id="bdown"></div>
-            <button class="cpb" id="cpb" onclick="copyRes()">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-              Copy Results
-            </button>
+            <div class="action-row">
+              <button class="cpb" id="cpb" onclick="copyRes()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                Copy Results
+              </button>
+              <button class="shb" id="shb" onclick="shareRes()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                Share Link
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -290,9 +326,24 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
       </div>
     </div>
     <div class="sb">
-      
-      <div class="ic"><h3>&#127482;&#127480; 2026 Federal Brackets</h3><ul><li>Up to $11,925<span>10%</span></li><li>$11,926-$48,475<span>12%</span></li><li>$48,476-$103,350<span>22%</span></li><li>$103,351-$197,300<span>24%</span></li><li>$197,301-$250,525<span>32%</span></li><li>$250,526-$626,350<span>35%</span></li><li>Over $626,350<span>37%</span></li></ul></div>
-      <div class="ic"><h3>&#128161; 2026 Contribution Limits</h3><ul><li>401(k) under 50<span>$23,500</span></li><li>401(k) age 50+<span>$31,000</span></li><li>HSA single<span>$4,300</span></li><li>HSA family<span>$8,550</span></li></ul></div>
+      <div class="ic" id="ic-brackets">
+        <div class="ic-header" onclick="toggleIC('ic-brackets')">
+          <h3>🇺🇸 2026 Federal Brackets</h3>
+          <span class="ic-chevron">▼</span>
+        </div>
+        <div class="ic-body">
+          <ul><li>Up to $11,925<span>10%</span></li><li>$11,926–$48,475<span>12%</span></li><li>$48,476–$103,350<span>22%</span></li><li>$103,351–$197,300<span>24%</span></li><li>$197,301–$250,525<span>32%</span></li><li>$250,526–$626,350<span>35%</span></li><li>Over $626,350<span>37%</span></li></ul>
+        </div>
+      </div>
+      <div class="ic" id="ic-limits">
+        <div class="ic-header" onclick="toggleIC('ic-limits')">
+          <h3>💡 2026 Contribution Limits</h3>
+          <span class="ic-chevron">▼</span>
+        </div>
+        <div class="ic-body">
+          <ul><li>401(k) under 50<span>$23,500</span></li><li>401(k) age 50+<span>$31,000</span></li><li>HSA single<span>$4,300</span></li><li>HSA family<span>$8,550</span></li></ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -527,7 +578,33 @@ function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(
 function syncSlider(val){var v=parseInt(val)||0;var slider=document.getElementById("us-sal-slider");if(slider){slider.value=Math.min(Math.max(v,20000),300000);}}
 function syncInput(val){var input=document.getElementById("us-sal");if(input){input.value=val;}}
 function toggleDed(){var btn=document.getElementById("ded-btn");var body=document.getElementById("ded-body");btn.classList.toggle("open");body.classList.toggle("open");}
-window.addEventListener("load",function(){var salInput=document.getElementById("us-sal");salInput.value=60000;document.getElementById("us-sal-slider").value=60000;calc();});
+function toggleIC(id){var el=document.getElementById(id);if(el)el.classList.toggle("open");}
+function shareRes(){
+  if(!last)return;
+  var sal=document.getElementById("us-sal").value;
+  var st=document.getElementById("us-st").value;
+  var fil=document.getElementById("us-fil").value;
+  var frq=document.getElementById("us-frq").value;
+  var url=window.location.origin+window.location.pathname+"?sal="+sal+"&st="+encodeURIComponent(st)+"&fil="+fil+"&frq="+frq;
+  navigator.clipboard.writeText(url).then(function(){
+    var b=document.getElementById("shb");
+    b.textContent="Link Copied!";b.classList.add("shared");
+    setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Share Link';b.classList.remove("shared");},2500);
+  });
+}
+window.addEventListener("load",function(){
+  var params=new URLSearchParams(window.location.search);
+  var sal=params.get("sal")||"60000";
+  var st=params.get("st");
+  var fil=params.get("fil");
+  var frq=params.get("frq");
+  document.getElementById("us-sal").value=sal;
+  document.getElementById("us-sal-slider").value=Math.min(Math.max(parseInt(sal),20000),300000);
+  if(st){var stEl=document.getElementById("us-st");for(var i=0;i<stEl.options.length;i++){if(stEl.options[i].value===st){stEl.selectedIndex=i;break;}}}
+  if(fil)document.getElementById("us-fil").value=fil;
+  if(frq)document.getElementById("us-frq").value=frq;
+  calc();
+});
 </script>
 <script>
 function toggleLang(){{var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}}
