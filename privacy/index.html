@@ -5,147 +5,314 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png">
   <link rel="apple-touch-icon" href="/favicon_512x512.png">
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy | PayCalcHub</title>
-<meta name="description" content="PayCalcHub privacy policy. We do not collect or store your financial data. All calculations run in your browser.">
-<link rel="canonical" href="https://paycalchub.com/privacy/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--red:#dc2626;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
-body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}a{color:inherit;text-decoration:none}
-nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
-.nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
-.logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}.nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}.nav-links a:hover{color:var(--txt)}.nav-links a.active{color:var(--acc);font-weight:500}
-.pg{max-width:1100px;margin:0 auto;padding:32px 24px 64px}.bc{font-size:13px;color:var(--mut);margin-bottom:12px}.bc a{color:var(--acc)}
-h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px}h1 em{font-style:normal;color:var(--acc)}.sub{color:var(--mut);font-size:15px;margin-bottom:28px}
-.lay{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start}
-.card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:24px}
-.fr{margin-bottom:14px}.fr label{display:block;font-size:13px;font-weight:500;color:var(--mut);margin-bottom:5px}
-.iw{position:relative}.ip{position:absolute;left:11px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--mut);pointer-events:none;z-index:1}
-.is{position:absolute;right:11px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--mut);pointer-events:none}
-.fr input,.fr select{width:100%;padding:10px 14px;border:1px solid var(--bor);border-radius:8px;font-size:15px;font-family:var(--f);background:var(--bg);color:var(--txt);outline:none;transition:border-color .15s;-moz-appearance:textfield}
-.fr input::-webkit-outer-spin-button,.fr input::-webkit-inner-spin-button{-webkit-appearance:none}
-.fr input:focus,.fr select:focus{border-color:var(--acc);background:#fff}
-.hp input{padding-left:28px}.hs input{padding-right:38px}.fg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.sb{display:flex;flex-direction:column;gap:18px}.ic{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:18px}
-.ic h3{font-size:13px;font-weight:600;margin-bottom:10px}.ic ul{list-style:none;display:flex;flex-direction:column;gap:5px}
-.ic li{font-size:13px;color:var(--mut);display:flex;justify-content:space-between}.ic li span{font-family:var(--mo);font-size:12px;font-weight:500;color:var(--txt)}
-.ic a{color:var(--acc);font-size:13px;display:block;margin-bottom:6px}
-.fqs{margin-top:40px}.fqs h2{font-size:20px;font-weight:600;margin-bottom:16px}
-.fqi{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);margin-bottom:8px;overflow:hidden}
-.fqq{padding:15px 18px;font-size:14px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.fqi-icon{font-size:20px;color:var(--mut);flex-shrink:0;transition:transform .2s}.fqq.open .fqi-icon{transform:rotate(45deg)}
-.fqa{font-size:14px;color:var(--mut);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .25s ease,padding .2s;padding:0 18px}.fqa.open{max-height:400px;padding:0 18px 16px}
-@media(max-width:800px){.lay{grid-template-columns:1fr}.sb{display:grid;grid-template-columns:1fr 1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}}
-@media(max-width:480px){.sb{grid-template-columns:1fr}}
-.content{max-width:720px;margin:0 auto;padding:48px 24px 80px}
-.content h2{font-size:16px;font-weight:600;margin:28px 0 8px}
-.content p{font-size:15px;color:var(--mut);margin-bottom:12px}
-.updated{font-size:13px;color:var(--mut);margin-bottom:32px}
-.lang-wrap{position:relative;margin-left:8px}
-.lang-btn{display:flex;align-items:center;gap:6px;background:var(--alight);border:1px solid #c5e0d3;border-radius:8px;padding:5px 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--acc);transition:background .15s}
-.lang-btn:hover{background:#d4eddf}
-.lang-chevron{font-size:11px;color:var(--mut);transition:transform .2s}
-.lang-wrap.open .lang-chevron{transform:rotate(180deg)}
-.lang-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:5px;min-width:148px;box-shadow:0 4px 20px rgba(0,0,0,0.08);z-index:200}
-.lang-wrap.open .lang-dropdown{display:block}
-.lang-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;font-size:13px;color:var(--txt);cursor:pointer;transition:background .1s}
-.lang-item:hover{background:var(--bg)}
-.lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
-.lang-item-flag{font-size:16px}
-.lang-item-check{margin-left:auto;font-size:13px;color:var(--acc)}
-
-.fi-logo span{color:var(--acc)}
-
-footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
-.fi{max-width:1100px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:20px 40px;align-items:start}
-.fi-logo{font-weight:600;font-size:16px;color:var(--txt);text-decoration:none;white-space:nowrap;padding-top:2px}
-.fi-logo span{color:var(--acc)}
-.fi-mid{display:flex;flex-direction:column;gap:8px}
-.fi-nav-row{display:flex;align-items:center;gap:4px 16px;flex-wrap:wrap;font-size:13px}
-.fi-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);min-width:72px;opacity:.6}
-.fi-nav-row a{color:var(--mut);text-decoration:none;transition:color .15s}
-.fi-nav-row a:hover{color:var(--acc)}
-.fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.6;padding-top:2px}
-@media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
-
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
-.hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
-.mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
-.mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
-.mobile-menu a:last-child{border-bottom:none}
-.mobile-menu.open{display:block}
-@media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
-</style>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-7723301737736770">
+  <title>Privacy Policy | PayCalcHub</title>
+  <meta name="description" content="PayCalcHub privacy policy. We do not collect or store your financial data. All calculations run in your browser. Learn how we handle analytics, cookies, and Google AdSense.">
+  <link rel="canonical" href="https://paycalchub.com/privacy/">
+  <meta property="og:title" content="Privacy Policy | PayCalcHub">
+  <meta property="og:description" content="PayCalcHub does not collect your financial data. All calculator inputs stay in your browser.">
   <meta property="og:image" content="https://paycalchub.com/og-image.png">
-  
-  
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://paycalchub.com/og-image.png">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "PayCalcHub", "item": "https://paycalchub.com/"},
-    {"@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://paycalchub.com/privacy/"}
-  ]
-}
-</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "PayCalcHub", "item": "https://paycalchub.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://paycalchub.com/privacy/"}
+    ]
+  }
+  </script>
+  <style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;--f:"DM Sans",sans-serif}
+  body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+
+  nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
+  .nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
+  .logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}
+  .nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}.nav-links a:hover{color:var(--txt)}.nav-links a.active{color:var(--acc);font-weight:500}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+  .hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
+  .mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
+  .mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
+  .mobile-menu a:last-child{border-bottom:none}.mobile-menu.open{display:block}
+  @media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
+
+  .pg{max-width:800px;margin:0 auto;padding:40px 24px 80px}
+  .bc{font-size:13px;color:var(--mut);margin-bottom:14px}.bc a{color:var(--acc)}
+  h1{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px}
+  h1 em{font-style:normal;color:var(--acc)}
+  .meta{font-size:13px;color:var(--mut);margin-bottom:32px}
+
+  /* SUMMARY CARDS */
+  .summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:40px}
+  .sum-card{background:var(--alight);border:1px solid #c5e0d3;border-radius:var(--rad);padding:16px 18px}
+  .sum-card .icon{font-size:22px;margin-bottom:8px}
+  .sum-card h3{font-size:13px;font-weight:600;color:#1a5c3a;margin-bottom:4px}
+  .sum-card p{font-size:12px;color:#2d6b4a;line-height:1.55}
+
+  /* SECTIONS */
+  .sec{margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid var(--bor)}
+  .sec:last-of-type{border-bottom:none}
+  .sec h2{font-size:18px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .sec h2 .tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:var(--alight);color:var(--acc);border-radius:4px;padding:2px 7px}
+  .sec h3{font-size:15px;font-weight:600;margin:18px 0 8px}
+  .sec p{font-size:14px;color:var(--mut);line-height:1.8;margin-bottom:12px}
+  .sec ul,.sec ol{padding-left:20px;margin-bottom:12px}
+  .sec li{font-size:14px;color:var(--mut);line-height:1.75;margin-bottom:6px}
+  .sec a{color:var(--acc)}
+  .sec strong{color:var(--txt)}
+
+  /* TABLE */
+  .data-table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13px}
+  .data-table th{text-align:left;padding:9px 12px;background:var(--bg);border-bottom:2px solid var(--bor);font-weight:600;color:var(--txt)}
+  .data-table td{padding:10px 12px;border-bottom:1px solid var(--bor);color:var(--mut);vertical-align:top}
+  .data-table td:first-child{font-weight:500;color:var(--txt);width:35%}
+  .data-table tr:last-child td{border-bottom:none}
+
+  /* HIGHLIGHT BOX */
+  .hbox{background:var(--alight);border:1px solid #c5e0d3;border-radius:10px;padding:16px 20px;margin:16px 0;font-size:14px;color:#1a5c3a;line-height:1.7}
+  .hbox strong{color:#0f3d29}
+
+  /* CONTACT CTA */
+  .cta{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:24px 28px;margin-top:40px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .cta p{font-size:14px;color:var(--mut);line-height:1.65}
+  .cta-btn{display:inline-flex;align-items:center;gap:6px;background:var(--acc);color:#fff;border-radius:8px;padding:10px 18px;font-size:14px;font-weight:600;white-space:nowrap;transition:opacity .15s}
+  .cta-btn:hover{opacity:.88}
+
+  footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
+  .fi{max-width:1100px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:20px 40px;align-items:start}
+  .fi-logo{font-weight:600;font-size:16px;color:var(--txt)}.fi-logo span{color:var(--acc)}
+  .fi-mid{display:flex;flex-direction:column;gap:8px}
+  .fi-nav-row{display:flex;align-items:center;gap:4px 16px;flex-wrap:wrap;font-size:13px}
+  .fi-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);min-width:72px;opacity:.6}
+  .fi-nav-row a{color:var(--mut)}.fi-nav-row a:hover{color:var(--acc)}
+  .fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.6}
+  @media(max-width:700px){.summary{grid-template-columns:1fr}.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}.cta{flex-direction:column}}
+  </style>
 </head>
 <body>
-<nav><div class="nav-in"><a href="/" class="logo">Pay<span>Calc</span>Hub</a><div class="nav-links"><a href="/salary-calculator/" >Salary</a><a href="/mortgage-calculator/" >Mortgage</a><a href="/loan-calculator/" >Loan</a><a href="/hourly-to-salary/" >Hourly</a></div></div></nav>
-<div class="content">
-  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: May 2026</p>
-  <p>PayCalcHub is committed to protecting your privacy. This policy explains what data we collect and how we use it.</p>
-  <h2>Data We Do Not Collect</h2>
-  <p>All calculations on PayCalcHub run entirely in your browser. We do not collect, store, or transmit any salary, income, mortgage, or personal financial data you enter into our calculators. Your financial inputs never leave your device.</p>
-  <h2>Analytics</h2>
-  <p>We use standard web analytics to collect anonymous usage data including pages visited, time on site, browser type, and country. This data does not identify you personally and is used solely to improve our tools.</p>
-  <h2>Google AdSense</h2>
-  <p>We display advertisements via Google AdSense. Google may use cookies to serve ads based on your prior visits. You can opt out at <a href="https://www.google.com/settings/ads" style="color:var(--acc)">Google Ad Settings</a>.</p>
-  <h2>Cookies</h2>
-  <p>We use cookies for analytics and advertising only. No sensitive personal or financial data is stored in cookies.</p>
-  <h2>Contact</h2>
-  <p>Questions? Visit our <a href="/contact/" style="color:var(--acc)">contact page</a>.</p>
+<nav><div class="nav-in">
+  <a href="/" class="logo">Pay<span>Calc</span>Hub</a>
+  <div class="nav-links">
+    <a href="/salary-calculator/">Salary</a>
+    <a href="/mortgage-calculator/">Mortgage</a>
+    <a href="/loan-calculator/">Loan</a>
+    <a href="/hourly-to-salary/">Hourly</a>
+    <a href="/about/">About</a>
+  </div>
+  <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/salary-calculator/">Salary Calculator</a>
+  <a href="/mortgage-calculator/">Mortgage Calculator</a>
+  <a href="/loan-calculator/">Loan Calculator</a>
+  <a href="/hourly-to-salary/">Hourly to Salary</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Contact</a>
+</div>
+</nav>
+
+<div class="pg">
+  <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; Privacy Policy</div>
+  <h1><em>Privacy</em> Policy</h1>
+  <p class="meta">Effective date: January 1, 2026 &nbsp;|&nbsp; Last updated: May 2026 &nbsp;|&nbsp; Applies to: paycalchub.com</p>
+
+  <div class="summary">
+    <div class="sum-card">
+      <div class="icon">🔒</div>
+      <h3>Your financial data stays on your device</h3>
+      <p>All calculator inputs run in your browser. Nothing you type is ever sent to our servers.</p>
+    </div>
+    <div class="sum-card">
+      <div class="icon">🚫</div>
+      <h3>No registration required</h3>
+      <p>We never ask for an account, email address, or personal information to use our calculators.</p>
+    </div>
+    <div class="sum-card">
+      <div class="icon">📢</div>
+      <h3>Ads are disclosed</h3>
+      <p>We display Google AdSense ads. This is clearly disclosed and you can opt out at any time.</p>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <div class="sec">
+    <h2>1. Who We Are</h2>
+    <p>PayCalcHub ("we," "us," or "our") operates the website located at <strong>paycalchub.com</strong>. We provide free financial calculators and educational content for US workers, job seekers, and homebuyers. If you have any questions about this policy, contact us at <a href="mailto:hello@paycalchub.com">hello@paycalchub.com</a> or via our <a href="/contact/">Contact page</a>.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="sec">
+    <h2>2. Information We Do <em style="font-style:normal;color:var(--acc)">Not</em> Collect</h2>
+    <div class="hbox">
+      <strong>Your financial inputs are never collected.</strong> All calculations on PayCalcHub — salary, tax, mortgage, loan — run entirely within your web browser using JavaScript. The numbers you enter into our calculators are never transmitted to our servers, never stored, and never shared with any third party.
+    </div>
+    <p>Specifically, we do not collect:</p>
+    <ul>
+      <li>Salary, income, or wage figures you enter</li>
+      <li>Mortgage amounts, loan figures, or debt information</li>
+      <li>State or location data entered into calculators</li>
+      <li>Filing status, deduction amounts, or any other tax inputs</li>
+    </ul>
+  </div>
+
+  <!-- 3 -->
+  <div class="sec">
+    <h2>3. Information We Do Collect</h2>
+    <h3>3a. Analytics Data</h3>
+    <p>We use standard web analytics to understand how visitors use our site. This data is collected anonymously and does not identify you personally. It includes:</p>
+    <table class="data-table">
+      <tr><th>Data Type</th><th>Purpose</th><th>Retention</th></tr>
+      <tr><td>Pages visited</td><td>Understand which calculators are most useful</td><td>26 months</td></tr>
+      <tr><td>Approximate country/region</td><td>Understand audience geography</td><td>26 months</td></tr>
+      <tr><td>Browser and device type</td><td>Ensure compatibility</td><td>26 months</td></tr>
+      <tr><td>Referral source</td><td>Understand how visitors find us</td><td>26 months</td></tr>
+      <tr><td>Session duration and bounce rate</td><td>Improve page quality</td><td>26 months</td></tr>
+    </table>
+    <p>We do not use analytics to track individual users across sessions or build personal profiles.</p>
+
+    <h3>3b. Contact Form Submissions</h3>
+    <p>If you use our <a href="/contact/">Contact page</a>, we collect the name, email address, and message content you voluntarily provide. This information is used solely to respond to your enquiry. Contact submissions are processed via Web3Forms and forwarded to our team email. We do not share your contact information with third parties.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="sec">
+    <h2>4. Google AdSense &amp; Advertising <span class="tag">Disclosed</span></h2>
+    <p>PayCalcHub displays advertisements served by <strong>Google AdSense</strong>. Advertising revenue allows us to keep all calculators free. Here is what this means for your privacy:</p>
+    <ul>
+      <li>Google may use cookies and similar technologies to serve ads based on your interests and prior browsing activity.</li>
+      <li>Google's advertising partners may also collect data in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+      <li>We do not share any personally identifiable information with Google AdSense beyond what is collected by their standard ad scripts.</li>
+      <li>Your calculator inputs are never shared with Google or any advertiser.</li>
+    </ul>
+    <p><strong>Opt out of personalized ads:</strong> You can manage or opt out of Google's personalized advertising at <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">google.com/settings/ads</a>. You can also use the <a href="https://optout.aboutads.info/" target="_blank" rel="noopener">Digital Advertising Alliance opt-out tool</a>.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="sec">
+    <h2>5. Cookies</h2>
+    <p>We use cookies for the following purposes only:</p>
+    <table class="data-table">
+      <tr><th>Cookie Type</th><th>Set By</th><th>Purpose</th></tr>
+      <tr><td>Analytics cookies</td><td>PayCalcHub / analytics provider</td><td>Anonymous usage statistics</td></tr>
+      <tr><td>Advertising cookies</td><td>Google AdSense</td><td>Ad personalization and frequency capping</td></tr>
+    </table>
+    <p>No sensitive personal or financial data is stored in cookies. You can control or delete cookies through your browser settings. Note that disabling cookies may affect the display of ads on this site.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="sec">
+    <h2>6. Third-Party Services</h2>
+    <p>We use the following third-party services that may process data according to their own privacy policies:</p>
+    <table class="data-table">
+      <tr><th>Service</th><th>Purpose</th><th>Privacy Policy</th></tr>
+      <tr><td>Google AdSense</td><td>Display advertising</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+      <tr><td>Google Fonts</td><td>Typography (DM Sans)</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+      <tr><td>Web3Forms</td><td>Contact form submission processing</td><td><a href="https://web3forms.com/privacy" target="_blank" rel="noopener">web3forms.com/privacy</a></td></tr>
+      <tr><td>Cloudflare Pages</td><td>Website hosting and CDN</td><td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a></td></tr>
+    </table>
+    <p>We are not responsible for the privacy practices of these third-party services. We encourage you to review their policies.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="sec">
+    <h2>7. Your Rights &amp; Choices</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access:</strong> Request a copy of any personal data we hold about you.</li>
+      <li><strong>Deletion:</strong> Request that we delete your personal data (e.g., contact form submissions).</li>
+      <li><strong>Correction:</strong> Request corrections to inaccurate data we hold.</li>
+      <li><strong>Opt-out of advertising:</strong> Opt out of personalized ads via <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ad Settings</a>.</li>
+      <li><strong>Data portability:</strong> Request a copy of data you've provided to us in a portable format.</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:hello@paycalchub.com">hello@paycalchub.com</a>. We will respond within 30 days.</p>
+
+    <h3>California Residents (CCPA)</h3>
+    <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information is collected, the right to delete personal information, and the right to opt out of the sale of personal information. <strong>We do not sell personal information.</strong> To exercise your CCPA rights, contact us at <a href="mailto:hello@paycalchub.com">hello@paycalchub.com</a>.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="sec">
+    <h2>8. Children's Privacy</h2>
+    <p>PayCalcHub is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="sec">
+    <h2>9. Data Retention</h2>
+    <p>We retain personal data only as long as necessary for the purpose it was collected:</p>
+    <ul>
+      <li><strong>Contact form submissions:</strong> Retained for up to 12 months, then deleted.</li>
+      <li><strong>Analytics data:</strong> Retained for 26 months in aggregate, anonymized form.</li>
+      <li><strong>Calculator inputs:</strong> Never stored — not applicable.</li>
+    </ul>
+  </div>
+
+  <!-- 10 -->
+  <div class="sec">
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last updated" date at the top of this page. We encourage you to review this page periodically. Continued use of PayCalcHub after any changes constitutes acceptance of the revised policy. For significant changes, we may also add a notice on our homepage.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="sec">
+    <h2>11. Contact Us</h2>
+    <p>If you have questions, concerns, or requests related to this Privacy Policy or your personal data, please reach out:</p>
+    <ul>
+      <li>Email: <a href="mailto:hello@paycalchub.com">hello@paycalchub.com</a></li>
+      <li>Contact form: <a href="/contact/">paycalchub.com/contact/</a></li>
+    </ul>
+    <p>We aim to respond to all privacy-related enquiries within 30 days.</p>
+  </div>
+
+  <div class="cta">
+    <p>Have questions about how we handle your data? We're happy to clarify anything in this policy.</p>
+    <a href="/contact/" class="cta-btn">Contact Us &rarr;</a>
+  </div>
+</div>
+
 <footer>
 <div class="fi">
   <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>
   <div class="fi-mid">
     <div class="fi-nav-row">
       <span class="fi-group-lbl">Calculators</span>
-      <a href="/salary-calculator/">Salary</a>
-      <a href="/mortgage-calculator/">Mortgage</a>
-      <a href="/loan-calculator/">Loan</a>
-      <a href="/hourly-to-salary/">Hourly</a>
+      <a href="/salary-calculator/">Salary</a><a href="/mortgage-calculator/">Mortgage</a>
+      <a href="/loan-calculator/">Loan</a><a href="/hourly-to-salary/">Hourly</a>
     </div>
     <div class="fi-nav-row">
-      <span class="fi-group-lbl">Guides</span>
-      <a href="/salary-to-hourly/">Salary &rarr; Hourly</a>
-      <a href="/how-much-house-can-i-afford/">Affordability</a>
-      <a href="/mortgage-per-month/">Mortgage Guide</a>
-      <a href="/about/">About</a>
-      <a href="/privacy/">Privacy</a>
-      <a href="/contact/">Contact</a>
+      <span class="fi-group-lbl">Site</span>
+      <a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a>
     </div>
   </div>
-  <span class="fi-copy">&copy; 2026 PayCalcHub.com<br>For informational purposes only.</span>
+  <span class="fi-copy">&copy; 2026 PayCalcHub.com<br>Informational purposes only.<br>Not financial advice.</span>
 </div>
 </footer>
+
 <script>
-function toggleLang(){{var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}}
-document.addEventListener('click',function(e){{var w=document.getElementById('langWrap');if(w&&!w.contains(e.target)){{w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}}});
-document.addEventListener('keydown',function(e){{if(e.key==='Escape'){{var w=document.getElementById('langWrap');if(w){{w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}}}}});
+function toggleMenu(){
+  var m=document.getElementById('mobileMenu');
+  var b=document.getElementById('hamburgerBtn');
+  var open=m.classList.toggle('open');
+  b.setAttribute('aria-expanded',open);
+}
+document.addEventListener('click',function(e){
+  var m=document.getElementById('mobileMenu');
+  var b=document.getElementById('hamburgerBtn');
+  var nav=document.querySelector('nav');
+  if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}
+});
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
-<script>
-function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
-document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
-</script>
 </body>
 </html>
