@@ -136,11 +136,17 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .tag-gray{background:var(--bg);color:var(--mut);border:1px solid var(--bor)}
 
 /* Popular searches */
-.pop{max-width:1100px;margin:0 auto;padding:0 24px 32px}
-.pop-inner{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px 24px}
-.pop-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.pop-link{border:1px solid var(--bor);border-radius:8px;padding:7px 14px;font-size:13px;color:var(--acc);background:var(--sur);transition:background .12s,border-color .12s}
-.pop-link:hover{background:var(--alight);border-color:var(--acc)}
+.pop{max-width:1100px;margin:0 auto;padding:0 24px 40px}
+.pop-groups{display:grid;grid-template-columns:repeat(3,1fr);background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);overflow:hidden}
+.pop-group{padding:18px 20px;border-right:1px solid var(--bor);border-bottom:1px solid var(--bor)}
+.pop-group:nth-child(3n){border-right:none}
+.pop-group:nth-child(4),.pop-group:nth-child(5),.pop-group:nth-child(6){border-bottom:none}
+.pop-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.pop-links{display:flex;flex-wrap:wrap;gap:6px}
+.pop-link{font-size:12.5px;color:var(--acc);background:var(--alight);border-radius:20px;padding:4px 11px;transition:background .12s;white-space:nowrap}
+.pop-link:hover{background:#c5e0d3}
+@media(max-width:800px){.pop-groups{grid-template-columns:1fr 1fr}.pop-group:nth-child(3n){border-right:1px solid var(--bor)}.pop-group:nth-child(2n){border-right:none}.pop-group:nth-child(5),.pop-group:nth-child(6){border-bottom:1px solid var(--bor)}.pop-group:last-child{border-bottom:none}}
+@media(max-width:500px){.pop-groups{grid-template-columns:1fr}.pop-group{border-right:none!important}.pop-group:last-child{border-bottom:none}}
 
 /* Footer */
 .fi-logo span{color:var(--acc)}
@@ -342,30 +348,72 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 
 <!-- Popular searches -->
 <div class="pop">
-<div class="pop-inner">
-  <div class="sec-lbl" style="margin-bottom:0">Popular searches</div>
-  <div class="pop-links">
-    <a href="/hourly-to-salary/20-dollars-an-hour/" class="pop-link">$20 an hour is how much a year?</a>
-    <a href="/hourly-to-salary/25-dollars-an-hour/" class="pop-link">$25 an hour annual salary</a>
-    <a href="/hourly-to-salary/15-dollars-an-hour/" class="pop-link">$15 an hour after taxes</a>
-    <a href="/salary-to-hourly/50k-a-year/" class="pop-link">$50,000 a year is how much an hour?</a>
-    <a href="/salary-to-hourly/60k-a-year/" class="pop-link">$60,000 a year after taxes</a>
-    <a href="/salary-to-hourly/100k-a-year/" class="pop-link">$100k a year hourly rate</a>
-    <a href="/salary-calculator/california/" class="pop-link">California salary calculator</a>
-    <a href="/salary-calculator/texas/" class="pop-link">Texas salary calculator</a>
-    <a href="/salary-calculator/new-york/" class="pop-link">New York salary calculator</a>
-    <a href="/salary-calculator/florida/" class="pop-link">Florida salary calculator</a>
-    <a href="/salary-calculator/united-kingdom/" class="pop-link">UK salary calculator</a>
-    <a href="/salary-calculator/canada/" class="pop-link">Canada salary calculator</a>
-    <a href="/salary-calculator/australia/" class="pop-link">Australia salary calculator</a>
-    <a href="/how-much-house-can-i-afford/60k-salary/" class="pop-link">How much house on $60k salary?</a>
-    <a href="/how-much-house-can-i-afford/80k-salary/" class="pop-link">How much house on $80k salary?</a>
-    <a href="/how-much-house-can-i-afford/100k-salary/" class="pop-link">How much house on $100k salary?</a>
-    <a href="/mortgage-per-month/300k-mortgage/" class="pop-link">$300k mortgage per month</a>
-    <a href="/mortgage-per-month/400k-mortgage/" class="pop-link">$400k mortgage per month</a>
-    <a href="/mortgage-per-month/500k-mortgage/" class="pop-link">$500k mortgage per month</a>
+  <div class="sec-lbl">Popular searches</div>
+  <div class="pop-groups">
+    <div class="pop-group">
+      <div class="pop-group-lbl">💵 Hourly wages</div>
+      <div class="pop-links">
+        <a href="/hourly-to-salary/15-dollars-an-hour/" class="pop-link">$15 an hour</a>
+        <a href="/hourly-to-salary/20-dollars-an-hour/" class="pop-link">$20 an hour</a>
+        <a href="/hourly-to-salary/25-dollars-an-hour/" class="pop-link">$25 an hour</a>
+        <a href="/hourly-to-salary/30-dollars-an-hour/" class="pop-link">$30 an hour</a>
+        <a href="/hourly-to-salary/40-dollars-an-hour/" class="pop-link">$40 an hour</a>
+        <a href="/hourly-to-salary/50-dollars-an-hour/" class="pop-link">$50 an hour</a>
+      </div>
+    </div>
+    <div class="pop-group">
+      <div class="pop-group-lbl">📅 Annual salaries</div>
+      <div class="pop-links">
+        <a href="/salary-to-hourly/40k-a-year/" class="pop-link">$40k a year</a>
+        <a href="/salary-to-hourly/50k-a-year/" class="pop-link">$50k a year</a>
+        <a href="/salary-to-hourly/60k-a-year/" class="pop-link">$60k a year</a>
+        <a href="/salary-to-hourly/75k-a-year/" class="pop-link">$75k a year</a>
+        <a href="/salary-to-hourly/100k-a-year/" class="pop-link">$100k a year</a>
+        <a href="/salary-to-hourly/120k-a-year/" class="pop-link">$120k a year</a>
+      </div>
+    </div>
+    <div class="pop-group">
+      <div class="pop-group-lbl">🗺️ By state</div>
+      <div class="pop-links">
+        <a href="/salary-calculator/california/" class="pop-link">California</a>
+        <a href="/salary-calculator/texas/" class="pop-link">Texas</a>
+        <a href="/salary-calculator/new-york/" class="pop-link">New York</a>
+        <a href="/salary-calculator/florida/" class="pop-link">Florida</a>
+        <a href="/salary-calculator/washington/" class="pop-link">Washington</a>
+        <a href="/salary-calculator/colorado/" class="pop-link">Colorado</a>
+      </div>
+    </div>
+    <div class="pop-group">
+      <div class="pop-group-lbl">🌍 International</div>
+      <div class="pop-links">
+        <a href="/salary-calculator/united-kingdom/" class="pop-link">UK</a>
+        <a href="/salary-calculator/canada/" class="pop-link">Canada</a>
+        <a href="/salary-calculator/australia/" class="pop-link">Australia</a>
+      </div>
+    </div>
+    <div class="pop-group">
+      <div class="pop-group-lbl">🏠 Mortgage</div>
+      <div class="pop-links">
+        <a href="/mortgage-per-month/200k-mortgage/" class="pop-link">$200k</a>
+        <a href="/mortgage-per-month/300k-mortgage/" class="pop-link">$300k</a>
+        <a href="/mortgage-per-month/400k-mortgage/" class="pop-link">$400k</a>
+        <a href="/mortgage-per-month/500k-mortgage/" class="pop-link">$500k</a>
+        <a href="/mortgage-per-month/600k-mortgage/" class="pop-link">$600k</a>
+        <a href="/mortgage-per-month/700k-mortgage/" class="pop-link">$700k</a>
+      </div>
+    </div>
+    <div class="pop-group">
+      <div class="pop-group-lbl">🏡 Affordability</div>
+      <div class="pop-links">
+        <a href="/how-much-house-can-i-afford/40k-salary/" class="pop-link">$40k salary</a>
+        <a href="/how-much-house-can-i-afford/60k-salary/" class="pop-link">$60k salary</a>
+        <a href="/how-much-house-can-i-afford/80k-salary/" class="pop-link">$80k salary</a>
+        <a href="/how-much-house-can-i-afford/100k-salary/" class="pop-link">$100k salary</a>
+        <a href="/how-much-house-can-i-afford/120k-salary/" class="pop-link">$120k salary</a>
+        <a href="/how-much-house-can-i-afford/150k-salary/" class="pop-link">$150k salary</a>
+      </div>
+    </div>
   </div>
-</div>
 </div>
 
 <!-- Footer -->
