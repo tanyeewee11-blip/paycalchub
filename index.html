@@ -104,8 +104,14 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 /* Preview calculator */
 .preview{background:var(--sur);border:1px solid var(--bor);border-radius:16px;padding:22px;box-shadow:0 6px 24px rgba(0,0,0,.05)}
 .prev-lbl{font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
-.prev-input{width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--bor);font-size:15px;font-family:var(--f);outline:none;margin-bottom:10px;background:var(--bg)}
+.prev-input{width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--bor);font-size:15px;font-family:var(--f);outline:none;margin-bottom:6px;background:var(--bg)}
 .prev-input:focus{border-color:var(--acc)}
+.prev-slider{width:100%;-webkit-appearance:none;appearance:none;height:4px;border-radius:2px;background:var(--bor);outline:none;cursor:pointer;margin-bottom:10px}
+.prev-slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.prev-slider::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff}
+.prev-row{display:flex;gap:8px;margin-bottom:10px}
+.prev-select{flex:1;padding:8px 10px;border-radius:8px;border:1px solid var(--bor);font-size:13px;font-family:var(--f);outline:none;background:var(--bg);color:var(--txt)}
+.prev-select:focus{border-color:var(--acc)}
 .prev-res{background:var(--alight);border-radius:10px;padding:13px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .prev-res-v{font-family:var(--mo);font-size:22px;font-weight:500;color:var(--acc)}
 .prev-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -115,18 +121,19 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 
 /* Stats bar */
 .stats-bar{max-width:1100px;margin:0 auto 0;padding:0 24px 32px}
-.stats-inner{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px 0;display:grid;grid-template-columns:repeat(4,1fr)}
-.stat-item{text-align:center;border-right:1px solid var(--bor);padding:0 16px}
+.stats-inner{background:var(--alight);border:1px solid #c5e0d3;border-radius:var(--rad);padding:20px 0;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{text-align:center;border-right:1px solid #c5e0d3;padding:0 16px}
 .stat-item:last-child{border-right:none}
-.stat-num{font-family:var(--mo);font-size:24px;font-weight:500;color:var(--acc);margin-bottom:4px}
-.stat-lbl{font-size:12px;color:var(--mut)}
+.stat-icon{font-size:18px;margin-bottom:4px}
+.stat-num{font-family:var(--mo);font-size:24px;font-weight:500;color:var(--acc);margin-bottom:2px}
+.stat-lbl{font-size:12px;color:#2d6b4a}
 
 /* Tools */
 .sec{max-width:1100px;margin:0 auto;padding:0 24px 32px}
 .sec-lbl{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--mut);letter-spacing:.06em;margin-bottom:16px}
 .tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.tc{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:22px;transition:border-color .15s,transform .15s;display:block}
-.tc:hover{border-color:var(--acc);transform:translateY(-2px)}
+.tc{background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:var(--rad);padding:22px;transition:border-color .15s,transform .15s,box-shadow .15s;display:block}
+.tc:hover{border-color:var(--acc);border-left-color:var(--acc);transform:translateY(-2px);box-shadow:0 4px 16px rgba(30,107,74,.08)}
 .ti{font-size:26px;margin-bottom:10px}
 .tc h2{font-size:15px;font-weight:600;margin-bottom:7px;color:var(--txt)}
 .tc p{font-size:13px;color:var(--mut);line-height:1.6;margin-bottom:12px}
@@ -180,7 +187,7 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .fqa.open{max-height:400px;padding:0 18px 16px}
 
 footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
-.fi{max-width:1100px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:20px 40px;align-items:start}
+.fi{max-width:1100px;margin:0 auto;padding:28px 24px 20px;display:grid;grid-template-columns:auto 1fr auto;gap:20px 40px;align-items:start}
 .fi-logo{font-weight:600;font-size:16px;color:var(--txt);text-decoration:none;white-space:nowrap;padding-top:2px}
 .fi-logo span{color:var(--acc)}
 .fi-mid{display:flex;flex-direction:column;gap:8px}
@@ -188,8 +195,9 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .fi-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);min-width:72px;opacity:.6}
 .fi-nav-row a{color:var(--mut);text-decoration:none;transition:color .15s}
 .fi-nav-row a:hover{color:var(--acc)}
-.fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.6;padding-top:2px}
-@media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
+.fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.7;padding-top:2px}
+.fi-disclaimer{max-width:1100px;margin:0 auto;padding:12px 24px 24px;border-top:1px solid var(--bor);font-size:11px;color:var(--mut);line-height:1.65;opacity:.7}
+@media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}.fi-disclaimer{text-align:center}}
 </style>
   <link rel="alternate" hreflang="en" href="https://paycalchub.com/">
   <link rel="alternate" hreflang="es" href="https://paycalchub.com/es/">
@@ -284,23 +292,49 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   </div>
 </div>
 <div class="preview">
-  <div class="prev-lbl">Quick Paycheck Check</div>
-  <input type="number" id="qs" value="60000" class="prev-input" oninput="qc()" placeholder="Annual salary">
+  <div class="prev-lbl">Quick Paycheck Estimate</div>
+  <input type="number" id="qs" value="60000" class="prev-input" oninput="syncQSlider(this.value);qc()" placeholder="Annual salary">
+  <input type="range" class="prev-slider" id="qs-slider" min="20000" max="300000" step="1000" value="60000" oninput="syncQInput(this.value);qc()">
+  <div class="prev-row">
+    <select class="prev-select" id="q-state" onchange="qc()">
+      <option value="0">No state tax (AK/FL/TX…)</option>
+      <option value="9.3" selected>California — 9.3%</option>
+      <option value="6.85">New York — 6.85%</option>
+      <option value="5.0">Massachusetts — 5.0%</option>
+      <option value="4.95">Illinois — 4.95%</option>
+      <option value="4.4">Colorado — 4.4%</option>
+      <option value="5.75">Virginia — 5.75%</option>
+      <option value="3.07">Pennsylvania — 3.07%</option>
+      <option value="4.25">Michigan — 4.25%</option>
+    </select>
+    <select class="prev-select" id="q-fil" onchange="qc()" style="max-width:130px">
+      <option value="single">Single</option>
+      <option value="married">Married</option>
+    </select>
+  </div>
   <div class="prev-res">
     <span style="font-size:13px;color:var(--acc)">Monthly take-home</span>
-    <span class="prev-res-v" id="qr">$3,867</span>
+    <span class="prev-res-v" id="qr">—</span>
   </div>
   <div class="prev-mini">
     <div class="prev-mini-card">
       <div class="prev-mini-lbl">Annual net</div>
-      <div class="prev-mini-val" id="qa">$46,407</div>
+      <div class="prev-mini-val" id="qa">—</div>
+    </div>
+    <div class="prev-mini-card">
+      <div class="prev-mini-lbl">Federal tax</div>
+      <div class="prev-mini-val" id="qf">—</div>
+    </div>
+    <div class="prev-mini-card">
+      <div class="prev-mini-lbl">State tax</div>
+      <div class="prev-mini-val" id="qst">—</div>
     </div>
     <div class="prev-mini-card">
       <div class="prev-mini-lbl">Effective rate</div>
-      <div class="prev-mini-val" id="qe">18.4%</div>
+      <div class="prev-mini-val" id="qe">—</div>
     </div>
   </div>
-  <p style="font-size:12px;color:var(--mut);margin-top:12px;line-height:1.5">Federal tax + FICA only — excludes state tax. <a href="/salary-calculator/" style="color:var(--acc);text-decoration:underline">Full breakdown →</a></p>
+  <p style="font-size:12px;color:var(--mut);margin-top:12px;line-height:1.5">Estimate only — excludes local taxes &amp; deductions. <a href="/salary-calculator/" style="color:var(--acc);text-decoration:underline">Full breakdown →</a></p>
 </div>
 </div>
 </div>
@@ -308,10 +342,10 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 <!-- Stats bar -->
 <div class="stats-bar">
 <div class="stats-inner">
-  <div class="stat-item"><div class="stat-num">50</div><div class="stat-lbl">US states covered</div></div>
-  <div class="stat-item"><div class="stat-num">4</div><div class="stat-lbl">Countries supported</div></div>
-  <div class="stat-item"><div class="stat-num">2026</div><div class="stat-lbl">Tax rates updated</div></div>
-  <div class="stat-item"><div class="stat-num">Free</div><div class="stat-lbl">No sign-up needed</div></div>
+  <div class="stat-item"><div class="stat-icon">🗺️</div><div class="stat-num">50</div><div class="stat-lbl">US states covered</div></div>
+  <div class="stat-item"><div class="stat-icon">🌍</div><div class="stat-num">4</div><div class="stat-lbl">Countries supported</div></div>
+  <div class="stat-item"><div class="stat-icon">📅</div><div class="stat-num">2026</div><div class="stat-lbl">Tax rates updated</div></div>
+  <div class="stat-item"><div class="stat-icon">✅</div><div class="stat-num">Free</div><div class="stat-lbl">No sign-up needed</div></div>
 </div>
 </div>
 
@@ -470,23 +504,35 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 <div class="sec">
   <div class="sec-lbl">From the Blog</div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
-    <a href="/blog/how-to-budget-on-15-dollars-an-hour/" style="background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s" onmouseover="this.style.borderColor='var(--acc)'" onmouseout="this.style.borderColor='var(--bor)'">
-      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc);margin-bottom:8px">Budgeting</div>
+    <a href="/blog/how-to-budget-on-15-dollars-an-hour/" style="background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s,transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc)">Budgeting</div>
+        <div style="font-size:11px;color:var(--mut)">Jan 2026 · 6 min read</div>
+      </div>
       <div style="font-size:15px;font-weight:600;color:var(--txt);line-height:1.4;margin-bottom:8px">How to Budget on $15 an Hour</div>
       <div style="font-size:13px;color:var(--mut);line-height:1.6">A real monthly budget, rent strategies, food savings, and how to build an emergency fund on $31,200/year.</div>
     </a>
-    <a href="/blog/minimum-wage-by-state-2026/" style="background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s" onmouseover="this.style.borderColor='var(--acc)'" onmouseout="this.style.borderColor='var(--bor)'">
-      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc);margin-bottom:8px">Wages &amp; Pay</div>
+    <a href="/blog/minimum-wage-by-state-2026/" style="background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s,transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc)">Wages &amp; Pay</div>
+        <div style="font-size:11px;color:var(--mut)">Jan 2026 · 8 min read</div>
+      </div>
       <div style="font-size:15px;font-weight:600;color:var(--txt);line-height:1.4;margin-bottom:8px">Minimum Wage by State 2026</div>
       <div style="font-size:13px;color:var(--mut);line-height:1.6">Every state's 2026 minimum wage, annual income, scheduled increases, and comparison to living wage.</div>
     </a>
-    <a href="/blog/federal-vs-state-tax-explained/" style="background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s" onmouseover="this.style.borderColor='var(--acc)'" onmouseout="this.style.borderColor='var(--bor)'">
-      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc);margin-bottom:8px">Tax Guide</div>
+    <a href="/blog/federal-vs-state-tax-explained/" style="background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s,transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc)">Tax Guide</div>
+        <div style="font-size:11px;color:var(--mut)">Jan 2026 · 7 min read</div>
+      </div>
       <div style="font-size:15px;font-weight:600;color:var(--txt);line-height:1.4;margin-bottom:8px">Federal vs State Tax: What's Taken from Your Paycheck</div>
       <div style="font-size:13px;color:var(--mut);line-height:1.6">Plain-English guide to every deduction: brackets, FICA, state tax, pre-tax vs post-tax, and real examples.</div>
     </a>
-    <a href="/blog/best-states-for-take-home-pay-2026/" style="background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s" onmouseover="this.style.borderColor='var(--acc)'" onmouseout="this.style.borderColor='var(--bor)'">
-      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc);margin-bottom:8px">State Tax</div>
+    <a href="/blog/best-states-for-take-home-pay-2026/" style="background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s,transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc)">State Tax</div>
+        <div style="font-size:11px;color:var(--mut)">Jan 2026 · 5 min read</div>
+      </div>
       <div style="font-size:15px;font-weight:600;color:var(--txt);line-height:1.4;margin-bottom:8px">Best States for Take-Home Pay 2026</div>
       <div style="font-size:13px;color:var(--mut);line-height:1.6">All 9 zero-income-tax states ranked with real dollar comparisons, hidden costs, and who benefits most.</div>
     </a>
@@ -500,20 +546,23 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 <div class="sec">
   <div class="sec-lbl">Why PayCalcHub</div>
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px">
-    <div style="background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:18px">
+    <div style="background:var(--alight);border:1px solid #c5e0d3;border-radius:12px;padding:20px">
       <div style="font-size:22px;margin-bottom:10px">🎯</div>
-      <div style="font-size:14px;font-weight:600;margin-bottom:6px">Accurate 2026 Data</div>
-      <div style="font-size:13px;color:var(--mut);line-height:1.6">Updated annually with official IRS brackets, FICA rates, all 50 state tax schedules, and FHFA conforming loan limits.</div>
+      <div style="font-size:14px;font-weight:600;margin-bottom:4px;color:var(--txt)">Accurate 2026 Data</div>
+      <div style="font-size:12px;font-weight:600;color:var(--acc);margin-bottom:8px">Updated January 2026 · 50 states covered</div>
+      <div style="font-size:13px;color:var(--mut);line-height:1.6">Official IRS brackets, FICA rates, all 50 state tax schedules, and FHFA conforming loan limits — verified every year.</div>
     </div>
-    <div style="background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:18px">
+    <div style="background:var(--alight);border:1px solid #c5e0d3;border-radius:12px;padding:20px">
       <div style="font-size:22px;margin-bottom:10px">🔒</div>
-      <div style="font-size:14px;font-weight:600;margin-bottom:6px">Private by Design</div>
-      <div style="font-size:13px;color:var(--mut);line-height:1.6">All calculations run in your browser. Your salary and financial data never leaves your device — no accounts, no tracking.</div>
+      <div style="font-size:14px;font-weight:600;margin-bottom:4px;color:var(--txt)">Private by Design</div>
+      <div style="font-size:12px;font-weight:600;color:var(--acc);margin-bottom:8px">0 bytes of financial data sent to servers</div>
+      <div style="font-size:13px;color:var(--mut);line-height:1.6">All calculations run in your browser. Your salary and financial inputs never leave your device — no accounts, no tracking.</div>
     </div>
-    <div style="background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:18px">
+    <div style="background:var(--alight);border:1px solid #c5e0d3;border-radius:12px;padding:20px">
       <div style="font-size:22px;margin-bottom:10px">🆓</div>
-      <div style="font-size:14px;font-weight:600;margin-bottom:6px">Always Free</div>
-      <div style="font-size:13px;color:var(--mut);line-height:1.6">Every calculator, guide, and data table is free. No paywalls, no sign-up, no premium tiers. Financial clarity is a right, not a product.</div>
+      <div style="font-size:14px;font-weight:600;margin-bottom:4px;color:var(--txt)">Always Free</div>
+      <div style="font-size:12px;font-weight:600;color:var(--acc);margin-bottom:8px">No paywalls · No sign-up · No premium tiers</div>
+      <div style="font-size:13px;color:var(--mut);line-height:1.6">Every calculator, guide, and data table is free to use. Financial clarity is a right, not a product.</div>
     </div>
   </div>
 </div>
@@ -530,37 +579,55 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
       <a href="/hourly-to-salary/">Hourly</a>
     </div>
     <div class="fi-nav-row">
-      <span class="fi-group-lbl">Guides</span>
+      <span class="fi-group-lbl">Tools</span>
       <a href="/salary-to-hourly/">Salary &rarr; Hourly</a>
       <a href="/how-much-house-can-i-afford/">Affordability</a>
       <a href="/mortgage-per-month/">Mortgage Guide</a>
       <a href="/blog/">Blog</a>
+    </div>
+    <div class="fi-nav-row">
+      <span class="fi-group-lbl">Company</span>
       <a href="/about/">About</a>
-      <a href="/privacy/">Privacy</a>
+      <a href="/privacy/">Privacy Policy</a>
       <a href="/contact/">Contact</a>
     </div>
   </div>
-  <span class="fi-copy">&copy; 2026 PayCalcHub.com<br>For informational purposes only.</span>
+  <div class="fi-copy">
+    &copy; 2026 PayCalcHub.com<br>
+    Not financial advice.
+  </div>
+</div>
+<div class="fi-disclaimer">
+  PayCalcHub provides financial calculators for informational and educational purposes only. All results are estimates based on published tax rates and standard assumptions. Nothing on this site constitutes financial, tax, legal, or investment advice. Always consult a qualified professional before making financial decisions.
 </div>
 </footer>
 
 <script>
+function syncQSlider(val){var s=document.getElementById('qs-slider');if(s)s.value=Math.min(Math.max(parseInt(val)||0,20000),300000);}
+function syncQInput(val){var i=document.getElementById('qs');if(i)i.value=val;}
 function qc(){
   var g=parseFloat(document.getElementById('qs').value)||0;
+  var stRate=parseFloat(document.getElementById('q-state').value)||0;
+  var fil=document.getElementById('q-fil').value;
   if(!g){
-    document.getElementById('qr').textContent='--';
-    document.getElementById('qa').textContent='--';
-    document.getElementById('qe').textContent='--';
+    ['qr','qa','qf','qst','qe'].forEach(function(id){document.getElementById(id).textContent='—';});
     return;
   }
-  var std=15000,taxable=Math.max(0,g-std);
-  var br=[[11925,.10],[36550,.12],[54875,.22],[93950,.24],[53225,.32],[375825,.35],[1e9,.37]];
+  var std=fil==='married'?30000:15000;
+  var taxable=Math.max(0,g-std);
+  var br=fil==='married'
+    ?[[23850,.10],[73100,.12],[116550,.22],[206700,.24],[394600,.32],[501050,.35],[1e9,.37]]
+    :[[11925,.10],[36550,.12],[54875,.22],[93950,.24],[53225,.32],[375825,.35],[1e9,.37]];
   var fed=0,rem=taxable;
   for(var i=0;i<br.length;i++){var c=Math.min(rem,br[i][0]);fed+=c*br[i][1];rem-=c;if(rem<=0)break;}
-  var fica=g*0.0765,net=g-fed-fica;
-  var eff=((fed+fica)/g*100).toFixed(1);
+  var fica=g*0.0765;
+  var stateTax=g*(stRate/100);
+  var net=g-fed-fica-stateTax;
+  var eff=((fed+fica+stateTax)/g*100).toFixed(1);
   document.getElementById('qr').textContent='$'+Math.round(net/12).toLocaleString();
   document.getElementById('qa').textContent='$'+Math.round(net).toLocaleString();
+  document.getElementById('qf').textContent='$'+Math.round(fed+fica).toLocaleString();
+  document.getElementById('qst').textContent= stRate>0 ? '$'+Math.round(stateTax).toLocaleString() : '$0';
   document.getElementById('qe').textContent=eff+'%';
 }
 qc();
