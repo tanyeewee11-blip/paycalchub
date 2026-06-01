@@ -42,6 +42,20 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;letter-spacing:-.02em;line
 .fqa{font-size:14px;color:var(--mut);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .25s ease,padding .2s;padding:0 18px}.fqa.open{max-height:400px;padding:0 18px 16px}
 @media(max-width:800px){.lay{grid-template-columns:1fr}.sb{display:grid;grid-template-columns:1fr 1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}}
 @media(max-width:480px){.sb{grid-template-columns:1fr}}
+/* Slider */
+.sal-slider-wrap{margin-top:8px;padding:2px 0 6px}
+.sal-slider{width:100%;-webkit-appearance:none;appearance:none;height:4px;border-radius:2px;background:var(--bor);outline:none;cursor:pointer}
+.sal-slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.sal-slider::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.sal-range-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--mut);margin-top:4px}
+/* Calculate + Share */
+.calc-btn{width:100%;padding:12px;background:var(--acc);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;font-family:var(--f);cursor:pointer;margin-top:16px;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .15s}
+.calc-btn:hover{opacity:.88}.calc-btn:active{opacity:.75}
+.action-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.cpb{width:100%;padding:10px;background:var(--bg);border:1px solid var(--bor);border-radius:8px;font-size:13px;font-weight:500;color:var(--mut);cursor:pointer;font-family:var(--f);display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+.cpb:hover,.cpb.copied{border-color:var(--acc);color:var(--acc);background:var(--alight)}
+.shb{width:100%;padding:10px;background:var(--bg);border:1px solid var(--bor);border-radius:8px;font-size:13px;font-weight:500;color:var(--mut);cursor:pointer;font-family:var(--f);display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+.shb:hover,.shb.shared{border-color:var(--acc);color:var(--acc);background:var(--alight)}
 .type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}
 .tb{padding:10px 6px;border:1px solid var(--bor);border-radius:8px;background:var(--bg);font-size:13px;font-family:var(--f);color:var(--mut);cursor:pointer;text-align:center;transition:all .15s}
 .tb.active{background:var(--acc);color:#fff;border-color:var(--acc)}
@@ -131,7 +145,12 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
           <button class="tb" onclick="setType(this,'Car Loan',6.5,5)">&#128663; Car Loan</button>
           <button class="tb" onclick="setType(this,'Student',5.5,10)">&#127891; Student</button>
         </div>
-        <div class="fr"><label>Loan Amount</label><div class="iw hp"><span class="ip">$</span><input type="number" id="amt" placeholder="20,000" oninput="calc()"></div></div>
+        <div class="fr"><label>Loan Amount</label><div class="iw hp"><span class="ip">$</span><input type="number" id="amt" placeholder="20,000" oninput="syncSlider(this.value);calc()"></div>
+          <div class="sal-slider-wrap">
+            <input type="range" class="sal-slider" id="amt-slider" min="1000" max="100000" step="500" value="20000" oninput="syncInput(this.value);calc()">
+            <div class="sal-range-labels"><span>$1k</span><span>$100k</span></div>
+          </div>
+        </div>
         <div class="fg">
           <div class="fr"><label>Annual Interest Rate</label><div class="iw hs"><input type="number" id="rate" placeholder="8.5" step="0.1" oninput="calc()"><span class="is">%</span></div></div>
           <div class="fr"><label>Loan Term</label><select id="term" onchange="calc()"><option value="1">1 year</option><option value="2">2 years</option><option value="3">3 years</option><option value="4">4 years</option><option value="5" selected>5 years</option><option value="7">7 years</option><option value="10">10 years</option><option value="15">15 years</option></select></div>
@@ -146,8 +165,21 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
           <div class="amort-wrap"><h3>Yearly Amortization Schedule</h3>
             <table><thead><tr><th>Year</th><th>Principal</th><th>Interest</th><th>Balance</th></tr></thead><tbody id="amort"></tbody></table>
           </div>
+          <div class="action-row">
+            <button class="cpb" id="cpb" onclick="copyRes()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Copy Results
+            </button>
+            <button class="shb" id="shb" onclick="shareRes()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Share Link
+            </button>
+          </div>
         </div>
-      </div>
+        <button class="calc-btn" onclick="calc()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Calculate Loan Payment
+        </button>
       <div class="art">
         <h2>How Is a Loan Repayment Calculated?</h2>
         <p>Monthly repayments use the standard amortization formula: <strong>M = P[r(1+r)^n] / [(1+r)^n−1]</strong>, where P is the principal, r is the monthly interest rate, and n is the total number of payments. Each payment covers the interest accrued that month first, with the remainder reducing the principal balance.</p>
@@ -216,7 +248,31 @@ function calc(){
   document.getElementById("res").classList.add("show");
 }
 function tFaq(el){const o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(q=>{q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
-window.addEventListener("load",()=>{document.getElementById("amt").value=20000;document.getElementById("rate").value=8.5;calc();});
+function syncSlider(val){var v=parseInt(val)||0;var s=document.getElementById("amt-slider");if(s)s.value=Math.min(Math.max(v,1000),100000);}
+function syncInput(val){var i=document.getElementById("amt");if(i)i.value=val;}
+function shareRes(){
+  var amt=document.getElementById("amt").value;
+  var rate=document.getElementById("rate").value;
+  var term=document.getElementById("term").value;
+  var url=window.location.origin+window.location.pathname+"?amt="+amt+"&rate="+rate+"&term="+term;
+  navigator.clipboard.writeText(url).then(function(){var b=document.getElementById("shb");b.textContent="Link Copied!";b.classList.add("shared");setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Share Link';b.classList.remove("shared");},2500);});
+}
+function copyRes(){
+  var mo=document.getElementById("r-mo").textContent;
+  var lines=["PayCalcHub Loan Estimate","Monthly Payment: "+mo];
+  navigator.clipboard.writeText(lines.join("\n")).then(function(){var b=document.getElementById("cpb");b.textContent="Copied!";b.classList.add("copied");setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy Results';b.classList.remove("copied");},2000);});
+}
+window.addEventListener("load",function(){
+  var p=new URLSearchParams(window.location.search);
+  var amt=p.get("amt")||"20000";
+  var rate=p.get("rate")||"8.5";
+  var term=p.get("term")||"5";
+  document.getElementById("amt").value=amt;
+  document.getElementById("amt-slider").value=Math.min(Math.max(parseInt(amt),1000),100000);
+  document.getElementById("rate").value=rate;
+  document.getElementById("term").value=term;
+  calc();
+});
 </script>
 <script>
 function toggleLang(){{var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}}

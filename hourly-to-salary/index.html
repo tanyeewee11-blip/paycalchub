@@ -41,6 +41,18 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;letter-spacing:-.02em;line
 .fqa{font-size:14px;color:var(--mut);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .25s ease,padding .2s;padding:0 18px}.fqa.open{max-height:400px;padding:0 18px 16px}
 @media(max-width:800px){.lay{grid-template-columns:1fr}.sb{display:grid;grid-template-columns:1fr 1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}}
 @media(max-width:480px){.sb{grid-template-columns:1fr}}
+.sal-slider-wrap{margin-top:8px;padding:2px 0 6px}
+.sal-slider{width:100%;-webkit-appearance:none;appearance:none;height:4px;border-radius:2px;background:var(--bor);outline:none;cursor:pointer}
+.sal-slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.sal-slider::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.sal-range-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--mut);margin-top:4px}
+.calc-btn{width:100%;padding:12px;background:var(--acc);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;font-family:var(--f);cursor:pointer;margin-top:16px;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .15s}
+.calc-btn:hover{opacity:.88}.calc-btn:active{opacity:.75}
+.action-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.cpb{width:100%;padding:10px;background:var(--bg);border:1px solid var(--bor);border-radius:8px;font-size:13px;font-weight:500;color:var(--mut);cursor:pointer;font-family:var(--f);display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+.cpb:hover,.cpb.copied{border-color:var(--acc);color:var(--acc);background:var(--alight)}
+.shb{width:100%;padding:10px;background:var(--bg);border:1px solid var(--bor);border-radius:8px;font-size:13px;font-weight:500;color:var(--mut);cursor:pointer;font-family:var(--f);display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+.shb:hover,.shb.shared{border-color:var(--acc);color:var(--acc);background:var(--alight)}
 .max-w{max-width:700px;margin:0 auto;padding:32px 24px 64px}
 .res-table{width:100%;border-collapse:collapse;margin-top:20px;border-top:1px solid var(--bor);padding-top:16px;display:none}
 .res-table.show{display:table}
@@ -114,7 +126,12 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   <h1><em>Hourly to Salary</em> Calculator</h1>
   <p class="sub">Convert your hourly wage to annual, monthly, bi-weekly, and weekly salary instantly.</p>
   <div class="card">
-    <div class="fr"><label>Hourly Wage</label><div class="iw hp"><span class="ip">$</span><input type="number" id="hw" placeholder="25.00" step="0.01" oninput="calc()"></div></div>
+    <div class="fr"><label>Hourly Wage</label><div class="iw hp"><span class="ip">$</span><input type="number" id="hw" placeholder="25.00" step="0.01" oninput="syncSlider(this.value);calc()"></div>
+      <div class="sal-slider-wrap">
+        <input type="range" class="sal-slider" id="hw-slider" min="8" max="150" step="0.5" value="25" oninput="syncInput(this.value);calc()">
+        <div class="sal-range-labels"><span>$8/hr</span><span>$150/hr</span></div>
+      </div>
+    </div>
     <div class="fg">
       <div class="fr"><label>Hours per Week</label><select id="hrs" onchange="calc()"><option value="20">20 hrs (part-time)</option><option value="30">30 hours</option><option value="40" selected>40 hrs (full-time)</option><option value="45">45 hours</option><option value="50">50 hours</option><option value="60">60 hours</option></select></div>
       <div class="fr"><label>Weeks per Year</label><select id="wks" onchange="calc()"><option value="52" selected>52 weeks</option><option value="50">50 weeks (2 wks unpaid)</option><option value="48">48 weeks (4 wks unpaid)</option></select></div>
@@ -130,6 +147,20 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
         <tr class="hi"><td><strong>Annual Salary</strong></td><td id="r-yr"></td></tr>
       </tbody>
     </table></div>
+    <div class="action-row" id="action-row" style="display:none">
+      <button class="cpb" id="cpb" onclick="copyRes()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        Copy Results
+      </button>
+      <button class="shb" id="shb" onclick="shareRes()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        Share Link
+      </button>
+    </div>
+    <button class="calc-btn" onclick="calc()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      Convert Hourly to Salary
+    </button>
   </div>
   <div class="art" style="margin-top:40px">
     <h2>How to Convert Hourly Wage to Annual Salary</h2>
@@ -178,7 +209,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 function fmt(n){return "$"+n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
 function calc(){
   const h=parseFloat(document.getElementById("hw").value)||0;
-  if(!h){document.getElementById("res").classList.remove("show");return;}
+  if(!h){document.getElementById("res").classList.remove("show");document.getElementById("action-row").style.display="none";return;}
   const hrs=parseFloat(document.getElementById("hrs").value),wks=parseFloat(document.getElementById("wks").value);
   const ann=h*hrs*wks,mo=ann/12,wk=h*hrs;
   document.getElementById("r-h").textContent=fmt(h);
@@ -189,7 +220,31 @@ function calc(){
   document.getElementById("r-mo").textContent=fmt(mo);
   document.getElementById("r-yr").textContent=fmt(ann);
   document.getElementById("res").classList.add("show");
+  document.getElementById("action-row").style.display="grid";
 }
+function syncSlider(val){var v=parseFloat(val)||0;var s=document.getElementById("hw-slider");if(s)s.value=Math.min(Math.max(v,8),150);}
+function syncInput(val){var i=document.getElementById("hw");if(i)i.value=val;}
+function shareRes(){
+  var hw=document.getElementById("hw").value;
+  var hrs=document.getElementById("hrs").value;
+  var url=window.location.origin+window.location.pathname+"?hw="+hw+"&hrs="+hrs;
+  navigator.clipboard.writeText(url).then(function(){var b=document.getElementById("shb");b.textContent="Link Copied!";b.classList.add("shared");setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Share Link';b.classList.remove("shared");},2500);});
+}
+function copyRes(){
+  var yr=document.getElementById("r-yr").textContent;
+  var mo=document.getElementById("r-mo").textContent;
+  var lines=["PayCalcHub Hourly to Salary","Annual: "+yr,"Monthly: "+mo];
+  navigator.clipboard.writeText(lines.join("\n")).then(function(){var b=document.getElementById("cpb");b.textContent="Copied!";b.classList.add("copied");setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy Results';b.classList.remove("copied");},2000);});
+}
+window.addEventListener("load",function(){
+  var p=new URLSearchParams(window.location.search);
+  var hw=p.get("hw")||"25";
+  var hrs=p.get("hrs")||"40";
+  document.getElementById("hw").value=hw;
+  document.getElementById("hw-slider").value=Math.min(Math.max(parseFloat(hw),8),150);
+  document.getElementById("hrs").value=hrs;
+  calc();
+});
 function tFaq(el){const o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(q=>{q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
 </script>
 <script>
