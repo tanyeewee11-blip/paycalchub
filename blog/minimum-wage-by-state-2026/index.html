@@ -19,6 +19,9 @@
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://paycalchub.com/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Minimum Wage by State 2026","description":"Every state's 2026 minimum wage, annual income, scheduled increases, and comparison to living wage.","datePublished":"2026-01-05","dateModified":"2026-01-05","author":{"@type":"Organization","name":"PayCalcHub","url":"https://paycalchub.com"},"publisher":{"@type":"Organization","name":"PayCalcHub","url":"https://paycalchub.com"},"mainEntityOfPage":"https://paycalchub.com/blog/minimum-wage-by-state-2026/"}
+  </script>
   <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
@@ -208,6 +211,13 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
     <a href="/blog/how-to-budget-on-15-dollars-an-hour/">How to Budget on $15/Hour</a>
     <a href="/blog/federal-vs-state-tax-explained/">Federal vs State Tax Explained</a>
   </div>
+
+  <div class="fqs"><h2>Frequently Asked Questions</h2>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is the federal minimum wage in 2026? <span class="fqi-icon">+</span></div><div class="fqa">The federal minimum wage remains $7.25/hour in 2026 — unchanged since 2009. However, many states and cities have set higher minimums. If your state minimum is higher than the federal rate, your employer must pay the higher amount.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">Which state has the highest minimum wage in 2026? <span class="fqi-icon">+</span></div><div class="fqa">Washington state has one of the highest minimum wages at $16.28/hour in 2026, followed closely by California ($16.50/hour). Washington DC (not a state) has the highest rate in the country at $17.50/hour.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">How much is minimum wage annually? <span class="fqi-icon">+</span></div><div class="fqa">At the federal minimum of $7.25/hour, full-time work (2,080 hours) yields $15,080/year before taxes. At $15/hour (common state minimum), full-time work yields $31,200/year. At $16.50/hour (California), full-time yields $34,320/year.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">Is minimum wage enough to live on? <span class="fqi-icon">+</span></div><div class="fqa">The federal minimum wage of $7.25/hour ($15,080/year) falls significantly below the living wage in every US state. MIT's Living Wage Calculator estimates single adults need $44,000–$55,000/year on average to cover basic needs. Even at $15/hour ($31,200/year), finances are tight in most urban areas.</div></div>
+  </div>
 </div>
 <footer>
 <div class="fi">
@@ -219,15 +229,24 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
       <a href="/loan-calculator/">Loan</a><a href="/hourly-to-salary/">Hourly</a>
     </div>
     <div class="fi-nav-row">
-      <span class="fi-group-lbl">Guides</span>
-      <a href="/blog/">Blog</a><a href="/about/">About</a>
-      <a href="/privacy/">Privacy</a><a href="/contact/">Contact</a>
+      <span class="fi-group-lbl">Tools</span>
+      <a href="/salary-to-hourly/">Salary → Hourly</a>
+      <a href="/how-much-house-can-i-afford/">Affordability</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="fi-nav-row">
+      <span class="fi-group-lbl">Company</span>
+      <a href="/about/">About</a><a href="/privacy/">Privacy Policy</a><a href="/contact/">Contact</a>
     </div>
   </div>
-  <span class="fi-copy">&copy; 2026 PayCalcHub.com<br>For informational purposes only.</span>
+  <div class="fi-copy">&copy; 2026 PayCalcHub.com<br>Not financial advice.</div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:12px 24px 24px;border-top:1px solid var(--bor);font-size:11px;color:var(--mut);line-height:1.65;opacity:.7">
+  PayCalcHub provides financial calculators and educational content for informational purposes only. All results are estimates. Nothing on this site constitutes financial, tax, legal, or investment advice.
 </div>
 </footer>
 <script>
+function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
 function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
 document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
 </script>

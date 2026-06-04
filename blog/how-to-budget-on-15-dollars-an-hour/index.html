@@ -19,6 +19,9 @@
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://paycalchub.com/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How to Budget on $15 an Hour","datePublished":"2026-01-15","dateModified":"2026-05-01","author":{"@type":"Organization","name":"PayCalcHub","url":"https://paycalchub.com"},"publisher":{"@type":"Organization","name":"PayCalcHub","url":"https://paycalchub.com"},"mainEntityOfPage":"https://paycalchub.com/blog/how-to-budget-on-15-dollars-an-hour/"}
+  </script>
   <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
@@ -70,7 +73,13 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .fi-nav-row a{color:var(--mut)}.fi-nav-row a:hover{color:var(--acc)}
 .fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.6}
 @media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
-</style>
+.fqq{padding:15px 18px;font-size:14px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}
+.fqi{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);margin-bottom:8px;overflow:hidden}
+.fqi-icon{font-size:20px;color:var(--mut);flex-shrink:0;transition:transform .2s}
+.fqq.open .fqi-icon{transform:rotate(45deg)}
+.fqa{font-size:14px;color:var(--mut);line-height:1.75;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .2s;padding:0 18px}
+.fqa.open{max-height:500px;padding:0 18px 16px}
+  </style>
 </head>
 <body>
 <nav><div class="nav-in">
@@ -196,26 +205,27 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
     <a href="/blog/how-much-house-can-i-afford-on-my-salary/">How Much House Can You Afford on Your Salary?</a>
     <a href="/blog/federal-vs-state-tax-explained/">Federal vs State Tax: What's Actually Taken from Your Paycheck</a>
   </div>
+  <div class="fqs" style="margin-top:40px"><h2 style="font-size:20px;font-weight:600;margin-bottom:16px">Frequently Asked Questions</h2>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">Can you live on $15 an hour? <span class="fqi-icon">+</span></div><div class="fqa">$15/hour equals $31,200/year or approximately $2,260/month after taxes. This is livable for a single adult in most Midwestern and Southern cities with careful budgeting, though tight in high-cost metros. Shared housing is typically essential below $18/hour in most markets.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is $15 an hour monthly after taxes? <span class="fqi-icon">+</span></div><div class="fqa">$15/hour works out to $2,600/month gross. After federal income tax and FICA (no state tax), take-home is approximately $2,259/month. In states with income tax, take-home drops to $2,050–$2,180/month.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">How do you save money on $15 an hour? <span class="fqi-icon">+</span></div><div class="fqa">Key strategies: share housing to cut rent by $300–$600/month, cook at home instead of dining out (saves $200–$400/month), cancel unused subscriptions ($50–$100/month), and automate even $50/paycheck to savings. Prioritize eliminating any high-interest debt first.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">How much rent can I afford on $15 an hour? <span class="fqi-icon">+</span></div><div class="fqa">The 30% rule suggests keeping rent under $780/month on $15/hour ($2,600 gross). In practice, many people spend 35–40% on housing at this income level. Shared housing, roommates, or subsidized housing programs can help keep housing costs manageable.</div></div>
+  </div>
 </div>
 <footer>
 <div class="fi">
   <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>
   <div class="fi-mid">
-    <div class="fi-nav-row">
-      <span class="fi-group-lbl">Calculators</span>
-      <a href="/salary-calculator/">Salary</a><a href="/mortgage-calculator/">Mortgage</a>
-      <a href="/loan-calculator/">Loan</a><a href="/hourly-to-salary/">Hourly</a>
-    </div>
-    <div class="fi-nav-row">
-      <span class="fi-group-lbl">Guides</span>
-      <a href="/blog/">Blog</a><a href="/about/">About</a>
-      <a href="/privacy/">Privacy</a><a href="/contact/">Contact</a>
-    </div>
+    <div class="fi-nav-row"><span class="fi-group-lbl">Calculators</span><a href="/salary-calculator/">Salary</a><a href="/mortgage-calculator/">Mortgage</a><a href="/loan-calculator/">Loan</a><a href="/hourly-to-salary/">Hourly</a></div>
+    <div class="fi-nav-row"><span class="fi-group-lbl">Tools</span><a href="/salary-to-hourly/">Salary &rarr; Hourly</a><a href="/how-much-house-can-i-afford/">Affordability</a><a href="/blog/">Blog</a></div>
+    <div class="fi-nav-row"><span class="fi-group-lbl">Company</span><a href="/about/">About</a><a href="/privacy/">Privacy Policy</a><a href="/contact/">Contact</a></div>
   </div>
-  <span class="fi-copy">&copy; 2026 PayCalcHub.com<br>For informational purposes only.</span>
+  <div class="fi-copy">&copy; 2026 PayCalcHub.com<br>Not financial advice.</div>
 </div>
+<div class="fi-disclaimer">PayCalcHub provides financial calculators and educational content for informational purposes only. All results are estimates. Nothing on this site constitutes financial, tax, legal, or investment advice.</div>
 </footer>
 <script>
+function tFaq(el){var o=el.classList.contains('open');document.querySelectorAll('.fqq.open').forEach(function(q){q.classList.remove('open');q.nextElementSibling.classList.remove('open');});if(!o){el.classList.add('open');el.nextElementSibling.classList.add('open');}}
 function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
 document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
 </script>

@@ -19,6 +19,9 @@
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://paycalchub.com/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Federal vs State Tax Explained","description":"Plain-English guide to every deduction on your paycheck: federal brackets, FICA, state tax, and real examples.","datePublished":"2026-01-10","dateModified":"2026-01-10","author":{"@type":"Organization","name":"PayCalcHub","url":"https://paycalchub.com"},"publisher":{"@type":"Organization","name":"PayCalcHub","url":"https://paycalchub.com"},"mainEntityOfPage":"https://paycalchub.com/blog/federal-vs-state-tax-explained/"}
+  </script>
   <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
@@ -213,6 +216,13 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
     <a href="/blog/minimum-wage-by-state-2026/">Minimum Wage by State 2026</a>
     <a href="/blog/how-much-house-can-i-afford-on-my-salary/">How Much House Can You Afford?</a>
   </div>
+
+  <div class="fqs"><h2>Frequently Asked Questions</h2>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is the difference between federal and state income tax? <span class="fqi-icon">+</span></div><div class="fqa">Federal income tax is collected by the IRS and applies to all US workers using graduated brackets (10–37%). State income tax is collected by individual states — 9 states have no income tax, while California's top rate reaches 13.3%. Both are withheld from your paycheck and calculated separately.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">Why is my paycheck less than my salary? <span class="fqi-icon">+</span></div><div class="fqa">Your paycheck is reduced by federal income tax (10–37% marginal rate), FICA taxes (7.65% for Social Security and Medicare), and state income tax (0–13.3%). Pre-tax deductions like 401(k) and health insurance also reduce your check, though they lower your taxable income.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">What states have no income tax? <span class="fqi-icon">+</span></div><div class="fqa">Nine states have no individual income tax: Alaska, Florida, Nevada, New Hampshire (on wages), South Dakota, Tennessee, Texas, Washington, and Wyoming. Living in a no-tax state can mean $2,000–$8,000+ more in take-home pay annually depending on your income.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">How do I calculate how much tax will be taken out of my paycheck? <span class="fqi-icon">+</span></div><div class="fqa">Use our Salary Calculator — enter your gross salary, state, and filing status to see a complete breakdown of federal tax, FICA, and state tax withheld each pay period.</div></div>
+  </div>
 </div>
 <footer>
 <div class="fi">
@@ -224,15 +234,24 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
       <a href="/loan-calculator/">Loan</a><a href="/hourly-to-salary/">Hourly</a>
     </div>
     <div class="fi-nav-row">
-      <span class="fi-group-lbl">Guides</span>
-      <a href="/blog/">Blog</a><a href="/about/">About</a>
-      <a href="/privacy/">Privacy</a><a href="/contact/">Contact</a>
+      <span class="fi-group-lbl">Tools</span>
+      <a href="/salary-to-hourly/">Salary → Hourly</a>
+      <a href="/how-much-house-can-i-afford/">Affordability</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="fi-nav-row">
+      <span class="fi-group-lbl">Company</span>
+      <a href="/about/">About</a><a href="/privacy/">Privacy Policy</a><a href="/contact/">Contact</a>
     </div>
   </div>
-  <span class="fi-copy">&copy; 2026 PayCalcHub.com<br>For informational purposes only.</span>
+  <div class="fi-copy">&copy; 2026 PayCalcHub.com<br>Not financial advice.</div>
+</div>
+<div style="max-width:1100px;margin:0 auto;padding:12px 24px 24px;border-top:1px solid var(--bor);font-size:11px;color:var(--mut);line-height:1.65;opacity:.7">
+  PayCalcHub provides financial calculators and educational content for informational purposes only. All results are estimates. Nothing on this site constitutes financial, tax, legal, or investment advice.
 </div>
 </footer>
 <script>
+function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
 function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
 document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
 </script>
