@@ -133,18 +133,30 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
       </div>
     </div>
     <div class="fg">
-      <div class="fr"><label>Hours per Week</label><select id="hrs" onchange="calc()"><option value="20">20 hrs (part-time)</option><option value="30">30 hours</option><option value="40" selected>40 hrs (full-time)</option><option value="45">45 hours</option><option value="50">50 hours</option><option value="60">60 hours</option></select></div>
+      <div class="fr"><label>Hours per Week <span class="opt">(regular)</span></label><select id="hrs" onchange="calc()"><option value="20">20 hrs (part-time)</option><option value="30">30 hours</option><option value="40" selected>40 hrs (full-time)</option></select></div>
       <div class="fr"><label>Weeks per Year</label><select id="wks" onchange="calc()"><option value="52" selected>52 weeks</option><option value="50">50 weeks (2 wks unpaid)</option><option value="48">48 weeks (4 wks unpaid)</option></select></div>
+      <div class="fsec" style="margin-bottom:0;padding-bottom:0">
+        <button class="ded-toggle" id="ot-btn" onclick="toggleOT()" style="padding:8px 0">
+          <span class="ded-toggle-icon">+</span> Overtime <span class="opt">Optional</span>
+        </button>
+        <div class="ded-body" id="ot-body">
+          <div class="fg" style="margin-top:10px">
+            <div class="fr"><label>Overtime Hours/Week</label><div class="iw hs"><input type="number" id="ot-hrs" placeholder="0" min="0" max="30" oninput="calc()"><span class="is">hrs</span></div></div>
+            <div class="fr"><label>OT Rate</label><select id="ot-rate" onchange="calc()"><option value="1.5">1.5× (standard)</option><option value="2">2× (double time)</option><option value="1.25">1.25×</option></select></div>
+          </div>
+        </div>
+      </div>
     </div>
     <div style="overflow-x:auto"><table class="res-table" id="res">
       <tbody>
         <tr><td>Hourly</td><td id="r-h"></td></tr>
         <tr><td>Daily (8 hrs)</td><td id="r-d"></td></tr>
-        <tr><td>Weekly</td><td id="r-w"></td></tr>
+        <tr><td>Weekly (regular)</td><td id="r-w"></td></tr>
+        <tr id="r-ot-row" style="display:none"><td>Overtime Pay/Week</td><td id="r-ot"></td></tr>
         <tr><td>Bi-weekly</td><td id="r-bw"></td></tr>
         <tr><td>Semi-monthly</td><td id="r-sm"></td></tr>
         <tr><td>Monthly</td><td id="r-mo"></td></tr>
-        <tr class="hi"><td><strong>Annual Salary</strong></td><td id="r-yr"></td></tr>
+        <tr class="hi"><td><strong>Annual (incl. OT)</strong></td><td id="r-yr"></td></tr>
       </tbody>
     </table></div>
     <div class="action-row" id="action-row" style="display:none">
@@ -210,18 +222,30 @@ function fmt(n){return "$"+n.toLocaleString("en-US",{minimumFractionDigits:2,max
 function calc(){
   const h=parseFloat(document.getElementById("hw").value)||0;
   if(!h){document.getElementById("res").classList.remove("show");document.getElementById("action-row").style.display="none";return;}
-  const hrs=parseFloat(document.getElementById("hrs").value),wks=parseFloat(document.getElementById("wks").value);
-  const ann=h*hrs*wks,mo=ann/12,wk=h*hrs;
+  const hrs=parseFloat(document.getElementById("hrs").value);
+  const wks=parseFloat(document.getElementById("wks").value);
+  const otHrs=parseFloat(document.getElementById("ot-hrs")?document.getElementById("ot-hrs").value:0)||0;
+  const otRate=parseFloat(document.getElementById("ot-rate")?document.getElementById("ot-rate").value:1.5)||1.5;
+  const wk=h*hrs;
+  const otWk=h*otRate*otHrs;
+  const ann=(wk+otWk)*wks;
+  const mo=ann/12;
   document.getElementById("r-h").textContent=fmt(h);
   document.getElementById("r-d").textContent=fmt(h*8);
   document.getElementById("r-w").textContent=fmt(wk);
-  document.getElementById("r-bw").textContent=fmt(wk*2);
+  document.getElementById("r-bw").textContent=fmt((wk+otWk)*2);
   document.getElementById("r-sm").textContent=fmt(ann/24);
   document.getElementById("r-mo").textContent=fmt(mo);
   document.getElementById("r-yr").textContent=fmt(ann);
+  // Show OT row if applicable
+  var otRow=document.getElementById("r-ot-row");
+  var otCell=document.getElementById("r-ot");
+  if(otHrs>0 && otRow && otCell){otRow.style.display="";otCell.textContent=fmt(otWk);}
+  else if(otRow){otRow.style.display="none";}
   document.getElementById("res").classList.add("show");
   document.getElementById("action-row").style.display="grid";
 }
+function toggleOT(){var btn=document.getElementById("ot-btn");var body=document.getElementById("ot-body");btn.classList.toggle("open");body.classList.toggle("open");}
 function syncSlider(val){var v=parseFloat(val)||0;var s=document.getElementById("hw-slider");if(s)s.value=Math.min(Math.max(v,8),150);}
 function syncInput(val){var i=document.getElementById("hw");if(i)i.value=val;}
 function shareRes(){

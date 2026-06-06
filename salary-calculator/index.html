@@ -244,6 +244,19 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
             </div>
             <div class="fr"><label>Pay Frequency</label><select id="us-frq" onchange="calc()"><option value="26">Bi-weekly (every 2 weeks)</option><option value="24">Semi-monthly (twice a month)</option><option value="12">Monthly</option><option value="52">Weekly</option></select></div>
             <div class="fsec" style="margin-bottom:0;padding-bottom:0">
+              <button class="ded-toggle" id="ot-btn" onclick="toggleOT()">
+                <span class="ded-toggle-icon">+</span> Overtime &amp; Bonus <span class="opt">Optional</span>
+              </button>
+              <div class="ded-body" id="ot-body">
+                <div class="fg" style="margin-top:10px">
+                  <div class="fr"><label>Overtime Hours/Week</label><div class="iw hs"><input type="number" id="us-ot-hrs" placeholder="0" min="0" max="30" oninput="calc()"><span class="is">hrs</span></div></div>
+                  <div class="fr"><label>OT Rate</label><select id="us-ot-rate" onchange="calc()"><option value="1.5">1.5× (standard)</option><option value="2">2× (double time)</option><option value="1.25">1.25×</option></select></div>
+                  <div class="fr"><label>Annual Bonus</label><div class="iw hp"><span class="ip">$</span><input type="number" id="us-bonus" placeholder="0" min="0" oninput="calc()"></div></div>
+                  <div class="fr"><label>Commission (annual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="us-comm" placeholder="0" min="0" oninput="calc()"></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="fsec" style="margin-bottom:0;padding-bottom:0">
               <button class="ded-toggle" id="ded-btn" onclick="toggleDed()">
                 <span class="ded-toggle-icon">+</span> Pre-Tax Deductions <span class="opt">Optional</span>
               </button>
@@ -487,7 +500,9 @@ function render(r){
   }).join("");
   document.getElementById("sbar-track").innerHTML=trackHTML;
   document.getElementById("sbar-legend").innerHTML=legendHTML;
-  var h='<div class="br"><span class="bl">Gross Salary</span><span class="bv">'+fmt(r.gross/d,r.cur)+'</span></div>';
+  var h='<div class="br"><span class="bl">Base Salary</span><span class="bv">'+fmt(r.baseSal/d,r.cur)+'</span></div>';
+  (r.addIncome||[]).forEach(function(x){h+='<div class="br" style="color:var(--acc)"><span class="bl">+ '+x.l+'</span><span class="bv" style="color:var(--acc)">+'+fmt(x.a/d,r.cur)+'</span></div>';});
+  if(r.addIncome&&r.addIncome.length)h+='<div class="br"><span class="bl">Total Gross Income</span><span class="bv">'+fmt(r.gross/d,r.cur)+'</span></div>';
   (r.pt||[]).forEach(function(x){h+='<div class="br pt"><span class="bl">'+x.l+' (pre-tax)</span><span class="bv">-'+fmt(x.a/d,r.cur)+'</span></div>';});
   if(r.pt&&r.pt.length)h+='<div class="br"><span class="bl">Taxable Income</span><span class="bv">'+fmt(r.ti/d,r.cur)+'</span></div>';
   r.ded.forEach(function(x){h+='<div class="br ded"><span class="bl">'+x.l+'</span><span class="bv">-'+fmt(x.a/d,r.cur)+'</span></div>';});
@@ -498,6 +513,7 @@ function copyRes(){
   if(!last)return;
   var d=DIVS[period];
   var lines=["PayCalcHub Salary Estimate","Gross: "+fmt(last.gross/d,last.cur)+" "+LABS[period]];
+  (last.addIncome||[]).forEach(function(x){lines.push("+ "+x.l+": "+fmt(x.a/d,last.cur));});
   (last.pt||[]).forEach(function(x){lines.push(x.l+": -"+fmt(x.a/d,last.cur));});
   last.ded.forEach(function(x){lines.push(x.l+": -"+fmt(x.a/d,last.cur));});
   lines.push("Take-Home: "+fmt(last.net/d,last.cur)+" "+LABS[period]);
@@ -505,7 +521,15 @@ function copyRes(){
   navigator.clipboard.writeText(lines.join("\n")).then(function(){var b=document.getElementById("cpb");b.textContent="Copied!";b.classList.add("copied");setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy Results';b.classList.remove("copied");},2000);});
 }
 function calcUS(){
-  var g=gv("us-sal");if(!g)return null;
+  var baseSal=gv("us-sal");if(!baseSal)return null;
+  // Overtime calculation
+  var otHrs=gv("us-ot-hrs")||0;
+  var otRate=parseFloat(gs("us-ot-rate"))||1.5;
+  var hourlyBase=baseSal/2080;
+  var otAnnual=otHrs*otRate*hourlyBase*52;
+  var bonus=gv("us-bonus")||0;
+  var comm=gv("us-comm")||0;
+  var g=baseSal+otAnnual+bonus+comm;
   var fil=gs("us-fil"),stRate=parseFloat(gs("us-st"))||0;
   var k=Math.min(gv("us-401k"),23500),hl=gv("us-hlt"),hsa=Math.min(gv("us-hsa"),4300),oth=gv("us-oth");
   var totalPT=k+hl+hsa+oth;
@@ -526,9 +550,13 @@ function calcUS(){
   if(hl>0)pt.push({l:"Health Insurance",a:hl});
   if(hsa>0)pt.push({l:"HSA Contribution",a:hsa});
   if(oth>0)pt.push({l:"Other Pre-Tax",a:oth});
+  var addIncome=[];
+  if(otAnnual>0)addIncome.push({l:"Overtime Pay ("+otHrs+"hrs/wk × "+otRate+"×)",a:otAnnual});
+  if(bonus>0)addIncome.push({l:"Annual Bonus",a:bonus});
+  if(comm>0)addIncome.push({l:"Commission",a:comm});
   var ded=[{l:"Federal Income Tax",a:fed},{l:"Social Security (6.2%)",a:ss},{l:"Medicare (1.45%)",a:med}];
   if(st>0)ded.push({l:"State Income Tax",a:st});
-  return{gross:g,ti:ti,net:g-totalPT-fed-ss-med-st,cur:"$",pt:pt,ded:ded,marg:marg};
+  return{gross:g,baseSal:baseSal,ti:ti,net:g-totalPT-fed-ss-med-st,cur:"$",pt:pt,addIncome:addIncome,ded:ded,marg:marg};
 }
 function calcUK(){
   var g=gv("uk-sal");if(!g)return null;
@@ -577,6 +605,7 @@ function calcAU(){
 function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
 function syncSlider(val){var v=parseInt(val)||0;var slider=document.getElementById("us-sal-slider");if(slider){slider.value=Math.min(Math.max(v,20000),300000);}}
 function syncInput(val){var input=document.getElementById("us-sal");if(input){input.value=val;}}
+function toggleOT(){var btn=document.getElementById("ot-btn");var body=document.getElementById("ot-body");btn.classList.toggle("open");body.classList.toggle("open");}
 function toggleDed(){var btn=document.getElementById("ded-btn");var body=document.getElementById("ded-body");btn.classList.toggle("open");body.classList.toggle("open");}
 function toggleIC(id){var el=document.getElementById(id);if(el)el.classList.toggle("open");}
 function shareRes(){

@@ -155,6 +155,16 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
           <div class="fr"><label>Annual Interest Rate</label><div class="iw hs"><input type="number" id="rate" placeholder="8.5" step="0.1" oninput="calc()"><span class="is">%</span></div></div>
           <div class="fr"><label>Loan Term</label><select id="term" onchange="calc()"><option value="1">1 year</option><option value="2">2 years</option><option value="3">3 years</option><option value="4">4 years</option><option value="5" selected>5 years</option><option value="7">7 years</option><option value="10">10 years</option><option value="15">15 years</option></select></div>
         </div>
+        <div class="fsec" style="margin-bottom:0;padding-bottom:0">
+          <button class="ded-toggle" id="ep-btn" onclick="toggleEP()">
+            <span class="ded-toggle-icon">+</span> Extra Payment Calculator <span class="opt">Pay off faster</span>
+          </button>
+          <div class="ded-body" id="ep-body">
+            <div class="fr" style="margin-top:10px"><label>Extra Monthly Payment</label><div class="iw hp"><span class="ip">$</span><input type="number" id="extra-mo" placeholder="0" min="0" oninput="calc()"></div></div>
+            <div id="ep-result" style="display:none;background:var(--alight);border-radius:8px;padding:12px 14px;margin-top:10px;font-size:13px;line-height:1.7;color:#1a5c3a"></div>
+          </div>
+        </div>
+        </div>
         <div class="res" id="res">
           <div class="res-grid">
             <div class="rb"><div class="rl">Monthly Payment</div><div class="rv" id="r-mo">$0</div></div>
@@ -226,16 +236,28 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </div>
 </footer>
 <script>
-function v(id){return parseFloat(document.getElementById(id).value)||0;}
+function v(id){var el=document.getElementById(id);return el?parseFloat(el.value)||0:0;}
 function fmt(n){return "$"+Math.round(n).toLocaleString("en-US");}
 function setType(el,type,rate,yrs){document.querySelectorAll(".tb").forEach(b=>b.classList.remove("active"));el.classList.add("active");document.getElementById("rate").value=rate;document.getElementById("term").value=yrs;calc();}
+function toggleEP(){var btn=document.getElementById("ep-btn");var body=document.getElementById("ep-body");btn.classList.toggle("open");body.classList.toggle("open");}
+function calcPayoff(P,r,n,extraMo){
+  if(r===0)return{months:Math.max(1,Math.ceil(P/(P/n+extraMo))),interest:0};
+  var bal=P,months=0,interest=0;
+  var stdPmt=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  while(bal>0.01&&months<n*3){
+    var ip=bal*r,pp=Math.min(stdPmt-ip+extraMo,bal);
+    interest+=ip;bal-=pp;months++;
+  }
+  return{months:months,interest:interest};
+}
 function calc(){
   const P=v("amt"),ar=v("rate"),yrs=parseInt(document.getElementById("term").value)||5;
   if(!P||!ar){document.getElementById("res").classList.remove("show");return;}
   const r=ar/100/12,n=yrs*12;
   const mo=r===0?P/n:P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
   const tot=mo*n,int=tot-P;
-  document.getElementById("r-mo").textContent=fmt(mo);
+  const extraMo=v("extra-mo");
+  document.getElementById("r-mo").textContent=fmt(mo+(extraMo||0));
   document.getElementById("r-int").textContent=fmt(int);
   document.getElementById("r-tot").textContent=fmt(tot);
   let h=`<div class="br"><span class="bl">Loan Amount</span><span class="bv">${fmt(P)}</span></div>`;
@@ -245,6 +267,21 @@ function calc(){
   let bal=P,tb="";
   for(let y=1;y<=yrs;y++){let yp=0,yi=0,ms=Math.min(12,n-(y-1)*12);for(let m=0;m<ms;m++){const ip=bal*r,pp=Math.min(mo-ip,bal);yi+=ip;yp+=pp;bal=Math.max(0,bal-pp);}tb+=`<tr><td>Year ${y}</td><td>${fmt(yp)}</td><td>${fmt(yi)}</td><td>${fmt(bal)}</td></tr>`;}
   document.querySelector("#amort").innerHTML=tb;
+  // Extra payment result
+  var epDiv=document.getElementById("ep-result");
+  if(extraMo>0&&epDiv){
+    var base=calcPayoff(P,r,n,0);
+    var withExtra=calcPayoff(P,r,n,extraMo);
+    var savedInt=base.interest-withExtra.interest;
+    var savedMos=base.months-withExtra.months;
+    var savedYrs=Math.floor(savedMos/12),savedMoRem=savedMos%12;
+    var payoffYrs=Math.floor(withExtra.months/12),payoffMoRem=withExtra.months%12;
+    epDiv.style.display="block";
+    epDiv.innerHTML=`<strong>💡 With ${fmt(extraMo)}/month extra:</strong><br>
+      • Pay off in <strong>${payoffYrs}y ${payoffMoRem}m</strong> (instead of ${yrs} years)<br>
+      • Save <strong>${fmt(savedInt)}</strong> in interest<br>
+      • Pay off <strong>${savedYrs>0?savedYrs+"y ":""}${savedMoRem}m earlier</strong>`;
+  } else if(epDiv){epDiv.style.display="none";}
   document.getElementById("res").classList.add("show");
 }
 function tFaq(el){const o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(q=>{q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}

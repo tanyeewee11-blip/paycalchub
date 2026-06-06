@@ -177,6 +177,20 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
         <div class="fg">
           <div class="fr"><label>Property Tax (Annual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tax" placeholder="4,000" oninput="calc()"></div></div>
           <div class="fr"><label>Home Insurance (Annual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="ins" placeholder="1,200" oninput="calc()"></div></div>
+          <div class="fr"><label>HOA Fees (Monthly)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="hoa" placeholder="0" oninput="calc()"></div></div>
+          <div class="fr"><label>PMI Rate <span class="opt">Auto if &lt;20% down</span></label><div class="iw hs"><input type="number" id="pmi-rate" placeholder="auto" step="0.1" oninput="calc()"><span class="is">%/yr</span></div></div>
+        </div>
+        <div class="fsec" style="margin-bottom:0;padding-bottom:0">
+          <button class="ded-toggle" id="ep-btn" onclick="toggleEP()">
+            <span class="ded-toggle-icon">+</span> Extra Payment Calculator <span class="opt">Pay off faster</span>
+          </button>
+          <div class="ded-body" id="ep-body">
+            <div class="fg" style="margin-top:10px">
+              <div class="fr"><label>Extra Monthly Payment</label><div class="iw hp"><span class="ip">$</span><input type="number" id="extra-mo" placeholder="0" min="0" oninput="calc()"></div></div>
+              <div class="fr"><label>Extra Annual Payment</label><div class="iw hp"><span class="ip">$</span><input type="number" id="extra-yr" placeholder="0" min="0" oninput="calc()"></div></div>
+            </div>
+            <div id="ep-result" style="display:none;background:var(--alight);border-radius:8px;padding:12px 14px;margin-top:10px;font-size:13px;line-height:1.7;color:#1a5c3a"></div>
+          </div>
         </div>
         <div class="res" id="res">
           <div class="rh"><div class="rl">Monthly Payment</div><div class="ra" id="r-amt">$0</div><div class="rp">per month</div></div>
@@ -267,10 +281,75 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </div>
 </footer>
 <script>
-function v(id){return parseFloat(document.getElementById(id).value)||0;}
+function v(id){var el=document.getElementById(id);return el?parseFloat(el.value)||0:0;}
 function fmt(n){return "$"+Math.round(n).toLocaleString("en-US");}
+function fmtd(n){return "$"+n.toLocaleString("en-US",{minimumFractionDigits:0,maximumFractionDigits:0});}
 function sync(){const p=v("price"),d=v("down-a");if(p)document.getElementById("down-p").value=((d/p)*100).toFixed(1);}
 function syncD(t){const p=v("price");if(!p)return;if(t==="a"){document.getElementById("down-p").value=((v("down-a")/p)*100).toFixed(1);}else{document.getElementById("down-a").value=Math.round(p*v("down-p")/100);}}
+function toggleEP(){var btn=document.getElementById("ep-btn");var body=document.getElementById("ep-body");btn.classList.toggle("open");body.classList.toggle("open");}
+function calcPayoff(P,r,n,extraMo){
+  // Returns months to payoff and total interest with extra payment
+  if(r===0)return{months:n,interest:0};
+  var bal=P,months=0,interest=0;
+  var stdPmt=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  while(bal>0.01&&months<n*2){
+    var ip=bal*r;
+    var pp=Math.min(stdPmt-ip+extraMo,bal);
+    interest+=ip;bal-=pp;months++;
+  }
+  return{months:months,interest:interest};
+}
+function calc(){
+  const price=v("price"),down=v("down-a"),rate=v("rate"),
+        yrs=parseInt(document.getElementById("term").value)||30,
+        ptax=v("tax"),ins=v("ins"),hoa=v("hoa"),
+        extraMo=v("extra-mo"),extraYr=v("extra-yr")/12;
+  if(!price||!rate){document.getElementById("res").classList.remove("show");return;}
+  const P=price-down,r=rate/100/12,n=yrs*12;
+  const pi=r===0?P/n:P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  // PMI: auto-calculate if LTV > 80%, unless user specified
+  const ltv=P/price;
+  var pmiRate=v("pmi-rate");
+  var pmiMo=0;
+  if(ltv>0.80){
+    if(!pmiRate)pmiRate=ltv>0.95?1.5:ltv>0.90?1.1:ltv>0.85?0.8:0.55;
+    pmiMo=P*(pmiRate/100)/12;
+  }
+  const totalExtra=extraMo+extraYr;
+  const total=pi+ptax/12+ins/12+hoa+pmiMo;
+  document.getElementById("r-amt").textContent=fmt(total+(totalExtra>0?totalExtra:0));
+  let h=`<div class="br"><span class="bl">Loan Amount</span><span class="bv">${fmt(P)}</span></div>`;
+  h+=`<div class="br"><span class="bl">Principal &amp; Interest</span><span class="bv">${fmt(pi)}/mo</span></div>`;
+  if(ptax)h+=`<div class="br"><span class="bl">Property Tax</span><span class="bv">${fmt(ptax/12)}/mo</span></div>`;
+  if(ins)h+=`<div class="br"><span class="bl">Home Insurance</span><span class="bv">${fmt(ins/12)}/mo</span></div>`;
+  if(hoa)h+=`<div class="br"><span class="bl">HOA Fees</span><span class="bv">${fmt(hoa)}/mo</span></div>`;
+  if(pmiMo>0)h+=`<div class="br"><span class="bl">PMI (${pmiRate.toFixed(2)}% — removed at 80% LTV)</span><span class="bv">${fmt(pmiMo)}/mo</span></div>`;
+  if(totalExtra>0)h+=`<div class="br"><span class="bl">Extra Payment</span><span class="bv">${fmt(totalExtra)}/mo</span></div>`;
+  h+=`<div class="br"><span class="bl">Total Interest Paid</span><span class="bv">${fmt(pi*n-P)}</span></div>`;
+  h+=`<div class="br tot"><span class="bl">Total Cost of Loan</span><span class="bv">${fmt(pi*n+ptax*yrs+ins*yrs+hoa*12*yrs)}</span></div>`;
+  document.getElementById("bdown").innerHTML=h;
+  // Extra payment results
+  var epDiv=document.getElementById("ep-result");
+  if(totalExtra>0&&epDiv){
+    var base=calcPayoff(P,r,n,0);
+    var withExtra=calcPayoff(P,r,n,totalExtra);
+    var savedInterest=base.interest-withExtra.interest;
+    var savedMonths=base.months-withExtra.months;
+    var savedYrs=Math.floor(savedMonths/12),savedMos=savedMonths%12;
+    var payoffYrs=Math.floor(withExtra.months/12),payoffMos=withExtra.months%12;
+    epDiv.style.display="block";
+    epDiv.innerHTML=`<strong>💡 With ${fmt(totalExtra)}/month extra:</strong><br>
+      • Pay off in <strong>${payoffYrs}y ${payoffMos}m</strong> (instead of ${yrs} years)<br>
+      • Save <strong>${fmt(savedInterest)}</strong> in interest<br>
+      • Pay off <strong>${savedYrs>0?savedYrs+"y ":""}${savedMos}m earlier</strong>`;
+  } else if(epDiv){epDiv.style.display="none";}
+  // Chart
+  let bal=P,data=[];const blk=yrs<=15?1:5,blocks=Math.ceil(yrs/blk);
+  for(let b=0;b<blocks;b++){let bp=0,bi=0,ms=Math.min(blk*12,n-b*blk*12);for(let m=0;m<ms;m++){const ip=bal*r,pp=Math.min(pi-ip,bal);bi+=ip;bp+=pp;bal=Math.max(0,bal-pp);}data.push({p:bp,i:bi});}
+  const mx=Math.max(...data.map(d=>d.p+d.i));
+  document.getElementById("bchart").innerHTML=data.map((d,i)=>`<div class="bar-y" title="Yr ${(i+1)*blk}"><div class="bar-i" style="height:${((d.i/mx)*100).toFixed(1)}%"></div><div class="bar-p" style="height:${((d.p/mx)*100).toFixed(1)}%"></div></div>`).join("");
+  document.getElementById("res").classList.add("show");
+}
 function calc(){
   const price=v("price"),down=v("down-a"),rate=v("rate"),yrs=parseInt(document.getElementById("term").value)||30,ptax=v("tax"),ins=v("ins");
   if(!price||!rate){document.getElementById("res").classList.remove("show");return;}
