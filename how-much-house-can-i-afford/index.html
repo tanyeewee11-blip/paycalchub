@@ -320,7 +320,42 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
     <p class="exp-text">Each salary card shows the affordable home price range based on the 28% rule (conservative) and 36% DTI (aggressive), modeled at a 2026 mortgage rate of approximately 6.9% on a 30-year fixed loan. The low end assumes a 10% down payment at 28% DTI; the high end assumes 20% down at 36% DTI. We assume no existing monthly debt — if you have car payments or student loans, your actual limit will be lower.</p>
     <p class="exp-text">Use our <a href="/mortgage-calculator/" style="color:var(--acc)">Mortgage Calculator</a> to model your exact monthly payment, or the individual salary pages above for a full scenario breakdown.</p>
   </div>
-</div>
+
+  <div style="margin-bottom:36px">
+    <h2 style="font-size:19px;font-weight:600;margin-bottom:12px">Hidden Costs That Affect What You Can Afford</h2>
+    <p class="exp-text">The salary cards above show home price ranges based on principal and interest only. Your actual monthly housing cost includes several additional items that reduce your effective purchasing power:</p>
+    <div style="background:var(--sur);border:1px solid var(--bor);border-radius:12px;overflow:hidden;margin:16px 0 20px">
+      <table style="width:100%;border-collapse:collapse">
+        <tr style="border-bottom:1px solid var(--bor)"><td style="padding:10px 16px;font-size:13px;color:var(--mut)">Property taxes</td><td style="padding:10px 16px;font-size:13px;text-align:right;color:var(--txt);font-weight:500">0.5–2.5% of home value/year — varies widely by state and county</td></tr>
+        <tr style="border-bottom:1px solid var(--bor)"><td style="padding:10px 16px;font-size:13px;color:var(--mut)">Homeowner's insurance</td><td style="padding:10px 16px;font-size:13px;text-align:right;color:var(--txt);font-weight:500">$1,200–$6,000+/year depending on location and coverage</td></tr>
+        <tr style="border-bottom:1px solid var(--bor)"><td style="padding:10px 16px;font-size:13px;color:var(--mut)">PMI (if down payment &lt;20%)</td><td style="padding:10px 16px;font-size:13px;text-align:right;color:var(--txt);font-weight:500">0.5–1.5% of loan amount/year — drops off when equity hits 20%</td></tr>
+        <tr style="border-bottom:1px solid var(--bor)"><td style="padding:10px 16px;font-size:13px;color:var(--mut)">HOA fees (if applicable)</td><td style="padding:10px 16px;font-size:13px;text-align:right;color:var(--txt);font-weight:500">$100–$800+/month for condos and planned communities</td></tr>
+        <tr><td style="padding:10px 16px;font-size:13px;color:var(--mut)">Maintenance &amp; repairs</td><td style="padding:10px 16px;font-size:13px;text-align:right;color:var(--txt);font-weight:500">Budget 1% of home value/year ($3,000 on a $300,000 home)</td></tr>
+      </table>
+    </div>
+    <p class="exp-text">On a $350,000 home in a typical market, total monthly housing costs including taxes, insurance, and PMI often run $400–$800 above the principal-and-interest figure. Always model total PITI before deciding what you can afford.</p>
+  </div>
+
+  <div style="margin-bottom:36px">
+    <h2 style="font-size:19px;font-weight:600;margin-bottom:16px">Frequently Asked Questions</h2>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div class="fqi"><div class="fqq" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');this.querySelector('.fqi-icon').style.transform=this.classList.contains('open')?'rotate(45deg)':''">How much house can I afford on $80,000 salary? <span class="fqi-icon">+</span></div><div class="fqa">At $80,000/year and 2026 mortgage rates (~6.5%), the 28% front-end rule allows roughly $1,867/month in housing costs, supporting a loan of approximately $295,000. With a 10% down payment, that covers a home around $328,000. See the full breakdown on our <a href="/how-much-house-can-i-afford/80k-salary/" style="color:var(--acc)">$80k affordability page</a>.</div></div>
+      <div class="fqi"><div class="fqq" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');this.querySelector('.fqi-icon').style.transform=this.classList.contains('open')?'rotate(45deg)':''">What is the 28% rule for home buying? <span class="fqi-icon">+</span></div><div class="fqa">The 28% rule states your monthly housing costs — mortgage principal and interest, property taxes, and insurance — should not exceed 28% of your gross monthly income. On a $6,000/month gross income, that means keeping total housing costs under $1,680/month. This is a guideline, not a hard limit: lenders often approve up to 36–43% DTI, but the 28% threshold generally keeps your budget sustainable.</div></div>
+      <div class="fqi"><div class="fqq" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');this.querySelector('.fqi-icon').style.transform=this.classList.contains('open')?'rotate(45deg)':''">How much do I need to earn to buy a $400,000 house? <span class="fqi-icon">+</span></div><div class="fqa">At 6.5% on a 30-year fixed loan with 10% down ($360,000 loan), principal and interest is approximately $2,275/month. Adding taxes, insurance, and PMI typically brings total housing costs to $2,700–$3,000/month. Using the 28% rule, you'd need a gross income of approximately $116,000–$129,000/year to keep that payment comfortable.</div></div>
+      <div class="fqi"><div class="fqq" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');this.querySelector('.fqi-icon').style.transform=this.classList.contains('open')?'rotate(45deg)':''">Does my credit score affect how much house I can afford? <span class="fqi-icon">+</span></div><div class="fqa">Yes, significantly. Credit score affects both your mortgage rate and your approval odds. At 760+, you typically qualify for the best rates. At 680–759, rates are higher by 0.25–0.75%. Below 680, rates can be 1–2% higher than prime, which meaningfully reduces your affordable price range — or may limit you to FHA loans. A 1% rate difference on a $300,000 loan changes the monthly payment by about $170.</div></div>
+      <div class="fqi"><div class="fqq" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');this.querySelector('.fqi-icon').style.transform=this.classList.contains('open')?'rotate(45deg)':''">Should I use the 28% or 36% DTI rule? <span class="fqi-icon">+</span></div><div class="fqa">The 28% rule (front-end DTI) applies to housing costs alone. The 36% rule (back-end DTI) applies to all monthly debt including housing, car loans, student loans, and credit card minimums. Lenders typically want both numbers below their thresholds. If you have significant non-housing debt, the back-end 36% rule often becomes the binding constraint — meaning your effective housing limit is lower than the 28% calculation alone suggests.</div></div>
+      <div class="fqi"><div class="fqq" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open');this.querySelector('.fqi-icon').style.transform=this.classList.contains('open')?'rotate(45deg)':''">What mortgage rate should I use to calculate affordability in 2026? <span class="fqi-icon">+</span></div><div class="fqa">30-year fixed mortgage rates in mid-2026 are running approximately 6.3–6.9% for well-qualified borrowers. The salary cards on this page use 6.9% as a conservative estimate. For the most accurate calculation, get pre-qualified with a lender to see your actual rate based on your credit score, down payment, and loan type before making offers.</div></div>
+    </div>
+  </div>
+
+  <div style="background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:20px 24px;margin-bottom:36px">
+    <h3 style="font-size:14px;font-weight:600;margin-bottom:12px">Related Guides &amp; Calculators</h3>
+    <a href="/mortgage-calculator/" style="display:block;color:var(--acc);font-size:13px;margin-bottom:8px">Mortgage Calculator — Model Your Exact Monthly Payment</a>
+    <a href="/blog/first-time-home-buyer-guide-2026/" style="display:block;color:var(--acc);font-size:13px;margin-bottom:8px">First-Time Home Buyer Guide 2026</a>
+    <a href="/blog/how-much-house-can-i-afford-on-100k-salary/" style="display:block;color:var(--acc);font-size:13px;margin-bottom:8px">How Much House on $100,000 Salary?</a>
+    <a href="/blog/how-much-house-can-i-afford-on-80k-salary/" style="display:block;color:var(--acc);font-size:13px;margin-bottom:8px">How Much House on $80,000 Salary?</a>
+    <a href="/blog/how-much-emergency-savings/" style="display:block;color:var(--acc);font-size:13px">How Much Emergency Savings Should You Have?</a>
+  </div>
 
 <footer>
 <div class="fi">
