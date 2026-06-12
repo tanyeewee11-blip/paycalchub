@@ -207,7 +207,21 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
         <div class="tax-row"><span class="tax-label">Take-Home Bi-weekly</span><span class="tax-val pos">$1,951</span></div>
       </div>
 
-      <div class="tip">⚠️ These figures cover <strong>federal tax only</strong>. State income tax (0–13%+), local taxes, health insurance premiums, 401(k) contributions, and other deductions will further reduce your paycheck. Use our <a href="/salary-calculator/">Salary Calculator</a> for a full state-by-state breakdown including all 50 states.</div>
+      <!-- Married filer comparison -->
+      <div class="card">
+        <div class="card-title">💑 Single vs Married Filing Jointly — $30/hr ($62,400/yr)</div>
+        <div style="overflow-x:auto"><table>
+          <tr><td></td><td style="font-weight:600;text-align:right">Single Filer</td><td style="font-weight:600;text-align:right">Married (MFJ)</td></tr>
+          <tr><td>Standard Deduction</td><td>$15,000</td><td>$30,000</td></tr>
+          <tr><td>Federal Income Tax</td><td>$4,960</td><td>$3,360</td></tr>
+          <tr><td>FICA (7.65%)</td><td>$4,774</td><td>$4,774</td></tr>
+          <tr class="highlight"><td>Est. Annual Take-Home</td><td>$50,720</td><td>$52,745</td></tr>
+          <tr><td>Est. Monthly Take-Home</td><td>$4,227</td><td>$4,395</td></tr>
+        </table></div>
+        <p style="font-size:12px;color:var(--mut);padding:10px 14px">MFJ estimate assumes $62,400 is the only household income. State taxes not included.</p>
+      </div>
+
+            <div class="tip">⚠️ These figures cover <strong>federal tax only</strong>. State income tax (0–13%+), local taxes, health insurance premiums, 401(k) contributions, and other deductions will further reduce your paycheck. Use our <a href="/salary-calculator/">Salary Calculator</a> for a full state-by-state breakdown including all 50 states.</div>
 
       <!-- Part-time vs full-time -->
       <div class="card">
@@ -225,8 +239,18 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
       <div class="card">
         <div class="card-title">🗺️ After-Tax Take-Home by State (Approximate)</div>
         <table class="state-table">
-          <tr><th>State</th><th>Est. State Tax</th><th>Annual Take-Home</th></tr>
-          <tr><td>Texas / Florida / Nevada (0%)</td><td>$0</td><td>$50,720</td></tr><tr><td>Colorado (4.4%)</td><td>$2,745</td><td>$47,975</td></tr><tr><td>Illinois (4.95%)</td><td>$3,088</td><td>$47,632</td></tr><tr><td>Georgia (5.49%)</td><td>$3,425</td><td>$47,295</td></tr><tr><td>Oregon (8.75%)</td><td>$5,460</td><td>$45,260</td></tr><tr><td>California (9.3%)</td><td>$5,803</td><td>$44,917</td></tr>
+          <tr><th>State</th><th>State Tax Rate</th><th>Annual Take-Home</th><th>Monthly Take-Home</th></tr>
+          <tr><td>Texas / Florida / Nevada</td><td>0%</td><td>$50,720</td><td>$4,227</td></tr>
+          <tr><td>Washington</td><td>0%</td><td>$50,720</td><td>$4,227</td></tr>
+          <tr><td>Colorado</td><td>4.4%</td><td>$47,975</td><td>$3,998</td></tr>
+          <tr><td>Illinois</td><td>4.95%</td><td>$47,632</td><td>$3,969</td></tr>
+          <tr><td>Michigan</td><td>4.25%</td><td>$48,068</td><td>$4,006</td></tr>
+          <tr><td>Georgia</td><td>5.49%</td><td>$47,295</td><td>$3,941</td></tr>
+          <tr><td>North Carolina</td><td>4.25%</td><td>$48,068</td><td>$4,006</td></tr>
+          <tr><td>Virginia</td><td>5.75%</td><td>$47,133</td><td>$3,928</td></tr>
+          <tr><td>New York</td><td>6.85%</td><td>$46,445</td><td>$3,871</td></tr>
+          <tr><td>Oregon</td><td>8.75%</td><td>$45,260</td><td>$3,772</td></tr>
+          <tr><td>California</td><td>9.3%</td><td>$44,917</td><td>$3,743</td></tr>
         </table>
         <p style="font-size:12px;color:var(--mut);padding:10px 14px">Estimates use flat-rate approximations. Actual liability varies based on filing status, deductions, and local taxes. <a href="/salary-calculator/" style="color:var(--acc)">Use our calculator for precise figures.</a></p>
       </div>
@@ -288,6 +312,10 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
         <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is the overtime rate for $30/hour? <span class="fqi-icon">+</span></div><div class="fqa">Under the FLSA, overtime (over 40 hrs/week) is paid at 1.5&times; the base rate. At $30/hour, overtime pays $45.00/hour. Working 5 overtime hours per week adds approximately $11,700/year in gross income.</div></div>
         <div class="fqi"><div class="fqq" onclick="tFaq(this)">Is $30 an hour a good wage? <span class="fqi-icon">+</span></div><div class="fqa">$30/hour is often described as the 'craftsman wage' — skilled trades, experienced nurses, and specialist technicians earn in this range. It's also the starting point for many bachelor's-degree professional roles in fields like accounting, education, and social work. Whether it's "good" depends heavily on your location, household size, and financial goals. Use the budget breakdown above to see how it fits your specific situation.</div></div>
         <div class="fqi"><div class="fqq" onclick="tFaq(this)">How does $30/hour compare to the US median wage? <span class="fqi-icon">+</span></div><div class="fqa">The US Bureau of Labor Statistics reports a median hourly wage of approximately $23/hour for all workers. $30/hour is above this median. The median annual wage for full-time workers is around $59,000 — $62,400 is above that benchmark.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is $30 an hour after taxes in California? <span class="fqi-icon">+</span></div><div class="fqa">In California, $30/hour ($62,400/year) nets approximately $44,917 annually after federal income tax, FICA, and California's 9.3% state income tax — about $3,743/month. California's SDI payroll deduction (1.1%) reduces take-home by an additional ~$686/year. Use our <a href="/salary-calculator/california/" style="color:var(--acc)">California Salary Calculator</a> for a precise figure.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is $30 an hour after taxes in Texas? <span class="fqi-icon">+</span></div><div class="fqa">Texas has no state income tax. At $30/hour ($62,400/year), a single filer in Texas keeps approximately $50,720 annually after federal income tax and FICA — about $4,227/month. This is $5,803 more per year than the same wage in California.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is $30 an hour after taxes in New York? <span class="fqi-icon">+</span></div><div class="fqa">In New York state (excluding NYC), $30/hour nets approximately $46,445/year after federal and state taxes — about $3,871/month. New York City residents pay an additional local income tax of up to 3.876%, cutting take-home by a further $1,500–$2,400 annually.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">How much is $30/hour for a married couple (sole earner)? <span class="fqi-icon">+</span></div><div class="fqa">Filing married jointly as the sole earner at $30/hour ($62,400/year), estimated federal take-home is approximately $52,745/year ($4,395/month) — about $2,025 more per year than a single filer, thanks to the doubled standard deduction of $30,000 vs $15,000.</div></div>
       </div>
 
       <!-- Other rates -->

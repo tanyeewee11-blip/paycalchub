@@ -88,7 +88,17 @@ tr.hl td{background:var(--alight);font-weight:600}tr.hl td:last-child{color:var(
 .sal-btn{background:var(--sur);border:1px solid var(--bor);border-radius:8px;padding:8px 14px;font-size:13px;font-weight:500;color:var(--acc);transition:all .15s}
 .sal-btn:hover{background:var(--alight);border-color:var(--acc)}
 
-@media(max-width:800px){.lay{grid-template-columns:1fr}.nav-links{display:none}.hero-amount{font-size:40px}}
+
+.budget-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.budget-item{background:var(--bg);border:1px solid var(--bor);border-radius:8px;padding:12px 14px}
+.budget-item-label{font-size:12px;color:var(--mut);margin-bottom:3px}
+.budget-item-val{font-family:var(--mo);font-size:15px;font-weight:500;color:var(--txt)}
+.state-table{width:100%;border-collapse:collapse;margin:14px 0}
+.state-table th{text-align:left;padding:9px 14px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);background:var(--bg);border-bottom:2px solid var(--bor)}
+.state-table td{padding:10px 14px;font-size:13px;border-bottom:1px solid var(--bor)}
+.state-table td:last-child{font-family:var(--mo);font-weight:500;text-align:right;color:var(--acc)}
+.state-table tr:last-child td{border-bottom:none}
+@media(max-width:800px){.lay{grid-template-columns:1fr}.nav-links{display:none}.hero-amount{font-size:40px}.budget-grid{grid-template-columns:1fr}}
 .lang-wrap{position:relative;margin-left:8px}
 .lang-btn{display:flex;align-items:center;gap:6px;background:var(--alight);border:1px solid #c5e0d3;border-radius:8px;padding:5px 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--acc);transition:background .15s}
 .lang-btn:hover{background:#d4eddf}
@@ -179,42 +189,108 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 
       <div class="tip">⚠️ Federal tax only. State income tax (0–13%), health insurance, and 401(k) deductions will further reduce take-home pay. Use our <a href="/salary-calculator/">Salary Calculator</a> for a full state-by-state breakdown.</div>
 
+      <!-- Married filer comparison -->
+      <div class="card">
+        <div class="card-title">💑 Single vs Married Filing Jointly — $50,000/yr</div>
+        <div style="overflow-x:auto"><table>
+          <tr><td></td><td style="font-weight:600;text-align:right">Single Filer</td><td style="font-weight:600;text-align:right">Married (MFJ)</td></tr>
+          <tr><td>Standard Deduction</td><td>$15,000</td><td>$30,000</td></tr>
+          <tr><td>Federal Income Tax</td><td>$3,962</td><td>$2,000</td></tr>
+          <tr><td>FICA (7.65%)</td><td>$3,825</td><td>$3,825</td></tr>
+          <tr class="hl"><td>Est. Annual Take-Home</td><td>$42,214</td><td>$44,175</td></tr>
+          <tr><td>Est. Monthly Take-Home</td><td>$3,518</td><td>$3,681</td></tr>
+        </table></div>
+        <p style="font-size:12px;color:var(--mut);padding:10px 14px">MFJ estimate assumes $50,000 is the only household income. State taxes not included.</p>
+      </div>
+
+      <!-- State comparison -->
+      <div class="card">
+        <div class="card-title">🗺️ $50,000/yr After-Tax Take-Home by State</div>
+        <table class="state-table">
+          <tr><th>State</th><th>State Tax Rate</th><th>Annual Take-Home</th><th>Monthly Take-Home</th></tr>
+          <tr><td>Texas / Florida / Nevada</td><td>0%</td><td>$42,214</td><td>$3,518</td></tr>
+          <tr><td>Washington</td><td>0%</td><td>$42,214</td><td>$3,518</td></tr>
+          <tr><td>Colorado</td><td>4.4%</td><td>$40,014</td><td>$3,335</td></tr>
+          <tr><td>Illinois</td><td>4.95%</td><td>$39,739</td><td>$3,312</td></tr>
+          <tr><td>Michigan</td><td>4.25%</td><td>$40,089</td><td>$3,341</td></tr>
+          <tr><td>Georgia</td><td>5.49%</td><td>$39,464</td><td>$3,289</td></tr>
+          <tr><td>North Carolina</td><td>4.25%</td><td>$40,089</td><td>$3,341</td></tr>
+          <tr><td>Virginia</td><td>5.75%</td><td>$39,339</td><td>$3,278</td></tr>
+          <tr><td>New York</td><td>6.85%</td><td>$38,789</td><td>$3,232</td></tr>
+          <tr><td>Oregon</td><td>8.75%</td><td>$37,839</td><td>$3,153</td></tr>
+          <tr class="hl"><td>California</td><td>9.3%</td><td>$37,564</td><td>$3,130</td></tr>
+        </table>
+        <p style="font-size:12px;color:var(--mut);padding:10px 14px">Estimates apply flat-rate approximations. Actual tax depends on filing status, deductions, and local taxes. <a href="/salary-calculator/" style="color:var(--acc)">Use our calculator for your exact figure.</a></p>
+      </div>
+
+      <!-- Part-time & overtime -->
+      <div class="card">
+        <div class="card-title">⏱ Part-Time &amp; Overtime Scenarios</div>
+        <div style="overflow-x:auto"><table>
+          <tr><td>20 hrs/week (part-time)</td><td>$25,000/yr · $12.02/hr</td></tr>
+          <tr><td>30 hrs/week</td><td>$37,500/yr · $18.03/hr</td></tr>
+          <tr class="hl"><td>40 hrs/week (full-time)</td><td>$50,000/yr · $24.04/hr</td></tr>
+          <tr><td>45 hrs/week (5 hrs OT/week)</td><td>$59,750/yr</td></tr>
+          <tr><td>50 hrs/week (10 hrs OT/week)</td><td>$69,500/yr</td></tr>
+          <tr><td>Overtime rate (1.5×)</td><td>$36.06/hr</td></tr>
+        </table></div>
+        <p style="font-size:12px;color:var(--mut);padding:10px 14px">Overtime calculated at 1.5× base rate under FLSA. Salaried exempt employees may not qualify.</p>
+      </div>
+
       <div class="art">
         <h2>Is $50,000 a Year a Good Salary?</h2>
-        <p>$50,000 a year is average — comfortable in most mid-size cities, tight in expensive metros. It is near the US median individual income and a common benchmark for entry-to-mid level professionals. After federal taxes, a single filer takes home approximately <strong>$42,214 per year</strong> — or <strong>$3,518 per month</strong> — to cover housing, food, transport, and savings.</p>
-        <p>At $50,000 a year, independent living is realistic in most mid-size US cities. Major metros remain expensive, but shared housing or outer suburbs make it manageable. This income level allows for modest savings if expenses are kept in check.</p>
+        <p>$50,000 a year is average — comfortable in most mid-size cities, tight in expensive metros. It sits near the US median individual income and is a common benchmark for entry-to-mid level professionals. After federal taxes, a single filer takes home approximately <strong>$42,214 per year</strong> — or <strong>$3,518 per month</strong>.</p>
+        <p>The honest answer depends entirely on where you live. In cities like Austin, Charlotte, or Columbus, $50,000 supports a solid single-adult lifestyle with room to save. In San Francisco, New York, or Boston, $50,000 is genuinely tight — housing alone can consume 50–60% of take-home pay. The state tax table above shows how dramatically purchasing power varies by location: a $50,000 salary in Texas leaves you with $4,650 more per year than the same salary in California.</p>
+
+        <h2>Monthly Budget on $50,000 a Year</h2>
+        <p>With $3,518/month in federal take-home pay, a reasonable starting budget looks like this:</p>
+        <div class="budget-grid">
+          <div class="budget-item"><div class="budget-item-label">Housing (30%)</div><div class="budget-item-val">$1,055</div></div>
+          <div class="budget-item"><div class="budget-item-label">Food &amp; Groceries (15%)</div><div class="budget-item-val">$528</div></div>
+          <div class="budget-item"><div class="budget-item-label">Transportation (13%)</div><div class="budget-item-val">$457</div></div>
+          <div class="budget-item"><div class="budget-item-label">Utilities &amp; Phone (7%)</div><div class="budget-item-val">$246</div></div>
+          <div class="budget-item"><div class="budget-item-label">Health &amp; Insurance (8%)</div><div class="budget-item-val">$281</div></div>
+          <div class="budget-item"><div class="budget-item-label">Savings &amp; Debt (15%)</div><div class="budget-item-val">$528</div></div>
+          <div class="budget-item"><div class="budget-item-label">Personal &amp; Other (12%)</div><div class="budget-item-val">$423</div></div>
+        </div>
+        <p>The savings allocation above ($528/month = $6,336/year) is enough to nearly max out a Roth IRA ($7,000 limit in 2026). At $50,000 income, a Roth IRA is almost always the better choice over a traditional IRA — your current tax rate is likely lower than your retirement rate.</p>
 
         <h2>Jobs That Pay Around $50,000 a Year</h2>
-        <p>Common roles in this salary range include: teacher, dental assistant, IT support specialist, paralegal, police officer, skilled tradesperson. Actual pay varies by location, experience, and employer. Use our <a href="/salary-calculator/">Salary Calculator</a> to see your exact take-home after state taxes.</p>
+        <p>Common roles at this salary level include: <strong>elementary school teacher, dental assistant, IT support specialist, paralegal, police officer, medical coder, skilled tradesperson (HVAC, electrician's apprentice), and junior accountant</strong>. These are largely stable, in-demand occupations — many with defined benefit pensions or strong benefits that push total compensation well above the base salary.</p>
+        <p>For those looking to grow beyond $50,000: the most reliable paths are earning a relevant certification (AWS, CPA, PMP), moving into a supervisory role, or switching to a higher-demand sector within your current field. The jump from $50,000 to $65,000+ is achievable within 2–3 years in most of these fields.</p>
 
         <h2>How to Calculate $50,000/Year to Hourly</h2>
-        <p>The standard formula: <strong>$50,000 &divide; 52 weeks &divide; 40 hours = $24.04/hr</strong>. If you work 50 weeks (2 weeks unpaid leave), the equivalent hourly rate is $19.23. To go the other direction — from hourly to annual salary — use our <a href="/hourly-to-salary/">Hourly to Salary Calculator</a>.</p>
+        <p>The standard formula: <strong>$50,000 &divide; 52 weeks &divide; 40 hours = $24.04/hr</strong>. If you work 50 weeks (taking 2 weeks unpaid leave), the equivalent hourly rate is $25.00. For overtime, the FLSA requires 1.5× pay beyond 40 hours/week for non-exempt workers — at $24.04/hr base, your overtime rate is $36.06/hr. To go the other direction — from hourly to annual salary — use our <a href="/hourly-to-salary/">Hourly to Salary Calculator</a>.</p>
 
-        <h2>Budgeting on $50,000 a Year</h2>
-        <p>With $3,518 in monthly take-home pay, a common budgeting framework suggests:</p>
-        <ul>
-          <li><strong>Housing (30%):</strong> $1,055/month</li>
-          <li><strong>Food & groceries (15%):</strong> $528/month</li>
-          <li><strong>Transport (15%):</strong> $528/month</li>
-          <li><strong>Savings & investments (20%):</strong> $704/month</li>
-          <li><strong>Other expenses (20%):</strong> $704/month</li>
-        </ul>
-        <p>These are guidelines only. Your actual allocations will depend on location, family size, and financial goals.</p>
+        <h2>$50,000 vs the US Median</h2>
+        <p>The Bureau of Labor Statistics reports a median hourly wage of approximately $23/hour for all US workers, and a median annual salary for full-time workers of around $59,000. At $50,000 a year, you are slightly above the median hourly rate but below the median for full-time annual earners. This makes $50,000 a solidly middle-income salary — not struggling, not comfortable everywhere, but a reasonable foundation to build from.</p>
       </div>
 
       <div class="fqs">
         <h2>Frequently Asked Questions</h2>
-        <div class="fqi"><div class="fqq" onclick="tFaq(this)">$50,000 a year is how much an hour? <span class="fqi-icon">+</span></div><div class="fqa">$50,000 a year equals $24.04 per hour based on a 40-hour work week for 52 weeks (2,080 hours). If you work 50 weeks, the hourly equivalent is $19.23.</div></div>
-        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is $50,000 a year after taxes? <span class="fqi-icon">+</span></div><div class="fqa">For a single filer in 2026, $50,000/year nets approximately $42,214 after federal income tax and FICA — about $3,518/month. State income tax will reduce this further depending on where you live.</div></div>
-        <div class="fqi"><div class="fqq" onclick="tFaq(this)">How much is $50,000 a year per month? <span class="fqi-icon">+</span></div><div class="fqa">$50,000 &divide; 12 = $4,167 gross per month. After federal taxes, estimated take-home is $3,518/month for a single filer.</div></div>
-        <div class="fqi"><div class="fqq" onclick="tFaq(this)">How much is $50,000 a year bi-weekly? <span class="fqi-icon">+</span></div><div class="fqa">Gross bi-weekly pay is $1,923 ($50,000 &divide; 26). Estimated net bi-weekly paycheck after federal taxes: $1,624.</div></div>
-        <div class="fqi"><div class="fqq" onclick="tFaq(this)">Is $50,000 a year a good salary? <span class="fqi-icon">+</span></div><div class="fqa">$50,000 a year is average — comfortable in most mid-size cities, tight in expensive metros. At $50,000 a year, independent living is realistic in most mid-size US cities. Major metros remain expensive, but shared...</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">$50,000 a year is how much an hour? <span class="fqi-icon">+</span></div><div class="fqa">$50,000 a year equals $24.04 per hour based on a 40-hour work week for 52 weeks (2,080 hours). If you work only 50 weeks (2 weeks unpaid), the equivalent hourly rate is $25.00.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is $50,000 a year after taxes? <span class="fqi-icon">+</span></div><div class="fqa">For a single filer in 2026, $50,000/year nets approximately $42,214 after federal income tax ($3,962) and FICA ($3,825) — about $3,518/month. State income tax reduces this further: from about $37,564 in California to the full $42,214 in zero-tax states like Texas or Florida.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">How much is $50,000 a year per month? <span class="fqi-icon">+</span></div><div class="fqa">$50,000 &divide; 12 = $4,167 gross per month. After federal taxes, estimated take-home is $3,518/month for a single filer. Married filing jointly (sole income) nets approximately $3,681/month after federal taxes.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">How much is $50,000 a year bi-weekly? <span class="fqi-icon">+</span></div><div class="fqa">Gross bi-weekly pay is $1,923 ($50,000 &divide; 26 pay periods). Estimated net bi-weekly paycheck after federal taxes: approximately $1,624 for a single filer.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">Is $50,000 a year a good salary? <span class="fqi-icon">+</span></div><div class="fqa">$50,000 a year is a solid middle-income salary. It's comfortable in most mid-size US cities (Austin, Columbus, Charlotte, Nashville) but tight in high-cost metros like San Francisco, New York, or Boston. After federal taxes, a single filer has $3,518/month — enough for independent living in most markets with disciplined budgeting.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is $50,000 a year as a weekly paycheck? <span class="fqi-icon">+</span></div><div class="fqa">$50,000 &divide; 52 weeks = $962 gross per week. After federal taxes, estimated weekly net pay is approximately $812 for a single filer.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">How much overtime to reach $60,000 from $50,000? <span class="fqi-icon">+</span></div><div class="fqa">At $24.04/hr base rate, your overtime rate is $36.06/hr. To earn an extra $10,000/year in overtime, you need approximately 277 overtime hours annually — about 5.3 extra hours per week for a full year. Very achievable in roles that offer consistent overtime.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is $50,000 a year after taxes in California? <span class="fqi-icon">+</span></div><div class="fqa">In California, $50,000/year nets approximately $37,564 annually after federal income tax, FICA, and California's 9.3% state income tax — about $3,130/month. California also has an SDI payroll deduction of 1.1% which reduces take-home slightly further.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is $50,000 a year after taxes in Texas? <span class="fqi-icon">+</span></div><div class="fqa">Texas has no state income tax. At $50,000/year, a single filer in Texas keeps approximately $42,214 annually after federal income tax and FICA — about $3,518/month. This is $4,650 more per year than the same salary earned in California.</div></div>
       </div>
 
       <div style="margin-top:40px">
         <h2 style="font-size:18px;font-weight:600;margin-bottom:12px">Other Annual Salaries</h2>
         <div class="other-sal">
-          <a href="/salary-to-hourly/40k-a-year/" class="sal-btn">$40,000/yr</a><a href="/salary-to-hourly/60k-a-year/" class="sal-btn">$60,000/yr</a><a href="/salary-to-hourly/70k-a-year/" class="sal-btn">$70,000/yr</a><a href="/salary-to-hourly/80k-a-year/" class="sal-btn">$80,000/yr</a>
+          <a href="/salary-to-hourly/30k-a-year/" class="sal-btn">$30,000/yr</a>
+          <a href="/salary-to-hourly/35k-a-year/" class="sal-btn">$35,000/yr</a>
+          <a href="/salary-to-hourly/40k-a-year/" class="sal-btn">$40,000/yr</a>
+          <a href="/salary-to-hourly/45k-a-year/" class="sal-btn">$45,000/yr</a>
+          <a href="/salary-to-hourly/55k-a-year/" class="sal-btn">$55,000/yr</a>
+          <a href="/salary-to-hourly/60k-a-year/" class="sal-btn">$60,000/yr</a>
+          <a href="/salary-to-hourly/70k-a-year/" class="sal-btn">$70,000/yr</a>
+          <a href="/salary-to-hourly/80k-a-year/" class="sal-btn">$80,000/yr</a>
+          <a href="/salary-to-hourly/100k-a-year/" class="sal-btn">$100,000/yr</a>
           <a href="/salary-calculator/" class="sal-btn">Full calculator →</a>
         </div>
       </div>
@@ -225,19 +301,42 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
         <h3>📊 $50,000/yr Quick Stats</h3>
         <ul>
           <li>Hourly rate<span>$24.04/hr</span></li>
-          <li>Monthly (gross)<span>$4,167</span></li>
+          <li>Daily (8 hrs)<span>$192</span></li>
+          <li>Weekly (gross)<span>$962</span></li>
           <li>Bi-weekly (gross)<span>$1,923</span></li>
+          <li>Monthly (gross)<span>$4,167</span></li>
           <li>Net annual (est.)<span>$42,214</span></li>
           <li>Net monthly (est.)<span>$3,518</span></li>
+          <li>Net bi-weekly (est.)<span>$1,624</span></li>
+          <li>Overtime rate<span>$36.06/hr</span></li>
           <li>Effective tax rate<span>15.6%</span></li>
         </ul>
       </div>
       <div class="ic">
         <h3>🔗 More Calculators</h3>
-        <a href="/salary-calculator/">💰 Salary Calculator</a>
+        <a href="/salary-calculator/">💰 Salary Calculator (all states)</a>
         <a href="/mortgage-calculator/">🏠 Mortgage Calculator</a>
         <a href="/loan-calculator/">📝 Loan Calculator</a>
-        <a href="/hourly-to-salary/">⏱ Hourly to Salary</a>
+        <a href="/hourly-to-salary/">⏱ All Hourly Rates</a>
+        <a href="/how-much-house-can-i-afford/">🏡 Home Affordability</a>
+      </div>
+      <div class="ic">
+        <h3>📚 Related Guides</h3>
+        <a href="/blog/what-is-a-good-salary-in-2026/">What is a Good Salary?</a>
+        <a href="/blog/average-salary-by-state-2026/">Average Salary by State</a>
+        <a href="/blog/401k-vs-roth-ira/">401(k) vs Roth IRA Guide</a>
+        <a href="/blog/how-much-emergency-savings/">Emergency Fund Guide</a>
+      </div>
+      <div class="ic">
+        <h3>📅 $50k/yr Pay Schedule</h3>
+        <ul>
+          <li>Daily<span>$192</span></li>
+          <li>Weekly<span>$962</span></li>
+          <li>Bi-weekly<span>$1,923</span></li>
+          <li>Semi-monthly<span>$2,083</span></li>
+          <li>Monthly<span>$4,167</span></li>
+          <li>Annual<span>$50,000</span></li>
+        </ul>
       </div>
     </div>
   </div>
