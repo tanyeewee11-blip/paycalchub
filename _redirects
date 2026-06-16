@@ -1,0 +1,7 @@
+# Redirect old blog article URLs that may have been indexed without trailing slash
+/blog/30-dollars-an-hour-annual-salary /blog/30-dollars-an-hour-annual-salary/ 301
+/blog/25-an-hour-after-taxes-texas /blog/25-an-hour-after-taxes-texas/ 301
+/blog/salary-vs-hourly-which-is-better /blog/salary-vs-hourly-which-is-better/ 301
+/blog/how-much-to-save-from-each-paycheck /blog/how-much-to-save-from-each-paycheck/ 301
+/blog/how-much-house-can-i-afford-50000-salary /blog/how-much-house-can-i-afford-50000-salary/ 301
+/blog/30-an-hour-jobs-no-degree /blog/30-an-hour-jobs-no-degree/ 301
