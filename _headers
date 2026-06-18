@@ -42,3 +42,8 @@
 
 /ads.txt
   Cache-Control: public, max-age=86400
+
+# ── AdSense & Security ────────────────────────────────────────────────────
+/*
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-DNS-Prefetch-Control: on
