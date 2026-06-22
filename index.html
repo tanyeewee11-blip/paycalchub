@@ -61,6 +61,7 @@
 :root{
 --bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;
 --acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;
+--gold:#b8860b;--gold-light:#faf3e3;--gold-dark:#8a6508;
 --f:"DM Sans",sans-serif;--mo:"DM Mono",monospace
 }
 body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}
@@ -96,13 +97,13 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .hero h1 em{font-style:normal;color:var(--acc)}
 .hero-sub{font-size:15px;color:var(--mut);margin-bottom:24px;max-width:440px;line-height:1.65}
 .hero-btns{display:flex;gap:10px;flex-wrap:wrap}
-.btn-p{padding:11px 22px;background:var(--acc);color:#fff;border-radius:8px;font-weight:600;font-size:14px;transition:opacity .15s}
-.btn-p:hover{opacity:.88}
-.btn-s{padding:11px 22px;background:var(--sur);color:var(--txt);border-radius:8px;font-weight:500;font-size:14px;border:1px solid var(--bor);transition:border-color .15s}
+.btn-p{padding:13px 26px;background:var(--gold);color:#fff;border-radius:9px;font-weight:600;font-size:14.5px;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 14px rgba(184,134,11,.28)}
+.btn-p:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(184,134,11,.36)}
+.btn-s{padding:13px 26px;background:var(--sur);color:var(--txt);border-radius:9px;font-weight:500;font-size:14.5px;border:1px solid var(--bor);transition:border-color .15s,color .15s}
 .btn-s:hover{border-color:var(--acc);color:var(--acc)}
 
 /* Preview calculator */
-.preview{background:var(--sur);border:1px solid var(--bor);border-radius:16px;padding:22px;box-shadow:0 6px 24px rgba(0,0,0,.05)}
+.preview{background:var(--sur);border:1px solid var(--bor);border-radius:18px;padding:24px;box-shadow:0 12px 40px rgba(30,107,74,.08),0 2px 8px rgba(0,0,0,.04)}
 .prev-lbl{font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
 .prev-input{width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--bor);font-size:15px;font-family:var(--f);outline:none;margin-bottom:6px;background:var(--bg)}
 .prev-input:focus{border-color:var(--acc)}
@@ -112,8 +113,8 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .prev-row{display:flex;gap:8px;margin-bottom:10px}
 .prev-select{flex:1;padding:8px 10px;border-radius:8px;border:1px solid var(--bor);font-size:13px;font-family:var(--f);outline:none;background:var(--bg);color:var(--txt)}
 .prev-select:focus{border-color:var(--acc)}
-.prev-res{background:var(--alight);border-radius:10px;padding:13px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.prev-res-v{font-family:var(--mo);font-size:22px;font-weight:500;color:var(--acc)}
+.prev-res{background:linear-gradient(135deg,var(--alight),#dcf0e6);border:1px solid #c5e0d3;border-radius:12px;padding:15px 18px;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.prev-res-v{font-family:var(--mo);font-size:26px;font-weight:600;color:var(--acc);letter-spacing:-.01em}
 .prev-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .prev-mini-card{background:var(--bg);border-radius:8px;padding:10px 12px}
 .prev-mini-lbl{font-size:11px;color:var(--mut);margin-bottom:3px}
@@ -124,36 +125,99 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .stats-inner{background:var(--alight);border:1px solid #c5e0d3;border-radius:var(--rad);padding:20px 0;display:grid;grid-template-columns:repeat(4,1fr)}
 .stat-item{text-align:center;border-right:1px solid #c5e0d3;padding:0 16px}
 .stat-item:last-child{border-right:none}
-.stat-icon{font-size:18px;margin-bottom:4px}
+.stat-icon{margin-bottom:6px;display:flex;justify-content:center;color:var(--acc)}
 .stat-num{font-family:var(--mo);font-size:24px;font-weight:500;color:var(--acc);margin-bottom:2px}
 .stat-lbl{font-size:12px;color:#2d6b4a}
 
 /* Tools */
 .sec{max-width:1100px;margin:0 auto;padding:0 24px 32px}
 .sec-lbl{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--mut);letter-spacing:.06em;margin-bottom:16px}
-.tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.tc{background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:var(--rad);padding:22px;transition:border-color .15s,transform .15s,box-shadow .15s;display:block}
+.tgrid{display:flex;flex-direction:column;gap:12px}
+.tc{background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:var(--rad);transition:border-color .15s,transform .15s,box-shadow .15s;display:block}
 .tc:hover{border-color:var(--acc);border-left-color:var(--acc);transform:translateY(-2px);box-shadow:0 4px 16px rgba(30,107,74,.08)}
-.ti{font-size:26px;margin-bottom:10px}
-.tc h2{font-size:15px;font-weight:600;margin-bottom:7px;color:var(--txt)}
+
+.tc-row{display:flex;align-items:center;gap:20px;padding:20px 26px}
+.tc-row .ti{margin-bottom:0;flex-shrink:0}
+.tc-row-body{flex:1;min-width:0}
+.tc-row-h{display:flex;align-items:center;gap:10px;margin-bottom:5px}
+.tc-row-h h2{margin-bottom:0}
+.tc-row p{margin-bottom:10px}
+.tc-row .tc-tags{flex-wrap:wrap}
+
+.tc.tc-featured{background:linear-gradient(100deg,#fff 0%,#cdebd9 160%);border:1px solid #a8d9bd;border-left:4px solid var(--gold);position:relative}
+.tc.tc-featured:hover{border-left-color:var(--gold-dark);box-shadow:0 8px 26px rgba(184,134,11,.16);transform:translateY(-2px)}
+.tc.tc-featured .ti{width:54px;height:54px;background:#fff;color:var(--gold-dark);box-shadow:0 2px 8px rgba(184,134,11,.15)}
+.tc.tc-featured h2{font-size:18px}
+.tc-featured-badge{display:inline-block;background:var(--gold);color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:5px}
+.tc-featured-cta{flex-shrink:0;font-size:13px;font-weight:600;color:var(--acc);display:none;white-space:nowrap}
+@media(min-width:640px){.tc-featured-cta{display:inline-flex;align-items:center;gap:4px}}
+
+.ti{width:46px;height:46px;border-radius:11px;background:var(--alight);color:var(--acc);display:flex;align-items:center;justify-content:center}
+.tc h2{font-size:16px;font-weight:700;margin-bottom:7px;color:var(--txt);letter-spacing:-.005em}
 .tc p{font-size:13px;color:var(--mut);line-height:1.6;margin-bottom:12px}
 .tc-tags{display:flex;flex-wrap:wrap;gap:6px}
 .tag{font-size:11px;font-weight:500;padding:3px 9px;border-radius:6px}
 .tag-green{background:var(--alight);color:var(--acc)}
 .tag-gray{background:var(--bg);color:var(--mut);border:1px solid var(--bor)}
 
+@media(max-width:640px){.tc-row{flex-wrap:wrap;padding:18px 20px}.tc-row-body{flex-basis:100%;order:2}.tc-featured-cta{flex-basis:100%;order:3;display:block}.tc-row-h{flex-wrap:wrap;gap:6px}}
+
+/* Why PayCalcHub */
+.why-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px}
+.why-card{background:var(--sur);border:1px solid var(--bor);border-radius:14px;padding:22px;transition:box-shadow .15s,transform .15s}
+.why-card:hover{box-shadow:0 6px 20px rgba(0,0,0,.05);transform:translateY(-1px)}
+.why-icon{width:44px;height:44px;border-radius:11px;background:var(--txt);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.why-h{font-size:15px;font-weight:700;color:var(--txt);margin-bottom:5px}
+.why-sub{font-size:11.5px;font-weight:600;color:var(--acc);text-transform:uppercase;letter-spacing:.03em;margin-bottom:10px}
+.why-p{font-size:13px;color:var(--mut);line-height:1.65}
+@media(max-width:800px){.why-grid{grid-template-columns:1fr}}
+
+/* Visual showcase */
+.showcase{background:var(--sur);border:1px solid var(--bor);border-radius:18px;padding:32px;display:grid;grid-template-columns:0.9fr 1.1fr;gap:36px;align-items:center}
+.showcase-h2{font-size:22px;font-weight:600;line-height:1.3;letter-spacing:-.01em;margin:10px 0 12px}
+.showcase-h2 em{font-style:normal;color:var(--gold)}
+.showcase-p{font-size:13.5px;color:var(--mut);line-height:1.65}
+.showcase-chart{background:var(--bg);border-radius:12px;padding:18px}
+@media(max-width:800px){.showcase{grid-template-columns:1fr;padding:24px}}
+
 /* Popular searches */
 .pop{max-width:1100px;margin:0 auto;padding:0 24px 40px}
-.pop-groups{display:grid;grid-template-columns:repeat(3,1fr);background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);overflow:hidden}
-.pop-group{padding:18px 20px;border-right:1px solid var(--bor);border-bottom:1px solid var(--bor)}
-.pop-group:nth-child(3n){border-right:none}
-.pop-group:nth-child(4),.pop-group:nth-child(5),.pop-group:nth-child(6){border-bottom:none}
-.pop-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin-bottom:10px;display:flex;align-items:center;gap:6px}
-.pop-links{display:flex;flex-wrap:wrap;gap:6px}
-.pop-link{font-size:12.5px;color:var(--acc);background:var(--alight);border-radius:20px;padding:4px 11px;transition:background .12s;white-space:nowrap}
-.pop-link:hover{background:#c5e0d3}
-@media(max-width:800px){.pop-groups{grid-template-columns:1fr 1fr}.pop-group:nth-child(3n){border-right:1px solid var(--bor)}.pop-group:nth-child(2n){border-right:none}.pop-group:nth-child(5),.pop-group:nth-child(6){border-bottom:1px solid var(--bor)}.pop-group:last-child{border-bottom:none}}
-@media(max-width:500px){.pop-groups{grid-template-columns:1fr}.pop-group{border-right:none!important}.pop-group:last-child{border-bottom:none}}
+.pop-groups{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.pop-card{background:var(--sur);border:1px solid var(--bor);border-radius:14px;padding:20px 22px;transition:box-shadow .15s,transform .15s}
+.pop-card:hover{box-shadow:0 6px 20px rgba(0,0,0,.05);transform:translateY(-1px)}
+.pop-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-dark);margin-bottom:13px;display:flex;align-items:center;gap:6px}
+.pop-links{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
+.pop-link{font-size:13px;color:var(--txt);background:var(--bg);border:1px solid var(--bor);border-radius:8px;padding:8px 12px;font-weight:500;transition:border-color .12s,background .12s;text-align:center;white-space:nowrap}
+.pop-link:hover{border-color:var(--acc);background:var(--alight)}
+.pop-link.pop-link-top{background:var(--acc);color:#fff;border-color:var(--acc)}
+.pop-link.pop-link-top:hover{background:var(--gold-dark);border-color:var(--gold-dark)}
+.pop-card-desc{font-size:12.5px;color:var(--mut);line-height:1.6;margin-bottom:14px}
+.pop-links-1col{grid-template-columns:1fr}
+.pop-links-2col{grid-template-columns:1fr 1fr}
+.pop-links-intl{display:flex;flex-direction:column;gap:7px}
+.pop-link-full{width:100%;display:block}
+
+.pop-card-state{grid-column:span 2}
+.pop-state-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.pop-state-top .pop-group-lbl{margin-bottom:0}
+.pop-state-body{display:grid;grid-template-columns:1fr 1.4fr;gap:20px;align-items:center}
+.pop-state-map{background:var(--bg);border-radius:10px;padding:14px;display:flex;align-items:center;gap:12px;height:100%}
+.pop-state-map svg{flex-shrink:0}
+.pop-state-map-text{font-size:12px;color:var(--mut);line-height:1.5}
+.pop-state-map-text strong{color:var(--txt);font-weight:700;display:block;font-size:13px;margin-bottom:2px}
+.pop-state-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
+.pop-state-link{font-size:13px;color:var(--txt);background:var(--bg);border:1px solid var(--bor);border-radius:8px;padding:8px 10px;font-weight:500;transition:border-color .12s,background .12s;text-align:center}
+.pop-state-link:hover{border-color:var(--acc);background:var(--alight)}
+.pop-state-link.pop-link-top{background:var(--acc);color:#fff;border-color:var(--acc)}
+.pop-state-link.pop-link-top:hover{background:var(--gold-dark);border-color:var(--gold-dark)}
+.pop-state-all{font-size:12px;font-weight:600;color:var(--acc);white-space:nowrap}
+
+.pop-card-wide{grid-column:span 2}
+.pop-card-desc-inline{font-size:12.5px;color:var(--mut)}
+.pop-links-6{grid-template-columns:repeat(6,1fr)}
+
+@media(max-width:800px){.pop-groups{grid-template-columns:1fr}.pop-card-state{grid-column:span 1}.pop-card-wide{grid-column:span 1}.pop-state-body{grid-template-columns:1fr}.pop-state-grid{grid-template-columns:1fr 1fr}.pop-links-6{grid-template-columns:1fr 1fr 1fr}}
+@media(max-width:560px){.pop-state-top{flex-direction:column;align-items:flex-start;gap:8px}}
 
 /* Footer */
 .fi-logo span{color:var(--acc)}
@@ -161,7 +225,7 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 
 
 @media(max-width:800px){
-.hero-grid,.tgrid{grid-template-columns:1fr}
+.hero-grid{grid-template-columns:1fr}
 .preview{display:block;margin-top:16px}
 .stats-inner{grid-template-columns:repeat(2,1fr)}
 .stat-item:nth-child(2){border-right:none}
@@ -342,10 +406,10 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 <!-- Stats bar -->
 <div class="stats-bar">
 <div class="stats-inner">
-  <div class="stat-item"><div class="stat-icon">🗺️</div><div class="stat-num">50</div><div class="stat-lbl">US states covered</div></div>
-  <div class="stat-item"><div class="stat-icon">🌍</div><div class="stat-num">4</div><div class="stat-lbl">Countries supported</div></div>
-  <div class="stat-item"><div class="stat-icon">📅</div><div class="stat-num">2026</div><div class="stat-lbl">Tax rates updated</div></div>
-  <div class="stat-item"><div class="stat-icon">✅</div><div class="stat-num">Free</div><div class="stat-lbl">No sign-up needed</div></div>
+  <div class="stat-item"><div class="stat-icon"><svg width="20" height="20" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg></div><div class="stat-num">50</div><div class="stat-lbl">US states covered</div></div>
+  <div class="stat-item"><div class="stat-icon"><svg width="20" height="20" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.2 2.3 3.4 5.3 3.4 8.5s-1.2 6.2-3.4 8.5c-2.2-2.3-3.4-5.3-3.4-8.5S9.8 5.8 12 3.5Z"/></svg></div><div class="stat-num">4</div><div class="stat-lbl">Countries supported</div></div>
+  <div class="stat-item"><div class="stat-icon"><svg width="20" height="20" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v3.5M16 3v3.5"/><path d="M8 13.5h2M8 17h2M14 13.5h2M14 17h2"/></svg></div><div class="stat-num">2026</div><div class="stat-lbl">Tax rates updated</div></div>
+  <div class="stat-item"><div class="stat-icon"><svg width="20" height="20" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 5.5v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9v-6L12 3Z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></div><div class="stat-num">Free</div><div class="stat-lbl">No sign-up needed</div></div>
 </div>
 </div>
 
@@ -353,29 +417,38 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 <div class="sec">
 <div class="sec-lbl">All Financial Tools</div>
 <div class="tgrid">
-  <a href="/salary-calculator/" class="tc">
-    <div class="ti">💰</div>
-    <h2>Salary Calculator</h2>
-    <p>Full tax breakdown for US (all 50 states), UK, Canada & Australia. Includes 401k, health insurance, and super deductions. Updated 2026 tax rates.</p>
-    <div class="tc-tags"><span class="tag tag-green">US · UK · Canada · AU</span><span class="tag tag-gray">All 50 states</span></div>
+  <a href="/salary-calculator/" class="tc tc-row tc-featured">
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M14.8 9.3c-.3-.9-1.3-1.5-2.6-1.5-1.6 0-2.7.8-2.7 2s1 1.7 2.5 2c1.7.3 2.8.8 2.8 2.1 0 1.2-1.2 2.1-2.8 2.1-1.3 0-2.4-.6-2.7-1.6"/><path d="M12 6.3v1.3M12 16.4v1.3"/></svg></div>
+    <div class="tc-row-body">
+      <div class="tc-row-h"><h2>Salary Calculator</h2><span class="tc-featured-badge">Most popular</span></div>
+      <p>Full tax breakdown for US (all 50 states), UK, Canada & Australia. Includes 401k, health insurance, and super deductions. Updated 2026 tax rates.</p>
+      <div class="tc-tags"><span class="tag tag-green">US · UK · Canada · AU</span><span class="tag tag-gray">All 50 states</span></div>
+    </div>
+    <span class="tc-featured-cta">Calculate now &rarr;</span>
   </a>
-  <a href="/mortgage-calculator/" class="tc">
-    <div class="ti">🏠</div>
-    <h2>Mortgage Calculator</h2>
-    <p>Monthly payment, total interest cost, and full amortization schedule. Adjust down payment, loan term, and interest rate instantly.</p>
-    <div class="tc-tags"><span class="tag tag-green">Amortization chart</span><span class="tag tag-gray">Instant results</span></div>
+  <a href="/mortgage-calculator/" class="tc tc-row">
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11.5 12 4l8.5 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-9"/></svg></div>
+    <div class="tc-row-body">
+      <h2>Mortgage Calculator</h2>
+      <p>Monthly payment, total interest cost, and full amortization schedule. Adjust down payment, loan term, and interest rate instantly.</p>
+      <div class="tc-tags"><span class="tag tag-green">Amortization chart</span><span class="tag tag-gray">Instant results</span></div>
+    </div>
   </a>
-  <a href="/loan-calculator/" class="tc">
-    <div class="ti">📝</div>
-    <h2>Loan Calculator</h2>
-    <p>Total interest cost, monthly repayment, and repayment schedule for any personal, auto, or student loan. Compare loan terms side by side.</p>
-    <div class="tc-tags"><span class="tag tag-green">Repayment schedule</span><span class="tag tag-gray">Any loan type</span></div>
+  <a href="/loan-calculator/" class="tc tc-row">
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h7l4 4V19a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 19V5A1.5 1.5 0 0 1 7 3.5Z"/><path d="M14 3.5V8h4.5"/><path d="M9 12.5h6M9 16h4"/></svg></div>
+    <div class="tc-row-body">
+      <h2>Loan Calculator</h2>
+      <p>Total interest cost, monthly repayment, and repayment schedule for any personal, auto, or student loan. Compare loan terms side by side.</p>
+      <div class="tc-tags"><span class="tag tag-green">Repayment schedule</span><span class="tag tag-gray">Any loan type</span></div>
+    </div>
   </a>
-  <a href="/hourly-to-salary/" class="tc">
-    <div class="ti">⏱️</div>
-    <h2>Hourly to Salary</h2>
-    <p>Convert any hourly rate to annual, monthly, biweekly, and weekly salary. Supports full-time and part-time schedules with overtime.</p>
-    <div class="tc-tags"><span class="tag tag-green">All pay periods</span><span class="tag tag-gray">Part-time &amp; OT</span></div>
+  <a href="/hourly-to-salary/" class="tc tc-row">
+    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8.25"/><path d="M12 8.5V13l3 2"/><path d="M9.5 2.5h5"/></svg></div>
+    <div class="tc-row-body">
+      <h2>Hourly to Salary</h2>
+      <p>Convert any hourly rate to annual, monthly, biweekly, and weekly salary. Supports full-time and part-time schedules with overtime.</p>
+      <div class="tc-tags"><span class="tag tag-green">All pay periods</span><span class="tag tag-gray">Part-time &amp; OT</span></div>
+    </div>
   </a>
 </div>
 </div>
@@ -384,64 +457,86 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 <div class="pop">
   <div class="sec-lbl">Popular searches</div>
   <div class="pop-groups">
-    <div class="pop-group">
-      <div class="pop-group-lbl">💵 Hourly wages</div>
+    <div class="pop-card pop-card-state">
+      <div class="pop-state-top">
+        <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg> By state &mdash; most searched</div>
+        <a href="/salary-calculator/" class="pop-state-all">View all 50 states &rarr;</a>
+      </div>
+      <div class="pop-state-body">
+        <div class="pop-state-map">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold-dark)"><path d="M3 8.5 9 5l6 3 6-3v11l-6 3-6-3-6 3Z"/><circle cx="9" cy="9.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="15" cy="13.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+          <div class="pop-state-map-text"><strong>All 50 states covered</strong>Every state calculator updated for 2026 tax rates</div>
+        </div>
+        <div class="pop-state-grid">
+          <a href="/salary-calculator/california/" class="pop-state-link pop-link-top">California</a>
+          <a href="/salary-calculator/texas/" class="pop-state-link pop-link-top">Texas</a>
+          <a href="/salary-calculator/new-york/" class="pop-state-link">New York</a>
+          <a href="/salary-calculator/florida/" class="pop-state-link">Florida</a>
+          <a href="/salary-calculator/washington/" class="pop-state-link">Washington</a>
+          <a href="/salary-calculator/colorado/" class="pop-state-link">Colorado</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pop-card">
+      <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8.25"/><path d="M12 8.5V13l3 2"/><path d="M9.5 2.5h5"/></svg> Hourly wages</div>
+      <p class="pop-card-desc">See the full-time annual salary, monthly pay, and after-tax take-home for any hourly rate.</p>
       <div class="pop-links">
         <a href="/hourly-to-salary/15-dollars-an-hour/" class="pop-link">$15 an hour</a>
-        <a href="/hourly-to-salary/20-dollars-an-hour/" class="pop-link">$20 an hour</a>
-        <a href="/hourly-to-salary/25-dollars-an-hour/" class="pop-link">$25 an hour</a>
+        <a href="/hourly-to-salary/20-dollars-an-hour/" class="pop-link pop-link-top">$20 an hour</a>
+        <a href="/hourly-to-salary/25-dollars-an-hour/" class="pop-link pop-link-top">$25 an hour</a>
         <a href="/hourly-to-salary/30-dollars-an-hour/" class="pop-link">$30 an hour</a>
         <a href="/hourly-to-salary/40-dollars-an-hour/" class="pop-link">$40 an hour</a>
         <a href="/hourly-to-salary/50-dollars-an-hour/" class="pop-link">$50 an hour</a>
       </div>
     </div>
-    <div class="pop-group">
-      <div class="pop-group-lbl">📅 Annual salaries</div>
+
+    <div class="pop-card">
+      <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v3.5M16 3v3.5"/><path d="M8 13.5h2M8 17h2M14 13.5h2M14 17h2"/></svg> Annual salaries</div>
+      <p class="pop-card-desc">Convert any yearly salary into an hourly rate, plus what it actually means for your monthly budget.</p>
       <div class="pop-links">
         <a href="/salary-to-hourly/40k-a-year/" class="pop-link">$40k a year</a>
-        <a href="/salary-to-hourly/50k-a-year/" class="pop-link">$50k a year</a>
-        <a href="/salary-to-hourly/60k-a-year/" class="pop-link">$60k a year</a>
+        <a href="/salary-to-hourly/50k-a-year/" class="pop-link pop-link-top">$50k a year</a>
+        <a href="/salary-to-hourly/60k-a-year/" class="pop-link pop-link-top">$60k a year</a>
         <a href="/salary-to-hourly/75k-a-year/" class="pop-link">$75k a year</a>
         <a href="/salary-to-hourly/100k-a-year/" class="pop-link">$100k a year</a>
         <a href="/salary-to-hourly/120k-a-year/" class="pop-link">$120k a year</a>
       </div>
     </div>
-    <div class="pop-group">
-      <div class="pop-group-lbl">🗺️ By state</div>
-      <div class="pop-links">
-        <a href="/salary-calculator/california/" class="pop-link">California</a>
-        <a href="/salary-calculator/texas/" class="pop-link">Texas</a>
-        <a href="/salary-calculator/new-york/" class="pop-link">New York</a>
-        <a href="/salary-calculator/florida/" class="pop-link">Florida</a>
-        <a href="/salary-calculator/washington/" class="pop-link">Washington</a>
-        <a href="/salary-calculator/colorado/" class="pop-link">Colorado</a>
+
+    <div class="pop-card">
+      <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.2 2.3 3.4 5.3 3.4 8.5s-1.2 6.2-3.4 8.5c-2.2-2.3-3.4-5.3-3.4-8.5S9.8 5.8 12 3.5Z"/></svg> International</div>
+      <p class="pop-card-desc">Full salary tax breakdowns outside the US, each updated for current 2026 tax brackets and rates.</p>
+      <div class="pop-links-intl">
+        <a href="/salary-calculator/united-kingdom/" class="pop-link pop-link-top pop-link-full">United Kingdom</a>
+        <div class="pop-links pop-links-2col">
+          <a href="/salary-calculator/canada/" class="pop-link">Canada</a>
+          <a href="/salary-calculator/australia/" class="pop-link">Australia</a>
+        </div>
       </div>
     </div>
-    <div class="pop-group">
-      <div class="pop-group-lbl">🌍 International</div>
-      <div class="pop-links">
-        <a href="/salary-calculator/united-kingdom/" class="pop-link">UK</a>
-        <a href="/salary-calculator/canada/" class="pop-link">Canada</a>
-        <a href="/salary-calculator/australia/" class="pop-link">Australia</a>
-      </div>
-    </div>
-    <div class="pop-group">
-      <div class="pop-group-lbl">🏠 Mortgage</div>
+
+    <div class="pop-card">
+      <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11.5 12 4l8.5 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-9"/></svg> Mortgage</div>
+      <p class="pop-card-desc">Monthly payment estimates by loan size, based on current 2026 average mortgage rates.</p>
       <div class="pop-links">
         <a href="/mortgage-per-month/200k-mortgage/" class="pop-link">$200k</a>
-        <a href="/mortgage-per-month/300k-mortgage/" class="pop-link">$300k</a>
-        <a href="/mortgage-per-month/400k-mortgage/" class="pop-link">$400k</a>
+        <a href="/mortgage-per-month/300k-mortgage/" class="pop-link pop-link-top">$300k</a>
+        <a href="/mortgage-per-month/400k-mortgage/" class="pop-link pop-link-top">$400k</a>
         <a href="/mortgage-per-month/500k-mortgage/" class="pop-link">$500k</a>
         <a href="/mortgage-per-month/600k-mortgage/" class="pop-link">$600k</a>
         <a href="/mortgage-per-month/700k-mortgage/" class="pop-link">$700k</a>
       </div>
     </div>
-    <div class="pop-group">
-      <div class="pop-group-lbl">🏡 Affordability</div>
-      <div class="pop-links">
+    <div class="pop-card pop-card-wide">
+      <div class="pop-state-top">
+        <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20h17"/><path d="m4.5 14.5 4.5-4.5 3.5 3.5L19 6.5"/><path d="M15 6.5h4.5V11"/></svg> Affordability</div>
+        <span class="pop-card-desc-inline">Find your realistic home price range using the 28% rule, by salary level.</span>
+      </div>
+      <div class="pop-links pop-links-6">
         <a href="/how-much-house-can-i-afford/40k-salary/" class="pop-link">$40k salary</a>
-        <a href="/how-much-house-can-i-afford/60k-salary/" class="pop-link">$60k salary</a>
-        <a href="/how-much-house-can-i-afford/80k-salary/" class="pop-link">$80k salary</a>
+        <a href="/how-much-house-can-i-afford/60k-salary/" class="pop-link pop-link-top">$60k salary</a>
+        <a href="/how-much-house-can-i-afford/80k-salary/" class="pop-link pop-link-top">$80k salary</a>
         <a href="/how-much-house-can-i-afford/100k-salary/" class="pop-link">$100k salary</a>
         <a href="/how-much-house-can-i-afford/120k-salary/" class="pop-link">$120k salary</a>
         <a href="/how-much-house-can-i-afford/150k-salary/" class="pop-link">$150k salary</a>
@@ -450,27 +545,63 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   </div>
 </div>
 
+<!-- Visual showcase -->
+<div class="sec">
+  <div class="showcase">
+    <div class="showcase-text">
+      <div class="sec-lbl">See it before you click</div>
+      <h2 class="showcase-h2">Every calculator shows you<br><em>exactly</em> where your money goes</h2>
+      <p class="showcase-p">No walls of numbers. Just a clear breakdown of taxes, deductions, and take-home pay &mdash; built fresh from official 2026 rates every time you calculate.</p>
+    </div>
+    <div class="showcase-chart">
+      <svg viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">
+        <text x="0" y="22" font-family="DM Sans, sans-serif" font-size="13" font-weight="700" fill="#1a1915">$75,000/Year &mdash; Where It Goes</text>
+        <text x="0" y="40" font-family="DM Sans, sans-serif" font-size="11" fill="#6b6960">Single filer &middot; no state tax &middot; effective rate 18.9%</text>
+        <defs>
+          <clipPath id="showcase-clip"><rect x="0" y="64" width="460" height="40" rx="8"/></clipPath>
+        </defs>
+        <g clip-path="url(#showcase-clip)">
+          <rect x="0" y="64" width="460" height="40" fill="#e4e2dc"/>
+          <rect x="0" y="64" width="62" height="40" fill="#c1503f" opacity="0.55"/>
+          <rect x="62" y="64" width="65" height="40" fill="#c1503f" opacity="0.32"/>
+          <rect x="127" y="64" width="333" height="40" fill="#1e6b4a"/>
+        </g>
+        <text x="293" y="89" font-family="DM Mono, monospace" font-size="14" font-weight="600" fill="#fff" text-anchor="middle">$60,825</text>
+        <g font-family="DM Sans, sans-serif" font-size="11.5" fill="#1a1915">
+          <rect x="0" y="124" width="12" height="12" rx="3" fill="#c1503f" opacity="0.55"/>
+          <text x="18" y="134">Federal tax: $7,237</text>
+          <rect x="160" y="124" width="12" height="12" rx="3" fill="#c1503f" opacity="0.32"/>
+          <text x="178" y="134">FICA: $5,738</text>
+          <rect x="290" y="124" width="12" height="12" rx="3" fill="#1e6b4a"/>
+          <text x="308" y="134">Take-home: $60,825</text>
+        </g>
+        <text x="0" y="172" font-family="DM Sans, sans-serif" font-size="10.5" fill="#6b6960">Generated instantly &mdash; try your own number above &uarr;</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
 <!-- Why PayCalcHub -->
 <div class="sec">
   <div class="sec-lbl">Why PayCalcHub</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px">
-    <div style="background:var(--alight);border:1px solid #c5e0d3;border-radius:12px;padding:20px">
-      <div style="font-size:22px;margin-bottom:10px">🎯</div>
-      <div style="font-size:14px;font-weight:600;margin-bottom:4px;color:var(--txt)">Accurate 2026 Data</div>
-      <div style="font-size:12px;font-weight:600;color:var(--acc);margin-bottom:8px">Updated January 2026 · 50 states covered</div>
-      <div style="font-size:13px;color:var(--mut);line-height:1.6">Official IRS brackets, FICA rates, all 50 state tax schedules, and FHFA conforming loan limits — verified every year.</div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon"><svg width="22" height="22" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.75" fill="currentColor"/></svg></div>
+      <div class="why-h">Accurate 2026 Data</div>
+      <div class="why-sub">Updated January 2026 &middot; 50 states covered</div>
+      <div class="why-p">Official IRS brackets, FICA rates, all 50 state tax schedules, and FHFA conforming loan limits &mdash; verified every year.</div>
     </div>
-    <div style="background:var(--alight);border:1px solid #c5e0d3;border-radius:12px;padding:20px">
-      <div style="font-size:22px;margin-bottom:10px">🔒</div>
-      <div style="font-size:14px;font-weight:600;margin-bottom:4px;color:var(--txt)">Private by Design</div>
-      <div style="font-size:12px;font-weight:600;color:var(--acc);margin-bottom:8px">0 bytes of financial data sent to servers</div>
-      <div style="font-size:13px;color:var(--mut);line-height:1.6">All calculations run in your browser. Your salary and financial inputs never leave your device — no accounts, no tracking.</div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="22" height="22" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><path d="M12 14.5v3"/></svg></div>
+      <div class="why-h">Private by Design</div>
+      <div class="why-sub">0 bytes of financial data sent to servers</div>
+      <div class="why-p">All calculations run in your browser. Your salary and financial inputs never leave your device &mdash; no accounts, no tracking.</div>
     </div>
-    <div style="background:var(--alight);border:1px solid #c5e0d3;border-radius:12px;padding:20px">
-      <div style="font-size:22px;margin-bottom:10px">🆓</div>
-      <div style="font-size:14px;font-weight:600;margin-bottom:4px;color:var(--txt)">Always Free</div>
-      <div style="font-size:12px;font-weight:600;color:var(--acc);margin-bottom:8px">No paywalls · No sign-up · No premium tiers</div>
-      <div style="font-size:13px;color:var(--mut);line-height:1.6">Every calculator, guide, and data table is free to use. Financial clarity is a right, not a product.</div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="22" height="22" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="9.5" width="17" height="11" rx="1.5"/><path d="M3.5 13.5h17"/><path d="M12 9.5v11"/><path d="M12 9.5c-1-3-3-4.5-4.5-4-1.5.5-1.5 3 0 4M12 9.5c1-3 3-4.5 4.5-4 1.5.5 1.5 3 0 4"/></svg></div>
+      <div class="why-h">Always Free</div>
+      <div class="why-sub">No paywalls &middot; No sign-up &middot; No premium tiers</div>
+      <div class="why-p">Every calculator, guide, and data table is free to use. Financial clarity is a right, not a product.</div>
     </div>
   </div>
 </div>
@@ -605,12 +736,32 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 <script>
 function syncQSlider(val){var s=document.getElementById('qs-slider');if(s)s.value=Math.min(Math.max(parseInt(val)||0,20000),300000);}
 function syncQInput(val){var i=document.getElementById('qs');if(i)i.value=val;}
+
+function animateValue(el, prefix, suffix, from, to, duration){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    el.textContent=prefix+Math.round(to).toLocaleString()+suffix;
+    return;
+  }
+  var start=null;
+  function step(ts){
+    if(!start)start=ts;
+    var p=Math.min((ts-start)/duration,1);
+    var eased=1-Math.pow(1-p,3);
+    var cur=from+(to-from)*eased;
+    el.textContent=prefix+Math.round(cur).toLocaleString()+suffix;
+    if(p<1)requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+var qcPrev={net:0,annual:0,fedfica:0,state:0,eff:0};
+
 function qc(){
   var g=parseFloat(document.getElementById('qs').value)||0;
   var stRate=parseFloat(document.getElementById('q-state').value)||0;
   var fil=document.getElementById('q-fil').value;
   if(!g){
     ['qr','qa','qf','qst','qe'].forEach(function(id){document.getElementById(id).textContent='—';});
+    qcPrev={net:0,annual:0,fedfica:0,state:0,eff:0};
     return;
   }
   var std=fil==='married'?30000:15000;
@@ -623,12 +774,16 @@ function qc(){
   var fica=g*0.0765;
   var stateTax=g*(stRate/100);
   var net=g-fed-fica-stateTax;
-  var eff=((fed+fica+stateTax)/g*100).toFixed(1);
-  document.getElementById('qr').textContent='$'+Math.round(net/12).toLocaleString();
-  document.getElementById('qa').textContent='$'+Math.round(net).toLocaleString();
-  document.getElementById('qf').textContent='$'+Math.round(fed+fica).toLocaleString();
+  var eff=((fed+fica+stateTax)/g*100);
+
+  var monthly=net/12;
+  animateValue(document.getElementById('qr'),'$','',qcPrev.net,monthly,500);
+  animateValue(document.getElementById('qa'),'$','',qcPrev.annual,net,500);
+  animateValue(document.getElementById('qf'),'$','',qcPrev.fedfica,fed+fica,500);
   document.getElementById('qst').textContent= stRate>0 ? '$'+Math.round(stateTax).toLocaleString() : '$0';
-  document.getElementById('qe').textContent=eff+'%';
+  animateValue(document.getElementById('qe'),'','%',qcPrev.eff,eff,500);
+
+  qcPrev={net:monthly,annual:net,fedfica:fed+fica,state:stateTax,eff:eff};
 }
 qc();
 </script>
