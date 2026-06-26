@@ -23,6 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/base.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -244,17 +245,16 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
 </div>
 </footer>
 <script>
-function qc(){var g=parseFloat(document.getElementById('qs').value)||0;if(!g){document.getElementById('qr').textContent='--';document.getElementById('qa').textContent='--';document.getElementById('qe').textContent='--';return;}var std=15000,taxable=Math.max(0,g-std);var br=[[11925,.10],[36550,.12],[54875,.22],[93950,.24],[53225,.32],[375825,.35],[1e9,.37]];var fed=0,rem=taxable;for(var i=0;i<br.length;i++){var c=Math.min(rem,br[i][0]);fed+=c*br[i][1];rem-=c;if(rem<=0)break;}var fica=g*0.0765,net=g-fed-fica;var eff=((fed+fica)/g*100).toFixed(1);document.getElementById('qr').textContent='$'+Math.round(net/12).toLocaleString();document.getElementById('qa').textContent='$'+Math.round(net).toLocaleString();document.getElementById('qe').textContent=eff+'%';}
+function qc(){var g=parseFloat(document.getElementById('qs').value)||0;if(!g){document.getElementById('qr').textContent='--';document.getElementById('qa').textContent='--';document.getElementById('qe').textContent='--';return;}var std=TAX_DATA.STANDARD_DEDUCTION.single,taxable=Math.max(0,g-std);var fed=calcFederalTax(taxable,'single');var fica=g*TAX_DATA.FICA_RATE,net=g-fed-fica;var eff=((fed+fica)/g*100).toFixed(1);document.getElementById('qr').textContent='$'+Math.round(net/12).toLocaleString();document.getElementById('qa').textContent='$'+Math.round(net).toLocaleString();document.getElementById('qe').textContent=eff+'%';}
 qc();
 </script>
 <script>
-function toggleLang(){var w=document.getElementById('langWrap');var o=w.classList.toggle('open');w.querySelector('.lang-btn').setAttribute('aria-expanded',o);}
-document.addEventListener('click',function(e){var w=document.getElementById('langWrap');if(w&&!w.contains(e.target)){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){var w=document.getElementById('langWrap');if(w){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}}});
+
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <script>
-function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
-document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+
 </script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/tax-data.js"></script>
 </body></html>

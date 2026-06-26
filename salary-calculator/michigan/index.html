@@ -35,7 +35,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
-  <style>
+  <link rel="stylesheet" href="/assets/css/base.css">
+<style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
 body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}a{color:inherit;text-decoration:none}
@@ -274,21 +275,17 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </div>
 </footer>
 <script>
-function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
-function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
-document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+
+
 var SR=4.05;
-var STD={single:15000,married:30000};
-var BS=[[11925,.10],[36550,.12],[54875,.22],[93950,.24],[53225,.32],[375825,.35],[1e9,.37]];
-var BM=[[23850,.10],[73100,.12],[109750,.22],[187900,.24],[106450,.32],[250550,.35],[1e9,.37]];
 function go(){
   var s=parseFloat(document.getElementById('sal').value)||0;
   var f=document.getElementById('fil').value;
   if(!s){document.getElementById('res').classList.remove('show');return;}
-  var std=STD[f],br=f==='married'?BM:BS;
-  var tx=Math.max(0,s-std),fed=0,rem=tx;
-  for(var i=0;i<br.length;i++){var c=Math.min(rem,br[i][0]);fed+=c*br[i][1];rem-=c;if(rem<=0)break;}
-  var fica=s*0.0765,state=s*(SR/100),net=s-fed-fica-state;
+  var std=TAX_DATA.STANDARD_DEDUCTION[f];
+  var tx=Math.max(0,s-std);
+  var fed=calcFederalTax(tx,f);
+  var fica=s*TAX_DATA.FICA_RATE,state=s*(SR/100),net=s-fed-fica-state;
   document.getElementById('res-amt').textContent='$'+Math.round(net).toLocaleString();
   var mo=Math.round(net/12);
   var rows=[['Federal Income Tax','-$'+Math.round(fed).toLocaleString()],['FICA (SS+Medicare)','-$'+Math.round(fica).toLocaleString()],['State Income Tax',SR===0?'$0 (none)':'-$'+Math.round(state).toLocaleString()],['Take-Home/Year','$'+Math.round(net).toLocaleString()],['Take-Home/Month','$'+mo.toLocaleString()]];
@@ -297,5 +294,7 @@ function go(){
 }
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script src="/assets/js/site.js"></script>
+<script src="/assets/js/tax-data.js"></script>
 </body>
 </html>

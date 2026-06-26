@@ -26,7 +26,8 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is it better to rent or buy in 2026?","acceptedAnswer":{"@type":"Answer","text":"In 2026, with mortgage rates at 6.3–6.9%, buying typically makes more financial sense if you plan to stay in a home for 5+ years, have a stable income, and can afford a down payment without depleting emergency savings. Renting is often better for stays under 3–4 years, those with high income volatility, or in markets where the price-to-rent ratio is very high (above 25)."}},{"@type":"Question","name":"How long do you need to stay in a home to make buying worth it?","acceptedAnswer":{"@type":"Answer","text":"At 2026 mortgage rates (~6.5%), the break-even point — where buying becomes cheaper than renting — is typically 4–7 years depending on the market. High-cost markets with high price-to-rent ratios (San Francisco, NYC) push the break-even to 8–12 years. Lower-cost markets with lower price-to-rent ratios can break even in 3–5 years."}},{"@type":"Question","name":"What are the hidden costs of buying a home?","acceptedAnswer":{"@type":"Answer","text":"The hidden costs of homeownership beyond mortgage P&I include: property taxes (0.5–2.5% of home value annually), homeowner's insurance ($1,200–$6,000+/year), PMI if down payment is under 20% (0.5–1.5% of loan annually), maintenance and repairs (budget 1% of home value/year), HOA fees ($0–$800+/month), and closing costs when you buy (2–5% of purchase price)."}},{"@type":"Question","name":"What is the price-to-rent ratio and why does it matter?","acceptedAnswer":{"@type":"Answer","text":"The price-to-rent ratio compares a home's purchase price to annual rent for a comparable property. A ratio below 15 generally favors buying; above 20 favors renting; above 25 strongly favors renting. In 2026, high-cost markets like San Francisco (ratio 30+) and NYC (ratio 25+) strongly favor renting on a pure numbers basis."}}]}
   </script>
-  <style>
+  <link rel="stylesheet" href="/assets/css/base.css">
+<style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
 body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}a{color:inherit;text-decoration:none}
@@ -267,10 +268,10 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </div>
 </footer>
 <script>
-function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
-function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
-document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+
+
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script src="/assets/js/site.js"></script>
 </body>
 </html>

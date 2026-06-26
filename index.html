@@ -56,38 +56,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="/assets/css/base.css">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
---bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;
---acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;
---gold:#b8860b;--gold-light:#faf3e3;--gold-dark:#8a6508;
---f:"DM Sans",sans-serif;--mo:"DM Mono",monospace
-}
-body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}
-a{color:inherit;text-decoration:none}
-nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
-.nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
-.logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}
-.nav-links{display:none}.nav-links a:hover{color:var(--txt)}
-@media(min-width:801px){.nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
-.hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px;transition:all .2s}
-.mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
-.mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
-.mobile-menu a:last-child{border-bottom:none}
-.mobile-menu.open{display:block}
-.lang-wrap{position:relative;margin-left:8px}
-.lang-btn{display:flex;align-items:center;gap:6px;background:var(--alight);border:1px solid #c5e0d3;border-radius:8px;padding:5px 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--acc);transition:background .15s}
-.lang-btn:hover{background:#d4eddf}
-.lang-flag{font-size:16px;line-height:1}.lang-code{font-size:13px;font-weight:600}
-.lang-chevron{font-size:11px;color:var(--mut);transition:transform .2s}
-.lang-wrap.open .lang-chevron{transform:rotate(180deg)}
-.lang-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:5px;min-width:148px;box-shadow:0 4px 20px rgba(0,0,0,0.08);z-index:200}
-.lang-wrap.open .lang-dropdown{display:block}
-.lang-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;font-size:13px;color:var(--txt);cursor:pointer;transition:background .1s}
-.lang-item:hover{background:var(--bg)}.lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
-.lang-item-flag{font-size:16px}.lang-item-check{margin-left:auto;font-size:13px;color:var(--acc)}
 
 /* Hero */
 .hero{max-width:1100px;margin:0 auto;padding:52px 24px 36px}
@@ -219,11 +189,6 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 @media(max-width:800px){.pop-groups{grid-template-columns:1fr}.pop-card-state{grid-column:span 1}.pop-card-wide{grid-column:span 1}.pop-state-body{grid-template-columns:1fr}.pop-state-grid{grid-template-columns:1fr 1fr}.pop-links-6{grid-template-columns:1fr 1fr 1fr}}
 @media(max-width:560px){.pop-state-top{flex-direction:column;align-items:flex-start;gap:8px}}
 
-/* Footer */
-.fi-logo span{color:var(--acc)}
-
-
-
 @media(max-width:800px){
 .hero-grid{grid-template-columns:1fr}
 .preview{display:block;margin-top:16px}
@@ -231,37 +196,9 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .stat-item:nth-child(2){border-right:none}
 .stat-item:nth-child(3){border-top:1px solid var(--bor);border-right:1px solid var(--bor)}
 .stat-item:nth-child(4){border-top:1px solid var(--bor)}
-.nav-links{display:none}
-.hamburger{display:flex}
 }
 
 
-.fi-logo span{color:var(--acc)}
-
-
-@media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}}
-
-.fi-logo span{color:var(--acc)}
-.fqi{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);overflow:hidden}
-.fqq{padding:15px 18px;font-size:14px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}
-.fqq:hover{background:var(--bg)}
-.fqi-icon{font-size:18px;color:var(--mut);flex-shrink:0;transition:transform .2s;font-weight:300}
-.fqq.open .fqi-icon{transform:rotate(45deg)}
-.fqa{font-size:14px;color:var(--mut);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .2s;padding:0 18px}
-.fqa.open{max-height:400px;padding:0 18px 16px}
-
-footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
-.fi{max-width:1100px;margin:0 auto;padding:28px 24px 20px;display:grid;grid-template-columns:auto 1fr auto;gap:20px 40px;align-items:start}
-.fi-logo{font-weight:600;font-size:16px;color:var(--txt);text-decoration:none;white-space:nowrap;padding-top:2px}
-.fi-logo span{color:var(--acc)}
-.fi-mid{display:flex;flex-direction:column;gap:8px}
-.fi-nav-row{display:flex;align-items:center;gap:4px 16px;flex-wrap:wrap;font-size:13px}
-.fi-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);min-width:72px;opacity:.6}
-.fi-nav-row a{color:var(--mut);text-decoration:none;transition:color .15s}
-.fi-nav-row a:hover{color:var(--acc)}
-.fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.7;padding-top:2px}
-.fi-disclaimer{max-width:1100px;margin:0 auto;padding:12px 24px 24px;border-top:1px solid var(--bor);font-size:11px;color:var(--mut);line-height:1.65;opacity:.7}
-@media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}.fi-disclaimer{text-align:center}}
 </style>
   <link rel="alternate" hreflang="en" href="https://paycalchub.com/">
   <link rel="alternate" hreflang="es" href="https://paycalchub.com/es/">
@@ -733,6 +670,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </div>
 </footer>
 
+<script src="/assets/js/tax-data.js"></script>
 <script>
 function syncQSlider(val){var s=document.getElementById('qs-slider');if(s)s.value=Math.min(Math.max(parseInt(val)||0,20000),300000);}
 function syncQInput(val){var i=document.getElementById('qs');if(i)i.value=val;}
@@ -764,14 +702,10 @@ function qc(){
     qcPrev={net:0,annual:0,fedfica:0,state:0,eff:0};
     return;
   }
-  var std=fil==='married'?30000:15000;
+  var std=TAX_DATA.STANDARD_DEDUCTION[fil]||TAX_DATA.STANDARD_DEDUCTION.single;
   var taxable=Math.max(0,g-std);
-  var br=fil==='married'
-    ?[[23850,.10],[73100,.12],[116550,.22],[206700,.24],[394600,.32],[501050,.35],[1e9,.37]]
-    :[[11925,.10],[36550,.12],[54875,.22],[93950,.24],[53225,.32],[375825,.35],[1e9,.37]];
-  var fed=0,rem=taxable;
-  for(var i=0;i<br.length;i++){var c=Math.min(rem,br[i][0]);fed+=c*br[i][1];rem-=c;if(rem<=0)break;}
-  var fica=g*0.0765;
+  var fed=calcFederalTax(taxable,fil);
+  var fica=g*TAX_DATA.FICA_RATE;
   var stateTax=g*(stRate/100);
   var net=g-fed-fica-stateTax;
   var eff=((fed+fica+stateTax)/g*100);
@@ -788,41 +722,7 @@ function qc(){
 qc();
 </script>
 
-<script>
-function toggleMenu(){
-  var m=document.getElementById('mobileMenu');
-  var b=document.getElementById('hamburgerBtn');
-  var open=m.classList.toggle('open');
-  b.setAttribute('aria-expanded',open);
-}
-document.addEventListener('click',function(e){
-  var m=document.getElementById('mobileMenu');
-  var b=document.getElementById('hamburgerBtn');
-  var nav=document.querySelector('nav');
-  if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}
-});
-function toggleLang(){
-  var w=document.getElementById('langWrap');
-  var open=w.classList.toggle('open');
-  w.querySelector('.lang-btn').setAttribute('aria-expanded', open);
-}
-document.addEventListener('click',function(e){
-  var w=document.getElementById('langWrap');
-  if(w && !w.contains(e.target)){
-    w.classList.remove('open');
-    w.querySelector('.lang-btn').setAttribute('aria-expanded','false');
-  }
-});
-document.addEventListener('keydown',function(e){
-  if(e.key==='Escape'){
-    var w=document.getElementById('langWrap');
-    if(w){w.classList.remove('open');w.querySelector('.lang-btn').setAttribute('aria-expanded','false');}
-  }
-});
-</script>
-<script>
-function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
-</script>
+<script src="/assets/js/site.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 </body>
 </html>

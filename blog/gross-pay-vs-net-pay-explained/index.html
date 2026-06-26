@@ -26,7 +26,8 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between gross and net pay?","acceptedAnswer":{"@type":"Answer","text":"Gross pay is your total earnings before any deductions. Net pay (take-home pay) is what remains after federal and state income taxes, FICA (Social Security and Medicare), and any voluntary deductions like 401(k) or health insurance are subtracted."}},{"@type":"Question","name":"Why is my net pay so much less than my salary?","acceptedAnswer":{"@type":"Answer","text":"The gap between gross and net pay is typically 20–35% for most US workers. Federal income tax (10–37%), FICA (7.65%), and state income tax (0–13.3%) together take the largest share. Pre-tax benefit deductions (health insurance, 401k) further reduce your check but also reduce your taxable income."}},{"@type":"Question","name":"How do I calculate my net pay?","acceptedAnswer":{"@type":"Answer","text":"Start with gross pay, subtract pre-tax deductions (401k, health insurance, HSA), then subtract federal income tax (using IRS brackets), FICA (7.65%), and state/local income tax. Use our Salary Calculator for an instant and accurate calculation."}},{"@type":"Question","name":"Can I increase my net pay without a raise?","acceptedAnswer":{"@type":"Answer","text":"Yes — adjusting your W-4 withholding, maximizing pre-tax deductions (401k, HSA, FSA), and ensuring you are claiming all eligible tax credits can all increase your net pay without a salary increase."}}]}
   </script>
-  <style>
+  <link rel="stylesheet" href="/assets/css/base.css">
+<style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
 body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}a{color:inherit;text-decoration:none}
@@ -219,10 +220,10 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </div>
 </footer>
 <script>
-function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
-function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
-document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+
+
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script src="/assets/js/site.js"></script>
 </body>
 </html>

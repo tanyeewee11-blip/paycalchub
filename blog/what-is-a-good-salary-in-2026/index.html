@@ -25,7 +25,8 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is considered a good salary in the US in 2026?","acceptedAnswer":{"@type":"Answer","text":"Any salary above $59,000/year puts you above the midpoint for full-time US workers. A salary of $75,000–$100,000 is generally considered good for a single adult in most US markets — above the living wage in most regions and in the top 25–35% of individual earners nationally."}},{"@type":"Question","name":"Is $50,000 a year a good salary in 2026?","acceptedAnswer":{"@type":"Answer","text":"$50,000 is below the median individual wage ($59,000) but livable for a single adult in most Midwestern and Southern US cities. It is tight in expensive coastal metros. For a household with two earners both at $50,000, it represents solid middle-class income in most of the country."}},{"@type":"Question","name":"Is $100,000 a year a good salary?","acceptedAnswer":{"@type":"Answer","text":"Yes — $100,000 puts you in the top 20–25% of US individual earners nationally. After federal taxes, take-home is approximately $78,000/year ($6,501/month). It is excellent in most US markets, comfortable in major metros, and tight but manageable in the most expensive cities."}},{"@type":"Question","name":"What salary do I need to be happy?","acceptedAnswer":{"@type":"Answer","text":"Research suggests emotional well-being rises with income up to about $75,000/year, beyond which additional income has diminishing returns on day-to-day happiness. Financial security — covering needs with buffer for savings — matters more than a specific number."}}]}
   </script>
-  <style>
+  <link rel="stylesheet" href="/assets/css/base.css">
+<style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
 body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}a{color:inherit;text-decoration:none}
@@ -334,10 +335,10 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </div>
 </footer>
 <script>
-function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
-function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
-document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+
+
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script src="/assets/js/site.js"></script>
 </body>
 </html>

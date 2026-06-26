@@ -26,7 +26,8 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is overtime pay calculated?","acceptedAnswer":{"@type":"Answer","text":"Overtime pay is calculated at 1.5x your regular hourly rate for all hours worked over 40 in a workweek under federal FLSA rules. For example, if your regular rate is $20/hour, your overtime rate is $30/hour. Some states require overtime after 8 hours in a single day rather than 40 hours in a week."}},{"@type":"Question","name":"Who is eligible for overtime pay?","acceptedAnswer":{"@type":"Answer","text":"Non-exempt employees under the FLSA are eligible for overtime. Most hourly workers are non-exempt. Salaried employees earning under $684/week ($35,568/year) are also entitled to overtime. Salaried employees above this threshold may be exempt depending on their job duties — the exemption depends on both salary level and the nature of the work, not salary alone."}},{"@type":"Question","name":"Does overtime get taxed more?","acceptedAnswer":{"@type":"Answer","text":"Overtime itself is not taxed at a higher rate — all income is subject to the same marginal tax rates. However, earning overtime can push some of your income into a higher tax bracket, meaning a portion of the additional earnings is taxed at the higher rate. Your effective tax rate across all income remains the same; only the marginal rate on the additional dollars changes."}},{"@type":"Question","name":"What is the overtime threshold salary in 2026?","acceptedAnswer":{"@type":"Answer","text":"Under current FLSA rules, salaried employees earning less than $684/week ($35,568/year) must receive overtime pay for hours over 40/week regardless of their job title or duties. Employees above this threshold may be exempt depending on their specific job duties under the executive, administrative, or professional exemptions."}}]}
   </script>
-  <style>
+  <link rel="stylesheet" href="/assets/css/base.css">
+<style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
 body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}a{color:inherit;text-decoration:none}
@@ -285,10 +286,10 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </div>
 </footer>
 <script>
-function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
-function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
-document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+
+
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script src="/assets/js/site.js"></script>
 </body>
 </html>

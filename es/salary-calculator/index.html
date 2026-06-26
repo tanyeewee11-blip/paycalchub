@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/base.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--red:#dc2626;--ora:#d97706;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
@@ -318,6 +319,11 @@ function calcUS(){
   var k=Math.min(gv("us-401k"),23500),hl=gv("us-hlt"),hsa=Math.min(gv("us-hsa"),4300),oth=gv("us-oth");
   var totalPT=k+hl+hsa+oth;
   var std=fil==="married"?30000:fil==="hoh"?22500:15000;
+  // NOTE: this advanced US calculator keeps its own bS/bM/bH brackets
+  // (it also supports head-of-household + 401k/HSA/SS-cap logic that
+  // /assets/js/tax-data.js does not model). If the federal brackets in
+  // /assets/js/tax-data.js are ever updated, update these three arrays
+  // too so they stay in sync.
   var bS=[[11925,.10],[48475,.12],[103350,.22],[197300,.24],[250525,.32],[626350,.35],[1e9,.37]];
   var bM=[[23850,.10],[96950,.12],[206700,.22],[394600,.24],[501050,.32],[751600,.35],[1e9,.37]];
   var bH=[[17000,.10],[64850,.12],[103350,.22],[197300,.24],[250500,.32],[626350,.35],[1e9,.37]];
@@ -382,13 +388,13 @@ function calcAU(){
   if(med>0)ded.push({l:"Medicare Levy (2%)",a:med});
   return{gross:g,ti:g,net:g-sup-tax-med,cur:"$",pt:pt,ded:ded};
 }
-function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
+
 window.addEventListener("load",function(){document.getElementById("us-sal").value=60000;calc();});
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <script>
-function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
-document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+
 </script>
+<script src="/assets/js/site.js"></script>
 </body>
 </html>

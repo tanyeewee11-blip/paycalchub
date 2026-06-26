@@ -26,7 +26,8 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Illinois have a state income tax?","acceptedAnswer":{"@type":"Answer","text":"Yes. Illinois charges a flat state income tax of 4.95% on all taxable income, regardless of how much you earn — unlike most states, which use graduated brackets."}},{"@type":"Question","name":"What is the take-home pay on $75,000 in Illinois?","acceptedAnswer":{"@type":"Answer","text":"A single filer earning $75,000/year in Illinois takes home approximately $57,700/year or $4,810/month after federal income tax, FICA, and the 4.95% state tax. Use our Salary Calculator for a precise figure based on your filing status."}},{"@type":"Question","name":"What is the median salary in Illinois?","acceptedAnswer":{"@type":"Answer","text":"The median full-time salary in Illinois is approximately $65,300/year as of 2026, according to Census American Community Survey data. Median household income is higher, at approximately $83,400/year, since many households have more than one earner."}}]}
   </script>
-  <style>
+  <link rel="stylesheet" href="/assets/css/base.css">
+<style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
 body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}a{color:inherit;text-decoration:none}
@@ -280,10 +281,10 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </div>
 </footer>
 <script>
-function tFaq(el){var o=el.classList.contains("open");document.querySelectorAll(".fqq.open").forEach(function(q){q.classList.remove("open");q.nextElementSibling.classList.remove("open");});if(!o){el.classList.add("open");el.nextElementSibling.classList.add("open");}}
-function toggleMenu(){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
-document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var b=document.getElementById('hamburgerBtn');var nav=document.querySelector('nav');if(m&&b&&nav&&!nav.contains(e.target)){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+
+
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script src="/assets/js/site.js"></script>
 </body>
 </html>
