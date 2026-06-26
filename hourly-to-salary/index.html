@@ -11,7 +11,8 @@
 <link rel="canonical" href="https://paycalchub.com/hourly-to-salary/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/css/base.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -121,29 +122,30 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </head>
 <body>
 <nav><div class="nav-in"><a href="/" class="logo">Pay<span>Calc</span>Hub</a><div class="nav-links"><a href="/salary-calculator/" >Salary</a><a href="/mortgage-calculator/" >Mortgage</a><a href="/loan-calculator/" >Loan</a><a href="/hourly-to-salary/" class="active">Hourly</a></div></div></nav>
+<main>
 <div style="max-width:700px;margin:16px auto 0;padding:0 24px"></div>
 <div class="max-w">
   <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; Hourly to Salary</div>
   <h1><em>Hourly to Salary</em> Calculator</h1>
   <p class="sub">Convert your hourly wage to annual, monthly, bi-weekly, and weekly salary instantly.</p>
   <div class="card">
-    <div class="fr"><label>Hourly Wage</label><div class="iw hp"><span class="ip">$</span><input type="number" id="hw" placeholder="25.00" step="0.01" oninput="syncSlider(this.value);calc()"></div>
+    <div class="fr"><label for="hw">Hourly Wage</label><div class="iw hp"><span class="ip">$</span><input type="number" id="hw" placeholder="25.00" step="0.01" oninput="syncSlider(this.value);calc()"></div>
       <div class="sal-slider-wrap">
         <input type="range" class="sal-slider" id="hw-slider" min="8" max="150" step="0.5" value="25" oninput="syncInput(this.value);calc()">
         <div class="sal-range-labels"><span>$8/hr</span><span>$150/hr</span></div>
       </div>
     </div>
     <div class="fg">
-      <div class="fr"><label>Hours per Week <span class="opt">(regular)</span></label><select id="hrs" onchange="calc()"><option value="20">20 hrs (part-time)</option><option value="30">30 hours</option><option value="40" selected>40 hrs (full-time)</option></select></div>
-      <div class="fr"><label>Weeks per Year</label><select id="wks" onchange="calc()"><option value="52" selected>52 weeks</option><option value="50">50 weeks (2 wks unpaid)</option><option value="48">48 weeks (4 wks unpaid)</option></select></div>
+      <div class="fr"><label for="hrs">Hours per Week <span class="opt">(regular)</span></label><select id="hrs" onchange="calc()"><option value="20">20 hrs (part-time)</option><option value="30">30 hours</option><option value="40" selected>40 hrs (full-time)</option></select></div>
+      <div class="fr"><label for="wks">Weeks per Year</label><select id="wks" onchange="calc()"><option value="52" selected>52 weeks</option><option value="50">50 weeks (2 wks unpaid)</option><option value="48">48 weeks (4 wks unpaid)</option></select></div>
       <div class="fsec" style="margin-bottom:0;padding-bottom:0">
         <button class="ded-toggle" id="ot-btn" onclick="toggleOT()" style="padding:8px 0">
           <span class="ded-toggle-icon">+</span> Overtime <span class="opt">Optional</span>
         </button>
         <div class="ded-body" id="ot-body">
           <div class="fg" style="margin-top:10px">
-            <div class="fr"><label>Overtime Hours/Week</label><div class="iw hs"><input type="number" id="ot-hrs" placeholder="0" min="0" max="30" oninput="calc()"><span class="is">hrs</span></div></div>
-            <div class="fr"><label>OT Rate</label><select id="ot-rate" onchange="calc()"><option value="1.5">1.5× (standard)</option><option value="2">2× (double time)</option><option value="1.25">1.25×</option></select></div>
+            <div class="fr"><label for="ot-hrs">Overtime Hours/Week</label><div class="iw hs"><input type="number" id="ot-hrs" placeholder="0" min="0" max="30" oninput="calc()"><span class="is">hrs</span></div></div>
+            <div class="fr"><label for="ot-rate">OT Rate</label><select id="ot-rate" onchange="calc()"><option value="1.5">1.5× (standard)</option><option value="2">2× (double time)</option><option value="1.25">1.25×</option></select></div>
           </div>
         </div>
       </div>
@@ -219,6 +221,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
     <a href="/blog/what-is-a-good-salary-in-2026/" style="display:block;color:var(--acc);font-size:13px">What is a Good Salary in 2026?</a>
   </div>
 </div>
+</main>
 <footer>
 <div class="fi">
   <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>

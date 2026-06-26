@@ -54,7 +54,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
 
 <link rel="stylesheet" href="/assets/css/base.css">
 <style>
@@ -279,6 +280,7 @@
   <a href="/hourly-to-salary/">Hourly</a>
 </div>
 </nav>
+<main>
 
 <!-- Hero -->
 <div class="hero">
@@ -294,10 +296,10 @@
 </div>
 <div class="preview">
   <div class="prev-lbl">Quick Paycheck Estimate</div>
-  <input type="number" id="qs" value="60000" class="prev-input" oninput="syncQSlider(this.value);qc()" placeholder="Annual salary">
-  <input type="range" class="prev-slider" id="qs-slider" min="20000" max="300000" step="1000" value="60000" oninput="syncQInput(this.value);qc()">
+  <input type="number" id="qs" aria-label="Annual salary" value="60000" class="prev-input" oninput="syncQSlider(this.value);qc()" placeholder="Annual salary">
+  <input type="range" class="prev-slider" id="qs-slider" aria-label="Annual salary slider" min="20000" max="300000" step="1000" value="60000" oninput="syncQInput(this.value);qc()">
   <div class="prev-row">
-    <select class="prev-select" id="q-state" onchange="qc()">
+    <select class="prev-select" id="q-state" aria-label="State" onchange="qc()">
       <option value="0" selected>No state tax (AK/FL/TX…)</option>
       <option value="9.3">California — 9.3%</option>
       <option value="6.85">New York — 6.85%</option>
@@ -308,7 +310,7 @@
       <option value="3.07">Pennsylvania — 3.07%</option>
       <option value="4.25">Michigan — 4.25%</option>
     </select>
-    <select class="prev-select" id="q-fil" onchange="qc()" style="max-width:130px">
+    <select class="prev-select" id="q-fil" aria-label="Filing status" onchange="qc()" style="max-width:130px">
       <option value="single">Single</option>
       <option value="married">Married</option>
     </select>
@@ -635,6 +637,7 @@
   </div>
 </div>
 
+</main>
 <footer>
 <div class="fi">
   <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>

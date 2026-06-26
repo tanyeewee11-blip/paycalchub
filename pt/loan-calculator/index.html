@@ -22,7 +22,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/css/base.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -150,6 +151,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
   </div>
 </div>
 </nav>
+<main>
 <div style="max-width:1100px;margin:16px auto 0;padding:0 24px"></div>
 <div class="pg">
   <div class="bc"><a href="/pt/">PayCalcHub</a> &rsaquo; Calculadora de Empréstimo</div>
@@ -163,10 +165,10 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
           <button class="tb" onclick="setType(this,'Car Loan',6.5,5)">&#128663; Car Loan</button>
           <button class="tb" onclick="setType(this,'Student',5.5,10)">&#127891; Student</button>
         </div>
-        <div class="fr"><label>Valor do Empréstimo</label><div class="iw hp"><span class="ip">$</span><input type="number" id="amt" placeholder="20,000" oninput="calc()"></div></div>
+        <div class="fr"><label for="amt">Valor do Empréstimo</label><div class="iw hp"><span class="ip">$</span><input type="number" id="amt" placeholder="20,000" oninput="calc()"></div></div>
         <div class="fg">
-          <div class="fr"><label>Annual Taxa de Juros</label><div class="iw hs"><input type="number" id="rate" placeholder="8.5" step="0.1" oninput="calc()"><span class="is">%</span></div></div>
-          <div class="fr"><label>Prazo do Empréstimo</label><select id="term" onchange="calc()"><option value="1">1 year</option><option value="2">2 years</option><option value="3">3 years</option><option value="4">4 years</option><option value="5" selected>5 years</option><option value="7">7 years</option><option value="10">10 years</option><option value="15">15 years</option></select></div>
+          <div class="fr"><label for="rate">Annual Taxa de Juros</label><div class="iw hs"><input type="number" id="rate" placeholder="8.5" step="0.1" oninput="calc()"><span class="is">%</span></div></div>
+          <div class="fr"><label for="term">Prazo do Empréstimo</label><select id="term" onchange="calc()"><option value="1">1 year</option><option value="2">2 years</option><option value="3">3 years</option><option value="4">4 years</option><option value="5" selected>5 years</option><option value="7">7 years</option><option value="10">10 years</option><option value="15">15 years</option></select></div>
         </div>
         <div class="res" id="res">
           <div class="res-grid">
@@ -201,6 +203,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
     </div>
   </div>
 </div>
+</main>
 <footer>
 <div class="fi">
   <span class="fi-logo">Pay<span>Calc</span>Hub</span>

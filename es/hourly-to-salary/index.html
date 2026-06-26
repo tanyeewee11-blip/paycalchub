@@ -11,7 +11,8 @@
 <link rel="canonical" href="https://paycalchub.com/es/hourly-to-salary/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/css/base.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -107,16 +108,17 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   </div>
 </div>
 </nav>
+<main>
 <div style="max-width:700px;margin:16px auto 0;padding:0 24px"></div>
 <div class="max-w">
   <div class="bc"><a href="/es/">PayCalcHub</a> &rsaquo; Calculadora por Hora</div>
   <h1>Calculadora de <em>Salario</em> por Hora</h1>
   <p class="sub">Convierte tu tarifa por hora a salario anual, mensual, quincenal y semanal al instante.</p>
   <div class="card">
-    <div class="fr"><label>Tarifa por Hora</label><div class="iw hp"><span class="ip">$</span><input type="number" id="hw" placeholder="25.00" step="0.01" oninput="calc()"></div></div>
+    <div class="fr"><label for="hw">Tarifa por Hora</label><div class="iw hp"><span class="ip">$</span><input type="number" id="hw" placeholder="25.00" step="0.01" oninput="calc()"></div></div>
     <div class="fg">
-      <div class="fr"><label>Horas por Semana</label><select id="hrs" onchange="calc()"><option value="20">20 horas (parcial)</option><option value="30">30 horas</option><option value="40" selected>40 horas (completo)</option><option value="45">45 horas</option><option value="50">50 horas</option><option value="60">60 horas</option></select></div>
-      <div class="fr"><label>Semanas por Año</label><select id="wks" onchange="calc()"><option value="52" selected>52 semanas</option><option value="50">50 semanas (2 sem. sin sueldo)</option><option value="48">48 semanas (4 sem. sin sueldo)</option></select></div>
+      <div class="fr"><label for="hrs">Horas por Semana</label><select id="hrs" onchange="calc()"><option value="20">20 horas (parcial)</option><option value="30">30 horas</option><option value="40" selected>40 horas (completo)</option><option value="45">45 horas</option><option value="50">50 horas</option><option value="60">60 horas</option></select></div>
+      <div class="fr"><label for="wks">Semanas por Año</label><select id="wks" onchange="calc()"><option value="52" selected>52 semanas</option><option value="50">50 semanas (2 sem. sin sueldo)</option><option value="48">48 semanas (4 sem. sin sueldo)</option></select></div>
     </div>
     <div style="overflow-x:auto"><table class="res-table" id="res">
       <tbody>
@@ -136,6 +138,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
     <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Cuántas horas laborales hay en un año? <span class="fqi-icon">+</span></div><div class="fqa">A standard full-time schedule is 2,080 hours al año (40 hours &times; 52 semanas). After accounting for 10 federal holidays and 2 weeks vacation, a typical work year is closer to 1,960 horas.</div></div>
   </div>
 </div>
+</main>
 <footer>
 <div class="fi">
   <span class="fi-logo">Pay<span>Calc</span>Hub</span>

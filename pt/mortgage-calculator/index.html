@@ -22,7 +22,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/css/base.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -150,6 +151,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
   </div>
 </div>
 </nav>
+<main>
 <div style="max-width:1100px;margin:16px auto 0;padding:0 24px"></div>
 <div class="pg">
   <div class="bc"><a href="/pt/">PayCalcHub</a> &rsaquo; Calculadora de Hipoteca</div>
@@ -158,20 +160,20 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
   <div class="lay">
     <div>
       <div class="card">
-        <div class="fr"><label>Preço do Imóvel</label><div class="iw hp"><span class="ip">$</span><input type="number" id="price" placeholder="400,000" oninput="sync();calc()"></div></div>
+        <div class="fr"><label for="price">Preço do Imóvel</label><div class="iw hp"><span class="ip">$</span><input type="number" id="price" placeholder="400,000" oninput="sync();calc()"></div></div>
         <div class="fr"><label>Entrada</label>
           <div class="fg">
-            <div class="iw hp"><span class="ip">$</span><input type="number" id="down-a" placeholder="80,000" oninput="syncD('a');calc()"></div>
-            <div class="iw hs"><input type="number" id="down-p" placeholder="20" oninput="syncD('p');calc()"><span class="is">%</span></div>
+            <div class="iw hp"><span class="ip">$</span><input type="number" id="down-a" aria-label="Valor da entrada" placeholder="80,000" oninput="syncD('a');calc()"></div>
+            <div class="iw hs"><input type="number" id="down-p" aria-label="Percentual da entrada" placeholder="20" oninput="syncD('p');calc()"><span class="is">%</span></div>
           </div>
         </div>
         <div class="fg">
-          <div class="fr"><label>Taxa de Juros (Annual)</label><div class="iw hs"><input type="number" id="rate" placeholder="6.5" step="0.1" oninput="calc()"><span class="is">%</span></div></div>
-          <div class="fr"><label>Prazo do Empréstimo</label><select id="term" onchange="calc()"><option value="30">30 years</option><option value="25">25 years</option><option value="20">20 years</option><option value="15">15 years</option><option value="10">10 years</option></select></div>
+          <div class="fr"><label for="rate">Taxa de Juros (Annual)</label><div class="iw hs"><input type="number" id="rate" placeholder="6.5" step="0.1" oninput="calc()"><span class="is">%</span></div></div>
+          <div class="fr"><label for="term">Prazo do Empréstimo</label><select id="term" onchange="calc()"><option value="30">30 years</option><option value="25">25 years</option><option value="20">20 years</option><option value="15">15 years</option><option value="10">10 years</option></select></div>
         </div>
         <div class="fg">
-          <div class="fr"><label>Property Tax (Annual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tax" placeholder="4,000" oninput="calc()"></div></div>
-          <div class="fr"><label>Home Insurance (Annual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="ins" placeholder="1,200" oninput="calc()"></div></div>
+          <div class="fr"><label for="tax">Property Tax (Annual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tax" placeholder="4,000" oninput="calc()"></div></div>
+          <div class="fr"><label for="ins">Home Insurance (Annual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="ins" placeholder="1,200" oninput="calc()"></div></div>
         </div>
         <div class="res" id="res">
           <div class="rh"><div class="rl">Prestação Mensal</div><div class="ra" id="r-amt">$0</div><div class="rp">per month</div></div>
@@ -202,6 +204,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
     </div>
   </div>
 </div>
+</main>
 <footer>
 <div class="fi">
   <span class="fi-logo">Pay<span>Calc</span>Hub</span>

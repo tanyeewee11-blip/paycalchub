@@ -6,6 +6,7 @@
    ========================================================================== */
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+main{display:block}
 
 :root{
   --bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;

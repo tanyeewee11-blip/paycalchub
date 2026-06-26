@@ -18,7 +18,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/css/base.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -167,6 +168,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
     </div>
   </div>
 </div></nav>
+<main>
 
 <div class="pg">
   <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; <a href="/salary-calculator/">Salary Calculator</a> &rsaquo; United Kingdom</div>
@@ -187,7 +189,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
       <!-- Quick Calculator -->
       <div class="calc-box">
         <h3>Quick UK Take-Home Calculator</h3>
-        <div class="crow"><label>Annual Salary (£)</label><input type="number" id="uk-sal" placeholder="e.g. 45000" oninput="calcUK()"></div>
+        <div class="crow"><label for="uk-sal">Annual Salary (£)</label><input type="number" id="uk-sal" placeholder="e.g. 45000" oninput="calcUK()"></div>
         <div id="uk-res" class="res-box">
           <div class="res-amount" id="uk-amt"></div>
           <div class="res-label">estimated take-home per year</div>
@@ -275,6 +277,7 @@ function calcUK(){
 <script>
 
 </script>
+</main>
 <footer>
 <div class="fi">
   <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>

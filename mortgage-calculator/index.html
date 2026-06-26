@@ -13,7 +13,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is my monthly mortgage payment calculated?","acceptedAnswer":{"@type":"Answer","text":"Monthly payment uses the amortization formula M = P[r(1+r)^n]/[(1+r)^n-1] where P is loan amount, r is monthly rate, and n is total months. Add property tax and insurance for the full PITI payment."}},{"@type":"Question","name":"What is a good mortgage rate in 2026?","acceptedAnswer":{"@type":"Answer","text":"US 30-year fixed rates in 2026 are typically 6.0-7.0%. Rates vary by credit score, down payment, and lender. Borrowers with 760+ credit scores and 20%+ down payment qualify for the best rates."}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/css/base.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -151,6 +152,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </head>
 <body>
 <nav><div class="nav-in"><a href="/" class="logo">Pay<span>Calc</span>Hub</a><div class="nav-links"><a href="/salary-calculator/" >Salary</a><a href="/mortgage-calculator/" class="active">Mortgage</a><a href="/loan-calculator/" >Loan</a><a href="/hourly-to-salary/" >Hourly</a></div></div></nav>
+<main>
 <div style="max-width:1100px;margin:16px auto 0;padding:0 24px"></div>
 <div class="pg">
   <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; Mortgage Calculator</div>
@@ -159,7 +161,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   <div class="lay">
     <div>
       <div class="card">
-        <div class="fr"><label>Home Price</label><div class="iw hp"><span class="ip">$</span><input type="number" id="price" placeholder="400,000" oninput="syncSlider(this.value);sync();calc()"></div>
+        <div class="fr"><label for="price">Home Price</label><div class="iw hp"><span class="ip">$</span><input type="number" id="price" placeholder="400,000" oninput="syncSlider(this.value);sync();calc()"></div>
           <div class="sal-slider-wrap">
             <input type="range" class="sal-slider" id="price-slider" min="100000" max="2000000" step="5000" value="400000" oninput="syncPriceInput(this.value);sync();calc()">
             <div class="sal-range-labels"><span>$100k</span><span>$2M</span></div>
@@ -167,19 +169,19 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
         </div>
         <div class="fr"><label>Down Payment</label>
           <div class="fg">
-            <div class="iw hp"><span class="ip">$</span><input type="number" id="down-a" placeholder="80,000" oninput="syncD('a');calc()"></div>
-            <div class="iw hs"><input type="number" id="down-p" placeholder="20" oninput="syncD('p');calc()"><span class="is">%</span></div>
+            <div class="iw hp"><span class="ip">$</span><input type="number" id="down-a" aria-label="Down Payment Amount" placeholder="80,000" oninput="syncD('a');calc()"></div>
+            <div class="iw hs"><input type="number" id="down-p" aria-label="Down Payment Percent" placeholder="20" oninput="syncD('p');calc()"><span class="is">%</span></div>
           </div>
         </div>
         <div class="fg">
-          <div class="fr"><label>Interest Rate (Annual)</label><div class="iw hs"><input type="number" id="rate" placeholder="6.5" step="0.1" oninput="calc()"><span class="is">%</span></div></div>
-          <div class="fr"><label>Loan Term</label><select id="term" onchange="calc()"><option value="30">30 years</option><option value="25">25 years</option><option value="20">20 years</option><option value="15">15 years</option><option value="10">10 years</option></select></div>
+          <div class="fr"><label for="rate">Interest Rate (Annual)</label><div class="iw hs"><input type="number" id="rate" placeholder="6.5" step="0.1" oninput="calc()"><span class="is">%</span></div></div>
+          <div class="fr"><label for="term">Loan Term</label><select id="term" onchange="calc()"><option value="30">30 years</option><option value="25">25 years</option><option value="20">20 years</option><option value="15">15 years</option><option value="10">10 years</option></select></div>
         </div>
         <div class="fg">
-          <div class="fr"><label>Property Tax (Annual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tax" placeholder="4,000" oninput="calc()"></div></div>
-          <div class="fr"><label>Home Insurance (Annual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="ins" placeholder="1,200" oninput="calc()"></div></div>
-          <div class="fr"><label>HOA Fees (Monthly)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="hoa" placeholder="0" oninput="calc()"></div></div>
-          <div class="fr"><label>PMI Rate <span class="opt">Auto if &lt;20% down</span></label><div class="iw hs"><input type="number" id="pmi-rate" placeholder="auto" step="0.1" oninput="calc()"><span class="is">%/yr</span></div></div>
+          <div class="fr"><label for="tax">Property Tax (Annual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tax" placeholder="4,000" oninput="calc()"></div></div>
+          <div class="fr"><label for="ins">Home Insurance (Annual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="ins" placeholder="1,200" oninput="calc()"></div></div>
+          <div class="fr"><label for="hoa">HOA Fees (Monthly)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="hoa" placeholder="0" oninput="calc()"></div></div>
+          <div class="fr"><label for="pmi-rate">PMI Rate <span class="opt">Auto if &lt;20% down</span></label><div class="iw hs"><input type="number" id="pmi-rate" placeholder="auto" step="0.1" oninput="calc()"><span class="is">%/yr</span></div></div>
         </div>
         <div class="fsec" style="margin-bottom:0;padding-bottom:0">
           <button class="ded-toggle" id="ep-btn" onclick="toggleEP()">
@@ -187,8 +189,8 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
           </button>
           <div class="ded-body" id="ep-body">
             <div class="fg" style="margin-top:10px">
-              <div class="fr"><label>Extra Monthly Payment</label><div class="iw hp"><span class="ip">$</span><input type="number" id="extra-mo" placeholder="0" min="0" oninput="calc()"></div></div>
-              <div class="fr"><label>Extra Annual Payment</label><div class="iw hp"><span class="ip">$</span><input type="number" id="extra-yr" placeholder="0" min="0" oninput="calc()"></div></div>
+              <div class="fr"><label for="extra-mo">Extra Monthly Payment</label><div class="iw hp"><span class="ip">$</span><input type="number" id="extra-mo" placeholder="0" min="0" oninput="calc()"></div></div>
+              <div class="fr"><label for="extra-yr">Extra Annual Payment</label><div class="iw hp"><span class="ip">$</span><input type="number" id="extra-yr" placeholder="0" min="0" oninput="calc()"></div></div>
             </div>
             <div id="ep-result" style="display:none;background:var(--alight);border-radius:8px;padding:12px 14px;margin-top:10px;font-size:13px;line-height:1.7;color:#1a5c3a"></div>
           </div>
@@ -261,6 +263,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   </div>
 </div>
 </div>
+</main>
 <footer>
 <div class="fi">
   <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>

@@ -22,7 +22,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/css/base.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -150,6 +151,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
   </div>
 </div>
 </nav>
+<main>
 <div style="max-width:1100px;margin:16px auto 0;padding:0 24px"></div>
 <div class="pg">
   <div class="bc"><a href="/pt/">PayCalcHub</a> &rsaquo; Calculadora de Salário</div>
@@ -166,43 +168,43 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
         </div>
         <div class="cb">
           <div id="f-us" class="fp">
-            <div class="fr"><label>Annual Salário Bruto</label><div class="iw hp"><span class="ip">$</span><input type="number" id="us-sal" placeholder="60,000" oninput="calc()"></div></div>
+            <div class="fr"><label for="us-sal">Annual Salário Bruto</label><div class="iw hp"><span class="ip">$</span><input type="number" id="us-sal" placeholder="60,000" oninput="calc()"></div></div>
             <div class="fg">
-              <div class="fr"><label>Estado Civil Fiscal</label><select id="us-fil" onchange="calc()"><option value="single">Solteiro/a</option><option value="married">Casado (declaração conjunta)</option><option value="hoh">Head of Household</option></select></div>
-              <div class="fr"><label>State</label><select id="us-st" onchange="calc()">
+              <div class="fr"><label for="us-fil">Estado Civil Fiscal</label><select id="us-fil" onchange="calc()"><option value="single">Solteiro/a</option><option value="married">Casado (declaração conjunta)</option><option value="hoh">Head of Household</option></select></div>
+              <div class="fr"><label for="us-st">State</label><select id="us-st" onchange="calc()">
                 <option value="0">Alaska - 0%</option><option value="5.0">Alabama - 5.0%</option><option value="2.5">Arizona - 2.5%</option><option value="4.7">Arkansas - 4.7%</option><option value="9.3">California - 9.3%</option><option value="4.4">Colorado - 4.4%</option><option value="6.99">Connecticut - 6.99%</option><option value="0">Delaware - 0%</option><option value="0">Florida - 0%</option><option value="5.49">Georgia - 5.49%</option><option value="8.25">Hawaii - 8.25%</option><option value="5.8">Idaho - 5.8%</option><option value="4.95">Illinois - 4.95%</option><option value="3.05">Indiana - 3.05%</option><option value="6.0">Iowa - 6.0%</option><option value="5.7">Kansas - 5.7%</option><option value="4.5">Kentucky - 4.5%</option><option value="4.25">Louisiana - 4.25%</option><option value="7.15">Maine - 7.15%</option><option value="5.75">Maryland - 5.75%</option><option value="5.0">Massachusetts - 5.0%</option><option value="4.25">Michigan - 4.25%</option><option value="9.85">Minnesota - 9.85%</option><option value="5.0">Mississippi - 5.0%</option><option value="4.95">Missouri - 4.95%</option><option value="5.9">Montana - 5.9%</option><option value="3.99">Nebraska - 3.99%</option><option value="0">Nevada - 0%</option><option value="0">New Hampshire - 0%</option><option value="10.75">New Jersey - 10.75%</option><option value="5.9">New Mexico - 5.9%</option><option value="6.85">New York - 6.85%</option><option value="4.75">North Carolina - 4.75%</option><option value="2.5">North Dakota - 2.5%</option><option value="3.99">Ohio - 3.99%</option><option value="4.75">Oklahoma - 4.75%</option><option value="9.9">Oregon - 9.9%</option><option value="3.07">Pennsylvania - 3.07%</option><option value="4.75">Rhode Island - 4.75%</option><option value="6.5">South Carolina - 6.5%</option><option value="0">South Dakota - 0%</option><option value="0">Tennessee - 0%</option><option value="0">Texas - 0%</option><option value="4.85">Utah - 4.85%</option><option value="8.75">Vermont - 8.75%</option><option value="5.75">Virginia - 5.75%</option><option value="0">Washington - 0%</option><option value="6.5">West Virginia - 6.5%</option><option value="7.65">Wisconsin - 7.65%</option><option value="0">Wyoming - 0%</option>
               </select></div>
             </div>
-            <div class="fr"><label>Frequência de Pagamento</label><select id="us-frq" onchange="calc()"><option value="26">Quinzenal (a cada 2 semanas)</option><option value="24">Duas vezes por mês</option><option value="12">Monthly</option><option value="52">Weekly</option></select></div>
+            <div class="fr"><label for="us-frq">Frequência de Pagamento</label><select id="us-frq" onchange="calc()"><option value="26">Quinzenal (a cada 2 semanas)</option><option value="24">Duas vezes por mês</option><option value="12">Monthly</option><option value="52">Weekly</option></select></div>
             <div class="fsec"><div class="fsec-lbl">Deduções Pré-Imposto <span class="opt">Optional</span></div>
               <div class="fg">
-                <div class="fr"><label>Contribuição 401(k)</label><div class="iw hs"><input type="number" id="us-401k" placeholder="0" min="0" max="23500" oninput="calc()"><span class="is">$/yr</span></div></div>
-                <div class="fr"><label>Plano de Saúde</label><div class="iw hs"><input type="number" id="us-hlt" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
-                <div class="fr"><label>Contribuição HSA</label><div class="iw hs"><input type="number" id="us-hsa" placeholder="0" min="0" max="4300" oninput="calc()"><span class="is">$/yr</span></div></div>
-                <div class="fr"><label>Other Pre-Tax</label><div class="iw hs"><input type="number" id="us-oth" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+                <div class="fr"><label for="us-401k">Contribuição 401(k)</label><div class="iw hs"><input type="number" id="us-401k" placeholder="0" min="0" max="23500" oninput="calc()"><span class="is">$/yr</span></div></div>
+                <div class="fr"><label for="us-hlt">Plano de Saúde</label><div class="iw hs"><input type="number" id="us-hlt" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+                <div class="fr"><label for="us-hsa">Contribuição HSA</label><div class="iw hs"><input type="number" id="us-hsa" placeholder="0" min="0" max="4300" oninput="calc()"><span class="is">$/yr</span></div></div>
+                <div class="fr"><label for="us-oth">Other Pre-Tax</label><div class="iw hs"><input type="number" id="us-oth" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
               </div>
             </div>
           </div>
           <div id="f-uk" class="fp" style="display:none">
-            <div class="fr"><label>Annual Salário Bruto</label><div class="iw hp"><span class="ip">&#163;</span><input type="number" id="uk-sal" placeholder="35,000" oninput="calc()"></div></div>
-            <div class="fr"><label>Tax Code</label><select id="uk-tc" onchange="calc()"><option value="1257">1257L - Standard (12,570 allowance)</option><option value="0">BR - Basic Rate, no allowance</option><option value="500">500L - Reduced allowance</option></select></div>
-            <div class="fr"><label>Student Loan</label><select id="uk-sl" onchange="calc()"><option value="none">None</option><option value="plan1">Plan 1 - before Sep 2012</option><option value="plan2">Plan 2 - after Sep 2012</option><option value="plan4">Plan 4 - Scotland</option></select></div>
+            <div class="fr"><label for="uk-sal">Annual Salário Bruto</label><div class="iw hp"><span class="ip">&#163;</span><input type="number" id="uk-sal" placeholder="35,000" oninput="calc()"></div></div>
+            <div class="fr"><label for="uk-tc">Tax Code</label><select id="uk-tc" onchange="calc()"><option value="1257">1257L - Standard (12,570 allowance)</option><option value="0">BR - Basic Rate, no allowance</option><option value="500">500L - Reduced allowance</option></select></div>
+            <div class="fr"><label for="uk-sl">Student Loan</label><select id="uk-sl" onchange="calc()"><option value="none">None</option><option value="plan1">Plan 1 - before Sep 2012</option><option value="plan2">Plan 2 - after Sep 2012</option><option value="plan4">Plan 4 - Scotland</option></select></div>
             <div class="fsec"><div class="fsec-lbl">Pension <span class="opt">Optional</span></div>
-              <div class="fr"><label>Pension Contribution</label><div class="iw hs"><input type="number" id="uk-pen" placeholder="0" oninput="calc()"><span class="is">&#163;/yr</span></div></div>
+              <div class="fr"><label for="uk-pen">Pension Contribution</label><div class="iw hs"><input type="number" id="uk-pen" placeholder="0" oninput="calc()"><span class="is">&#163;/yr</span></div></div>
             </div>
           </div>
           <div id="f-ca" class="fp" style="display:none">
-            <div class="fr"><label>Annual Salário Bruto</label><div class="iw hp"><span class="ip">$</span><input type="number" id="ca-sal" placeholder="65,000" oninput="calc()"></div></div>
-            <div class="fr"><label>Province</label><select id="ca-pv" onchange="calc()"><option value="on">Ontario</option><option value="bc">British Columbia</option><option value="ab">Alberta</option><option value="qc">Quebec</option><option value="mb">Manitoba</option><option value="sk">Saskatchewan</option><option value="ns">Nova Scotia</option><option value="nb">New Brunswick</option><option value="nl">Newfoundland</option><option value="pe">PEI</option></select></div>
+            <div class="fr"><label for="ca-sal">Annual Salário Bruto</label><div class="iw hp"><span class="ip">$</span><input type="number" id="ca-sal" placeholder="65,000" oninput="calc()"></div></div>
+            <div class="fr"><label for="ca-pv">Province</label><select id="ca-pv" onchange="calc()"><option value="on">Ontario</option><option value="bc">British Columbia</option><option value="ab">Alberta</option><option value="qc">Quebec</option><option value="mb">Manitoba</option><option value="sk">Saskatchewan</option><option value="ns">Nova Scotia</option><option value="nb">New Brunswick</option><option value="nl">Newfoundland</option><option value="pe">PEI</option></select></div>
             <div class="fsec"><div class="fsec-lbl">RRSP <span class="opt">Optional</span></div>
-              <div class="fr"><label>RRSP Contribution</label><div class="iw hs"><input type="number" id="ca-rr" placeholder="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+              <div class="fr"><label for="ca-rr">RRSP Contribution</label><div class="iw hs"><input type="number" id="ca-rr" placeholder="0" oninput="calc()"><span class="is">$/yr</span></div></div>
             </div>
           </div>
           <div id="f-au" class="fp" style="display:none">
-            <div class="fr"><label>Annual Salário Bruto</label><div class="iw hp"><span class="ip">$</span><input type="number" id="au-sal" placeholder="80,000" oninput="calc()"></div></div>
-            <div class="fr"><label>Medicare Levy</label><select id="au-med" onchange="calc()"><option value="yes">Include Medicare Levy (2%)</option><option value="no">Exempt from Medicare Levy</option></select></div>
+            <div class="fr"><label for="au-sal">Annual Salário Bruto</label><div class="iw hp"><span class="ip">$</span><input type="number" id="au-sal" placeholder="80,000" oninput="calc()"></div></div>
+            <div class="fr"><label for="au-med">Medicare Levy</label><select id="au-med" onchange="calc()"><option value="yes">Include Medicare Levy (2%)</option><option value="no">Exempt from Medicare Levy</option></select></div>
             <div class="fsec"><div class="fsec-lbl">Super <span class="opt">Optional</span></div>
-              <div class="fr"><label>Extra Super Contribution</label><div class="iw hs"><input type="number" id="au-sup" placeholder="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+              <div class="fr"><label for="au-sup">Extra Super Contribution</label><div class="iw hs"><input type="number" id="au-sup" placeholder="0" oninput="calc()"><span class="is">$/yr</span></div></div>
             </div>
           </div>
           <div class="res" id="res">
@@ -305,6 +307,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
 </div>
 </div>
 </div>
+</main>
 <footer>
 <div class="fi">
   <span class="fi-logo">Pay<span>Calc</span>Hub</span>

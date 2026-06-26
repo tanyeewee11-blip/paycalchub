@@ -1,0 +1,27 @@
+# PayCalcHub
+
+> Free financial calculators for salary, mortgage, and loan estimates, with 2026 US federal/state tax data and support for the US, UK, Canada, and Australia. No sign-up required; calculations run entirely in the browser.
+
+PayCalcHub helps people estimate take-home pay, mortgage payments, and loan costs. Content is available in English, Spanish, and Portuguese. Tax bracket data is centralized in /assets/js/tax-data.js and is reviewed annually.
+
+## Core calculators
+
+- [Salary / paycheck calculator](https://paycalchub.com/salary-calculator/): Take-home pay by US state, or UK/Canada/Australia, including federal tax, FICA, 401(k)/HSA, overtime, bonus and commission.
+- [Mortgage calculator](https://paycalchub.com/mortgage-calculator/): Monthly mortgage payment including principal, interest, property tax, insurance, HOA, and PMI.
+- [Loan calculator](https://paycalchub.com/loan-calculator/): Monthly payment and total interest for personal/auto loans across custom terms.
+- [Hourly-to-salary converter](https://paycalchub.com/hourly-to-salary/): Converts an hourly wage to annual/monthly salary equivalents.
+- [Salary-to-hourly converter](https://paycalchub.com/salary-to-hourly/): Converts an annual salary to an equivalent hourly wage.
+
+## Reference pages
+
+- [State salary calculators](https://paycalchub.com/salary-calculator/california/): Dedicated take-home-pay calculators for all 50 US states (replace "california" with any state slug).
+- [Mortgage-per-month examples](https://paycalchub.com/mortgage-per-month/300k-mortgage/): Pre-computed monthly payment breakdowns for common loan amounts.
+- [How much house can I afford](https://paycalchub.com/how-much-house-can-i-afford/60k-salary/): Affordability estimates by annual salary.
+- [Blog](https://paycalchub.com/blog/): Articles on take-home pay, state tax comparisons, and personal finance basics.
+
+## About
+
+- [About](https://paycalchub.com/about/): Who runs PayCalcHub and how the calculators are maintained.
+- [Affiliate disclosure](https://paycalchub.com/affiliate-disclosure/): Advertising and affiliate relationships.
+- [Privacy policy](https://paycalchub.com/privacy/): Data handling; calculations are not sent to a server.
+- [Contact](https://paycalchub.com/contact/): How to reach the site owner.

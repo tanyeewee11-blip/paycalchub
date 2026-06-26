@@ -22,7 +22,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/css/base.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -155,6 +156,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
     </div>
   </div>
 </div></nav>
+<main>
 <div class="hero">
 <div class="hero-grid">
 <div>
@@ -168,7 +170,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
 </div>
 <div class="preview">
   <div class="prev-lbl">Cálculo Rápido</div>
-  <input type="number" id="qs" value="60000" class="prev-input" oninput="qc()" placeholder="Salário anual">
+  <input type="number" id="qs" aria-label="Salário anual" value="60000" class="prev-input" oninput="qc()" placeholder="Salário anual">
   <div class="prev-res">
     <span style="font-size:13px;color:var(--acc)">Salário mensal líquido</span>
     <span class="prev-res-v" id="qr">$3,867</span>
@@ -228,6 +230,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
   </div>
 </div>
 </div>
+</main>
 <footer>
 <div class="fi">
   <span class="fi-logo">Pay<span>Calc</span>Hub</span>

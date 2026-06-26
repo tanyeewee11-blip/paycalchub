@@ -13,7 +13,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo se calcula mi cuota hipotecaria mensual?","acceptedAnswer":{"@type":"Answer","text":"Monthly payment uses the amortization formula M = P[r(1+r)^n]/[(1+r)^n-1] where P is loan amount, r is monthly rate, and n is total months. Add property tax and insurance for the full PITI payment."}},{"@type":"Question","name":"What is a good mortgage rate in 2026?","acceptedAnswer":{"@type":"Answer","text":"US 30-year fixed rates in 2026 are typically 6.0-7.0%. Rates vary by credit score, down payment, and lender. Borrowers with 760+ credit scores and 20%+ down payment qualify for the best rates."}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/css/base.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -132,6 +133,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   </div>
 </div>
 </nav>
+<main>
 <div style="max-width:1100px;margin:16px auto 0;padding:0 24px"></div>
 <div class="pg">
   <div class="bc"><a href="/es/">PayCalcHub</a> &rsaquo; Calculadora de Hipoteca</div>
@@ -140,20 +142,20 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   <div class="lay">
     <div>
       <div class="card">
-        <div class="fr"><label>Precio de la Vivienda</label><div class="iw hp"><span class="ip">$</span><input type="number" id="price" placeholder="400,000" oninput="sync();calc()"></div></div>
+        <div class="fr"><label for="price">Precio de la Vivienda</label><div class="iw hp"><span class="ip">$</span><input type="number" id="price" placeholder="400,000" oninput="sync();calc()"></div></div>
         <div class="fr"><label>Entrada / Enganche</label>
           <div class="fg">
-            <div class="iw hp"><span class="ip">$</span><input type="number" id="down-a" placeholder="80,000" oninput="syncD('a');calc()"></div>
-            <div class="iw hs"><input type="number" id="down-p" placeholder="20" oninput="syncD('p');calc()"><span class="is">%</span></div>
+            <div class="iw hp"><span class="ip">$</span><input type="number" id="down-a" aria-label="Monto del pago inicial" placeholder="80,000" oninput="syncD('a');calc()"></div>
+            <div class="iw hs"><input type="number" id="down-p" aria-label="Porcentaje del pago inicial" placeholder="20" oninput="syncD('p');calc()"><span class="is">%</span></div>
           </div>
         </div>
         <div class="fg">
-          <div class="fr"><label>Tasa de Interés (Anual)</label><div class="iw hs"><input type="number" id="rate" placeholder="6.5" step="0.1" oninput="calc()"><span class="is">%</span></div></div>
-          <div class="fr"><label>Plazo del Préstamo</label><select id="term" onchange="calc()"><option value="30">30 años</option><option value="25">25 años</option><option value="20">20 años</option><option value="15">15 años</option><option value="10">10 años</option></select></div>
+          <div class="fr"><label for="rate">Tasa de Interés (Anual)</label><div class="iw hs"><input type="number" id="rate" placeholder="6.5" step="0.1" oninput="calc()"><span class="is">%</span></div></div>
+          <div class="fr"><label for="term">Plazo del Préstamo</label><select id="term" onchange="calc()"><option value="30">30 años</option><option value="25">25 años</option><option value="20">20 años</option><option value="15">15 años</option><option value="10">10 años</option></select></div>
         </div>
         <div class="fg">
-          <div class="fr"><label>Impuesto sobre la Propiedad (Anual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tax" placeholder="4,000" oninput="calc()"></div></div>
-          <div class="fr"><label>Seguro del Hogar (Anual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="ins" placeholder="1,200" oninput="calc()"></div></div>
+          <div class="fr"><label for="tax">Impuesto sobre la Propiedad (Anual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tax" placeholder="4,000" oninput="calc()"></div></div>
+          <div class="fr"><label for="ins">Seguro del Hogar (Anual)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="ins" placeholder="1,200" oninput="calc()"></div></div>
         </div>
         <div class="res" id="res">
           <div class="rh"><div class="rl">Cuota Mensual</div><div class="ra" id="r-amt">$0</div><div class="rp">al mes</div></div>
@@ -184,6 +186,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
     </div>
   </div>
 </div>
+</main>
 <footer>
 <div class="fi">
   <span class="fi-logo">Pay<span>Calc</span>Hub</span>

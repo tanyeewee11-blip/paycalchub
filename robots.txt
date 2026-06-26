@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://paycalchub.com/sitemap.xml
+LLMs: https://paycalchub.com/llms.txt
