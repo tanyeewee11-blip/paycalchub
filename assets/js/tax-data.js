@@ -11,13 +11,14 @@
 
 var TAX_DATA = {
   // Update this whenever the numbers below are checked/changed.
-  LAST_VERIFIED: "2026-01-01",
-  SOURCE_NOTES: "IRS Rev. Proc. (2026 federal brackets & standard deduction), SSA.gov (FICA rate)",
+  LAST_VERIFIED: "2026-07-04",
+  SOURCE_NOTES: "IRS Rev. Proc. 2025-32 (2026 federal brackets & standard deduction, incl. OBBBA adjustments), SSA.gov Oct 2025 COLA announcement (SS wage base), IRS IR-2025-111 (401k limit), IRS Rev. Proc. 2025-19 (HSA limit)",
 
-  // 2026 federal standard deduction
+  // 2026 federal standard deduction (IRS Rev. Proc. 2025-32)
   STANDARD_DEDUCTION: {
-    single: 15000,
-    married: 30000
+    single: 16100,
+    married: 32200,
+    hoh: 24150
   },
 
   // 2026 federal income tax brackets: [width of this bracket in dollars, rate]
@@ -28,27 +29,36 @@ var TAX_DATA = {
   // taxable income is taxed at 10%, the next $36,550 at 12%, and so on.
   FEDERAL_BRACKETS: {
     single: [
-      [11925, 0.10],
-      [36550, 0.12],
-      [54875, 0.22],
-      [93950, 0.24],
-      [53225, 0.32],
-      [375825, 0.35],
+      [12400, 0.10],
+      [38000, 0.12],
+      [55300, 0.22],
+      [96075, 0.24],
+      [54450, 0.32],
+      [384375, 0.35],
       [1000000000, 0.37]
     ],
     married: [
-      [23850, 0.10],
-      [73100, 0.12],
-      [109750, 0.22],
-      [187900, 0.24],
-      [106450, 0.32],
-      [250550, 0.35],
+      [24800, 0.10],
+      [76000, 0.12],
+      [110600, 0.22],
+      [192150, 0.24],
+      [108900, 0.32],
+      [256250, 0.35],
       [1000000000, 0.37]
     ]
   },
 
   // Combined employee FICA rate: Social Security (6.2%) + Medicare (1.45%)
   FICA_RATE: 0.0765,
+
+  // 2026 Social Security (OASDI) taxable wage base — SSA Oct 2025 COLA announcement
+  SS_WAGE_BASE: 184500,
+
+  // 2026 IRS contribution limits used by the advanced US calculator
+  CONTRIBUTION_LIMITS_2026: {
+    "401k": 24500,
+    hsa_self_only: 4400
+  },
 
   // Flat state income tax rate used for the homepage quick-estimate widget.
   // NOTE: this is a simplified flat-rate approximation for the homepage
