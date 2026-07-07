@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png">
+  <link rel="apple-touch-icon" href="/favicon_512x512.png">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-7723301737736770">
+<title>Tax Withholding Calculator 2026 — Estimate Your W-4 Withholding | PayCalcHub</title>
+<meta name="description" content="Free tax withholding calculator for 2026. Estimate your federal income tax withholding per paycheck based on your W-4: filing status, dependents, extra income and deductions.">
+<link rel="canonical" href="https://paycalchub.com/tax-withholding-calculator/">
+<meta property="og:title" content="Tax Withholding Calculator 2026 — Estimate Your Paycheck Withholding">
+<meta property="og:description" content="Estimate your 2026 federal withholding per paycheck based on your W-4 inputs: filing status, dependents, other income, and deductions.">
+<meta property="og:url" content="https://paycalchub.com/tax-withholding-calculator/"><meta property="og:type" content="website">
+<meta property="og:image" content="https://paycalchub.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://paycalchub.com/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Tax Withholding Calculator","url":"https://paycalchub.com/tax-withholding-calculator/","description":"Free 2026 tax withholding calculator estimating federal income tax withheld per paycheck based on W-4 inputs.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"PayCalcHub","url":"https://paycalchub.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is tax withholding?","acceptedAnswer":{"@type":"Answer","text":"Tax withholding is the money your employer takes out of each paycheck and sends to the IRS on your behalf, as an advance payment toward your annual federal income tax bill. The amount is based on the W-4 form you filed with your employer."}},{"@type":"Question","name":"What happens if too much or too little is withheld?","acceptedAnswer":{"@type":"Answer","text":"If too much is withheld over the year, you get a tax refund when you file — but you gave the government an interest-free loan. If too little is withheld, you'll owe money at tax time, and may face an underpayment penalty if the shortfall is large enough. Adjusting your W-4 helps you land closer to breaking even."}},{"@type":"Question","name":"How do I change my withholding?","acceptedAnswer":{"@type":"Answer","text":"Submit a new Form W-4 to your employer at any time. You don't need a specific reason, though it's especially worth updating after marriage, divorce, a new child, a second job, or a significant raise."}},{"@type":"Question","name":"Does this calculator account for state withholding?","acceptedAnswer":{"@type":"Answer","text":"No, this tool estimates federal withholding only, since state W-4 equivalents and rules vary widely by state. Use the Salary Calculator for a full federal + state + FICA take-home pay estimate."}},{"@type":"Question","name":"Is this the same as a payroll tax calculator?","acceptedAnswer":{"@type":"Answer","text":"This tool focuses specifically on federal income tax withholding based on your W-4. A payroll tax calculator usually refers to the same core numbers plus FICA (Social Security and Medicare), which together make up the taxes withheld from every paycheck. For the full picture, the Salary Calculator functions as a complete payroll tax calculator for any of the 50 states."}},{"@type":"Question","name":"Can I check this against my actual W-2?","acceptedAnswer":{"@type":"Answer","text":"Yes — after the tax year ends, your W-2 shows Box 2 (federal income tax withheld) for the full year. Compare that to the annual withholding figure this calculator shows to see whether your withholding tracked what you expected."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
+<link rel="stylesheet" href="/assets/css/base.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "PayCalcHub", "item": "https://paycalchub.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Tax Withholding Calculator", "item": "https://paycalchub.com/tax-withholding-calculator/"}
+  ]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--red:#dc2626;--ora:#d97706;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
+body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}
+.nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}
+.nav-links a:hover{color:var(--txt)}.nav-links a.active{color:var(--acc);font-weight:500}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
+.mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
+.mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
+.mobile-menu a:last-child{border-bottom:none}.mobile-menu.open{display:block}
+@media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
+.pg{max-width:1100px;margin:0 auto;padding:32px 24px 64px}
+.bc{font-size:13px;color:var(--mut);margin-bottom:12px}.bc a{color:var(--acc)}
+h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px}
+h1 em{font-style:normal;color:var(--acc)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:28px}
+.lay{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start}
+.card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);overflow:hidden}
+.cb{padding:24px}
+.fr{margin-bottom:14px}
+.fr label{display:block;font-size:13px;font-weight:500;color:var(--mut);margin-bottom:5px}
+.iw{position:relative}
+.ip{position:absolute;left:11px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--mut);pointer-events:none;z-index:1}
+.is{position:absolute;right:11px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--mut);pointer-events:none}
+.fr input,.fr select{width:100%;padding:10px 14px;border:1px solid var(--bor);border-radius:8px;font-size:15px;font-family:var(--f);background:var(--bg);color:var(--txt);outline:none;transition:border-color .15s,background .15s;-moz-appearance:textfield}
+.fr input::-webkit-outer-spin-button,.fr input::-webkit-inner-spin-button{-webkit-appearance:none}
+.fr input:focus,.fr select:focus{border-color:var(--acc);background:#fff}
+.hp input{padding-left:28px}.hs input{padding-right:38px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fsec{margin:18px 0 14px;padding-top:18px;border-top:1px solid var(--bor)}
+.fsec-lbl{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--mut);margin-bottom:12px}
+.ded-toggle{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--acc);cursor:pointer;padding:10px 0;border:none;background:none;font-family:var(--f);width:100%}
+.ded-toggle-icon{font-size:16px;transition:transform .2s;line-height:1}
+.ded-toggle.open .ded-toggle-icon{transform:rotate(45deg)}
+.ded-body{display:none}.ded-body.open{display:block}
+.opt{font-size:10px;font-weight:500;background:var(--bg);border:1px solid var(--bor);color:var(--mut);padding:1px 6px;border-radius:4px}
+.res{margin-top:20px;border-top:1px solid var(--bor);padding-top:20px}
+.rh{background:var(--alight);border-radius:10px;padding:20px;text-align:center;margin-bottom:16px}
+.rl{font-size:11px;font-weight:600;color:var(--acc);letter-spacing:.06em;text-transform:uppercase}
+.ra{font-family:var(--mo);font-size:38px;font-weight:500;color:var(--acc);letter-spacing:-.02em;line-height:1.1;margin:4px 0 2px}
+.rp{font-size:13px;color:var(--mut)}.re{font-size:12px;color:var(--acc);margin-top:6px;font-weight:500}
+.bd{display:flex;flex-direction:column;gap:5px}
+.br{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:9px 13px;border-radius:8px;background:var(--bg)}
+.bl{color:var(--mut)}.bv{font-family:var(--mo);font-weight:500}
+.br.ded .bv{color:var(--red)}.br.cred .bv{color:var(--acc)}
+.br.net{background:var(--alight)}.br.net .bl{font-weight:600;color:var(--acc)}.br.net .bv{color:var(--acc);font-size:15px}
+.sb{display:flex;flex-direction:column;gap:18px}
+.ic{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad)}
+.ic ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.ic li{font-size:13px;color:var(--mut);display:flex;justify-content:space-between}
+.ic li span{font-family:var(--mo);font-size:12px;font-weight:500;color:var(--txt)}
+@media(min-width:801px){.ic-body{padding:0 18px 18px}.ic h3{margin:14px 18px 10px;font-size:13px;font-weight:600}}
+.tip-box{background:#fff8e1;border:1px solid #f0c040;border-radius:8px;padding:14px 16px;font-size:13px;color:#7a5800;line-height:1.7;margin:16px 0}
+.art{margin-top:48px}.art h2{font-size:20px;font-weight:600;margin-bottom:12px}
+.art p{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:16px}
+.art ul{padding-left:20px;margin-bottom:16px}.art li{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:6px}
+.fqs{margin-top:40px}.fqs h2{font-size:20px;font-weight:600;margin-bottom:16px}
+.fqi{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);margin-bottom:8px;overflow:hidden}
+.fqq{padding:15px 18px;font-size:14px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.fqi-icon{font-size:20px;color:var(--mut);flex-shrink:0;transition:transform .2s}
+.fqq.open .fqi-icon{transform:rotate(45deg)}
+.fqa{font-size:14px;color:var(--mut);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .25s ease,padding .2s;padding:0 18px}
+.fqa.open{max-height:400px;padding:0 18px 16px}
+.related{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px 22px;margin-top:24px}
+.related h3{font-size:14px;font-weight:600;margin-bottom:12px;margin-top:0}
+.related a{display:block;color:var(--acc);font-size:13px;margin-bottom:8px;line-height:1.5}
+.related a:last-child{margin-bottom:0}
+@media(max-width:800px){.lay{grid-template-columns:1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}.ra{font-size:32px}}
+footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
+.fi{max-width:1100px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:20px 40px;align-items:start}
+.fi-logo{font-weight:600;font-size:16px;color:var(--txt);text-decoration:none;white-space:nowrap;padding-top:2px}
+.fi-logo span{color:var(--acc)}
+.fi-mid{display:flex;flex-direction:column;gap:8px}
+.fi-nav-row{display:flex;align-items:center;gap:4px 16px;flex-wrap:wrap;font-size:13px}
+.fi-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);min-width:72px;opacity:.6}
+.fi-nav-row a{color:var(--mut);text-decoration:none;transition:color .15s}
+.fi-nav-row a:hover{color:var(--acc)}
+.fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.6;padding-top:2px}
+@media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
+</style>
+</head>
+<body>
+<nav><div class="nav-in">
+  <a href="/" class="logo">Pay<span>Calc</span>Hub</a>
+  <div class="nav-links"><a href="/salary-calculator/">Salary</a><a href="/mortgage-calculator/">Mortgage</a><a href="/loan-calculator/">Loan</a><a href="/hourly-to-salary/">Hourly</a></div>
+  <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/salary-calculator/">Salary Calculator</a>
+  <a href="/net-pay-calculator/">Net Pay Calculator</a>
+  <a href="/mortgage-calculator/">Mortgage Calculator</a>
+  <a href="/hourly-to-salary/">Hourly to Salary</a>
+  <a href="/about/">About</a>
+</div>
+</nav>
+<main>
+<div class="pg">
+  <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; Tax Withholding Calculator</div>
+  <h1>Free <em>Tax Withholding</em> Calculator</h1>
+  <p class="sub">Estimate your 2026 federal income tax withholding per paycheck based on your W-4: filing status, dependents, other income, and deductions.</p>
+  <div class="lay">
+    <div>
+      <div class="card">
+        <div class="cb">
+          <div class="fg">
+            <div class="fr"><label for="tw-pay">Gross Pay Per Paycheck</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tw-pay" placeholder="2,500" value="2500" oninput="calc()"></div></div>
+            <div class="fr"><label for="tw-frq">Pay Frequency</label><select id="tw-frq" onchange="calc()"><option value="26">Bi-weekly (26/yr)</option><option value="24">Semi-monthly (24/yr)</option><option value="12">Monthly (12/yr)</option><option value="52">Weekly (52/yr)</option></select></div>
+          </div>
+          <div class="fr"><label for="tw-fil">Filing Status (W-4 Step 1c)</label><select id="tw-fil" onchange="calc()"><option value="single">Single or Married Filing Separately</option><option value="married">Married Filing Jointly</option><option value="hoh">Head of Household</option></select></div>
+          <div class="fsec">
+            <div class="fsec-lbl">W-4 Step 3 — Dependents</div>
+            <div class="fg">
+              <div class="fr"><label for="tw-kids">Qualifying Children Under 17</label><input type="number" id="tw-kids" placeholder="0" min="0" value="0" oninput="calc()"></div>
+              <div class="fr"><label for="tw-deps">Other Dependents</label><input type="number" id="tw-deps" placeholder="0" min="0" value="0" oninput="calc()"></div>
+            </div>
+          </div>
+          <div class="fsec" style="margin-bottom:0;padding-bottom:0">
+            <button class="ded-toggle" id="ded-btn" onclick="toggleDed()">
+              <span class="ded-toggle-icon">+</span> W-4 Step 4 — Other Adjustments <span class="opt">Optional</span>
+            </button>
+            <div class="ded-body" id="ded-body">
+              <div class="fg" style="margin-top:10px">
+                <div class="fr"><label for="tw-4a">Other Income (annual, 4a)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tw-4a" placeholder="0" min="0" oninput="calc()"></div></div>
+                <div class="fr"><label for="tw-4b">Extra Deductions (annual, 4b)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tw-4b" placeholder="0" min="0" oninput="calc()"></div></div>
+              </div>
+              <div class="fr"><label for="tw-4c">Extra Withholding Per Paycheck (4c)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tw-4c" placeholder="0" min="0" oninput="calc()"></div></div>
+            </div>
+          </div>
+          <div class="res" id="res">
+            <div class="rh"><div class="rl">Estimated Federal Withholding</div><div class="ra" id="r-amt">$0</div><div class="rp" id="r-per">per paycheck</div><div class="re" id="r-eff"></div></div>
+            <div class="bd" id="bdown"></div>
+          </div>
+          <div class="tip-box">⚠ This estimates <strong>federal income tax withholding only</strong>, using the IRS annualized-wage method as a close approximation of your employer's actual payroll system. Your real withholding may differ slightly based on your employer's specific method, and this does not include Social Security, Medicare, or state tax. Not tax advice — for anything beyond a quick estimate, use the <a href="https://www.irs.gov/individuals/tax-withholding-estimator" style="color:#7a5800;text-decoration:underline" target="_blank" rel="noopener">IRS Tax Withholding Estimator</a>.</div>
+        </div>
+      </div>
+      <div class="art">
+        <h2>How Federal Tax Withholding Works</h2>
+        <p>Every paycheck, your employer withholds an estimate of your federal income tax and sends it to the IRS on your behalf, based on the W-4 form you filed. This calculator annualizes your gross pay, applies the 2026 standard deduction and tax brackets for your filing status, subtracts any dependent credits from Step 3, then divides the result back across your pay periods — the same basic approach the IRS's own annualized wage method uses.</p>
+        <h2>Getting Withholding "Right"</h2>
+        <p>The goal isn't a huge refund or a big tax bill — it's landing close to $0 owed and $0 refunded, which means you kept the most money in each paycheck all year rather than giving the IRS an interest-free loan. If your estimated withholding here looks off from your actual paycheck, the most common causes are a second job, a working spouse, or significant other income (freelance, investments) that isn't reflected in your W-4.</p>
+        <h2>Frequently Asked Questions</h2>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is tax withholding? <span class="fqi-icon">+</span></div><div class="fqa">Tax withholding is the money your employer takes out of each paycheck and sends to the IRS on your behalf, as an advance payment toward your annual federal income tax bill. The amount is based on the W-4 form you filed with your employer.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What happens if too much or too little is withheld? <span class="fqi-icon">+</span></div><div class="fqa">If too much is withheld over the year, you get a tax refund when you file — but you gave the government an interest-free loan. If too little is withheld, you'll owe money at tax time, and may face an underpayment penalty if the shortfall is large enough. Adjusting your W-4 helps you land closer to breaking even.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">How do I change my withholding? <span class="fqi-icon">+</span></div><div class="fqa">Submit a new Form W-4 to your employer at any time. You don't need a specific reason, though it's especially worth updating after marriage, divorce, a new child, a second job, or a significant raise.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">Does this calculator account for state withholding? <span class="fqi-icon">+</span></div><div class="fqa">No, this tool estimates federal withholding only, since state W-4 equivalents and rules vary widely by state. Use the Salary Calculator for a full federal + state + FICA take-home pay estimate.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">Is this the same as a payroll tax calculator? <span class="fqi-icon">+</span></div><div class="fqa">This tool focuses specifically on federal income tax withholding based on your W-4. A payroll tax calculator usually refers to the same core numbers plus FICA (Social Security and Medicare), which together make up the taxes withheld from every paycheck. For the full picture — federal withholding, FICA, and state tax together — use the <a href="/salary-calculator/" class="il">Salary Calculator</a>, which functions as a complete payroll tax calculator for any of the 50 states.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">Can I check this against my actual W-2? <span class="fqi-icon">+</span></div><div class="fqa">Yes — after the tax year ends, your W-2 shows Box 2 (federal income tax withheld) for the full year. Compare that to the "Annual" withholding figure this calculator shows to see whether your withholding tracked what you expected. A large gap either way is a signal to update your W-4 for the next year.</div></div>
+        <div class="related">
+          <h3>Related Calculators &amp; Guides</h3>
+          <a href="/blog/w4-withholding-guide-2026/">W-4 Withholding Guide 2026 — How to Fill It Out</a>
+          <a href="/salary-calculator/">Full Salary Calculator — federal + state + FICA</a>
+          <a href="/net-pay-calculator/">Net Pay Calculator — Weekly, Biweekly &amp; Monthly</a>
+          <a href="/blog/2026-federal-tax-brackets/">2026 Federal Tax Brackets</a>
+          <a href="/blog/tax-refund-calculator-2026/">Tax Refund Calculator 2026</a>
+        </div>
+      </div>
+    </div>
+    <div class="sb">
+      <div class="ic">
+        <h3 style="padding:14px 18px 0">💡 2026 W-4 Credits</h3>
+        <div class="ic-body">
+          <ul><li>Per qualifying child</li></ul>
+          <ul><li>Child Tax Credit<span>$2,200</span></li><li>Other dependent credit<span>$500</span></li></ul>
+        </div>
+      </div>
+      <div class="ic">
+        <h3 style="padding:14px 18px 0">📋 2026 Standard Deduction</h3>
+        <div class="ic-body">
+          <ul><li>Single / MFS<span>$16,100</span></li><li>Married filing jointly<span>$32,200</span></li><li>Head of household<span>$24,150</span></li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+<footer>
+<div class="fi">
+  <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>
+  <div class="fi-mid">
+    <div class="fi-nav-row">
+      <span class="fi-group-lbl">Calculators</span>
+      <a href="/salary-calculator/">Salary</a>
+      <a href="/mortgage-calculator/">Mortgage</a>
+      <a href="/loan-calculator/">Loan</a>
+      <a href="/hourly-to-salary/">Hourly</a>
+    </div>
+    <div class="fi-nav-row">
+      <span class="fi-group-lbl">Tools</span>
+      <a href="/net-pay-calculator/">Net Pay Calculator</a>
+      <a href="/salary-to-hourly/">Salary &rarr; Hourly</a>
+      <a href="/how-much-house-can-i-afford/">Affordability</a>
+      <a href="/mortgage-per-month/">Mortgage Guide</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="fi-nav-row">
+      <span class="fi-group-lbl">Company</span>
+      <a href="/about/">About</a>
+      <a href="/privacy/">Privacy Policy</a><a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </div>
+  <div class="fi-copy">
+    &copy; 2026 PayCalcHub.com<br>
+    Not financial advice.
+  </div>
+</div>
+<div class="fi-disclaimer">
+  PayCalcHub provides financial calculators for informational and educational purposes only. All results are estimates based on published tax rates and standard assumptions. Nothing on this site constitutes financial, tax, legal, or investment advice. Always consult a qualified professional before making financial decisions.
+</div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById('mobileMenu'),b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
+function toggleDed(){var btn=document.getElementById("ded-btn");var body=document.getElementById("ded-body");btn.classList.toggle("open");body.classList.toggle("open");}
+function tFaq(el){var a=el.nextElementSibling;var isOpen=el.classList.contains('open');document.querySelectorAll('.fqq.open').forEach(function(q){q.classList.remove('open');q.nextElementSibling.classList.remove('open');});if(!isOpen){el.classList.add('open');a.classList.add('open');}}
+function gv(id){return parseFloat(document.getElementById(id).value)||0;}
+function gs(id){return document.getElementById(id).value;}
+function fmt(n){return "$"+Math.round(n).toLocaleString("en-US");}
+// 2026 federal brackets — verified against IRS Rev. Proc. 2025-32 (2026-07-05)
+var bS=[[12400,.10],[50400,.12],[105700,.22],[201775,.24],[256225,.32],[640600,.35],[1e9,.37]];
+var bM=[[24800,.10],[100800,.12],[211400,.22],[403550,.24],[512450,.32],[768700,.35],[1e9,.37]];
+var bH=[[17700,.10],[67450,.12],[105700,.22],[201750,.24],[256200,.32],[640600,.35],[1e9,.37]];
+function calcFed(taxable,br){var fed=0,prev=0,marg=10;for(var i=0;i<br.length;i++){var lim=br[i][0],rate=br[i][1];if(taxable<=prev)break;fed+=(Math.min(taxable,lim)-prev)*rate;if(taxable>prev)marg=rate*100;prev=lim;}return{fed:fed,marg:marg};}
+function calc(){
+  var pay=gv("tw-pay");
+  if(!pay){document.getElementById("r-amt").textContent="$0";document.getElementById("bdown").innerHTML="";return;}
+  var frq=parseInt(gs("tw-frq"));
+  var fil=gs("tw-fil");
+  var kids=gv("tw-kids"),deps=gv("tw-deps");
+  var otherInc=gv("tw-4a"),extraDed=gv("tw-4b"),extraWH=gv("tw-4c");
+  var std=fil==="married"?32200:fil==="hoh"?24150:16100;
+  var br=fil==="married"?bM:fil==="hoh"?bH:bS;
+  var annualWages=pay*frq;
+  var totalIncome=annualWages+otherInc;
+  var taxable=Math.max(0,totalIncome-std-extraDed);
+  var r=calcFed(taxable,br);
+  var tentativeTax=r.fed,marg=r.marg;
+  var credit=kids*2200+deps*500;
+  var annualWH=Math.max(0,tentativeTax-credit);
+  var perPeriodWH=annualWH/frq+extraWH;
+  var LABS={26:"per paycheck (bi-weekly)",24:"per paycheck (semi-monthly)",12:"per month",52:"per paycheck (weekly)"};
+  document.getElementById("r-amt").textContent=fmt(perPeriodWH);
+  document.getElementById("r-per").textContent=LABS[frq];
+  var effRate=((annualWH/annualWages)*100).toFixed(1);
+  document.getElementById("r-eff").textContent="Annual: "+fmt(annualWH+extraWH*frq)+" · Effective rate: "+effRate+"% · Marginal: "+marg+"%";
+  var h='<div class="br"><span class="bl">Annualized Gross Wages</span><span class="bv">'+fmt(annualWages)+'</span></div>';
+  if(otherInc>0)h+='<div class="br"><span class="bl">+ Other Income (4a)</span><span class="bv">+'+fmt(otherInc)+'</span></div>';
+  h+='<div class="br ded"><span class="bl">Standard Deduction</span><span class="bv">-'+fmt(std)+'</span></div>';
+  if(extraDed>0)h+='<div class="br ded"><span class="bl">Extra Deductions (4b)</span><span class="bv">-'+fmt(extraDed)+'</span></div>';
+  h+='<div class="br"><span class="bl">Taxable Income</span><span class="bv">'+fmt(taxable)+'</span></div>';
+  h+='<div class="br ded"><span class="bl">Tentative Annual Tax</span><span class="bv">-'+fmt(tentativeTax)+'</span></div>';
+  if(credit>0)h+='<div class="br cred"><span class="bl">Dependent Credits (Step 3)</span><span class="bv">+'+fmt(credit)+'</span></div>';
+  h+='<div class="br"><span class="bl">Annual Withholding</span><span class="bv">'+fmt(annualWH)+'</span></div>';
+  if(extraWH>0)h+='<div class="br"><span class="bl">+ Extra Withholding (4c, per check)</span><span class="bv">+'+fmt(extraWH)+'</span></div>';
+  h+='<div class="br net"><span class="bl">Withholding This Paycheck</span><span class="bv">'+fmt(perPeriodWH)+'</span></div>';
+  document.getElementById("bdown").innerHTML=h;
+}
+window.addEventListener("load",calc);
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

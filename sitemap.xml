@@ -47,6 +47,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://paycalchub.com/tax-withholding-calculator/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://paycalchub.com/net-pay-calculator/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://paycalchub.com/hourly-to-salary/</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -94,7 +106,7 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -610,13 +622,13 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/connecticut/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/delaware/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -628,7 +640,7 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/georgia/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -640,7 +652,7 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/idaho/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -652,7 +664,7 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/indiana/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -670,7 +682,7 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/kentucky/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -700,7 +712,7 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/michigan/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -712,7 +724,7 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/mississippi/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -724,13 +736,13 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/montana/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/nebraska/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -748,7 +760,7 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/new-jersey/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -766,7 +778,7 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/north-carolina/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -778,13 +790,13 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/ohio/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/oklahoma/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -808,7 +820,7 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/south-carolina/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -838,7 +850,7 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/utah/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -862,7 +874,7 @@
   </url>
   <url>
     <loc>https://paycalchub.com/salary-calculator/west-virginia/</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png">
+  <link rel="apple-touch-icon" href="/favicon_512x512.png">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-7723301737736770">
+<title>Net Pay Calculator — Weekly, Biweekly & Monthly Take-Home Pay 2026 | PayCalcHub</title>
+<meta name="description" content="Free net pay calculator. See your exact take-home pay per week, biweekly, semi-monthly, and monthly paycheck — after federal tax, state tax, and FICA. Updated 2026 rates.">
+<link rel="canonical" href="https://paycalchub.com/net-pay-calculator/">
+<meta property="og:title" content="Net Pay Calculator — Every Paycheck, Every Pay Period">
+<meta property="og:description" content="See your net pay per week, biweekly, semi-monthly, or month — instantly, with 2026 federal, state, and FICA taxes applied.">
+<meta property="og:url" content="https://paycalchub.com/net-pay-calculator/"><meta property="og:type" content="website">
+<meta property="og:image" content="https://paycalchub.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://paycalchub.com/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Net Pay Calculator","url":"https://paycalchub.com/net-pay-calculator/","description":"Free net pay calculator showing take-home pay per week, biweekly, semi-monthly, and month for all 50 US states. Updated 2026 tax rates.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"PayCalcHub","url":"https://paycalchub.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is net pay?","acceptedAnswer":{"@type":"Answer","text":"Net pay is the amount left in your paycheck after federal income tax, state income tax, and FICA (Social Security and Medicare) are withheld from your gross pay. It's also called take-home pay — the amount that actually hits your bank account."}},{"@type":"Question","name":"Why is my biweekly net pay not exactly half of semi-monthly?","acceptedAnswer":{"@type":"Answer","text":"Biweekly pay (every 2 weeks) results in 26 paychecks per year, while semi-monthly pay (twice a month) results in 24 paychecks per year. Since your annual salary is the same either way, each biweekly paycheck is slightly smaller than half a semi-monthly paycheck — but you receive 2 more of them per year."}},{"@type":"Question","name":"How many paychecks will I get in a year?","acceptedAnswer":{"@type":"Answer","text":"Weekly pay: 52 paychecks/year. Biweekly pay (every 2 weeks): 26 paychecks/year. Semi-monthly pay (twice a month, e.g. 15th and last day): 24 paychecks/year. Monthly pay: 12 paychecks/year."}},{"@type":"Question","name":"Is net pay the same as take-home pay?","acceptedAnswer":{"@type":"Answer","text":"Yes, net pay and take-home pay refer to the same thing: your earnings after all mandatory tax withholdings (federal, state, Social Security, Medicare) are subtracted from your gross pay."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
+<link rel="stylesheet" href="/assets/css/base.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "PayCalcHub", "item": "https://paycalchub.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Net Pay Calculator", "item": "https://paycalchub.com/net-pay-calculator/"}
+  ]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--red:#dc2626;--ora:#d97706;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
+body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}
+.nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}
+.nav-links a:hover{color:var(--txt)}.nav-links a.active{color:var(--acc);font-weight:500}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
+.mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
+.mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
+.mobile-menu a:last-child{border-bottom:none}.mobile-menu.open{display:block}
+@media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
+.pg{max-width:1100px;margin:0 auto;padding:32px 24px 64px}
+.bc{font-size:13px;color:var(--mut);margin-bottom:12px}.bc a{color:var(--acc)}
+h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px}
+h1 em{font-style:normal;color:var(--acc)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:28px}
+.lay{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start}
+.card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);overflow:hidden}
+.cb{padding:24px}
+.fr{margin-bottom:14px}
+.fr label{display:block;font-size:13px;font-weight:500;color:var(--mut);margin-bottom:5px}
+.iw{position:relative}
+.ip{position:absolute;left:11px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--mut);pointer-events:none;z-index:1}
+.is{position:absolute;right:11px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--mut);pointer-events:none}
+.fr input,.fr select{width:100%;padding:10px 14px;border:1px solid var(--bor);border-radius:8px;font-size:15px;font-family:var(--f);background:var(--bg);color:var(--txt);outline:none;transition:border-color .15s,background .15s;-moz-appearance:textfield}
+.fr input::-webkit-outer-spin-button,.fr input::-webkit-inner-spin-button{-webkit-appearance:none}
+.fr input:focus,.fr select:focus{border-color:var(--acc);background:#fff}
+.hp input{padding-left:28px}.hs input{padding-right:38px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fsec{margin:18px 0 14px;padding-top:18px;border-top:1px solid var(--bor)}
+.ded-toggle{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--acc);cursor:pointer;padding:10px 0;border:none;background:none;font-family:var(--f);width:100%}
+.ded-toggle-icon{font-size:16px;transition:transform .2s;line-height:1}
+.ded-toggle.open .ded-toggle-icon{transform:rotate(45deg)}
+.ded-body{display:none}.ded-body.open{display:block}
+.opt{font-size:10px;font-weight:500;background:var(--bg);border:1px solid var(--bor);color:var(--mut);padding:1px 6px;border-radius:4px}
+.res{margin-top:20px;border-top:1px solid var(--bor);padding-top:20px;display:none}
+.res.show{display:block}
+.rh{background:var(--alight);border-radius:10px;padding:20px;text-align:center;margin-bottom:18px}
+.rl{font-size:11px;font-weight:600;color:var(--acc);letter-spacing:.06em;text-transform:uppercase}
+.ra{font-family:var(--mo);font-size:38px;font-weight:500;color:var(--acc);letter-spacing:-.02em;line-height:1.1;margin:4px 0 2px}
+.rp{font-size:13px;color:var(--mut)}.re{font-size:12px;color:var(--acc);margin-top:6px;font-weight:500}
+.period-table{width:100%;border-collapse:collapse;margin-bottom:18px}
+.period-table th{text-align:left;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);padding:8px 10px;border-bottom:1px solid var(--bor)}
+.period-table th:last-child,.period-table td:last-child{text-align:right}
+.period-table td{padding:11px 10px;font-size:14px;border-bottom:1px solid var(--bor)}
+.period-table tr:last-child td{border-bottom:none}
+.period-table td.pname{color:var(--mut)}
+.period-table td.pcount{color:var(--mut);font-size:12px}
+.period-table td.pnet{font-family:var(--mo);font-weight:600;color:var(--acc);font-size:15px}
+.period-table tr.highlight{background:var(--alight)}
+.period-table tr.highlight td.pname{color:var(--acc);font-weight:600}
+.bd{display:flex;flex-direction:column;gap:5px}
+.br{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:9px 13px;border-radius:8px;background:var(--bg)}
+.bl{color:var(--mut)}.bv{font-family:var(--mo);font-weight:500}
+.br.ded .bv{color:var(--red)}.br.pt .bv{color:var(--ora)}
+.br.net{background:var(--alight)}.br.net .bl{font-weight:600;color:var(--acc)}.br.net .bv{color:var(--acc);font-size:15px}
+.sb{display:flex;flex-direction:column;gap:18px}
+.ic{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad)}
+.ic ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.ic li{font-size:13px;color:var(--mut);display:flex;justify-content:space-between}
+.ic li span{font-family:var(--mo);font-size:12px;font-weight:500;color:var(--txt)}
+@media(min-width:801px){.ic-body{padding:0 18px 18px}.ic h3{margin:14px 18px 10px;font-size:13px;font-weight:600}}
+.art{margin-top:48px}.art h2{font-size:20px;font-weight:600;margin-bottom:12px}
+.art p{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:16px}
+.art ul{padding-left:20px;margin-bottom:16px}.art li{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:6px}
+.fqs{margin-top:40px}.fqs h2{font-size:20px;font-weight:600;margin-bottom:16px}
+.fqi{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);margin-bottom:8px;overflow:hidden}
+.fqq{padding:15px 18px;font-size:14px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.fqi-icon{font-size:20px;color:var(--mut);flex-shrink:0;transition:transform .2s}
+.fqq.open .fqi-icon{transform:rotate(45deg)}
+.fqa{font-size:14px;color:var(--mut);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .25s ease,padding .2s;padding:0 18px}
+.fqa.open{max-height:400px;padding:0 18px 16px}
+.related{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px 22px;margin-top:24px}
+.related h3{font-size:14px;font-weight:600;margin-bottom:12px;margin-top:0}
+.related a{display:block;color:var(--acc);font-size:13px;margin-bottom:8px;line-height:1.5}
+.related a:last-child{margin-bottom:0}
+@media(max-width:800px){.lay{grid-template-columns:1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}.ra{font-size:32px}.period-table{font-size:13px}}
+footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
+.fi{max-width:1100px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:20px 40px;align-items:start}
+.fi-logo{font-weight:600;font-size:16px;color:var(--txt);text-decoration:none;white-space:nowrap;padding-top:2px}
+.fi-logo span{color:var(--acc)}
+.fi-mid{display:flex;flex-direction:column;gap:8px}
+.fi-nav-row{display:flex;align-items:center;gap:4px 16px;flex-wrap:wrap;font-size:13px}
+.fi-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);min-width:72px;opacity:.6}
+.fi-nav-row a{color:var(--mut);text-decoration:none;transition:color .15s}
+.fi-nav-row a:hover{color:var(--acc)}
+.fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.6;padding-top:2px}
+@media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
+</style>
+</head>
+<body>
+<nav><div class="nav-in">
+  <a href="/" class="logo">Pay<span>Calc</span>Hub</a>
+  <div class="nav-links"><a href="/salary-calculator/">Salary</a><a href="/mortgage-calculator/">Mortgage</a><a href="/loan-calculator/">Loan</a><a href="/hourly-to-salary/">Hourly</a></div>
+  <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/salary-calculator/">Salary Calculator</a>
+  <a href="/mortgage-calculator/">Mortgage Calculator</a>
+  <a href="/loan-calculator/">Loan Calculator</a>
+  <a href="/hourly-to-salary/">Hourly to Salary</a>
+  <a href="/about/">About</a>
+</div>
+</nav>
+<main>
+<div class="pg">
+  <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; Net Pay Calculator</div>
+  <h1>Free <em>Net Pay</em> Calculator</h1>
+  <p class="sub">See your exact net pay — weekly, biweekly, semi-monthly, and monthly — after federal tax, state tax, and FICA. All 50 US states. Updated for 2026.</p>
+  <div class="lay">
+    <div>
+      <div class="card">
+        <div class="cb">
+          <div class="fr"><label for="np-sal">Annual Gross Salary</label><div class="iw hp"><span class="ip">$</span><input type="number" id="np-sal" placeholder="60,000" value="60000" oninput="calc()"></div></div>
+          <div class="fg">
+            <div class="fr"><label for="np-fil">Filing Status</label><select id="np-fil" onchange="calc()"><option value="single">Single</option><option value="married">Married Filing Jointly</option><option value="hoh">Head of Household</option></select></div>
+            <div class="fr"><label for="np-st">State</label><select id="np-st" onchange="calc()"><option value="0">Alaska - No tax</option><option value="5.0">Alabama - 5.0%</option><option value="2.5">Arizona - 2.5%</option><option value="3.9">Arkansas - 3.9%</option><option value="9.3">California - 9.3%</option><option value="4.4">Colorado - 4.4%</option><option value="5.5">Connecticut - 5.5%</option><option value="5.55">Delaware - 5.55%</option><option value="0">Florida - No tax</option><option value="5.19">Georgia - 5.19%</option><option value="8.25">Hawaii - 8.25%</option><option value="5.3">Idaho - 5.3%</option><option value="4.95">Illinois - 4.95%</option><option value="2.95">Indiana - 2.95%</option><option value="3.8">Iowa - 3.8%</option><option value="5.2">Kansas - 5.2%</option><option value="3.5">Kentucky - 3.5%</option><option value="3.0">Louisiana - 3.0%</option><option value="7.15">Maine - 7.15%</option><option value="4.75">Maryland - 4.75%</option><option value="5.0">Massachusetts - 5.0%</option><option value="4.25">Michigan - 4.25%</option><option value="6.8">Minnesota - 6.8%</option><option value="4.0">Mississippi - 4.0%</option><option value="4.7">Missouri - 4.7%</option><option value="5.65">Montana - 5.65%</option><option value="4.55">Nebraska - 4.55%</option><option value="0">Nevada - No tax</option><option value="0">New Hampshire - No tax</option><option value="5.53">New Jersey - 5.53%</option><option value="4.9">New Mexico - 4.9%</option><option value="6.85">New York - 6.85%</option><option value="3.99">North Carolina - 3.99%</option><option value="2.5">North Dakota - 2.5%</option><option value="2.75">Ohio - 2.75%</option><option value="4.5">Oklahoma - 4.5%</option><option value="8.75">Oregon - 8.75%</option><option value="3.07">Pennsylvania - 3.07%</option><option value="5.99">Rhode Island - 5.99%</option><option value="6.0">South Carolina - 6.0%</option><option value="0">South Dakota - No tax</option><option value="0">Tennessee - No tax</option><option value="0">Texas - No tax</option><option value="4.5">Utah - 4.5%</option><option value="6.6">Vermont - 6.6%</option><option value="5.75">Virginia - 5.75%</option><option value="0">Washington - No tax</option><option value="4.82">West Virginia - 4.82%</option><option value="4.4">Wisconsin - 4.4%</option><option value="0">Wyoming - No tax</option></select></div>
+          </div>
+          <div class="fsec" style="margin-bottom:0;padding-bottom:0">
+            <button class="ded-toggle" id="ded-btn" onclick="toggleDed()">
+              <span class="ded-toggle-icon">+</span> Pre-Tax Deductions <span class="opt">Optional</span>
+            </button>
+            <div class="ded-body" id="ded-body">
+              <div class="fg" style="margin-top:10px">
+                <div class="fr"><label for="np-401k">401(k) Contribution</label><div class="iw hs"><input type="number" id="np-401k" placeholder="0" min="0" max="24500" oninput="calc()"><span class="is">$/yr</span></div></div>
+                <div class="fr"><label for="np-hlt">Health Insurance</label><div class="iw hs"><input type="number" id="np-hlt" placeholder="0" min="0" oninput="calc()"><span class="is">$/yr</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="res show" id="res">
+            <div class="rh"><div class="rl">Net Pay Per Year</div><div class="ra" id="r-amt">$0</div><div class="rp">take-home after all taxes</div><div class="re" id="r-eff"></div></div>
+            <table class="period-table">
+              <tr><th>Pay Period</th><th>Paychecks/yr</th><th>Net Pay</th></tr>
+              <tr><td class="pname">Weekly</td><td class="pcount">52</td><td class="pnet" id="p-weekly">$0</td></tr>
+              <tr class="highlight"><td class="pname">Bi-weekly</td><td class="pcount">26</td><td class="pnet" id="p-biweekly">$0</td></tr>
+              <tr><td class="pname">Semi-monthly</td><td class="pcount">24</td><td class="pnet" id="p-semimonthly">$0</td></tr>
+              <tr><td class="pname">Monthly</td><td class="pcount">12</td><td class="pnet" id="p-monthly">$0</td></tr>
+            </table>
+            <div class="bd" id="bdown"></div>
+          </div>
+        </div>
+      </div>
+      <div class="art">
+        <h2>Net Pay vs. Gross Pay: What's the Difference?</h2>
+        <p><strong>Gross pay</strong> is your salary before anything is taken out. <strong>Net pay</strong> — also called take-home pay — is what's left after federal income tax, state income tax (if your state has one), Social Security (6.2%), and Medicare (1.45%) are withheld. Net pay is the amount that actually lands in your bank account.</p>
+        <h2>Weekly, Biweekly, Semi-Monthly, or Monthly — Why the Numbers Differ</h2>
+        <p>Your annual net pay is fixed, but how it's split into paychecks depends on your employer's pay schedule:</p>
+        <ul>
+          <li><strong>Weekly</strong> — 52 paychecks/year. Common in hourly and trade jobs.</li>
+          <li><strong>Bi-weekly</strong> — 26 paychecks/year (every other week). The most common pay schedule in the US.</li>
+          <li><strong>Semi-monthly</strong> — 24 paychecks/year, typically on fixed dates like the 15th and last day of the month.</li>
+          <li><strong>Monthly</strong> — 12 paychecks/year. Less common in the US; more typical for salaried roles at smaller employers.</li>
+        </ul>
+        <p>Biweekly and semi-monthly are the two that trip people up: biweekly gives you 2 extra paychecks per year compared to semi-monthly, which is why two months a year have a "3-paycheck" bi-weekly month, but each individual biweekly check is smaller than a semi-monthly one.</p>
+        <h2>How This Calculator Works</h2>
+        <p>Enter your annual gross salary, filing status, and state. The calculator applies the 2026 federal tax brackets, your state's income tax rate (if any), and FICA (Social Security + Medicare), then divides your net annual pay across each common pay schedule so you can see exactly what to expect in any given paycheck.</p>
+        <h2>Frequently Asked Questions</h2>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">What is net pay? <span class="fqi-icon">+</span></div><div class="fqa">Net pay is the amount left in your paycheck after federal income tax, state income tax, and FICA (Social Security and Medicare) are withheld from your gross pay. It's also called take-home pay — the amount that actually hits your bank account.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">Why is my biweekly net pay not exactly half of semi-monthly? <span class="fqi-icon">+</span></div><div class="fqa">Biweekly pay (every 2 weeks) results in 26 paychecks per year, while semi-monthly pay (twice a month) results in 24 paychecks per year. Since your annual salary is the same either way, each biweekly paycheck is slightly smaller than half a semi-monthly paycheck — but you receive 2 more of them per year.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">How many paychecks will I get in a year? <span class="fqi-icon">+</span></div><div class="fqa">Weekly pay: 52 paychecks/year. Biweekly pay (every 2 weeks): 26 paychecks/year. Semi-monthly pay (twice a month, e.g. 15th and last day): 24 paychecks/year. Monthly pay: 12 paychecks/year.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">Is net pay the same as take-home pay? <span class="fqi-icon">+</span></div><div class="fqa">Yes, net pay and take-home pay refer to the same thing: your earnings after all mandatory tax withholdings (federal, state, Social Security, Medicare) are subtracted from your gross pay.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">Does this include 401(k) or health insurance deductions? <span class="fqi-icon">+</span></div><div class="fqa">Yes — use the optional Pre-Tax Deductions section to add your 401(k) and health insurance contributions. These reduce your taxable income before federal and state tax are calculated, which increases your net pay slightly compared to not contributing at all (since less income is taxed), even though the contribution itself reduces your take-home cash.</div></div>
+        <div class="related">
+          <h3>Related Calculators &amp; Guides</h3>
+          <a href="/salary-calculator/">Full Salary Calculator — with overtime, bonus &amp; more deductions</a>
+          <a href="/hourly-to-salary/">Hourly to Salary Calculator</a>
+          <a href="/blog/gross-pay-vs-net-pay-explained/">Gross Pay vs. Net Pay Explained</a>
+          <a href="/blog/biweekly-vs-semimonthly-pay/">Biweekly vs. Semi-Monthly Pay</a>
+          <a href="/blog/2026-federal-tax-brackets/">2026 Federal Tax Brackets</a>
+        </div>
+      </div>
+    </div>
+    <div class="sb">
+      <div class="ic">
+        <h3 style="padding:14px 18px 0">💡 2026 Payroll Basics</h3>
+        <div class="ic-body">
+          <ul><li>Social Security<span>6.2%</span></li><li>Medicare<span>1.45%</span></li><li>SS wage base<span>$184,500</span></li><li>Std. deduction (single)<span>$16,100</span></li><li>Std. deduction (married)<span>$32,200</span></li></ul>
+        </div>
+      </div>
+      <div class="ic">
+        <h3 style="padding:14px 18px 0">📅 Pay Periods Per Year</h3>
+        <div class="ic-body">
+          <ul><li>Weekly<span>52</span></li><li>Bi-weekly<span>26</span></li><li>Semi-monthly<span>24</span></li><li>Monthly<span>12</span></li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+<footer>
+<div class="fi">
+  <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>
+  <div class="fi-mid">
+    <div class="fi-nav-row">
+      <span class="fi-group-lbl">Calculators</span>
+      <a href="/salary-calculator/">Salary</a>
+      <a href="/mortgage-calculator/">Mortgage</a>
+      <a href="/loan-calculator/">Loan</a>
+      <a href="/hourly-to-salary/">Hourly</a>
+    </div>
+    <div class="fi-nav-row">
+      <span class="fi-group-lbl">Tools</span>
+      <a href="/net-pay-calculator/">Net Pay</a>
+      <a href="/salary-to-hourly/">Salary &rarr; Hourly</a>
+      <a href="/how-much-house-can-i-afford/">Affordability</a>
+      <a href="/blog/">Blog</a>
+    </div>
+    <div class="fi-nav-row">
+      <span class="fi-group-lbl">Company</span>
+      <a href="/about/">About</a>
+      <a href="/privacy/">Privacy Policy</a><a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </div>
+  <div class="fi-copy">
+    &copy; 2026 PayCalcHub.com<br>
+    Not financial advice.
+  </div>
+</div>
+<div class="fi-disclaimer">
+  PayCalcHub provides financial calculators for informational and educational purposes only. All results are estimates based on published tax rates and standard assumptions. Nothing on this site constitutes financial, tax, legal, or investment advice. Always consult a qualified professional before making financial decisions.
+</div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById('mobileMenu'),b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
+function toggleDed(){var btn=document.getElementById("ded-btn");var body=document.getElementById("ded-body");btn.classList.toggle("open");body.classList.toggle("open");}
+function tFaq(el){var a=el.nextElementSibling;var isOpen=el.classList.contains('open');document.querySelectorAll('.fqq.open').forEach(function(q){q.classList.remove('open');q.nextElementSibling.classList.remove('open');});if(!isOpen){el.classList.add('open');a.classList.add('open');}}
+function gv(id){return parseFloat(document.getElementById(id).value)||0;}
+function gs(id){return document.getElementById(id).value;}
+function fmt(n){return "$"+Math.round(n).toLocaleString("en-US");}
+// 2026 federal brackets — verified against IRS Rev. Proc. 2025-32 (2026-07-05)
+var bS=[[12400,.10],[50400,.12],[105700,.22],[201775,.24],[256225,.32],[640600,.35],[1e9,.37]];
+var bM=[[24800,.10],[100800,.12],[211400,.22],[403550,.24],[512450,.32],[768700,.35],[1e9,.37]];
+var bH=[[17700,.10],[67450,.12],[105700,.22],[201750,.24],[256200,.32],[640600,.35],[1e9,.37]];
+function calcFed(taxable,br){var fed=0,prev=0,marg=10;for(var i=0;i<br.length;i++){var lim=br[i][0],rate=br[i][1];if(taxable<=prev)break;fed+=(Math.min(taxable,lim)-prev)*rate;if(taxable>prev)marg=rate*100;prev=lim;}return{fed:fed,marg:marg};}
+function calc(){
+  var g=gv("np-sal");
+  if(!g){document.getElementById("res").classList.remove("show");return;}
+  var fil=gs("np-fil"),stRate=parseFloat(gs("np-st"))||0;
+  var k=Math.min(gv("np-401k"),24500),hl=gv("np-hlt");
+  var totalPT=k+hl;
+  var std=fil==="married"?32200:fil==="hoh"?24150:16100;
+  var br=fil==="married"?bM:fil==="hoh"?bH:bS;
+  var ti=Math.max(0,g-totalPT),taxable=Math.max(0,ti-std);
+  var r=calcFed(taxable,br);
+  var fed=r.fed,marg=r.marg;
+  var pb=Math.max(0,g-hl);
+  var ss=Math.min(pb,184500)*0.062;
+  var med=pb*0.0145+(pb>200000?(pb-200000)*0.009:0);
+  var st=ti*(stRate/100);
+  var net=g-totalPT-fed-ss-med-st;
+  var totalTax=fed+ss+med+st;
+  var eff=((totalTax/g)*100).toFixed(1);
+  document.getElementById("r-amt").textContent=fmt(net);
+  document.getElementById("r-eff").textContent="Effective rate: "+eff+"% · Marginal: "+marg+"%";
+  document.getElementById("p-weekly").textContent=fmt(net/52);
+  document.getElementById("p-biweekly").textContent=fmt(net/26);
+  document.getElementById("p-semimonthly").textContent=fmt(net/24);
+  document.getElementById("p-monthly").textContent=fmt(net/12);
+  var h='<div class="br"><span class="bl">Gross Salary (annual)</span><span class="bv">'+fmt(g)+'</span></div>';
+  if(k>0)h+='<div class="br pt"><span class="bl">401(k) Contribution (pre-tax)</span><span class="bv">-'+fmt(k)+'</span></div>';
+  if(hl>0)h+='<div class="br pt"><span class="bl">Health Insurance (pre-tax)</span><span class="bv">-'+fmt(hl)+'</span></div>';
+  h+='<div class="br ded"><span class="bl">Federal Income Tax</span><span class="bv">-'+fmt(fed)+'</span></div>';
+  h+='<div class="br ded"><span class="bl">Social Security (6.2%)</span><span class="bv">-'+fmt(ss)+'</span></div>';
+  h+='<div class="br ded"><span class="bl">Medicare (1.45%)</span><span class="bv">-'+fmt(med)+'</span></div>';
+  if(st>0)h+='<div class="br ded"><span class="bl">State Income Tax</span><span class="bv">-'+fmt(st)+'</span></div>';
+  h+='<div class="br net"><span class="bl">Net Pay (annual)</span><span class="bv">'+fmt(net)+'</span></div>';
+  document.getElementById("bdown").innerHTML=h;
+  document.getElementById("res").classList.add("show");
+}
+window.addEventListener("load",function(){
+  var params=new URLSearchParams(window.location.search);
+  var sal=params.get("sal");
+  if(sal)document.getElementById("np-sal").value=sal;
+  calc();
+});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>
