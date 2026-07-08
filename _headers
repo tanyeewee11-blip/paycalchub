@@ -51,3 +51,12 @@
 /*
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   X-DNS-Prefetch-Control: on
+
+# ── Embeddable widgets — allow being framed by any external site ──────────
+# Overrides the site-wide X-Frame-Options: DENY above for this path only.
+# Modern browsers prefer CSP frame-ancestors over X-Frame-Options when both
+# are present, so this safely opens embedding without weakening the rest
+# of the site's clickjacking protection.
+/embed/*
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: frame-ancestors *;

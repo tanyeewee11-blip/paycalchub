@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hourly to Salary Calculator Widget</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+  }
+  .pch-widget {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 360px;
+    border: 1px solid #e2e4e8;
+    border-radius: 10px;
+    padding: 20px;
+    background: #ffffff;
+    color: #1a1a1a;
+  }
+  .pch-widget h3 {
+    margin: 0 0 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #14213d;
+  }
+  .pch-input-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .pch-input-row span {
+    font-size: 15px;
+    color: #444;
+  }
+  .pch-widget input[type="number"] {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #cbd2d9;
+    border-radius: 6px;
+    outline: none;
+    width: 100%;
+  }
+  .pch-widget input[type="number"]:focus {
+    border-color: #2a6cd6;
+  }
+  .pch-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .pch-result-card {
+    background: #f5f7fa;
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .pch-result-card .label {
+    font-size: 11px;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 2px;
+  }
+  .pch-result-card .value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #14213d;
+  }
+  .pch-note {
+    font-size: 11px;
+    color: #9aa1ab;
+    margin: 0 0 12px;
+    line-height: 1.4;
+  }
+  .pch-footer {
+    border-top: 1px solid #eef0f3;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #6b7280;
+    text-align: center;
+  }
+  .pch-footer a {
+    color: #2a6cd6;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .pch-footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<div class="pch-widget">
+  <h3>Hourly to Salary Calculator</h3>
+  <div class="pch-input-row">
+    <span>$</span>
+    <input type="number" id="pch-hourly" value="20" min="0" step="0.5" aria-label="Hourly wage">
+    <span>/ hour</span>
+  </div>
+
+  <div class="pch-results">
+    <div class="pch-result-card">
+      <div class="label">Yearly</div>
+      <div class="value" id="pch-yearly" aria-live="polite">$41,600</div>
+    </div>
+    <div class="pch-result-card">
+      <div class="label">Monthly</div>
+      <div class="value" id="pch-monthly" aria-live="polite">$3,467</div>
+    </div>
+    <div class="pch-result-card">
+      <div class="label">Biweekly</div>
+      <div class="value" id="pch-biweekly" aria-live="polite">$1,600</div>
+    </div>
+    <div class="pch-result-card">
+      <div class="label">Weekly</div>
+      <div class="value" id="pch-weekly" aria-live="polite">$800</div>
+    </div>
+  </div>
+
+  <p class="pch-note">Based on 40 hours/week, 52 weeks/year, before taxes. For after-tax take-home pay by state, use the full calculator.</p>
+
+  <div class="pch-footer">
+    Calculator by <a id="pch-outbound-link" href="https://paycalchub.com/hourly-to-salary/?utm_source=widget&amp;utm_medium=embed" target="_blank" rel="noopener">PayCalcHub</a>
+  </div>
+</div>
+
+<script>
+(function () {
+  var input = document.getElementById('pch-hourly');
+  var yearlyEl = document.getElementById('pch-yearly');
+  var monthlyEl = document.getElementById('pch-monthly');
+  var biweeklyEl = document.getElementById('pch-biweekly');
+  var weeklyEl = document.getElementById('pch-weekly');
+
+  function formatUSD(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function recalc() {
+    var hourly = parseFloat(input.value);
+    if (isNaN(hourly) || hourly < 0) hourly = 0;
+
+    var weekly = hourly * 40;
+    var yearly = weekly * 52;
+    var monthly = yearly / 12;
+    var biweekly = weekly * 2;
+
+    yearlyEl.textContent = formatUSD(yearly);
+    monthlyEl.textContent = formatUSD(monthly);
+    biweeklyEl.textContent = formatUSD(biweekly);
+    weeklyEl.textContent = formatUSD(weekly);
+  }
+
+  input.addEventListener('input', recalc);
+  recalc();
+
+  // Pass through a ?site= param on this widget's own URL (set per-partner
+  // in the iframe src you give each site) so GA4 can attribute clicks
+  // back to which partner site embedded the widget.
+  var params = new URLSearchParams(window.location.search);
+  var site = params.get('site');
+  if (site) {
+    var link = document.getElementById('pch-outbound-link');
+    var url = new URL(link.href);
+    url.searchParams.set('utm_content', site);
+    link.href = url.toString();
+  }
+})();
+</script>
+
+</body>
+</html>
