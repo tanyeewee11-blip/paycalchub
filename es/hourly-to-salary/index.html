@@ -41,10 +41,29 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;letter-spacing:-.02em;line
 .fqq{padding:15px 18px;font-size:14px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .fqi-icon{font-size:20px;color:var(--mut);flex-shrink:0;transition:transform .2s}.fqq.open .fqi-icon{transform:rotate(45deg)}
 .fqa{font-size:14px;color:var(--mut);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .25s ease,padding .2s;padding:0 18px}.fqa.open{max-height:400px;padding:0 18px 16px}
+.fsec{margin:18px 0 14px;padding-top:18px;border-top:1px solid var(--bor)}
+.ded-toggle{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--acc);cursor:pointer;padding:10px 0;border:none;background:none;font-family:var(--f);width:100%}
+.ded-toggle-icon{font-size:16px;transition:transform .2s;line-height:1}
+.ded-toggle.open .ded-toggle-icon{transform:rotate(45deg)}
+.ded-body{display:none}
+.ded-body.open{display:block}
+.opt{font-size:10px;font-weight:500;background:var(--bg);border:1px solid var(--bor);color:var(--mut);padding:1px 6px;border-radius:4px}
 footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .fi{max-width:1100px;margin:0 auto;padding:24px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;font-size:13px;color:var(--mut)}.fl{display:flex;gap:20px}
 @media(max-width:800px){.lay{grid-template-columns:1fr}.sb{display:grid;grid-template-columns:1fr 1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}}
 @media(max-width:480px){.sb{grid-template-columns:1fr}}
+.sal-slider-wrap{margin-top:8px;padding:2px 0 6px}
+.sal-slider{width:100%;-webkit-appearance:none;appearance:none;height:4px;border-radius:2px;background:var(--bor);outline:none;cursor:pointer}
+.sal-slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.sal-slider::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.sal-range-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--mut);margin-top:4px}
+.calc-btn{width:100%;padding:12px;background:var(--acc);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;font-family:var(--f);cursor:pointer;margin-top:16px;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .15s}
+.calc-btn:hover{opacity:.88}.calc-btn:active{opacity:.75}
+.action-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.cpb{width:100%;padding:10px;background:var(--bg);border:1px solid var(--bor);border-radius:8px;font-size:13px;font-weight:500;color:var(--mut);cursor:pointer;font-family:var(--f);display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+.cpb:hover,.cpb.copied{border-color:var(--acc);color:var(--acc);background:var(--alight)}
+.shb{width:100%;padding:10px;background:var(--bg);border:1px solid var(--bor);border-radius:8px;font-size:13px;font-weight:500;color:var(--mut);cursor:pointer;font-family:var(--f);display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+.shb:hover,.shb.shared{border-color:var(--acc);color:var(--acc);background:var(--alight)}
 .res-table{width:100%;border-collapse:collapse;margin-top:20px;border-top:1px solid var(--bor);padding-top:16px;display:none}
 .res-table.show{display:table}
 .res-table tr{border-bottom:1px solid var(--bor)}
@@ -76,7 +95,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .mobile-menu.open{display:block}
 @media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cómo convierto mi tarifa por hora a salario anual?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply your hourly wage by hours a la semana, then by weeks al año. For a standard full-time job: hourly rate × 40 hours × 52 semanas = annual salary. A $25/hour rate equals $52,000 al año working full-time."}}, {"@type": "Question", "name": "¿Cuánto equivale $15/hora al año?", "acceptedAnswer": {"@type": "Answer", "text": "$15/hour × 40 hours × 52 semanas = $31,200 al año before taxes. After federal taxes and Social Security/Medicare, take-home pay would be approximately $25,000–$26,000 annually depending on your state."}}, {"@type": "Question", "name": "¿Cuántas horas laborales hay en un año?", "acceptedAnswer": {"@type": "Answer", "text": "A standard full-time schedule is 2,080 hours al año (40 hours × 52 semanas). After accounting for 10 federal holidays and 2 weeks vacation, a typical work year is closer to 1,960 horas."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cómo convierto mi tarifa por hora a salario anual?", "acceptedAnswer": {"@type": "Answer", "text": "Multiplica tu tarifa por hora por las horas que trabajas a la semana, y luego por las semanas que trabajas al año. Para un empleo de tiempo completo estándar: tarifa por hora × 40 horas × 52 semanas = salario anual. Una tarifa de $25/hora equivale a $52,000 al año trabajando tiempo completo."}}, {"@type": "Question", "name": "¿Cuánto equivale $15 por hora al año?", "acceptedAnswer": {"@type": "Answer", "text": "$15/hora × 40 horas × 52 semanas = $31,200 al año antes de impuestos. Después de impuestos federales y Seguro Social/Medicare, el salario neto sería aproximadamente $25,000–$26,000 al año dependiendo de tu estado."}}, {"@type": "Question", "name": "¿Cuántas horas laborales hay en un año?", "acceptedAnswer": {"@type": "Answer", "text": "Un horario estándar de tiempo completo son 2,080 horas al año (40 horas × 52 semanas). Tomando en cuenta 10 días festivos federales y 2 semanas de vacaciones, un año laboral típico es más cercano a 1,960 horas."}}, {"@type": "Question", "name": "¿Cuánto es $20 por hora al año?", "acceptedAnswer": {"@type": "Answer", "text": "$20/hora × 2,080 horas = $41,600 al año en bruto. Después de impuesto federal y FICA, un declarante soltero en un estado sin impuesto estatal recibe aproximadamente $34,800 al año ($2,900/mes) en neto. En estados con impuesto estatal, el neto es menor."}}, {"@type": "Question", "name": "¿Cuánto es $30 por hora al año?", "acceptedAnswer": {"@type": "Answer", "text": "$30/hora × 2,080 horas = $62,400 al año en bruto — por encima del ingreso individual mediano en EE.UU. Después de impuestos en un estado sin impuesto estatal, el neto sería aproximadamente $50,800 al año ($4,233/mes)."}}, {"@type": "Question", "name": "¿Las horas extra cuentan para mi salario anual?", "acceptedAnswer": {"@type": "Answer", "text": "Sí — si trabajas horas extra regularmente, agrégalas usando el campo de Horas Extra en la calculadora de arriba. Bajo las reglas federales, las horas extra estándar son 1.5× tu tarifa regular por las horas que exceden 40 a la semana. Las horas extra constantes pueden agregar entre $5,000 y $20,000+ a tu ingreso anual dependiendo de tu tarifa base y horas trabajadas."}}]}</script>
   <meta property="og:image" content="https://paycalchub.com/og-image.png">
   
   
@@ -115,31 +134,90 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
   <div class="lay">
     <div>
   <div class="card">
-    <div class="fr"><label for="hw">Tarifa por Hora</label><div class="iw hp"><span class="ip">$</span><input type="number" id="hw" placeholder="25.00" step="0.01" oninput="calc()"></div></div>
+    <div class="fr"><label for="hw">Tarifa por Hora</label><div class="iw hp"><span class="ip">$</span><input type="number" id="hw" placeholder="25.00" step="0.01" oninput="syncSlider(this.value);calc()"></div>
+      <div class="sal-slider-wrap">
+        <input type="range" class="sal-slider" id="hw-slider" min="8" max="150" step="0.5" value="25" oninput="syncInput(this.value);calc()">
+        <div class="sal-range-labels"><span>$8/hr</span><span>$150/hr</span></div>
+      </div>
+    </div>
     <div class="fg">
-      <div class="fr"><label for="hrs">Horas por Semana</label><select id="hrs" onchange="calc()"><option value="20">20 horas (parcial)</option><option value="30">30 horas</option><option value="40" selected>40 horas (completo)</option><option value="45">45 horas</option><option value="50">50 horas</option><option value="60">60 horas</option></select></div>
+      <div class="fr"><label for="hrs">Horas por Semana <span class="opt">(regular)</span></label><select id="hrs" onchange="calc()"><option value="20">20 horas (parcial)</option><option value="30">30 horas</option><option value="40" selected>40 horas (completo)</option><option value="45">45 horas</option><option value="50">50 horas</option><option value="60">60 horas</option></select></div>
       <div class="fr"><label for="wks">Semanas por Año</label><select id="wks" onchange="calc()"><option value="52" selected>52 semanas</option><option value="50">50 semanas (2 sem. sin sueldo)</option><option value="48">48 semanas (4 sem. sin sueldo)</option></select></div>
+      <div class="fsec" style="margin-bottom:0;padding-bottom:0">
+        <button class="ded-toggle" id="ot-btn" onclick="toggleOT()" style="padding:8px 0">
+          <span class="ded-toggle-icon">+</span> Horas Extra <span class="opt">Opcional</span>
+        </button>
+        <div class="ded-body" id="ot-body">
+          <div class="fg" style="margin-top:10px">
+            <div class="fr"><label for="ot-hrs">Horas Extra/Semana</label><div class="iw hs"><input type="number" id="ot-hrs" placeholder="0" min="0" max="30" oninput="calc()"><span class="is">hrs</span></div></div>
+            <div class="fr"><label for="ot-rate">Tarifa de Horas Extra</label><select id="ot-rate" onchange="calc()"><option value="1.5">1.5× (estándar)</option><option value="2">2× (tiempo doble)</option><option value="1.25">1.25×</option></select></div>
+          </div>
+        </div>
+      </div>
     </div>
     <div style="overflow-x:auto"><table class="res-table" id="res">
       <tbody>
         <tr><td>Por hora</td><td id="r-h"></td></tr>
         <tr><td>Diario (8 hrs)</td><td id="r-d"></td></tr>
-        <tr><td>Semanal</td><td id="r-w"></td></tr>
+        <tr><td>Semanal (regular)</td><td id="r-w"></td></tr>
+        <tr id="r-ot-row" style="display:none"><td>Pago Horas Extra/Semana</td><td id="r-ot"></td></tr>
         <tr><td>Quincenal</td><td id="r-bw"></td></tr>
-        <tr><td>Semi-monthly</td><td id="r-sm"></td></tr>
+        <tr><td>Semi-mensual</td><td id="r-sm"></td></tr>
         <tr><td>Mensual</td><td id="r-mo"></td></tr>
-        <tr class="hi"><td><strong>Salario Anual</strong></td><td id="r-yr"></td></tr>
+        <tr class="hi"><td><strong>Salario Anual (con horas extra)</strong></td><td id="r-yr"></td></tr>
       </tbody>
     </table></div>
+    <div class="action-row" id="action-row" style="display:none">
+      <button class="cpb" id="cpb" onclick="copyRes()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        Copiar Resultados
+      </button>
+      <button class="shb" id="shb" onclick="shareRes()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        Compartir Enlace
+      </button>
+    </div>
+    <button class="calc-btn" onclick="calc()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      Convertir Hora a Salario
+    </button>
+  </div>
+  <div class="art" style="margin-top:40px">
+    <h2>Cómo Convertir Salario por Hora a Salario Anual</h2>
+    <p>La fórmula estándar es simple: <strong>tarifa por hora × horas por semana × semanas por año</strong>. Para un empleado de tiempo completo que trabaja 40 horas a la semana durante 52 semanas, eso equivale a 2,080 horas laborales al año. Una tarifa de $25/hora se traduce entonces en $52,000 anuales antes de impuestos.</p>
+    <p>Los trabajadores de medio tiempo, contratistas y trabajadores por turnos deben ajustar los campos de horas por semana y semanas por año arriba para reflejar su horario real. Si tomas licencia sin sueldo o trabajas de forma estacional, seleccionar 48 o 50 semanas da una imagen más precisa de tu ingreso anual real.</p>
+
+    <h2 style="margin-top:32px">Referencias Comunes de Salario por Hora (2026)</h2>
+    <div style="background:var(--sur);border:1px solid var(--bor);border-radius:12px;overflow:hidden;margin:16px 0 24px">
+      <table style="width:100%;border-collapse:collapse">
+        <tr style="border-bottom:1px solid var(--bor)"><td style="padding:10px 16px;font-size:13px;color:var(--mut)">$7.25/hr — Salario mínimo federal</td><td style="padding:10px 16px;font-size:13px;font-family:var(--mo);font-weight:500;text-align:right">$15,080/año</td></tr>
+        <tr style="border-bottom:1px solid var(--bor)"><td style="padding:10px 16px;font-size:13px;color:var(--mut)">$15.00/hr — Mínimo estatal en muchos estados de EE.UU.</td><td style="padding:10px 16px;font-size:13px;font-family:var(--mo);font-weight:500;text-align:right">$31,200/año</td></tr>
+        <tr style="border-bottom:1px solid var(--bor)"><td style="padding:10px 16px;font-size:13px;color:var(--mut)">$20.00/hr — Por encima del mínimo, roles calificados de entrada</td><td style="padding:10px 16px;font-size:13px;font-family:var(--mo);font-weight:500;text-align:right">$41,600/año</td></tr>
+        <tr style="border-bottom:1px solid var(--bor)"><td style="padding:10px 16px;font-size:13px;color:var(--mut)">$25.00/hr — Cercano al ingreso individual mediano en EE.UU.</td><td style="padding:10px 16px;font-size:13px;font-family:var(--mo);font-weight:500;text-align:right">$52,000/año</td></tr>
+        <tr style="border-bottom:1px solid var(--bor)"><td style="padding:10px 16px;font-size:13px;color:var(--mut)">$35.00/hr — Oficios especializados, trabajadores con experiencia</td><td style="padding:10px 16px;font-size:13px;font-family:var(--mo);font-weight:500;text-align:right">$72,800/año</td></tr>
+        <tr style="border-bottom:1px solid var(--bor)"><td style="padding:10px 16px;font-size:13px;color:var(--mut)">$50.00/hr — Tecnología, salud, roles senior</td><td style="padding:10px 16px;font-size:13px;font-family:var(--mo);font-weight:500;text-align:right">$104,000/año</td></tr>
+        <tr><td style="padding:10px 16px;font-size:13px;color:var(--mut)">$75.00/hr — Especialistas senior, consultores</td><td style="padding:10px 16px;font-size:13px;font-family:var(--mo);font-weight:500;text-align:right">$156,000/año</td></tr>
+      </table>
+    </div>
+
+    <h2 style="margin-top:32px">Equivalente por Hora Después de Impuestos</h2>
+    <p>Tu tarifa por hora en bruto y tu equivalente por hora después de impuestos son considerablemente diferentes. El impuesto federal sobre la renta, FICA (7.65%) y el impuesto estatal reducen lo que realmente recibes por cada hora trabajada. A $25/hora ($52,000/año), un declarante soltero en un estado sin impuesto estatal recibe aproximadamente $43,200/año en neto — cerca de $20.77/hora neto.</p>
+    <p>Usa nuestra <a href="/es/salary-calculator/" style="color:var(--acc)">Calculadora de Salario</a> para ver tu pago anual exacto después de impuestos para cualquier tarifa por hora, incluyendo un desglose completo por estado.</p>
+
+    <h2 style="margin-top:32px">Pago de Horas Extra</h2>
+    <p>Si trabajas horas extra regularmente, agrégalas en la calculadora de arriba usando el campo de Horas Extra. Bajo las reglas federales (FLSA), los trabajadores por hora ganan <strong>1.5× su tarifa regular</strong> por todas las horas que exceden 40 a la semana. Algunos estados (California, Alaska) requieren pago de horas extra después de 8 horas en un solo día, sin importar el total semanal.</p>
   </div>
   <div class="fqs" style="margin-top:32px"><h2>Preguntas Frecuentes</h2>
-    <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Cómo convierto mi tarifa por hora a salario anual? <span class="fqi-icon">+</span></div><div class="fqa">Multiply your hourly wage by hours a la semana, then by weeks al año. For a standard full-time job: hourly rate &times; 40 hours &times; 52 semanas = annual salary. A $25/hour rate equals $52,000 al año working full-time.</div></div>
-    <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Cuánto equivale $15/hora al año? <span class="fqi-icon">+</span></div><div class="fqa">$15/hour &times; 40 hours &times; 52 semanas = $31,200 al año before taxes. After federal taxes and Social Security/Medicare, take-home pay would be approximately $25,000&ndash;$26,000 annually depending on your state.</div></div>
-    <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Cuántas horas laborales hay en un año? <span class="fqi-icon">+</span></div><div class="fqa">A standard full-time schedule is 2,080 hours al año (40 hours &times; 52 semanas). After accounting for 10 federal holidays and 2 weeks vacation, a typical work year is closer to 1,960 horas.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Cómo convierto mi tarifa por hora a salario anual? <span class="fqi-icon">+</span></div><div class="fqa">Multiplica tu tarifa por hora por las horas que trabajas a la semana, y luego por las semanas que trabajas al año. Para un empleo de tiempo completo estándar: tarifa por hora &times; 40 horas &times; 52 semanas = salario anual. Una tarifa de $25/hora equivale a $52,000 al año trabajando tiempo completo.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Cuánto equivale $15 por hora al año? <span class="fqi-icon">+</span></div><div class="fqa">$15/hora &times; 40 horas &times; 52 semanas = $31,200 al año antes de impuestos. Después de impuestos federales y Seguro Social/Medicare, el salario neto sería aproximadamente $25,000&ndash;$26,000 al año dependiendo de tu estado.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Cuántas horas laborales hay en un año? <span class="fqi-icon">+</span></div><div class="fqa">Un horario estándar de tiempo completo son 2,080 horas al año (40 horas &times; 52 semanas). Tomando en cuenta 10 días festivos federales y 2 semanas de vacaciones, un año laboral típico es más cercano a 1,960 horas. La mayoría de los cálculos de salario usan 2,080 como base estándar.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Cuánto es $20 por hora al año? <span class="fqi-icon">+</span></div><div class="fqa">$20/hora &times; 2,080 horas = $41,600/año en bruto. Después de impuesto federal y FICA, un declarante soltero en un estado sin impuesto estatal recibe aproximadamente $34,800/año ($2,900/mes) en neto. En estados con impuesto estatal, el neto es menor.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Cuánto es $30 por hora al año? <span class="fqi-icon">+</span></div><div class="fqa">$30/hora &times; 2,080 horas = $62,400/año en bruto — por encima del ingreso individual mediano en EE.UU. Después de impuestos en un estado sin impuesto estatal, un declarante soltero recibe aproximadamente $50,800/año ($4,233/mes) en neto.</div></div>
+    <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Las horas extra cuentan para mi salario anual? <span class="fqi-icon">+</span></div><div class="fqa">Sí — si trabajas horas extra regularmente, agrégalas usando el campo de Horas Extra en la calculadora de arriba. Las horas extra federales estándar son 1.5× tu tarifa regular por las horas que exceden 40 a la semana. Las horas extra constantes pueden agregar entre $5,000 y $20,000+ a tu ingreso anual dependiendo de tu tarifa base y horas trabajadas.</div></div>
   </div>
     </div>
     <div class="sb">
-      <div class="ic"><h3>&#128202; Referencia Rápida</h3><ul><li>Mínimo federal<span>$7.25/hr</span></li><li>Mínimo estatal común<span>$15/hr</span></li><li>Salario medio EE.UU.<span>~$25/hr</span></li><li>Oficios especializados<span>$35/hr</span></li></ul></div>
+      <div class="ic"><h3>&#9889; Datos de Horas Extra</h3><ul><li>Tarifa OT federal<span>1.5×</span></li><li>Umbral OT federal<span>40 hrs/sem</span></li><li>OT diario (CA/AK)<span>después de 8 hrs/día</span></li><li>Tiempo doble (CA)<span>después de 12 hrs/día</span></li></ul></div>
       <div class="ic"><h3>&#128279; Más Calculadoras</h3><a href="/es/salary-calculator/">&#128176; Calculadora de Salario</a><a href="/es/mortgage-calculator/">&#127968; Calculadora de Hipoteca</a><a href="/es/loan-calculator/">&#128179; Calculadora de Préstamo</a></div>
     </div>
   </div>
@@ -166,18 +244,53 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 function fmt(n){return "$"+n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
 function calc(){
   const h=parseFloat(document.getElementById("hw").value)||0;
-  if(!h){document.getElementById("res").classList.remove("show");return;}
-  const hrs=parseFloat(document.getElementById("hrs").value),wks=parseFloat(document.getElementById("wks").value);
-  const ann=h*hrs*wks,mo=ann/12,wk=h*hrs;
+  if(!h){document.getElementById("res").classList.remove("show");document.getElementById("action-row").style.display="none";return;}
+  const hrs=parseFloat(document.getElementById("hrs").value);
+  const wks=parseFloat(document.getElementById("wks").value);
+  const otHrs=parseFloat(document.getElementById("ot-hrs")?document.getElementById("ot-hrs").value:0)||0;
+  const otRate=parseFloat(document.getElementById("ot-rate")?document.getElementById("ot-rate").value:1.5)||1.5;
+  const wk=h*hrs;
+  const otWk=h*otRate*otHrs;
+  const ann=(wk+otWk)*wks;
+  const mo=ann/12;
   document.getElementById("r-h").textContent=fmt(h);
   document.getElementById("r-d").textContent=fmt(h*8);
   document.getElementById("r-w").textContent=fmt(wk);
-  document.getElementById("r-bw").textContent=fmt(wk*2);
+  document.getElementById("r-bw").textContent=fmt((wk+otWk)*2);
   document.getElementById("r-sm").textContent=fmt(ann/24);
   document.getElementById("r-mo").textContent=fmt(mo);
   document.getElementById("r-yr").textContent=fmt(ann);
+  var otRow=document.getElementById("r-ot-row");
+  var otCell=document.getElementById("r-ot");
+  if(otHrs>0 && otRow && otCell){otRow.style.display="";otCell.textContent=fmt(otWk);}
+  else if(otRow){otRow.style.display="none";}
   document.getElementById("res").classList.add("show");
+  document.getElementById("action-row").style.display="grid";
 }
+function toggleOT(){var btn=document.getElementById("ot-btn");var body=document.getElementById("ot-body");btn.classList.toggle("open");body.classList.toggle("open");}
+function syncSlider(val){var v=parseFloat(val)||0;var s=document.getElementById("hw-slider");if(s)s.value=Math.min(Math.max(v,8),150);}
+function syncInput(val){var i=document.getElementById("hw");if(i)i.value=val;}
+function shareRes(){
+  var hw=document.getElementById("hw").value;
+  var hrs=document.getElementById("hrs").value;
+  var url=window.location.origin+window.location.pathname+"?hw="+hw+"&hrs="+hrs;
+  navigator.clipboard.writeText(url).then(function(){var b=document.getElementById("shb");b.textContent="¡Enlace Copiado!";b.classList.add("shared");setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Compartir Enlace';b.classList.remove("shared");},2500);});
+}
+function copyRes(){
+  var yr=document.getElementById("r-yr").textContent;
+  var mo=document.getElementById("r-mo").textContent;
+  var lines=["PayCalcHub Calculadora por Hora","Anual: "+yr,"Mensual: "+mo];
+  navigator.clipboard.writeText(lines.join("\n")).then(function(){var b=document.getElementById("cpb");b.textContent="¡Copiado!";b.classList.add("copied");setTimeout(function(){b.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copiar Resultados';b.classList.remove("copied");},2000);});
+}
+window.addEventListener("load",function(){
+  var p=new URLSearchParams(window.location.search);
+  var hw=p.get("hw")||"25";
+  var hrs=p.get("hrs")||"40";
+  document.getElementById("hw").value=hw;
+  document.getElementById("hw-slider").value=Math.min(Math.max(parseFloat(hw),8),150);
+  document.getElementById("hrs").value=hrs;
+  calc();
+});
 
 </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>

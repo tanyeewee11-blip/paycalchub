@@ -41,6 +41,13 @@ h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;letter-spacing:-.02em;line
 .fqq{padding:15px 18px;font-size:14px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .fqi-icon{font-size:20px;color:var(--mut);flex-shrink:0;transition:transform .2s}.fqq.open .fqi-icon{transform:rotate(45deg)}
 .fqa{font-size:14px;color:var(--mut);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .25s ease,padding .2s;padding:0 18px}.fqa.open{max-height:400px;padding:0 18px 16px}
+.fsec{margin:18px 0 14px;padding-top:18px;border-top:1px solid var(--bor)}
+.ded-toggle{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--acc);cursor:pointer;padding:10px 0;border:none;background:none;font-family:var(--f);width:100%}
+.ded-toggle-icon{font-size:16px;transition:transform .2s;line-height:1}
+.ded-toggle.open .ded-toggle-icon{transform:rotate(45deg)}
+.ded-body{display:none}
+.ded-body.open{display:block}
+.opt{font-size:10px;font-weight:500;background:var(--bg);border:1px solid var(--bor);color:var(--mut);padding:1px 6px;border-radius:4px}
 @media(max-width:800px){.lay{grid-template-columns:1fr}.sb{display:grid;grid-template-columns:1fr 1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}}
 @media(max-width:480px){.sb{grid-template-columns:1fr}}
 .sal-slider-wrap{margin-top:8px;padding:2px 0 6px}
@@ -136,7 +143,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
       </div>
     </div>
     <div class="fg">
-      <div class="fr"><label for="hrs">Hours per Week <span class="opt">(regular)</span></label><select id="hrs" onchange="calc()"><option value="20">20 hrs (part-time)</option><option value="30">30 hours</option><option value="40" selected>40 hrs (full-time)</option></select></div>
+      <div class="fr"><label for="hrs">Hours per Week <span class="opt">(regular)</span></label><select id="hrs" onchange="calc()"><option value="20">20 hrs (part-time)</option><option value="30">30 hours</option><option value="40" selected>40 hrs (full-time)</option><option value="45">45 hours</option><option value="50">50 hours</option><option value="60">60 hours</option></select></div>
       <div class="fr"><label for="wks">Weeks per Year</label><select id="wks" onchange="calc()"><option value="52" selected>52 weeks</option><option value="50">50 weeks (2 wks unpaid)</option><option value="48">48 weeks (4 wks unpaid)</option></select></div>
       <div class="fsec" style="margin-bottom:0;padding-bottom:0">
         <button class="ded-toggle" id="ot-btn" onclick="toggleOT()" style="padding:8px 0">
