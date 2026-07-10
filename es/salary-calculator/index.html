@@ -121,6 +121,21 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 .mobile-menu a:last-child{border-bottom:none}
 .mobile-menu.open{display:block}
 @media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
+.st-section{margin-top:48px;width:100%}
+.st-section h2{font-size:22px;font-weight:600;margin-bottom:8px}
+.st-sub{font-size:15px;color:var(--mut);margin-bottom:20px}
+.st-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;width:100%}
+.st-card{background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:12px 14px;transition:border-color .15s,box-shadow .15s;display:block}
+.st-card:hover{border-color:var(--acc);box-shadow:0 2px 10px rgba(30,107,74,.08)}
+.st-name{font-size:13px;font-weight:500;margin-bottom:6px;color:var(--txt)}
+.st-badge{font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;display:inline-block}
+.st-badge.tax{background:#fef3c7;color:#92400e}
+.st-badge.no-tax{background:var(--alight);color:var(--acc)}
+.country-card{background:var(--sur);border:1px solid var(--bor);border-radius:12px;padding:20px 16px;display:block;text-align:center;transition:border-color .15s,box-shadow .15s;text-decoration:none}
+.country-card:hover{border-color:var(--acc);box-shadow:0 2px 12px rgba(30,107,74,.08)}
+.country-card-flag{font-size:36px;margin-bottom:10px;line-height:1}
+.country-card-name{font-size:14px;font-weight:600;color:var(--txt);margin-bottom:4px}
+.country-card-sub{font-size:12px;color:var(--mut)}
 </style>
   <meta property="og:image" content="https://paycalchub.com/og-image.png">
   
@@ -251,6 +266,85 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
       
     </div>
   </div>
+</div>
+
+<div class="pg" style="padding-top:0">
+<div class="st-section" style="margin-top:0">
+  <h2>Calculadora de Salario por País</h2>
+  <p class="st-sub">Selecciona tu país para una estimación de salario neto incluyendo impuestos locales.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px;max-width:700px">
+    <a href="/salary-calculator/united-kingdom/" class="country-card">
+      <div class="country-card-flag">🇬🇧</div>
+      <div class="country-card-name">Reino Unido</div>
+      <div class="country-card-sub">Impuesto sobre la renta + NI</div>
+    </a>
+    <a href="/salary-calculator/canada/" class="country-card">
+      <div class="country-card-flag">🇨🇦</div>
+      <div class="country-card-name">Canadá</div>
+      <div class="country-card-sub">Federal + CPP + EI</div>
+    </a>
+    <a href="/salary-calculator/australia/" class="country-card">
+      <div class="country-card-flag">🇦🇺</div>
+      <div class="country-card-name">Australia</div>
+      <div class="country-card-sub">Impuesto sobre la renta + Medicare</div>
+    </a>
+  </div>
+</div>
+
+<div class="st-section">
+  <h2>Calculadora de Salario por Estado</h2>
+  <p class="st-sub">Selecciona tu estado para una estimación personalizada de salario neto incluyendo el impuesto estatal.</p>
+  <div class="st-grid"><a href="/salary-calculator/alabama/" class="st-card"><div class="st-name">Alabama</div><span class="st-badge tax">⚡ 5.0%</span></a>
+<a href="/salary-calculator/alaska/" class="st-card"><div class="st-name">Alaska</div><span class="st-badge no-tax">✅ Sin impuesto</span></a>
+<a href="/salary-calculator/arizona/" class="st-card"><div class="st-name">Arizona</div><span class="st-badge tax">⚡ 2.5%</span></a>
+<a href="/salary-calculator/arkansas/" class="st-card"><div class="st-name">Arkansas</div><span class="st-badge tax">⚡ 4.7%</span></a>
+<a href="/salary-calculator/california/" class="st-card"><div class="st-name">California</div><span class="st-badge tax">⚡ 9.3%</span></a>
+<a href="/salary-calculator/colorado/" class="st-card"><div class="st-name">Colorado</div><span class="st-badge tax">⚡ 4.4%</span></a>
+<a href="/salary-calculator/connecticut/" class="st-card"><div class="st-name">Connecticut</div><span class="st-badge tax">⚡ 6.99%</span></a>
+<a href="/salary-calculator/delaware/" class="st-card"><div class="st-name">Delaware</div><span class="st-badge tax">⚡ 6.6%</span></a>
+<a href="/salary-calculator/florida/" class="st-card"><div class="st-name">Florida</div><span class="st-badge no-tax">✅ Sin impuesto</span></a>
+<a href="/salary-calculator/georgia/" class="st-card"><div class="st-name">Georgia</div><span class="st-badge tax">⚡ 5.49%</span></a>
+<a href="/salary-calculator/hawaii/" class="st-card"><div class="st-name">Hawái</div><span class="st-badge tax">⚡ 8.25%</span></a>
+<a href="/salary-calculator/idaho/" class="st-card"><div class="st-name">Idaho</div><span class="st-badge tax">⚡ 5.8%</span></a>
+<a href="/salary-calculator/illinois/" class="st-card"><div class="st-name">Illinois</div><span class="st-badge tax">⚡ 4.95%</span></a>
+<a href="/salary-calculator/indiana/" class="st-card"><div class="st-name">Indiana</div><span class="st-badge tax">⚡ 3.05%</span></a>
+<a href="/salary-calculator/iowa/" class="st-card"><div class="st-name">Iowa</div><span class="st-badge tax">⚡ 6.0%</span></a>
+<a href="/salary-calculator/kansas/" class="st-card"><div class="st-name">Kansas</div><span class="st-badge tax">⚡ 5.7%</span></a>
+<a href="/salary-calculator/kentucky/" class="st-card"><div class="st-name">Kentucky</div><span class="st-badge tax">⚡ 4.5%</span></a>
+<a href="/salary-calculator/louisiana/" class="st-card"><div class="st-name">Luisiana</div><span class="st-badge tax">⚡ 4.25%</span></a>
+<a href="/salary-calculator/maine/" class="st-card"><div class="st-name">Maine</div><span class="st-badge tax">⚡ 7.15%</span></a>
+<a href="/salary-calculator/maryland/" class="st-card"><div class="st-name">Maryland</div><span class="st-badge tax">⚡ 5.75%</span></a>
+<a href="/salary-calculator/massachusetts/" class="st-card"><div class="st-name">Massachusetts</div><span class="st-badge tax">⚡ 5.0%</span></a>
+<a href="/salary-calculator/michigan/" class="st-card"><div class="st-name">Michigan</div><span class="st-badge tax">⚡ 4.25%</span></a>
+<a href="/salary-calculator/minnesota/" class="st-card"><div class="st-name">Minnesota</div><span class="st-badge tax">⚡ 9.85%</span></a>
+<a href="/salary-calculator/mississippi/" class="st-card"><div class="st-name">Misisipi</div><span class="st-badge tax">⚡ 5.0%</span></a>
+<a href="/salary-calculator/missouri/" class="st-card"><div class="st-name">Misuri</div><span class="st-badge tax">⚡ 4.95%</span></a>
+<a href="/salary-calculator/montana/" class="st-card"><div class="st-name">Montana</div><span class="st-badge tax">⚡ 5.9%</span></a>
+<a href="/salary-calculator/nebraska/" class="st-card"><div class="st-name">Nebraska</div><span class="st-badge tax">⚡ 3.99%</span></a>
+<a href="/salary-calculator/nevada/" class="st-card"><div class="st-name">Nevada</div><span class="st-badge no-tax">✅ Sin impuesto</span></a>
+<a href="/salary-calculator/new-hampshire/" class="st-card"><div class="st-name">New Hampshire</div><span class="st-badge no-tax">✅ Sin impuesto</span></a>
+<a href="/salary-calculator/new-jersey/" class="st-card"><div class="st-name">Nueva Jersey</div><span class="st-badge tax">⚡ 10.75%</span></a>
+<a href="/salary-calculator/new-mexico/" class="st-card"><div class="st-name">Nuevo México</div><span class="st-badge tax">⚡ 5.9%</span></a>
+<a href="/salary-calculator/new-york/" class="st-card"><div class="st-name">Nueva York</div><span class="st-badge tax">⚡ 6.85%</span></a>
+<a href="/salary-calculator/north-carolina/" class="st-card"><div class="st-name">Carolina del Norte</div><span class="st-badge tax">⚡ 4.75%</span></a>
+<a href="/salary-calculator/north-dakota/" class="st-card"><div class="st-name">Dakota del Norte</div><span class="st-badge tax">⚡ 2.5%</span></a>
+<a href="/salary-calculator/ohio/" class="st-card"><div class="st-name">Ohio</div><span class="st-badge tax">⚡ 3.99%</span></a>
+<a href="/salary-calculator/oklahoma/" class="st-card"><div class="st-name">Oklahoma</div><span class="st-badge tax">⚡ 4.75%</span></a>
+<a href="/salary-calculator/oregon/" class="st-card"><div class="st-name">Oregón</div><span class="st-badge tax">⚡ 9.9%</span></a>
+<a href="/salary-calculator/pennsylvania/" class="st-card"><div class="st-name">Pensilvania</div><span class="st-badge tax">⚡ 3.07%</span></a>
+<a href="/salary-calculator/rhode-island/" class="st-card"><div class="st-name">Rhode Island</div><span class="st-badge tax">⚡ 4.75%</span></a>
+<a href="/salary-calculator/south-carolina/" class="st-card"><div class="st-name">Carolina del Sur</div><span class="st-badge tax">⚡ 6.5%</span></a>
+<a href="/salary-calculator/south-dakota/" class="st-card"><div class="st-name">Dakota del Sur</div><span class="st-badge no-tax">✅ Sin impuesto</span></a>
+<a href="/salary-calculator/tennessee/" class="st-card"><div class="st-name">Tennessee</div><span class="st-badge no-tax">✅ Sin impuesto</span></a>
+<a href="/salary-calculator/texas/" class="st-card"><div class="st-name">Texas</div><span class="st-badge no-tax">✅ Sin impuesto</span></a>
+<a href="/salary-calculator/utah/" class="st-card"><div class="st-name">Utah</div><span class="st-badge tax">⚡ 4.85%</span></a>
+<a href="/salary-calculator/vermont/" class="st-card"><div class="st-name">Vermont</div><span class="st-badge tax">⚡ 8.75%</span></a>
+<a href="/salary-calculator/virginia/" class="st-card"><div class="st-name">Virginia</div><span class="st-badge tax">⚡ 5.75%</span></a>
+<a href="/salary-calculator/washington/" class="st-card"><div class="st-name">Washington</div><span class="st-badge no-tax">✅ Sin impuesto</span></a>
+<a href="/salary-calculator/west-virginia/" class="st-card"><div class="st-name">Virginia Occidental</div><span class="st-badge tax">⚡ 6.5%</span></a>
+<a href="/salary-calculator/wisconsin/" class="st-card"><div class="st-name">Wisconsin</div><span class="st-badge tax">⚡ 7.65%</span></a>
+<a href="/salary-calculator/wyoming/" class="st-card"><div class="st-name">Wyoming</div><span class="st-badge no-tax">✅ Sin impuesto</span></a></div>
+</div>
 </div>
 </main>
 <footer>

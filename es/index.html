@@ -88,6 +88,13 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .sec{max-width:1100px;margin:0 auto;padding:0 24px 32px}
 .sec-lbl{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--mut);letter-spacing:.06em;margin-bottom:16px}
 .tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.tc.tc-featured{background:linear-gradient(100deg,#fff 0%,#cdebd9 160%);border:1px solid #a8d9bd;border-left:4px solid var(--gold);position:relative}
+.tc.tc-featured:hover{border-left-color:var(--gold-dark);box-shadow:0 8px 26px rgba(184,134,11,.16);transform:translateY(-2px)}
+.tc.tc-featured .ti{width:54px;height:54px;background:#fff;color:var(--gold-dark);box-shadow:0 2px 8px rgba(184,134,11,.15)}
+.tc.tc-featured h2{font-size:18px}
+.tc-featured-badge{display:inline-block;background:var(--gold);color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:5px}
+.tc-row-h{display:flex;align-items:center;gap:10px;margin-bottom:5px;flex-wrap:wrap}
+.tc-row-h h2{margin-bottom:0}
 .tc{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:22px;transition:border-color .15s,transform .15s;display:block}
 .tc:hover{border-color:var(--acc);transform:translateY(-2px)}
 .ti{font-size:26px;margin-bottom:10px}
@@ -212,9 +219,9 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
 <div class="sec">
 <div class="sec-lbl">Todas las herramientas</div>
 <div class="tgrid">
-  <a href="/es/salary-calculator/" class="tc">
+  <a href="/es/salary-calculator/" class="tc tc-featured">
     <div class="ti">💰</div>
-    <h2>Calculadora de Salario Neto</h2>
+    <div class="tc-row-h"><h2>Calculadora de Salario</h2><span class="tc-featured-badge">Más popular</span></div>
     <p>Desglose fiscal completo para EE.UU. (los 50 estados), UK, Canadá y Australia. Incluye 401k, seguro médico y super.</p>
     <div class="tc-tags"><span class="tag tag-green">EE.UU. · UK · Canadá · AU</span><span class="tag tag-gray">50 estados</span></div>
   </a>
@@ -235,6 +242,18 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
     <h2>Calculadora por Hora a Salario</h2>
     <p>Convierte cualquier tarifa horaria a salario anual, mensual, quincenal y semanal. Compatible con jornada completa y parcial.</p>
     <div class="tc-tags"><span class="tag tag-green">Todos los períodos</span><span class="tag tag-gray">Parcial y horas extra</span></div>
+  </a>
+  <a href="/es/net-pay-calculator/" class="tc">
+    <div class="ti">💵</div>
+    <h2>Calculadora de Salario Neto</h2>
+    <p>Ve tu pago exacto por semana, quincena, y mes — después de impuesto federal, estatal y FICA. Los 50 estados de EE.UU.</p>
+    <div class="tc-tags"><span class="tag tag-green">Todos los períodos de pago</span><span class="tag tag-gray">50 estados</span></div>
+  </a>
+  <a href="/es/tax-withholding-calculator/" class="tc">
+    <div class="ti">📋</div>
+    <h2>Calculadora de Retención de Impuestos</h2>
+    <p>Estima tu retención de impuesto federal por cheque según tu W-4: estado civil, dependientes, e ingresos extra.</p>
+    <div class="tc-tags"><span class="tag tag-green">Basado en W-4</span><span class="tag tag-gray">Actualizado 2026</span></div>
   </a>
 </div>
 </div>
