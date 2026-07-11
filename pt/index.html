@@ -112,12 +112,6 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .pop-link:hover{background:var(--alight);border-color:var(--acc)}
 
 /* Footer */
-footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;padding:28px 24px}
-.fi{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
-.fi-logo{font-weight:600;font-size:16px}.fi-logo span{color:var(--acc)}
-.fi-nav{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;color:var(--mut)}
-.fi-nav a:hover{color:var(--acc)}
-.fi-copy{font-size:12px;color:var(--mut)}
 
 @media(max-width:800px){
 .hero-grid,.tgrid{grid-template-columns:1fr}
@@ -126,8 +120,7 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
 .stat-item:nth-child(2){border-right:none}
 .stat-item:nth-child(3){border-top:1px solid var(--bor);border-right:1px solid var(--bor)}
 .stat-item:nth-child(4){border-top:1px solid var(--bor)}
-.nav-links{display:none}
-}
+.nav-links{display:none}}
 
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
 .hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
@@ -251,18 +244,36 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:32px;pad
 </main>
 <footer>
 <div class="fi">
-  <span class="fi-logo">Pay<span>Calc</span>Hub</span>
-  <nav class="fi-nav" aria-label="Navegação rodapé">
-    <a href="/pt/salary-calculator/">Salário</a>
-    <a href="/pt/mortgage-calculator/">Hipoteca</a>
-    <a href="/pt/loan-calculator/">Empréstimo</a>
-    <a href="/pt/hourly-to-salary/">Por Hora</a>
+  <div class="fi-brand">
+    <a href="/pt/" class="fi-logo">Pay<span>Calc</span>Hub</a>
+    <p class="fi-tagline">Calculadoras financeiras e de folha de pagamento dos EUA, grátis e sem cadastro — atualizadas para 2026.</p>
+  </div>
+  <div class="fi-col">
+    <h4>Calculadoras</h4>
+    <a href="/pt/salary-calculator/">Calculadora de Salário</a>
+    <a href="/pt/hourly-to-salary/">Hora para Salário</a>
+    <a href="/pt/net-pay-calculator/">Calculadora de Salário Líquido</a>
+    <a href="/pt/tax-withholding-calculator/">Retenção de Imposto</a>
+    <a href="/pt/mortgage-calculator/">Calculadora de Hipoteca</a>
+    <a href="/pt/loan-calculator/">Calculadora de Empréstimo</a>
+  </div>
+  <div class="fi-col">
+    <h4>Guias</h4>
+    <a href="/salary-to-hourly/">Salário para Hora</a>
+    <a href="/blog/">Blog</a>
+  </div>
+  <div class="fi-col">
+    <h4>Empresa</h4>
     <a href="/privacy/">Privacidade</a>
     <a href="/affiliate-disclosure/">Divulgação de Afiliados</a>
     <a href="/contact/">Contato</a>
     <a href="/">English</a>
-  </nav>
-  <span class="fi-copy">&copy; 2026 PayCalcHub.com &mdash; Apenas para fins informativos.</span>
+    <a href="/es/">Español</a>
+  </div>
+</div>
+<div class="fi-bottom">
+  <span class="fi-copy">&copy; 2026 PayCalcHub.com</span>
+  <span class="fi-copy">Apenas para fins informativos.</span>
 </div>
 </footer>
 <script>

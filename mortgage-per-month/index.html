@@ -91,9 +91,6 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .pop-link:hover{background:var(--alight);border-color:var(--acc)}
 
 /* Footer */
-.fi-logo span{color:var(--acc)}
-
-
 
 @media(max-width:800px){
 .hero-grid,.tgrid{grid-template-columns:1fr}
@@ -102,28 +99,13 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .stat-item:nth-child(2){border-right:none}
 .stat-item:nth-child(3){border-top:1px solid var(--bor);border-right:1px solid var(--bor)}
 .stat-item:nth-child(4){border-top:1px solid var(--bor)}
-.nav-links{display:none}
-}
+.nav-links{display:none}}
 
 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:500px){.grid{grid-template-columns:repeat(2,1fr)}}
 .sal-card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:16px;transition:border-color .15s}
 .sal-card:hover{border-color:var(--acc)}
 .sal-amount{font-family:var(--mo);font-size:20px;font-weight:500;color:var(--acc);margin-bottom:4px}
 .sal-hourly{font-size:12px;color:var(--mut)}
-
-.fi-logo span{color:var(--acc)}
-
-footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
-.fi{max-width:1100px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:20px 40px;align-items:start}
-.fi-logo{font-weight:600;font-size:16px;color:var(--txt);text-decoration:none;white-space:nowrap;padding-top:2px}
-.fi-logo span{color:var(--acc)}
-.fi-mid{display:flex;flex-direction:column;gap:8px}
-.fi-nav-row{display:flex;align-items:center;gap:4px 16px;flex-wrap:wrap;font-size:13px}
-.fi-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);min-width:72px;opacity:.6}
-.fi-nav-row a{color:var(--mut);text-decoration:none;transition:color .15s}
-.fi-nav-row a:hover{color:var(--acc)}
-.fi-copy{font-size:12px;color:var(--mut);text-align:right;line-height:1.6;padding-top:2px}
-@media(max-width:700px){.fi{grid-template-columns:1fr;text-align:center}.fi-group-lbl{display:none}.fi-nav-row{justify-content:center}.fi-copy{text-align:center}}
 
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
 .hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
@@ -238,35 +220,39 @@ footer{border-top:1px solid var(--bor);background:var(--sur);margin-top:64px}
 </main>
 <footer>
 <div class="fi">
-  <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>
-  <div class="fi-mid">
-    <div class="fi-nav-row">
-      <span class="fi-group-lbl">Calculators</span>
-      <a href="/salary-calculator/">Salary</a>
-      <a href="/mortgage-calculator/">Mortgage</a>
-      <a href="/loan-calculator/">Loan</a>
-      <a href="/hourly-to-salary/">Hourly</a>
-    </div>
-    <div class="fi-nav-row">
-      <span class="fi-group-lbl">Tools</span>
-      <a href="/net-pay-calculator/">Net Pay Calculator</a>
-      <a href="/tax-withholding-calculator/">Tax Withholding Calculator</a>
-      <a href="/salary-to-hourly/">Salary &rarr; Hourly</a>
-      <a href="/how-much-house-can-i-afford/">Affordability</a>
-      <a href="/mortgage-per-month/">Mortgage Guide</a>
-      <a href="/blog/">Blog</a>
-    </div>
-    <div class="fi-nav-row">
-      <span class="fi-group-lbl">Company</span>
-      <a href="/about/">About</a>
-      <a href="/privacy/">Privacy Policy</a><a href="/affiliate-disclosure/">Affiliate Disclosure</a>
-      <a href="/contact/">Contact</a>
-    </div>
+  <div class="fi-brand">
+    <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>
+    <p class="fi-tagline">Free, no-signup U.S. payroll and finance calculators — updated for 2026 tax rates.</p>
   </div>
-  <div class="fi-copy">
-    &copy; 2026 PayCalcHub.com<br>
-    Not financial advice.
+  <div class="fi-col">
+    <h4>Calculators</h4>
+    <a href="/salary-calculator/">Salary Calculator</a>
+    <a href="/hourly-to-salary/">Hourly to Salary</a>
+    <a href="/net-pay-calculator/">Net Pay Calculator</a>
+    <a href="/tax-withholding-calculator/">Tax Withholding</a>
+    <a href="/mortgage-calculator/">Mortgage Calculator</a>
+    <a href="/loan-calculator/">Loan Calculator</a>
   </div>
+  <div class="fi-col">
+    <h4>Guides</h4>
+    <a href="/salary-to-hourly/">Salary &rarr; Hourly</a>
+    <a href="/how-much-house-can-i-afford/">Affordability Guide</a>
+    <a href="/mortgage-per-month/">Mortgage Guide</a>
+    <a href="/blog/">Blog</a>
+  </div>
+  <div class="fi-col">
+    <h4>Company</h4>
+    <a href="/about/">About</a>
+    <a href="/privacy/">Privacy Policy</a>
+    <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+    <a href="/contact/">Contact</a>
+    <a href="/es/">Español</a>
+    <a href="/pt/">Português</a>
+  </div>
+</div>
+<div class="fi-bottom">
+  <span class="fi-copy">&copy; 2026 PayCalcHub.com</span>
+  <span class="fi-copy">Not financial advice.</span>
 </div>
 <div class="fi-disclaimer">
   PayCalcHub provides financial calculators for informational and educational purposes only. All results are estimates based on published tax rates and standard assumptions. Nothing on this site constitutes financial, tax, legal, or investment advice. Always consult a qualified professional before making financial decisions.

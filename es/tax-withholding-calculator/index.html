@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png">
+  <link rel="apple-touch-icon" href="/favicon_512x512.png">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-7723301737736770">
+<title>Calculadora de Retención de Impuestos 2026 — Estima tu W-4 | PayCalcHub</title>
+<meta name="description" content="Calculadora de retención de impuestos gratis para 2026. Estima tu retención de impuesto federal por cheque según tu W-4: estado civil, dependientes, ingreso extra y deducciones.">
+<link rel="canonical" href="https://paycalchub.com/es/tax-withholding-calculator/">
+<meta property="og:title" content="Calculadora de Retención de Impuestos 2026 — Estima tu Retención">
+<meta property="og:description" content="Estima tu retención federal 2026 por cheque según tu W-4: estado civil, dependientes, otros ingresos y deducciones.">
+<meta property="og:url" content="https://paycalchub.com/es/tax-withholding-calculator/"><meta property="og:type" content="website">
+<meta property="og:image" content="https://paycalchub.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://paycalchub.com/og-image.png">
+<link rel="alternate" hreflang="en" href="https://paycalchub.com/tax-withholding-calculator/">
+<link rel="alternate" hreflang="es" href="https://paycalchub.com/es/tax-withholding-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://paycalchub.com/tax-withholding-calculator/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora de Retención de Impuestos","url":"https://paycalchub.com/es/tax-withholding-calculator/","description":"Calculadora gratis de retención de impuesto federal 2026 estimando la retención por cheque según los datos de tu W-4.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"PayCalcHub","url":"https://paycalchub.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es la retención de impuestos?","acceptedAnswer":{"@type":"Answer","text":"La retención de impuestos es el dinero que tu empleador saca de cada cheque y envía al IRS en tu nombre, como un pago anticipado hacia tu factura de impuesto federal anual. La cantidad se basa en el formulario W-4 que llenaste con tu empleador."}},{"@type":"Question","name":"¿Qué pasa si se retiene demasiado o muy poco?","acceptedAnswer":{"@type":"Answer","text":"Si se retiene demasiado durante el año, recibes un reembolso de impuestos al declarar — pero le diste al gobierno un préstamo sin intereses. Si se retiene muy poco, deberás dinero al momento de declarar, y podrías enfrentar una multa por pago insuficiente si la diferencia es grande. Ajustar tu W-4 te ayuda a acercarte al punto de equilibrio."}},{"@type":"Question","name":"¿Cómo cambio mi retención?","acceptedAnswer":{"@type":"Answer","text":"Envía un nuevo Formulario W-4 a tu empleador en cualquier momento. No necesitas una razón específica, aunque vale especialmente la pena actualizarlo después de casarte, divorciarte, tener un nuevo hijo, conseguir un segundo trabajo, o un aumento significativo."}},{"@type":"Question","name":"¿Esta calculadora incluye la retención estatal?","acceptedAnswer":{"@type":"Answer","text":"No, esta herramienta estima solo la retención federal, ya que los equivalentes de W-4 estatal y las reglas varían mucho según el estado. Usa la Calculadora de Salario para una estimación completa de pago neto federal + estatal + FICA."}},{"@type":"Question","name":"¿Es lo mismo que una calculadora de impuestos de nómina?","acceptedAnswer":{"@type":"Answer","text":"Esta herramienta se enfoca específicamente en la retención de impuesto federal según tu W-4. Una calculadora de impuestos de nómina generalmente se refiere a los mismos números principales más FICA (Seguro Social y Medicare), que juntos forman los impuestos retenidos de cada cheque. Para el panorama completo, la Calculadora de Salario funciona como una calculadora completa de impuestos de nómina para cualquiera de los 50 estados."}},{"@type":"Question","name":"¿Puedo comparar esto con mi W-2 real?","acceptedAnswer":{"@type":"Answer","text":"Sí — después de que termine el año fiscal, tu W-2 muestra la Casilla 2 (impuesto federal retenido) para el año completo. Compara eso con la cifra de retención anual que muestra esta calculadora para ver si tu retención coincidió con lo esperado."}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
+<link rel="stylesheet" href="/assets/css/base.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "PayCalcHub", "item": "https://paycalchub.com/es/"},
+    {"@type": "ListItem", "position": 2, "name": "Calculadora de Retención de Impuestos", "item": "https://paycalchub.com/es/tax-withholding-calculator/"}
+  ]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--red:#dc2626;--ora:#d97706;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
+body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}
+a{color:inherit;text-decoration:none}
+nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}
+.nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}
+.nav-links a:hover{color:var(--txt)}.nav-links a.active{color:var(--acc);font-weight:500}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
+.mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
+.mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
+.mobile-menu a:last-child{border-bottom:none}.mobile-menu.open{display:block}
+@media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
+.pg{max-width:1100px;margin:0 auto;padding:32px 24px 64px}
+.bc{font-size:13px;color:var(--mut);margin-bottom:12px}.bc a{color:var(--acc)}
+h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px}
+h1 em{font-style:normal;color:var(--acc)}
+.sub{color:var(--mut);font-size:15px;margin-bottom:28px}
+.lay{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start}
+.card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);overflow:hidden}
+.cb{padding:24px}
+.fr{margin-bottom:14px}
+.fr label{display:block;font-size:13px;font-weight:500;color:var(--mut);margin-bottom:5px}
+.iw{position:relative}
+.ip{position:absolute;left:11px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--mut);pointer-events:none;z-index:1}
+.is{position:absolute;right:11px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--mut);pointer-events:none}
+.fr input,.fr select{width:100%;padding:10px 14px;border:1px solid var(--bor);border-radius:8px;font-size:15px;font-family:var(--f);background:var(--bg);color:var(--txt);outline:none;transition:border-color .15s,background .15s;-moz-appearance:textfield}
+.fr input::-webkit-outer-spin-button,.fr input::-webkit-inner-spin-button{-webkit-appearance:none}
+.fr input:focus,.fr select:focus{border-color:var(--acc);background:#fff}
+.hp input{padding-left:28px}.hs input{padding-right:38px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fsec{margin:18px 0 14px;padding-top:18px;border-top:1px solid var(--bor)}
+.fsec-lbl{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--mut);margin-bottom:12px}
+.ded-toggle{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--acc);cursor:pointer;padding:10px 0;border:none;background:none;font-family:var(--f);width:100%}
+.ded-toggle-icon{font-size:16px;transition:transform .2s;line-height:1}
+.ded-toggle.open .ded-toggle-icon{transform:rotate(45deg)}
+.ded-body{display:none}.ded-body.open{display:block}
+.opt{font-size:10px;font-weight:500;background:var(--bg);border:1px solid var(--bor);color:var(--mut);padding:1px 6px;border-radius:4px}
+.res{margin-top:20px;border-top:1px solid var(--bor);padding-top:20px}
+.rh{background:var(--alight);border-radius:10px;padding:20px;text-align:center;margin-bottom:16px}
+.rl{font-size:11px;font-weight:600;color:var(--acc);letter-spacing:.06em;text-transform:uppercase}
+.ra{font-family:var(--mo);font-size:38px;font-weight:500;color:var(--acc);letter-spacing:-.02em;line-height:1.1;margin:4px 0 2px}
+.rp{font-size:13px;color:var(--mut)}.re{font-size:12px;color:var(--acc);margin-top:6px;font-weight:500}
+.bd{display:flex;flex-direction:column;gap:5px}
+.br{display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:9px 13px;border-radius:8px;background:var(--bg)}
+.bl{color:var(--mut)}.bv{font-family:var(--mo);font-weight:500}
+.br.ded .bv{color:var(--red)}.br.cred .bv{color:var(--acc)}
+.br.net{background:var(--alight)}.br.net .bl{font-weight:600;color:var(--acc)}.br.net .bv{color:var(--acc);font-size:15px}
+.sb{display:flex;flex-direction:column;gap:18px}
+.ic{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad)}
+.ic ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.ic li{font-size:13px;color:var(--mut);display:flex;justify-content:space-between}
+.ic li span{font-family:var(--mo);font-size:12px;font-weight:500;color:var(--txt)}
+@media(min-width:801px){.ic-body{padding:0 18px 18px}.ic h3{margin:14px 18px 10px;font-size:13px;font-weight:600}}
+.tip-box{background:#fff8e1;border:1px solid #f0c040;border-radius:8px;padding:14px 16px;font-size:13px;color:#7a5800;line-height:1.7;margin:16px 0}
+.art{margin-top:48px}.art h2{font-size:20px;font-weight:600;margin-bottom:12px}
+.art p{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:16px}
+.art ul{padding-left:20px;margin-bottom:16px}.art li{font-size:15px;color:var(--mut);line-height:1.75;margin-bottom:6px}
+.fqs{margin-top:40px}.fqs h2{font-size:20px;font-weight:600;margin-bottom:16px}
+.fqi{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);margin-bottom:8px;overflow:hidden}
+.fqq{padding:15px 18px;font-size:14px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.fqi-icon{font-size:20px;color:var(--mut);flex-shrink:0;transition:transform .2s}
+.fqq.open .fqi-icon{transform:rotate(45deg)}
+.fqa{font-size:14px;color:var(--mut);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .25s ease,padding .2s;padding:0 18px}
+.fqa.open{max-height:400px;padding:0 18px 16px}
+.related{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px 22px;margin-top:24px}
+.related h3{font-size:14px;font-weight:600;margin-bottom:12px;margin-top:0}
+.related a{display:block;color:var(--acc);font-size:13px;margin-bottom:8px;line-height:1.5}
+.related a:last-child{margin-bottom:0}
+@media(max-width:800px){.lay{grid-template-columns:1fr}.nav-links{display:none}.fg{grid-template-columns:1fr}.ra{font-size:32px}}
+
+.lang-wrap{position:relative;margin-left:8px}
+.lang-btn{display:flex;align-items:center;gap:6px;background:var(--alight);border:1px solid #c5e0d3;border-radius:8px;padding:5px 10px;cursor:pointer;font-size:13px;font-weight:500;color:var(--acc);transition:background .15s}
+.lang-btn:hover{background:#d4eddf}
+.lang-chevron{transition:transform .2s}
+.lang-wrap.open .lang-chevron{transform:rotate(180deg)}
+.lang-dropdown{display:none;position:absolute;top:calc(100% + 6px);right:0;background:var(--sur);border:1px solid var(--bor);border-radius:10px;padding:5px;min-width:148px;box-shadow:0 4px 20px rgba(0,0,0,0.08);z-index:200}
+.lang-wrap.open .lang-dropdown{display:block}
+.lang-item{display:flex;align-items:center;gap:9px;padding:7px 10px;border-radius:6px;font-size:13px;color:var(--txt);transition:background .1s;text-decoration:none}
+.lang-item:hover{background:var(--bg)}
+.lang-item.active{background:var(--alight);color:var(--acc);font-weight:600}
+.lang-item-flag{font-size:16px}
+</style>
+</head>
+<body>
+<nav><div class="nav-in">
+  <a href="/es/" class="logo">Pay<span>Calc</span>Hub</a>
+  <div class="nav-links"><a href="/es/salary-calculator/">Salario</a><a href="/es/mortgage-calculator/">Hipoteca</a><a href="/es/loan-calculator/">Préstamo</a><a href="/es/hourly-to-salary/">Por Hora</a></div>
+  <div class="lang-wrap" id="langWrap">
+    <button class="lang-btn" onclick="toggleLang()" aria-label="Seleccionar idioma" aria-expanded="false" aria-haspopup="listbox">
+      <span style="font-size:16px">🇪🇸</span><span style="font-size:13px;font-weight:600">ES</span>
+      <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="lang-dropdown" role="listbox">
+      <a href="/tax-withholding-calculator/" class="lang-item"><span class="lang-item-flag">🇺🇸</span><span>English</span></a>
+      <a href="/pt/tax-withholding-calculator/" class="lang-item"><span class="lang-item-flag">🇧🇷</span><span>Português</span></a>
+      <div class="lang-item active"><span class="lang-item-flag">🇪🇸</span><span>Español</span></div>
+    </div>
+  </div>
+  <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/es/salary-calculator/">Calculadora de Salario</a>
+  <a href="/es/net-pay-calculator/">Calculadora de Salario Neto</a>
+  <a href="/es/mortgage-calculator/">Calculadora de Hipoteca</a>
+  <a href="/es/hourly-to-salary/">Por Hora a Salario</a>
+</div>
+</nav>
+<main>
+<div class="pg">
+  <div class="bc"><a href="/es/">PayCalcHub</a> &rsaquo; Calculadora de Retención de Impuestos</div>
+  <h1>Calculadora de <em>Retención de Impuestos</em> Gratis</h1>
+  <p class="sub">Estima tu retención de impuesto federal 2026 por cheque según tu W-4: estado civil, dependientes, otros ingresos, y deducciones.</p>
+  <div class="lay">
+    <div>
+      <div class="card">
+        <div class="cb">
+          <div class="fg">
+            <div class="fr"><label for="tw-pay">Pago Bruto Por Cheque</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tw-pay" placeholder="2,500" value="2500" oninput="calc()"></div></div>
+            <div class="fr"><label for="tw-frq">Frecuencia de Pago</label><select id="tw-frq" onchange="calc()"><option value="26">Quincenal (26/año)</option><option value="24">Semi-mensual (24/año)</option><option value="12">Mensual (12/año)</option><option value="52">Semanal (52/año)</option></select></div>
+          </div>
+          <div class="fr"><label for="tw-fil">Estado Civil (W-4 Paso 1c)</label><select id="tw-fil" onchange="calc()"><option value="single">Soltero(a) o Casado(a) Declarando por Separado</option><option value="married">Casado(a) Declaración Conjunta</option><option value="hoh">Cabeza de Familia</option></select></div>
+          <div class="fsec">
+            <div class="fsec-lbl">W-4 Paso 3 — Dependientes</div>
+            <div class="fg">
+              <div class="fr"><label for="tw-kids">Hijos Calificados Menores de 17</label><input type="number" id="tw-kids" placeholder="0" min="0" value="0" oninput="calc()"></div>
+              <div class="fr"><label for="tw-deps">Otros Dependientes</label><input type="number" id="tw-deps" placeholder="0" min="0" value="0" oninput="calc()"></div>
+            </div>
+          </div>
+          <div class="fsec" style="margin-bottom:0;padding-bottom:0">
+            <button class="ded-toggle" id="ded-btn" onclick="toggleDed()">
+              <span class="ded-toggle-icon">+</span> W-4 Paso 4 — Otros Ajustes <span class="opt">Opcional</span>
+            </button>
+            <div class="ded-body" id="ded-body">
+              <div class="fg" style="margin-top:10px">
+                <div class="fr"><label for="tw-4a">Otro Ingreso (anual, 4a)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tw-4a" placeholder="0" min="0" oninput="calc()"></div></div>
+                <div class="fr"><label for="tw-4b">Deducciones Extra (anual, 4b)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tw-4b" placeholder="0" min="0" oninput="calc()"></div></div>
+              </div>
+              <div class="fr"><label for="tw-4c">Retención Extra Por Cheque (4c)</label><div class="iw hp"><span class="ip">$</span><input type="number" id="tw-4c" placeholder="0" min="0" oninput="calc()"></div></div>
+            </div>
+          </div>
+          <div class="res" id="res">
+            <div class="rh"><div class="rl">Retención Federal Estimada</div><div class="ra" id="r-amt">$0</div><div class="rp" id="r-per">por cheque</div><div class="re" id="r-eff"></div></div>
+            <div class="bd" id="bdown"></div>
+          </div>
+          <div class="tip-box">⚠ Esto estima solo la <strong>retención de impuesto federal</strong>, usando el método de salario anualizado del IRS como una aproximación cercana al sistema real de nómina de tu empleador. Tu retención real puede variar ligeramente según el método específico de tu empleador, y esto no incluye Seguro Social, Medicare, o impuesto estatal. No es asesoría fiscal — para algo más allá de una estimación rápida, usa el <a href="https://www.irs.gov/individuals/tax-withholding-estimator" style="color:#7a5800;text-decoration:underline" target="_blank" rel="noopener">Estimador de Retención del IRS</a>.</div>
+        </div>
+      </div>
+      <div class="art">
+        <h2>Cómo Funciona la Retención de Impuesto Federal</h2>
+        <p>Cada cheque, tu empleador retiene una estimación de tu impuesto federal y la envía al IRS en tu nombre, según el formulario W-4 que llenaste. Esta calculadora anualiza tu pago bruto, aplica la deducción estándar y los tramos de impuesto de 2026 para tu estado civil, resta los créditos de dependientes del Paso 3, y luego divide el resultado de nuevo entre tus periodos de pago — el mismo enfoque básico que usa el método de salario anualizado del propio IRS.</p>
+        <h2>Lograr una Retención "Correcta"</h2>
+        <p>El objetivo no es un reembolso enorme ni una gran factura de impuestos — es acercarse a $0 adeudado y $0 reembolsado, lo que significa que mantuviste la mayor cantidad de dinero en cada cheque durante todo el año en lugar de darle al IRS un préstamo sin intereses. Si tu retención estimada aquí parece diferente a tu cheque real, las causas más comunes son un segundo trabajo, un cónyuge que trabaja, o ingresos adicionales significativos (freelance, inversiones) que no se reflejan en tu W-4.</p>
+        <h2>Preguntas Frecuentes</h2>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Qué es la retención de impuestos? <span class="fqi-icon">+</span></div><div class="fqa">La retención de impuestos es el dinero que tu empleador saca de cada cheque y envía al IRS en tu nombre, como un pago anticipado hacia tu factura de impuesto federal anual. La cantidad se basa en el formulario W-4 que llenaste con tu empleador.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Qué pasa si se retiene demasiado o muy poco? <span class="fqi-icon">+</span></div><div class="fqa">Si se retiene demasiado durante el año, recibes un reembolso de impuestos al declarar — pero le diste al gobierno un préstamo sin intereses. Si se retiene muy poco, deberás dinero al momento de declarar, y podrías enfrentar una multa por pago insuficiente si la diferencia es grande. Ajustar tu W-4 te ayuda a acercarte al punto de equilibrio.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Cómo cambio mi retención? <span class="fqi-icon">+</span></div><div class="fqa">Envía un nuevo Formulario W-4 a tu empleador en cualquier momento. No necesitas una razón específica, aunque vale especialmente la pena actualizarlo después de casarte, divorciarte, tener un nuevo hijo, conseguir un segundo trabajo, o un aumento significativo.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Esta calculadora incluye la retención estatal? <span class="fqi-icon">+</span></div><div class="fqa">No, esta herramienta estima solo la retención federal, ya que los equivalentes de W-4 estatal y las reglas varían mucho según el estado. Usa la Calculadora de Salario para una estimación completa de pago neto federal + estatal + FICA.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Es lo mismo que una calculadora de impuestos de nómina? <span class="fqi-icon">+</span></div><div class="fqa">Esta herramienta se enfoca específicamente en la retención de impuesto federal según tu W-4. Una calculadora de impuestos de nómina generalmente se refiere a los mismos números principales más FICA (Seguro Social y Medicare), que juntos forman los impuestos retenidos de cada cheque. Para el panorama completo — retención federal, FICA, e impuesto estatal juntos — usa la <a href="/es/salary-calculator/" style="color:var(--acc)">Calculadora de Salario</a>, que funciona como una calculadora completa de impuestos de nómina para cualquiera de los 50 estados.</div></div>
+        <div class="fqi"><div class="fqq" onclick="tFaq(this)">¿Puedo comparar esto con mi W-2 real? <span class="fqi-icon">+</span></div><div class="fqa">Sí — después de que termine el año fiscal, tu W-2 muestra la Casilla 2 (impuesto federal retenido) para el año completo. Compara eso con la cifra de retención "Anual" que muestra esta calculadora para ver si tu retención coincidió con lo esperado. Una diferencia grande en cualquier dirección es una señal para actualizar tu W-4 para el próximo año.</div></div>
+        <div class="related">
+          <h3>Calculadoras y Guías Relacionadas</h3>
+          <a href="/es/salary-calculator/">Calculadora de Salario Completa — federal + estatal + FICA</a>
+          <a href="/es/net-pay-calculator/">Calculadora de Salario Neto — Semanal, Quincenal y Mensual</a>
+        </div>
+      </div>
+    </div>
+    <div class="sb">
+      <div class="ic">
+        <h3 style="padding:14px 18px 0">&#128161; Créditos W-4 2026</h3>
+        <div class="ic-body">
+          <ul><li>Crédito Tributario por Hijos<span>$2,200</span></li><li>Crédito por otro dependiente<span>$500</span></li></ul>
+        </div>
+      </div>
+      <div class="ic">
+        <h3 style="padding:14px 18px 0">&#128203; Deducción Estándar 2026</h3>
+        <div class="ic-body">
+          <ul><li>Soltero(a) / MFS<span>$16,100</span></li><li>Casado(a) declaración conjunta<span>$32,200</span></li><li>Cabeza de familia<span>$24,150</span></li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+<footer>
+<div class="fi">
+  <div class="fi-brand">
+    <a href="/es/" class="fi-logo">Pay<span>Calc</span>Hub</a>
+    <p class="fi-tagline">Calculadoras financieras y de nómina de EE.UU., gratis y sin registro — actualizadas para 2026.</p>
+  </div>
+  <div class="fi-col">
+    <h4>Calculadoras</h4>
+    <a href="/es/salary-calculator/">Calculadora de Salario</a>
+    <a href="/es/hourly-to-salary/">Por Hora a Salario</a>
+    <a href="/es/net-pay-calculator/">Calculadora de Salario Neto</a>
+    <a href="/es/tax-withholding-calculator/">Retención de Impuestos</a>
+    <a href="/es/mortgage-calculator/">Calculadora de Hipoteca</a>
+    <a href="/es/loan-calculator/">Calculadora de Préstamo</a>
+  </div>
+  <div class="fi-col">
+    <h4>Guías</h4>
+    <a href="/salary-to-hourly/">Salario a Hora</a>
+    <a href="/blog/">Blog</a>
+  </div>
+  <div class="fi-col">
+    <h4>Empresa</h4>
+    <a href="/privacy/">Privacidad</a>
+    <a href="/affiliate-disclosure/">Divulgación de Afiliados</a>
+    <a href="/contact/">Contacto</a>
+    <a href="/">English</a>
+    <a href="/pt/">Português</a>
+  </div>
+</div>
+<div class="fi-bottom">
+  <span class="fi-copy">&copy; 2026 PayCalcHub.com</span>
+  <span class="fi-copy">Solo para fines informativos.</span>
+</div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById('mobileMenu'),b=document.getElementById('hamburgerBtn');var open=m.classList.toggle('open');b.setAttribute('aria-expanded',open);}
+function toggleDed(){var btn=document.getElementById("ded-btn");var body=document.getElementById("ded-body");btn.classList.toggle("open");body.classList.toggle("open");}
+function tFaq(el){var a=el.nextElementSibling;var isOpen=el.classList.contains('open');document.querySelectorAll('.fqq.open').forEach(function(q){q.classList.remove('open');q.nextElementSibling.classList.remove('open');});if(!isOpen){el.classList.add('open');a.classList.add('open');}}
+function gv(id){return parseFloat(document.getElementById(id).value)||0;}
+function gs(id){return document.getElementById(id).value;}
+function fmt(n){return "$"+Math.round(n).toLocaleString("en-US");}
+// 2026 federal brackets — verified against IRS Rev. Proc. 2025-32 (2026-07-05)
+var bS=[[12400,.10],[50400,.12],[105700,.22],[201775,.24],[256225,.32],[640600,.35],[1e9,.37]];
+var bM=[[24800,.10],[100800,.12],[211400,.22],[403550,.24],[512450,.32],[768700,.35],[1e9,.37]];
+var bH=[[17700,.10],[67450,.12],[105700,.22],[201750,.24],[256200,.32],[640600,.35],[1e9,.37]];
+function calcFed(taxable,br){var fed=0,prev=0,marg=10;for(var i=0;i<br.length;i++){var lim=br[i][0],rate=br[i][1];if(taxable<=prev)break;fed+=(Math.min(taxable,lim)-prev)*rate;if(taxable>prev)marg=rate*100;prev=lim;}return{fed:fed,marg:marg};}
+function calc(){
+  var pay=gv("tw-pay");
+  if(!pay){document.getElementById("r-amt").textContent="$0";document.getElementById("bdown").innerHTML="";return;}
+  var frq=parseInt(gs("tw-frq"));
+  var fil=gs("tw-fil");
+  var kids=gv("tw-kids"),deps=gv("tw-deps");
+  var otherInc=gv("tw-4a"),extraDed=gv("tw-4b"),extraWH=gv("tw-4c");
+  var std=fil==="married"?32200:fil==="hoh"?24150:16100;
+  var br=fil==="married"?bM:fil==="hoh"?bH:bS;
+  var annualWages=pay*frq;
+  var totalIncome=annualWages+otherInc;
+  var taxable=Math.max(0,totalIncome-std-extraDed);
+  var r=calcFed(taxable,br);
+  var tentativeTax=r.fed,marg=r.marg;
+  var credit=kids*2200+deps*500;
+  var annualWH=Math.max(0,tentativeTax-credit);
+  var perPeriodWH=annualWH/frq+extraWH;
+  var LABS={26:"por cheque (quincenal)",24:"por cheque (semi-mensual)",12:"por mes",52:"por cheque (semanal)"};
+  document.getElementById("r-amt").textContent=fmt(perPeriodWH);
+  document.getElementById("r-per").textContent=LABS[frq];
+  var effRate=((annualWH/annualWages)*100).toFixed(1);
+  document.getElementById("r-eff").textContent="Anual: "+fmt(annualWH+extraWH*frq)+" · Tasa efectiva: "+effRate+"% · Marginal: "+marg+"%";
+  var h='<div class="br"><span class="bl">Salario Bruto Anualizado</span><span class="bv">'+fmt(annualWages)+'</span></div>';
+  if(otherInc>0)h+='<div class="br"><span class="bl">+ Otro Ingreso (4a)</span><span class="bv">+'+fmt(otherInc)+'</span></div>';
+  h+='<div class="br ded"><span class="bl">Deducción Estándar</span><span class="bv">-'+fmt(std)+'</span></div>';
+  if(extraDed>0)h+='<div class="br ded"><span class="bl">Deducciones Extra (4b)</span><span class="bv">-'+fmt(extraDed)+'</span></div>';
+  h+='<div class="br"><span class="bl">Ingreso Imponible</span><span class="bv">'+fmt(taxable)+'</span></div>';
+  h+='<div class="br ded"><span class="bl">Impuesto Anual Tentativo</span><span class="bv">-'+fmt(tentativeTax)+'</span></div>';
+  if(credit>0)h+='<div class="br cred"><span class="bl">Créditos por Dependientes (Paso 3)</span><span class="bv">+'+fmt(credit)+'</span></div>';
+  h+='<div class="br"><span class="bl">Retención Anual</span><span class="bv">'+fmt(annualWH)+'</span></div>';
+  if(extraWH>0)h+='<div class="br"><span class="bl">+ Retención Extra (4c, por cheque)</span><span class="bv">+'+fmt(extraWH)+'</span></div>';
+  h+='<div class="br net"><span class="bl">Retención Este Cheque</span><span class="bv">'+fmt(perPeriodWH)+'</span></div>';
+  document.getElementById("bdown").innerHTML=h;
+}
+function toggleLang(){var w=document.getElementById('langWrap');w.classList.toggle('open');}
+document.addEventListener('click',function(e){var w=document.getElementById('langWrap');if(w&&!w.contains(e.target))w.classList.remove('open');});
+window.addEventListener("load",calc);
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>
