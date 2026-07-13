@@ -72,6 +72,24 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .prev-res{background:var(--alight);border-radius:10px;padding:13px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .prev-res-v{font-family:var(--mo);font-size:22px;font-weight:500;color:var(--acc)}
 .prev-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.prev-row{display:flex;gap:8px;margin-bottom:10px}
+.prev-slider{width:100%;-webkit-appearance:none;appearance:none;height:4px;border-radius:2px;background:var(--bor);outline:none;cursor:pointer;margin-bottom:10px}
+.prev-slider::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.prev-slider::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.prev-select{flex:1;padding:8px 10px;border-radius:8px;border:1px solid var(--bor);font-size:13px;font-family:var(--f);outline:none;background:var(--bg);color:var(--txt)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px}
+.why-card{background:var(--sur);border:1px solid var(--bor);border-radius:14px;padding:22px;transition:box-shadow .15s,transform .15s}
+.why-icon{width:44px;height:44px;border-radius:11px;background:var(--txt);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.why-h{font-size:15px;font-weight:700;color:var(--txt);margin-bottom:5px}
+.why-sub{font-size:11.5px;font-weight:600;color:var(--acc);text-transform:uppercase;letter-spacing:.03em;margin-bottom:10px}
+.why-p{font-size:13px;color:var(--mut);line-height:1.65}
+@media(max-width:800px){.why-grid{grid-template-columns:1fr}}
+.showcase{background:var(--sur);border:1px solid var(--bor);border-radius:18px;padding:32px;display:grid;grid-template-columns:0.9fr 1.1fr;gap:36px;align-items:center}
+.showcase-h2{font-size:22px;font-weight:600;line-height:1.3;letter-spacing:-.01em;margin:10px 0 12px}
+.showcase-h2 em{font-style:normal;color:var(--gold)}
+.showcase-p{font-size:13.5px;color:var(--mut);line-height:1.65}
+.showcase-chart{background:var(--bg);border-radius:12px;padding:18px}
+@media(max-width:800px){.showcase{grid-template-columns:1fr;padding:24px}}
 .prev-mini-card{background:var(--bg);border-radius:8px;padding:10px 12px}
 .prev-mini-lbl{font-size:11px;color:var(--mut);margin-bottom:3px}
 .prev-mini-val{font-family:var(--mo);font-size:14px;font-weight:500;color:var(--txt)}
@@ -106,11 +124,31 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 .tag-gray{background:var(--bg);color:var(--mut);border:1px solid var(--bor)}
 
 /* Popular searches */
-.pop{max-width:1100px;margin:0 auto;padding:0 24px 32px}
-.pop-inner{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px 24px}
-.pop-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.pop-link{border:1px solid var(--bor);border-radius:8px;padding:7px 14px;font-size:13px;color:var(--acc);background:var(--sur);transition:background .12s,border-color .12s}
-.pop-link:hover{background:var(--alight);border-color:var(--acc)}
+.pop{max-width:1100px;margin:0 auto;padding:0 24px 40px}
+.pop-groups{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.pop-card{background:var(--sur);border:1px solid var(--bor);border-radius:14px;padding:20px 22px;transition:box-shadow .15s,transform .15s}
+.pop-card-state{grid-column:span 2}
+.pop-state-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.pop-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-dark);margin-bottom:13px;display:flex;align-items:center;gap:6px}
+.pop-state-all{font-size:12px;font-weight:600;color:var(--acc);white-space:nowrap}
+.pop-state-body{display:grid;grid-template-columns:1fr 1.4fr;gap:20px;align-items:center}
+.pop-state-map{background:var(--bg);border-radius:10px;padding:14px;display:flex;align-items:center;gap:12px;height:100%}
+.pop-state-map-text{font-size:12px;color:var(--mut);line-height:1.5}
+.pop-state-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
+.pop-state-link{font-size:13px;color:var(--txt);background:var(--bg);border:1px solid var(--bor);border-radius:8px;padding:8px 10px;font-weight:500;transition:border-color .12s,background .12s;text-align:center}
+.pop-state-link:hover{border-color:var(--acc);background:var(--alight)}
+.pop-link-top{background:var(--acc);color:#fff;border-color:var(--acc)}
+.pop-card-desc{font-size:12.5px;color:var(--mut);line-height:1.6;margin-bottom:14px}
+.pop-links{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
+.pop-link{font-size:13px;color:var(--txt);background:var(--bg);border:1px solid var(--bor);border-radius:8px;padding:8px 12px;font-weight:500;transition:border-color .12s,background .12s;text-align:center;white-space:nowrap}
+.pop-link:hover{border-color:var(--acc);background:var(--alight)}
+.pop-links-intl{display:flex;flex-direction:column;gap:7px}
+.pop-link-full{width:100%;display:block}
+.pop-links-2col{grid-template-columns:1fr 1fr}
+.pop-card-wide{grid-column:span 2}
+.pop-card-desc-inline{font-size:12.5px;color:var(--mut)}
+.pop-links-6{grid-template-columns:repeat(6,1fr)}
+@media(max-width:800px){.pop-groups{grid-template-columns:1fr}.pop-card-state{grid-column:span 1}.pop-card-wide{grid-column:span 1}.pop-state-body{grid-template-columns:1fr}.pop-state-grid{grid-template-columns:1fr 1fr}.pop-links-6{grid-template-columns:1fr 1fr 1fr}}
 
 /* Footer */
 
@@ -178,21 +216,48 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 </div>
 <div class="preview">
   <div class="prev-lbl">Cálculo Rápido</div>
-  <input type="number" id="qs" aria-label="Salario anual" value="60000" class="prev-input" oninput="qc()" placeholder="Salario anual">
+  <input type="number" id="qs" aria-label="Salario anual" value="60000" class="prev-input" oninput="syncQSlider(this.value);qc()" placeholder="Salario anual">
+  <input type="range" class="prev-slider" id="qs-slider" aria-label="Deslizador de salario anual" min="20000" max="300000" step="1000" value="60000" oninput="syncQInput(this.value);qc()">
+  <div class="prev-row">
+    <select class="prev-select" id="q-state" aria-label="Estado" onchange="qc()">
+      <option value="0" selected>Sin impuesto estatal (AK/FL/TX…)</option>
+      <option value="9.3">California — 9.3%</option>
+      <option value="6.85">Nueva York — 6.85%</option>
+      <option value="5.0">Massachusetts — 5.0%</option>
+      <option value="4.95">Illinois — 4.95%</option>
+      <option value="4.4">Colorado — 4.4%</option>
+      <option value="5.75">Virginia — 5.75%</option>
+      <option value="3.07">Pensilvania — 3.07%</option>
+      <option value="4.25">Michigan — 4.25%</option>
+    </select>
+    <select class="prev-select" id="q-fil" aria-label="Estado civil" onchange="qc()" style="max-width:130px">
+      <option value="single">Soltero(a)</option>
+      <option value="married">Casado(a)</option>
+    </select>
+  </div>
   <div class="prev-res">
     <span style="font-size:13px;color:var(--acc)">Salario mensual neto</span>
-    <span class="prev-res-v" id="qr">$3,867</span>
+    <span class="prev-res-v" id="qr">—</span>
   </div>
   <div class="prev-mini">
     <div class="prev-mini-card">
       <div class="prev-mini-lbl">Neto anual</div>
-      <div class="prev-mini-val" id="qa">$46,407</div>
+      <div class="prev-mini-val" id="qa">—</div>
+    </div>
+    <div class="prev-mini-card">
+      <div class="prev-mini-lbl">Impuesto federal</div>
+      <div class="prev-mini-val" id="qf">—</div>
+    </div>
+    <div class="prev-mini-card">
+      <div class="prev-mini-lbl">Impuesto estatal</div>
+      <div class="prev-mini-val" id="qst">—</div>
     </div>
     <div class="prev-mini-card">
       <div class="prev-mini-lbl">Tasa efectiva</div>
-      <div class="prev-mini-val" id="qe">18.4%</div>
+      <div class="prev-mini-val" id="qe">—</div>
     </div>
   </div>
+  <p style="font-size:12px;color:var(--mut);margin-top:12px;line-height:1.5">Solo una estimación — excluye impuestos locales y deducciones. <a href="/es/salary-calculator/" style="color:var(--acc);text-decoration:underline">Ver desglose completo →</a></p>
 </div>
 </div>
 </div>
@@ -252,21 +317,245 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 
 <!-- Popular searches -->
 <div class="pop">
-<div class="pop-inner">
-  <div class="sec-lbl" style="margin-bottom:0">Búsquedas populares</div>
-  <div class="pop-links">
-    <a href="/hourly-to-salary/20-dollars-an-hour/" class="pop-link">$20 la hora ¿cuánto es al año?</a>
-    <a href="/hourly-to-salary/25-dollars-an-hour/" class="pop-link">$25 la hora salario anual</a>
-    <a href="/hourly-to-salary/15-dollars-an-hour/" class="pop-link">$15 la hora después de impuestos</a>
-    <a href="/salary-to-hourly/50k-a-year/" class="pop-link">$50,000 al año ¿cuánto es por hora?</a>
-    <a href="/salary-to-hourly/60k-a-year/" class="pop-link">$60,000 al año después de impuestos</a>
-    <a href="/salary-to-hourly/100k-a-year/" class="pop-link">$100k al año tarifa por hora</a>
-    <a href="/salary-calculator/california/" class="pop-link">Calculadora salario California</a>
-    <a href="/salary-calculator/texas/" class="pop-link">Calculadora salario Texas</a>
-    <a href="/salary-calculator/new-york/" class="pop-link">Calculadora salario Nueva York</a>
-    <a href="/salary-calculator/florida/" class="pop-link">Calculadora salario Florida</a>
+<div class="sec-lbl">Búsquedas populares</div>
+<div class="pop-groups">
+  <div class="pop-card pop-card-state">
+    <div class="pop-state-top">
+      <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg> Por estado &mdash; más buscado</div>
+      <a href="/salary-calculator/" class="pop-state-all">Ver los 50 estados &rarr;</a>
+    </div>
+    <div class="pop-state-body">
+      <div class="pop-state-map">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold-dark)"><path d="M3 8.5 9 5l6 3 6-3v11l-6 3-6-3-6 3Z"/><circle cx="9" cy="9.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="15" cy="13.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+        <div class="pop-state-map-text"><strong>Los 50 estados cubiertos</strong>Cada calculadora estatal actualizada con las tasas de 2026</div>
+      </div>
+      <div class="pop-state-grid">
+        <a href="/salary-calculator/california/" class="pop-state-link pop-link-top">California</a>
+        <a href="/salary-calculator/texas/" class="pop-state-link pop-link-top">Texas</a>
+        <a href="/salary-calculator/new-york/" class="pop-state-link">Nueva York</a>
+        <a href="/salary-calculator/florida/" class="pop-state-link">Florida</a>
+        <a href="/salary-calculator/washington/" class="pop-state-link">Washington</a>
+        <a href="/salary-calculator/colorado/" class="pop-state-link">Colorado</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pop-card">
+    <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8.25"/><path d="M12 8.5V13l3 2"/><path d="M9.5 2.5h5"/></svg> Salarios por hora</div>
+    <p class="pop-card-desc">Ve el salario anual de tiempo completo, el pago mensual, y el neto después de impuestos para cualquier tarifa por hora.</p>
+    <div class="pop-links">
+      <a href="/hourly-to-salary/15-dollars-an-hour/" class="pop-link">$15 la hora</a>
+      <a href="/hourly-to-salary/20-dollars-an-hour/" class="pop-link pop-link-top">$20 la hora</a>
+      <a href="/hourly-to-salary/25-dollars-an-hour/" class="pop-link pop-link-top">$25 la hora</a>
+      <a href="/hourly-to-salary/30-dollars-an-hour/" class="pop-link">$30 la hora</a>
+      <a href="/hourly-to-salary/40-dollars-an-hour/" class="pop-link">$40 la hora</a>
+      <a href="/hourly-to-salary/50-dollars-an-hour/" class="pop-link">$50 la hora</a>
+    </div>
+  </div>
+
+  <div class="pop-card">
+    <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v3.5M16 3v3.5"/><path d="M8 13.5h2M8 17h2M14 13.5h2M14 17h2"/></svg> Salarios anuales</div>
+    <p class="pop-card-desc">Convierte cualquier salario anual a tarifa por hora, además de lo que realmente significa para tu presupuesto mensual.</p>
+    <div class="pop-links">
+      <a href="/salary-to-hourly/40k-a-year/" class="pop-link">$40k al año</a>
+      <a href="/salary-to-hourly/50k-a-year/" class="pop-link pop-link-top">$50k al año</a>
+      <a href="/salary-to-hourly/60k-a-year/" class="pop-link pop-link-top">$60k al año</a>
+      <a href="/salary-to-hourly/75k-a-year/" class="pop-link">$75k al año</a>
+      <a href="/salary-to-hourly/100k-a-year/" class="pop-link">$100k al año</a>
+      <a href="/salary-to-hourly/120k-a-year/" class="pop-link">$120k al año</a>
+    </div>
+  </div>
+
+  <div class="pop-card">
+    <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.2 2.3 3.4 5.3 3.4 8.5s-1.2 6.2-3.4 8.5c-2.2-2.3-3.4-5.3-3.4-8.5S9.8 5.8 12 3.5Z"/></svg> Internacional</div>
+    <p class="pop-card-desc">Desgloses fiscales completos fuera de EE.UU., cada uno actualizado con los tramos y tasas fiscales de 2026.</p>
+    <div class="pop-links-intl">
+      <a href="/salary-calculator/united-kingdom/" class="pop-link pop-link-top pop-link-full">Reino Unido</a>
+      <div class="pop-links pop-links-2col">
+        <a href="/salary-calculator/canada/" class="pop-link">Canadá</a>
+        <a href="/salary-calculator/australia/" class="pop-link">Australia</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pop-card">
+    <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11.5 12 4l8.5 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-9"/></svg> Hipoteca</div>
+    <p class="pop-card-desc">Estimaciones de pago mensual por tamaño de préstamo, basadas en las tasas hipotecarias promedio de 2026.</p>
+    <div class="pop-links">
+      <a href="/mortgage-per-month/200k-mortgage/" class="pop-link">$200k</a>
+      <a href="/mortgage-per-month/300k-mortgage/" class="pop-link pop-link-top">$300k</a>
+      <a href="/mortgage-per-month/400k-mortgage/" class="pop-link pop-link-top">$400k</a>
+      <a href="/mortgage-per-month/500k-mortgage/" class="pop-link">$500k</a>
+      <a href="/mortgage-per-month/600k-mortgage/" class="pop-link">$600k</a>
+      <a href="/mortgage-per-month/700k-mortgage/" class="pop-link">$700k</a>
+    </div>
+  </div>
+  <div class="pop-card pop-card-wide">
+    <div class="pop-state-top">
+      <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20h17"/><path d="m4.5 14.5 4.5-4.5 3.5 3.5L19 6.5"/><path d="M15 6.5h4.5V11"/></svg> Asequibilidad</div>
+      <span class="pop-card-desc-inline">Encuentra tu rango realista de precio de casa usando la regla del 28%, según tu nivel de salario.</span>
+    </div>
+    <div class="pop-links pop-links-6">
+      <a href="/how-much-house-can-i-afford/40k-salary/" class="pop-link">Salario $40k</a>
+      <a href="/how-much-house-can-i-afford/60k-salary/" class="pop-link pop-link-top">Salario $60k</a>
+      <a href="/how-much-house-can-i-afford/80k-salary/" class="pop-link pop-link-top">Salario $80k</a>
+      <a href="/how-much-house-can-i-afford/100k-salary/" class="pop-link">Salario $100k</a>
+      <a href="/how-much-house-can-i-afford/120k-salary/" class="pop-link">Salario $120k</a>
+      <a href="/how-much-house-can-i-afford/150k-salary/" class="pop-link">Salario $150k</a>
+    </div>
   </div>
 </div>
+</div>
+
+<!-- Visual showcase -->
+<div class="sec">
+  <div class="showcase">
+    <div class="showcase-text">
+      <div class="sec-lbl">Míralo antes de hacer clic</div>
+      <h2 class="showcase-h2">Cada calculadora te muestra<br><em>exactamente</em> a dónde va tu dinero</h2>
+      <p class="showcase-p">Sin muros de números. Solo un desglose claro de impuestos, deducciones y salario neto — calculado con las tasas oficiales de 2026 cada vez que haces el cálculo.</p>
+    </div>
+    <div class="showcase-chart">
+      <svg viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">
+        <text x="0" y="22" font-family="DM Sans, sans-serif" font-size="13" font-weight="700" fill="#1a1915">$75,000/Año &mdash; A Dónde Va</text>
+        <text x="0" y="40" font-family="DM Sans, sans-serif" font-size="11" fill="#6b6960">Declarante soltero &middot; sin impuesto estatal &middot; tasa efectiva 18.9%</text>
+        <defs>
+          <clipPath id="showcase-clip-es"><rect x="0" y="64" width="460" height="40" rx="8"/></clipPath>
+        </defs>
+        <g clip-path="url(#showcase-clip-es)">
+          <rect x="0" y="64" width="460" height="40" fill="#e4e2dc"/>
+          <rect x="0" y="64" width="62" height="40" fill="#c1503f" opacity="0.55"/>
+          <rect x="62" y="64" width="65" height="40" fill="#c1503f" opacity="0.32"/>
+          <rect x="127" y="64" width="333" height="40" fill="#1e6b4a"/>
+        </g>
+        <text x="293" y="89" font-family="DM Mono, monospace" font-size="14" font-weight="600" fill="#fff" text-anchor="middle">$60,825</text>
+        <g font-family="DM Sans, sans-serif" font-size="11.5" fill="#1a1915">
+          <rect x="0" y="124" width="12" height="12" rx="3" fill="#c1503f" opacity="0.55"/>
+          <text x="18" y="134">Impuesto federal: $7,237</text>
+          <rect x="160" y="124" width="12" height="12" rx="3" fill="#c1503f" opacity="0.32"/>
+          <text x="178" y="134">FICA: $5,738</text>
+          <rect x="290" y="124" width="12" height="12" rx="3" fill="#1e6b4a"/>
+          <text x="308" y="134">Neto: $60,825</text>
+        </g>
+        <text x="0" y="172" font-family="DM Sans, sans-serif" font-size="10.5" fill="#6b6960">Generado al instante &mdash; prueba tu propio número arriba &uarr;</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- Why PayCalcHub -->
+<div class="sec">
+  <div class="sec-lbl">Por Qué PayCalcHub</div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon"><svg width="22" height="22" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.75" fill="currentColor"/></svg></div>
+      <div class="why-h">Datos Precisos 2026</div>
+      <div class="why-sub">Actualizado enero 2026 &middot; 50 estados cubiertos</div>
+      <div class="why-p">Tramos oficiales del IRS, tasas de FICA, tablas fiscales de los 50 estados, y límites de préstamos conforme a FHFA &mdash; verificados cada año.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="22" height="22" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><path d="M12 14.5v3"/></svg></div>
+      <div class="why-h">Privado por Diseño</div>
+      <div class="why-sub">0 bytes de datos financieros enviados a servidores</div>
+      <div class="why-p">Todos los cálculos se ejecutan en tu navegador. Tu salario y datos financieros nunca salen de tu dispositivo &mdash; sin cuentas, sin rastreo.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg width="22" height="22" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="9.5" width="17" height="11" rx="1.5"/><path d="M3.5 13.5h17"/><path d="M12 9.5v11"/><path d="M12 9.5c-1-3-3-4.5-4.5-4-1.5.5-1.5 3 0 4M12 9.5c1-3 3-4.5 4.5-4 1.5.5 1.5 3 0 4"/></svg></div>
+      <div class="why-h">Siempre Gratis</div>
+      <div class="why-sub">Sin muros de pago &middot; Sin registro &middot; Sin niveles premium</div>
+      <div class="why-p">Cada calculadora, guía y tabla de datos es gratis para usar. La claridad financiera es un derecho, no un producto.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ Section -->
+<div class="sec">
+  <div class="sec-lbl">Preguntas Comunes</div>
+  <div style="margin-top:16px;display:flex;flex-direction:column;gap:8px">
+
+    <div class="fqi">
+      <div class="fqq" onclick="tFaq(this)">
+        <span>¿Qué tan precisas son estas calculadoras?</span>
+        <span class="fqi-icon">+</span>
+      </div>
+      <div class="fqa">Todas las calculadoras usan los tramos fiscales federales, tasas de FICA y deducciones estándar más recientes de 2026. Las tasas de impuesto estatal se actualizan anualmente. Los resultados son estimaciones — tu salario neto real depende de tus deducciones específicas, estado civil y beneficios del empleador. Usa nuestra <a href="/es/salary-calculator/" style="color:var(--acc)">Calculadora de Salario</a> para un desglose detallado incluyendo 401k y seguro médico.</div>
+    </div>
+
+    <div class="fqi">
+      <div class="fqq" onclick="tFaq(this)">
+        <span>¿Con qué calculadora debo empezar?</span>
+        <span class="fqi-icon">+</span>
+      </div>
+      <div class="fqa">Si ganas un salario por hora, empieza con la <a href="/es/hourly-to-salary/" style="color:var(--acc)">Calculadora por Hora a Salario</a>. Para una estimación de salario neto anual, usa la <a href="/es/salary-calculator/" style="color:var(--acc)">Calculadora de Salario</a> — cubre los 50 estados de EE.UU. además de UK, Canadá y Australia. Para comprar casa, prueba la Calculadora de Asequibilidad.</div>
+    </div>
+
+    <div class="fqi">
+      <div class="fqq" onclick="tFaq(this)">
+        <span>¿Cuánta casa puedo pagar con mi salario?</span>
+        <span class="fqi-icon">+</span>
+      </div>
+      <div class="fqa">La regla estándar es que los costos de vivienda no deben exceder el 28% de tu ingreso bruto mensual. Con un salario de $60,000 eso equivale a aproximadamente $1,400/mes — soportando un precio de casa de entre $184,000 y $276,000 dependiendo de tu pago inicial y tasa de interés.</div>
+    </div>
+
+    <div class="fqi">
+      <div class="fqq" onclick="tFaq(this)">
+        <span>¿Cuál es la diferencia entre salario bruto y neto?</span>
+        <span class="fqi-icon">+</span>
+      </div>
+      <div class="fqa">El salario bruto es tu pago total antes de cualquier deducción. El salario neto (pago a casa) es lo que recibes después del impuesto federal sobre la renta, FICA (Seguro Social + Medicare), impuesto estatal sobre la renta, y deducciones voluntarias como 401k o seguro médico. Para la mayoría de los estadounidenses, el salario neto es 70&ndash;85% del salario bruto dependiendo del nivel de ingreso y el estado.</div>
+    </div>
+
+    <div class="fqi">
+      <div class="fqq" onclick="tFaq(this)">
+        <span>¿Estas calculadoras son gratis?</span>
+        <span class="fqi-icon">+</span>
+      </div>
+      <div class="fqa">Sí — cada calculadora de PayCalcHub es completamente gratis. Sin registro, sin necesidad de cuenta, y ningún dato se almacena o envía a nuestros servidores. Todos los cálculos ocurren completamente en tu navegador.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Blog Section -->
+<div class="sec">
+  <div class="sec-lbl">Del Blog</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
+    <a href="/blog/25-an-hour-after-taxes-texas/" style="background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s,transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc)">Salario Neto</div>
+        <div style="font-size:11px;color:var(--mut)">Abr 2026 · 5 min</div>
+      </div>
+      <div style="font-size:15px;font-weight:600;color:var(--txt);line-height:1.4;margin-bottom:8px">$25 la Hora Después de Impuestos en Texas</div>
+      <div style="font-size:13px;color:var(--mut);line-height:1.6">Salario neto exacto: $43,821/año, $3,652/mes. Comparación completa con California, Nueva York y 6 estados más. (Artículo en inglés)</div>
+    </a>
+    <a href="/blog/30-an-hour-jobs-no-degree/" style="background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s,transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc)">Carrera y Salario</div>
+        <div style="font-size:11px;color:var(--mut)">May 2026 · 7 min</div>
+      </div>
+      <div style="font-size:15px;font-weight:600;color:var(--txt);line-height:1.4;margin-bottom:8px">Empleos de $30/Hora Sin Título Universitario (2026)</div>
+      <div style="font-size:13px;color:var(--mut);line-height:1.6">15 empleos reales que pagan $30/hr o más — oficios, tecnología, salud. (Artículo en inglés)</div>
+    </a>
+    <a href="/blog/no-tax-on-overtime-obbba-2026/" style="background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s,transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc)">Ley Fiscal 2026</div>
+        <div style="font-size:11px;color:var(--mut)">Jun 2026 · 8 min</div>
+      </div>
+      <div style="font-size:15px;font-weight:600;color:var(--txt);line-height:1.4;margin-bottom:8px">Sin Impuesto en Horas Extra (OBBBA): Lo Que Realmente Reciben los Trabajadores</div>
+      <div style="font-size:13px;color:var(--mut);line-height:1.6">La nueva deducción federal es real, pero no es lo que dicen los titulares. (Artículo en inglés)</div>
+    </a>
+    <a href="/blog/million-dollar-salary-after-taxes-by-state/" style="background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s,transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc)">Ingresos Altos</div>
+        <div style="font-size:11px;color:var(--mut)">Jun 2026 · 8 min</div>
+      </div>
+      <div style="font-size:15px;font-weight:600;color:var(--txt);line-height:1.4;margin-bottom:8px">Salario de $1 Millón Después de Impuestos por Estado</div>
+      <div style="font-size:13px;color:var(--mut);line-height:1.6">Una brecha de $93,000/año entre el mejor y el peor estado. (Artículo en inglés)</div>
+    </a>
+  </div>
+  <div style="text-align:center;margin-top:16px">
+    <a href="/blog/" style="display:inline-block;padding:10px 24px;background:var(--alight);color:var(--acc);border:1px solid #c5e0d3;border-radius:99px;font-size:13px;font-weight:600">Ver todos los artículos &rarr;</a>
+  </div>
 </div>
 
 <!-- Footer -->
@@ -307,21 +596,52 @@ nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top
 </footer>
 
 <script>
-function qc(){
-  var g=parseFloat(document.getElementById('qs').value)||0;
-  if(!g){
-    document.getElementById('qr').textContent='--';
-    document.getElementById('qa').textContent='--';
-    document.getElementById('qe').textContent='--';
+function syncQSlider(val){var s=document.getElementById('qs-slider');if(s)s.value=Math.min(Math.max(parseInt(val)||0,20000),300000);}
+function syncQInput(val){var i=document.getElementById('qs');if(i)i.value=val;}
+
+function animateValue(el, prefix, suffix, from, to, duration){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    el.textContent=prefix+Math.round(to).toLocaleString()+suffix;
     return;
   }
-  var std=TAX_DATA.STANDARD_DEDUCTION.single,taxable=Math.max(0,g-std);
-  var fed=calcFederalTax(taxable,'single');
-  var fica=g*TAX_DATA.FICA_RATE,net=g-fed-fica;
-  var eff=((fed+fica)/g*100).toFixed(1);
-  document.getElementById('qr').textContent='$'+Math.round(net/12).toLocaleString();
-  document.getElementById('qa').textContent='$'+Math.round(net).toLocaleString();
-  document.getElementById('qe').textContent=eff+'%';
+  var start=null;
+  function step(ts){
+    if(!start)start=ts;
+    var p=Math.min((ts-start)/duration,1);
+    var eased=1-Math.pow(1-p,3);
+    var cur=from+(to-from)*eased;
+    el.textContent=prefix+Math.round(cur).toLocaleString()+suffix;
+    if(p<1)requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+var qcPrev={net:0,annual:0,fedfica:0,state:0,eff:0};
+
+function qc(){
+  var g=parseFloat(document.getElementById('qs').value)||0;
+  var stRate=parseFloat(document.getElementById('q-state').value)||0;
+  var fil=document.getElementById('q-fil').value;
+  if(!g){
+    ['qr','qa','qf','qst','qe'].forEach(function(id){document.getElementById(id).textContent='—';});
+    qcPrev={net:0,annual:0,fedfica:0,state:0,eff:0};
+    return;
+  }
+  var std=TAX_DATA.STANDARD_DEDUCTION[fil]||TAX_DATA.STANDARD_DEDUCTION.single;
+  var taxable=Math.max(0,g-std);
+  var fed=calcFederalTax(taxable,fil);
+  var fica=g*TAX_DATA.FICA_RATE;
+  var stateTax=g*(stRate/100);
+  var net=g-fed-fica-stateTax;
+  var eff=((fed+fica+stateTax)/g*100);
+
+  var monthly=net/12;
+  animateValue(document.getElementById('qr'),'$','',qcPrev.net,monthly,500);
+  animateValue(document.getElementById('qa'),'$','',qcPrev.annual,net,500);
+  animateValue(document.getElementById('qf'),'$','',qcPrev.fedfica,fed+fica,500);
+  document.getElementById('qst').textContent= stRate>0 ? '$'+Math.round(stateTax).toLocaleString() : '$0';
+  animateValue(document.getElementById('qe'),'','%',qcPrev.eff,eff,500);
+
+  qcPrev={net:monthly,annual:net,fedfica:fed+fica,state:stateTax,eff:eff};
 }
 qc();
 
