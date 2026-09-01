@@ -45,6 +45,21 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tan Yee Wee",
+    "url": "https://paycalchub.com/about/",
+    "image": "https://paycalchub.com/assets/img/founder-tan-yee-wee.jpg",
+    "jobTitle": "Founder, PayCalcHub",
+    "description": "Licensed investment consultant with Public Mutual in Malaysia; builds free U.S. financial calculators verified against official IRS, SSA, and state tax sources.",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "PayCalcHub"
+    }
+  }
+  </script>
   <link rel="stylesheet" href="/assets/css/base.css">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -110,6 +125,10 @@
 
   /* WHO WE ARE */
   .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+  .founder-grid{display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:start;margin-bottom:8px}
+  .founder-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--rad);border:1px solid var(--bor)}
+  .founder-name{font-size:16px;font-weight:600;color:var(--txt);margin-bottom:10px}
+  .founder-role{font-weight:400;color:var(--mut);font-size:14px}
   .who-card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:20px}
   .who-card h3{font-size:14px;font-weight:600;margin-bottom:8px;color:var(--txt)}
   .who-card p{font-size:13px;color:var(--mut);line-height:1.65}
@@ -131,7 +150,7 @@
   .faq-item.open .faq-a{max-height:400px;padding:0 18px 16px}
 
   .notice{background:var(--bg);border:1px solid var(--bor);border-radius:var(--rad);padding:16px 20px;font-size:13px;color:var(--mut);line-height:1.75;margin-top:32px}
-  @media(max-width:700px){.pillars{grid-template-columns:1fr}.tools-grid{grid-template-columns:1fr}.who-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.contact-strip{flex-direction:column}}
+  @media(max-width:700px){.pillars{grid-template-columns:1fr}.tools-grid{grid-template-columns:1fr}.who-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.contact-strip{flex-direction:column}.founder-grid{grid-template-columns:96px 1fr;gap:16px}}
   </style>
 </head>
 <body>
@@ -200,9 +219,18 @@
 
   <div class="sec">
     <h2>Who Built This</h2>
-    <p>PayCalcHub was built by one person who got tired of financial calculators that were either buried in ads, required sign-ups, or gave vague estimates without explaining the math. I built the tools I wished existed — ones that show the full breakdown, cite their sources, and work on any device without friction.</p>
-    <p>I research and verify all tax data against official IRS publications, state Department of Revenue bulletins, and BLS data. Every calculator is updated at the start of each year. When I'm not sure about something, I say so — estimates are labeled as estimates, and methodology is always documented.</p>
-    <p>PayCalcHub is an independent project. There's no VC backing, no team of content writers, no sales funnel. Just calculators that work and guides that tell you what you actually need to know.</p>
+    <div class="founder-grid">
+      <div class="founder-photo">
+        <img src="/assets/img/founder-tan-yee-wee.jpg" alt="Tan Yee Wee, founder of PayCalcHub" width="400" height="400" loading="lazy">
+      </div>
+      <div class="founder-bio">
+        <p class="founder-name">Tan Yee Wee <span class="founder-role">— Founder</span></p>
+        <p>PayCalcHub was built by one person who got tired of financial calculators that were either buried in ads, required sign-ups, or gave vague estimates without explaining the math. I built the tools I wished existed — ones that show the full breakdown, cite their sources, and work on any device without friction.</p>
+        <p>I work in the financial industry as a licensed consultant with Public Mutual, where I help clients with investment planning and unit trust services. Financial calculations — projections, comparisons, breaking down what a number actually means for someone's life — are something I work with daily, both for clients and for my own planning.</p>
+        <p>I started building these calculators for myself, then started sharing them with clients, family, and friends who wanted to understand their own numbers without needing a finance background. That's the same standard this site is held to: every U.S. tax figure is checked against official IRS, SSA, and state sources (see methodology below) rather than my own assumptions, so the tools stay accurate regardless of where I'm writing from.</p>
+        <p>PayCalcHub is an independent project. There's no VC backing, no team of content writers, no sales funnel. Just calculators that work and guides that tell you what you actually need to know.</p>
+      </div>
+    </div>
     <div class="contact-strip">
       <div>
         <strong>Questions or corrections?</strong>
