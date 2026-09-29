@@ -1,751 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png">
-  <link rel="apple-touch-icon" href="/favicon_512x512.png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayCalcHub — Free Salary, Mortgage & Tax Calculators (2026)</title>
+  <meta name="description" content="Calculate take-home pay, hourly to salary conversions, mortgage amortization, and IRS tax withholdings with verified 2026 statutory rates. Free and fast.">
+  <link rel="canonical" href="https://paycalchub.com/">
+  <link rel="stylesheet" href="/css/style.css">
 
-<meta name="google-adsense-account" content="ca-pub-7723301737736770">
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G36BWD37Y3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-G36BWD37Y3');
-</script>
-
-<title>PayCalcHub — Free Salary, Mortgage & Tax Calculators (2026)</title>
-
-<meta name="description" content="Free financial calculators for salary, mortgage, and loans. Updated 2026 tax rates for US, UK, Canada & Australia. Instant take-home pay results.">
-
-<link rel="canonical" href="https://paycalchub.com/">
-<meta property="og:title" content="PayCalcHub — Free Financial Calculators (2026)">
-<meta property="og:description" content="Free salary, mortgage and loan calculators. Updated 2026 tax rates for US, UK, Canada & Australia. Instant results, no sign-up.">
-<meta property="og:url" content="https://paycalchub.com/">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://paycalchub.com/og-image.png">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://paycalchub.com/og-image.png">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "PayCalcHub Financial Tools",
-  "url": "https://paycalchub.com",
-  "description": "Calculate take-home pay, mortgage repayments, and loan interest instantly.",
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Any",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
+  <!-- Structured Data: WebSite & Financial Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "PayCalcHub",
+    "url": "https://paycalchub.com",
+    "description": "Free, privacy-first payroll, mortgage, and tax calculation engines for 2026.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "PayCalcHub",
+      "url": "https://paycalchub.com",
+      "logo": "https://paycalchub.com/favicon.ico"
+    }
   }
-}
-</script>
+  </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
-
-<link rel="stylesheet" href="/assets/css/base.css">
-<style>
-
-/* Hero */
-.hero{max-width:1100px;margin:0 auto;padding:52px 24px 36px}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.badge{display:inline-flex;align-items:center;background:var(--alight);color:var(--acc);font-size:12px;font-weight:600;padding:5px 12px;border-radius:99px;margin-bottom:18px;letter-spacing:.03em}
-.hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:600;line-height:1.15;letter-spacing:-.03em;margin-bottom:14px}
-.hero h1 em{font-style:normal;color:var(--acc)}
-.hero-sub{font-size:15px;color:var(--mut);margin-bottom:24px;max-width:440px;line-height:1.65}
-.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
-.btn-p{padding:13px 26px;background:var(--gold);color:#fff;border-radius:9px;font-weight:600;font-size:14.5px;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 14px rgba(184,134,11,.28)}
-.btn-p:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(184,134,11,.36)}
-.btn-s{padding:13px 26px;background:var(--sur);color:var(--txt);border-radius:9px;font-weight:500;font-size:14.5px;border:1px solid var(--bor);transition:border-color .15s,color .15s}
-.btn-s:hover{border-color:var(--acc);color:var(--acc)}
-
-/* Preview calculator */
-.preview{background:var(--sur);border:1px solid var(--bor);border-radius:18px;padding:24px;box-shadow:0 12px 40px rgba(30,107,74,.08),0 2px 8px rgba(0,0,0,.04)}
-.prev-lbl{font-size:11px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
-.prev-input{width:100%;padding:10px 14px;border-radius:8px;border:1px solid var(--bor);font-size:15px;font-family:var(--f);outline:none;margin-bottom:6px;background:var(--bg)}
-.prev-input:focus{border-color:var(--acc)}
-.prev-slider{width:100%;-webkit-appearance:none;appearance:none;height:4px;border-radius:2px;background:var(--bor);outline:none;cursor:pointer;margin-bottom:10px}
-.prev-slider::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.2)}
-.prev-slider::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--acc);cursor:pointer;border:2px solid #fff}
-.prev-row{display:flex;gap:8px;margin-bottom:10px}
-.prev-select{flex:1;padding:8px 10px;border-radius:8px;border:1px solid var(--bor);font-size:13px;font-family:var(--f);outline:none;background:var(--bg);color:var(--txt)}
-.prev-select:focus{border-color:var(--acc)}
-.prev-res{background:linear-gradient(135deg,var(--alight),#dcf0e6);border:1px solid #c5e0d3;border-radius:12px;padding:15px 18px;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.prev-res-v{font-family:var(--mo);font-size:26px;font-weight:600;color:var(--acc);letter-spacing:-.01em}
-.prev-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.prev-mini-card{background:var(--bg);border-radius:8px;padding:10px 12px}
-.prev-mini-lbl{font-size:11px;color:var(--mut);margin-bottom:3px}
-.prev-mini-val{font-family:var(--mo);font-size:14px;font-weight:500;color:var(--txt)}
-
-/* Stats bar */
-.stats-bar{max-width:1100px;margin:0 auto 0;padding:0 24px 32px}
-.stats-inner{background:var(--alight);border:1px solid #c5e0d3;border-radius:var(--rad);padding:20px 0;display:grid;grid-template-columns:repeat(4,1fr)}
-.stat-item{text-align:center;border-right:1px solid #c5e0d3;padding:0 16px}
-.stat-item:last-child{border-right:none}
-.stat-icon{margin-bottom:6px;display:flex;justify-content:center;color:var(--acc)}
-.stat-num{font-family:var(--mo);font-size:24px;font-weight:500;color:var(--acc);margin-bottom:2px}
-.stat-lbl{font-size:12px;color:#2d6b4a}
-
-/* Tools */
-.sec{max-width:1100px;margin:0 auto;padding:0 24px 32px}
-.sec-lbl{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--mut);letter-spacing:.06em;margin-bottom:16px}
-.tgrid{display:flex;flex-direction:column;gap:12px}
-.tc{background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:var(--rad);transition:border-color .15s,transform .15s,box-shadow .15s;display:block}
-.tc:hover{border-color:var(--acc);border-left-color:var(--acc);transform:translateY(-2px);box-shadow:0 4px 16px rgba(30,107,74,.08)}
-
-.tc-row{display:flex;align-items:center;gap:20px;padding:20px 26px}
-.tc-row .ti{margin-bottom:0;flex-shrink:0}
-.tc-row-body{flex:1;min-width:0}
-.tc-row-h{display:flex;align-items:center;gap:10px;margin-bottom:5px}
-.tc-row-h h2{margin-bottom:0}
-.tc-row p{margin-bottom:10px}
-.tc-row .tc-tags{flex-wrap:wrap}
-
-.tc.tc-featured{background:linear-gradient(100deg,#fff 0%,#cdebd9 160%);border:1px solid #a8d9bd;border-left:4px solid var(--gold);position:relative}
-.tc.tc-featured:hover{border-left-color:var(--gold-dark);box-shadow:0 8px 26px rgba(184,134,11,.16);transform:translateY(-2px)}
-.tc.tc-featured .ti{width:54px;height:54px;background:#fff;color:var(--gold-dark);box-shadow:0 2px 8px rgba(184,134,11,.15)}
-.tc.tc-featured h2{font-size:18px}
-.tc-featured-badge{display:inline-block;background:var(--gold);color:#fff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:5px}
-.tc-featured-cta{flex-shrink:0;font-size:13px;font-weight:600;color:var(--acc);display:none;white-space:nowrap}
-@media(min-width:640px){.tc-featured-cta{display:inline-flex;align-items:center;gap:4px}}
-
-.ti{width:46px;height:46px;border-radius:11px;background:var(--alight);color:var(--acc);display:flex;align-items:center;justify-content:center}
-.tc h2{font-size:16px;font-weight:700;margin-bottom:7px;color:var(--txt);letter-spacing:-.005em}
-.tc p{font-size:13px;color:var(--mut);line-height:1.6;margin-bottom:12px}
-.tc-tags{display:flex;flex-wrap:wrap;gap:6px}
-.tag{font-size:11px;font-weight:500;padding:3px 9px;border-radius:6px}
-.tag-green{background:var(--alight);color:var(--acc)}
-.tag-gray{background:var(--bg);color:var(--mut);border:1px solid var(--bor)}
-
-@media(max-width:640px){.tc-row{flex-wrap:wrap;padding:18px 20px}.tc-row-body{flex-basis:100%;order:2}.tc-featured-cta{flex-basis:100%;order:3;display:block}.tc-row-h{flex-wrap:wrap;gap:6px}}
-
-/* Why PayCalcHub */
-.why-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px}
-.why-card{background:var(--sur);border:1px solid var(--bor);border-radius:14px;padding:22px;transition:box-shadow .15s,transform .15s}
-.why-card:hover{box-shadow:0 6px 20px rgba(0,0,0,.05);transform:translateY(-1px)}
-.why-icon{width:44px;height:44px;border-radius:11px;background:var(--txt);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-.why-h{font-size:15px;font-weight:700;color:var(--txt);margin-bottom:5px}
-.why-sub{font-size:11.5px;font-weight:600;color:var(--acc);text-transform:uppercase;letter-spacing:.03em;margin-bottom:10px}
-.why-p{font-size:13px;color:var(--mut);line-height:1.65}
-@media(max-width:800px){.why-grid{grid-template-columns:1fr}}
-
-/* Visual showcase */
-.showcase{background:var(--sur);border:1px solid var(--bor);border-radius:18px;padding:32px;display:grid;grid-template-columns:0.9fr 1.1fr;gap:36px;align-items:center}
-.showcase-h2{font-size:22px;font-weight:600;line-height:1.3;letter-spacing:-.01em;margin:10px 0 12px}
-.showcase-h2 em{font-style:normal;color:var(--gold)}
-.showcase-p{font-size:13.5px;color:var(--mut);line-height:1.65}
-.showcase-chart{background:var(--bg);border-radius:12px;padding:18px}
-@media(max-width:800px){.showcase{grid-template-columns:1fr;padding:24px}}
-
-/* Popular searches */
-.pop{max-width:1100px;margin:0 auto;padding:0 24px 40px}
-.pop-groups{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
-.pop-card{background:var(--sur);border:1px solid var(--bor);border-radius:14px;padding:20px 22px;transition:box-shadow .15s,transform .15s}
-.pop-card:hover{box-shadow:0 6px 20px rgba(0,0,0,.05);transform:translateY(-1px)}
-.pop-group-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-dark);margin-bottom:13px;display:flex;align-items:center;gap:6px}
-.pop-links{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
-.pop-link{font-size:13px;color:var(--txt);background:var(--bg);border:1px solid var(--bor);border-radius:8px;padding:8px 12px;font-weight:500;transition:border-color .12s,background .12s;text-align:center;white-space:nowrap}
-.pop-link:hover{border-color:var(--acc);background:var(--alight)}
-.pop-link.pop-link-top{background:var(--acc);color:#fff;border-color:var(--acc)}
-.pop-link.pop-link-top:hover{background:var(--gold-dark);border-color:var(--gold-dark)}
-.pop-card-desc{font-size:12.5px;color:var(--mut);line-height:1.6;margin-bottom:14px}
-.pop-links-1col{grid-template-columns:1fr}
-.pop-links-2col{grid-template-columns:1fr 1fr}
-.pop-links-intl{display:flex;flex-direction:column;gap:7px}
-.pop-link-full{width:100%;display:block}
-
-.pop-card-state{grid-column:span 2}
-.pop-state-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
-.pop-state-top .pop-group-lbl{margin-bottom:0}
-.pop-state-body{display:grid;grid-template-columns:1fr 1.4fr;gap:20px;align-items:center}
-.pop-state-map{background:var(--bg);border-radius:10px;padding:14px;display:flex;align-items:center;gap:12px;height:100%}
-.pop-state-map svg{flex-shrink:0}
-.pop-state-map-text{font-size:12px;color:var(--mut);line-height:1.5}
-.pop-state-map-text strong{color:var(--txt);font-weight:700;display:block;font-size:13px;margin-bottom:2px}
-.pop-state-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
-.pop-state-link{font-size:13px;color:var(--txt);background:var(--bg);border:1px solid var(--bor);border-radius:8px;padding:8px 10px;font-weight:500;transition:border-color .12s,background .12s;text-align:center}
-.pop-state-link:hover{border-color:var(--acc);background:var(--alight)}
-.pop-state-link.pop-link-top{background:var(--acc);color:#fff;border-color:var(--acc)}
-.pop-state-link.pop-link-top:hover{background:var(--gold-dark);border-color:var(--gold-dark)}
-.pop-state-all{font-size:12px;font-weight:600;color:var(--acc);white-space:nowrap}
-
-.pop-card-wide{grid-column:span 2}
-.pop-card-desc-inline{font-size:12.5px;color:var(--mut)}
-.pop-links-6{grid-template-columns:repeat(6,1fr)}
-
-@media(max-width:800px){.pop-groups{grid-template-columns:1fr}.pop-card-state{grid-column:span 1}.pop-card-wide{grid-column:span 1}.pop-state-body{grid-template-columns:1fr}.pop-state-grid{grid-template-columns:1fr 1fr}.pop-links-6{grid-template-columns:1fr 1fr 1fr}}
-@media(max-width:560px){.pop-state-top{flex-direction:column;align-items:flex-start;gap:8px}}
-
-@media(max-width:800px){
-.hero-grid{grid-template-columns:1fr}
-.preview{display:block;margin-top:16px}
-.stats-inner{grid-template-columns:repeat(2,1fr)}
-.stat-item:nth-child(2){border-right:none}
-.stat-item:nth-child(3){border-top:1px solid var(--bor);border-right:1px solid var(--bor)}
-.stat-item:nth-child(4){border-top:1px solid var(--bor)}}
-
-</style>
-  <link rel="alternate" hreflang="en" href="https://paycalchub.com/">
-  <link rel="alternate" hreflang="es" href="https://paycalchub.com/es/">
-  <link rel="alternate" hreflang="pt" href="https://paycalchub.com/pt/">
-<link rel="alternate" hreflang="x-default" href="https://paycalchub.com/">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SiteLinksSearchBox",
-  "url": "https://paycalchub.com",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://paycalchub.com/salary-calculator/",
-    "query-input": "required name=search_term_string"
+  <!-- Structured Data: FAQPage Schema for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is net take-home pay calculated under 2026 tax rules?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Net take-home pay equals Gross Pay minus Federal Income Tax (based on IRS Publication 15-T brackets), mandatory FICA deductions (6.2% Social Security + 1.45% Medicare), state/local income taxes, and pre-tax benefit deductions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a tax deduction and a tax credit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A tax deduction lowers your overall taxable income before tax brackets are applied (such as the standard deduction or 401k contributions). A tax credit reduces your total tax liability dollar-for-dollar after taxes have been calculated."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does living in a no-income-tax state affect take-home pay?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Living in one of the nine states without personal income tax (such as Texas, Florida, Washington, or Nevada) can boost take-home pay by 4% to 10% compared to states with high graduated income tax rates like California or New York."
+        }
+      }
+    ]
   }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "PayCalcHub Financial Tools",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Salary Calculator", "url": "https://paycalchub.com/salary-calculator/"},
-    {"@type": "ListItem", "position": 2, "name": "Mortgage Calculator", "url": "https://paycalchub.com/mortgage-calculator/"},
-    {"@type": "ListItem", "position": 3, "name": "Loan Calculator", "url": "https://paycalchub.com/loan-calculator/"},
-    {"@type": "ListItem", "position": 4, "name": "Hourly to Salary Calculator", "url": "https://paycalchub.com/hourly-to-salary/"}
-  ]
-}
-</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"How accurate are these calculators?","acceptedAnswer":{"@type":"Answer","text":"All calculators use the latest 2026 federal tax brackets, FICA rates, and standard deductions. Results are estimates based on your filing status and income."}},
-  {"@type":"Question","name":"Which salary calculator is best for me?","acceptedAnswer":{"@type":"Answer","text":"If you earn an hourly wage, use the Hourly to Salary Calculator. For annual salary take-home pay, use the Salary Calculator covering all 50 US states plus UK, Canada, and Australia."}},
-  {"@type":"Question","name":"How much house can I afford on my salary?","acceptedAnswer":{"@type":"Answer","text":"The standard rule limits housing costs to 28% of gross monthly income. See our full affordability guide at paycalchub.com/how-much-house-can-i-afford/ for your exact salary."}},
-  {"@type":"Question","name":"Are these calculators free?","acceptedAnswer":{"@type":"Answer","text":"Yes — all PayCalcHub calculators are completely free. No sign-up, no account, and no data is stored or sent to our servers."}}
-]}</script>
+  </script>
 </head>
 <body>
-<nav>
-<div class="nav-in">
-<a href="/" class="logo">Pay<span>Calc</span>Hub</a>
 
-<div class="nav-links">
-<a href="/salary-calculator/">Salary</a>
-<a href="/mortgage-calculator/">Mortgage</a>
-<a href="/loan-calculator/">Loan</a>
-<a href="/hourly-to-salary/">Hourly</a>
-</div>
-<div style="display:flex;align-items:center;gap:8px">
-<div class="lang-wrap" id="langWrap">
-  <button class="lang-btn" onclick="toggleLang()" aria-label="Select language" aria-expanded="false" aria-haspopup="listbox">
-    <span class="lang-flag">🇺🇸</span>
-    <span class="lang-code">EN</span>
-    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <div class="lang-dropdown" role="listbox">
-    <div class="lang-item active" role="option" aria-selected="true">
-      <span class="lang-item-flag">🇺🇸</span>
-      <span>English</span>
-      <svg class="lang-item-check" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5l3.5 3.5 5.5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="/" class="logo">PayCalc<span>Hub</span></a>
+      <nav class="nav-links">
+        <a href="/" class="active">Home</a>
+        <a href="/salary-calculator/">Salary Calculator</a>
+        <a href="/hourly-to-salary/">Hourly to Salary</a>
+        <a href="/net-pay-calculator/">Net Pay</a>
+        <a href="/mortgage-calculator/">Mortgage</a>
+        <a href="/blog/">Blog & Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
     </div>
-    <a href="/es/" class="lang-item" role="option" aria-selected="false">
-      <span class="lang-item-flag">🇪🇸</span>
-      <span>Español</span>
-    </a>
-      <a href="/pt/" class="lang-item"><span class="lang-item-flag">🇧🇷</span><span>Português</span></a>
-  </div>
-</div>
-<button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
-  <span></span><span></span><span></span>
-</button>
-</div>
-</div>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="/salary-calculator/">Salary</a>
-  <a href="/mortgage-calculator/">Mortgage</a>
-  <a href="/loan-calculator/">Loan</a>
-  <a href="/hourly-to-salary/">Hourly</a>
-</div>
-</nav>
-<main>
+  </header>
 
-<!-- Hero -->
-<div class="hero">
-<div class="hero-grid">
-<div>
-  <div class="badge">Updated for 2026 Tax Rates</div>
-  <h1>Smart <em>Finance</em><br>Calculators</h1>
-  <p class="hero-sub">Find your exact take-home pay by state, compare salary vs hourly, and calculate mortgage payments. Free, instant, no sign-up.</p>
-  <div class="hero-btns">
-    <a href="/salary-calculator/" class="btn-p">Calculate salary &rarr;</a>
-    <a href="/mortgage-calculator/" class="btn-s">Mortgage &rarr;</a>
-  </div>
-</div>
-<div class="preview">
-  <div class="prev-lbl">Quick Paycheck Estimate</div>
-  <input type="number" id="qs" aria-label="Annual salary" value="60000" class="prev-input" oninput="syncQSlider(this.value);qc()" placeholder="Annual salary">
-  <input type="range" class="prev-slider" id="qs-slider" aria-label="Annual salary slider" min="20000" max="300000" step="1000" value="60000" oninput="syncQInput(this.value);qc()">
-  <div class="prev-row">
-    <select class="prev-select" id="q-state" aria-label="State" onchange="qc()">
-      <option value="0" selected>No state tax (AK/FL/TX…)</option>
-      <option value="9.3">California — 9.3%</option>
-      <option value="6.85">New York — 6.85%</option>
-      <option value="5.0">Massachusetts — 5.0%</option>
-      <option value="4.95">Illinois — 4.95%</option>
-      <option value="4.4">Colorado — 4.4%</option>
-      <option value="5.75">Virginia — 5.75%</option>
-      <option value="3.07">Pennsylvania — 3.07%</option>
-      <option value="4.25">Michigan — 4.25%</option>
-    </select>
-    <select class="prev-select" id="q-fil" aria-label="Filing status" onchange="qc()" style="max-width:130px">
-      <option value="single">Single</option>
-      <option value="married">Married</option>
-    </select>
-  </div>
-  <div class="prev-res">
-    <span style="font-size:13px;color:var(--acc)">Monthly take-home</span>
-    <span class="prev-res-v" id="qr">—</span>
-  </div>
-  <div class="prev-mini">
-    <div class="prev-mini-card">
-      <div class="prev-mini-lbl">Annual net</div>
-      <div class="prev-mini-val" id="qa">—</div>
+  <!-- Hero Section -->
+  <section class="hero" style="text-align: center; padding: 50px 20px 30px; background: linear-gradient(180deg, #f7fafc 0%, #edf2f7 100%); border-bottom: 1px solid #e2e8f0;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <span style="display: inline-block; background: #ebf8ff; color: #2b6cb0; font-size: 0.85rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 15px; text-transform: uppercase;">
+        2026 Fiscal Year Tax Brackets Updated
+      </span>
+      <h1 style="font-size: 2.5rem; color: #1a202c; margin-bottom: 15px; font-weight: 800; line-height: 1.2;">
+        Free Financial & Payroll Calculators
+      </h1>
+      <p style="font-size: 1.15rem; color: #4a5568; margin-bottom: 25px; line-height: 1.6;">
+        Accurate salary, paycheck, mortgage, and wage conversion calculators backed by official IRS Publication 15-T and state statutory guidelines. Free, fast, and no registration required.
+      </p>
     </div>
-    <div class="prev-mini-card">
-      <div class="prev-mini-lbl">Federal tax</div>
-      <div class="prev-mini-val" id="qf">—</div>
-    </div>
-    <div class="prev-mini-card">
-      <div class="prev-mini-lbl">State tax</div>
-      <div class="prev-mini-val" id="qst">—</div>
-    </div>
-    <div class="prev-mini-card">
-      <div class="prev-mini-lbl">Effective rate</div>
-      <div class="prev-mini-val" id="qe">—</div>
-    </div>
-  </div>
-  <p style="font-size:12px;color:var(--mut);margin-top:12px;line-height:1.5">Estimate only — excludes local taxes &amp; deductions. <a href="/salary-calculator/" style="color:var(--acc);text-decoration:underline">Full breakdown →</a></p>
-</div>
-</div>
-</div>
+  </section>
 
-<!-- Stats bar -->
-<div class="stats-bar">
-<div class="stats-inner">
-  <div class="stat-item"><div class="stat-icon"><svg width="20" height="20" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg></div><div class="stat-num">50</div><div class="stat-lbl">US states covered</div></div>
-  <div class="stat-item"><div class="stat-icon"><svg width="20" height="20" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.2 2.3 3.4 5.3 3.4 8.5s-1.2 6.2-3.4 8.5c-2.2-2.3-3.4-5.3-3.4-8.5S9.8 5.8 12 3.5Z"/></svg></div><div class="stat-num">4</div><div class="stat-lbl">Countries supported</div></div>
-  <div class="stat-item"><div class="stat-icon"><svg width="20" height="20" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v3.5M16 3v3.5"/><path d="M8 13.5h2M8 17h2M14 13.5h2M14 17h2"/></svg></div><div class="stat-num">2026</div><div class="stat-lbl">Tax rates updated</div></div>
-  <div class="stat-item"><div class="stat-icon"><svg width="20" height="20" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 5.5v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9v-6L12 3Z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></div><div class="stat-num">Free</div><div class="stat-lbl">No sign-up needed</div></div>
-</div>
-</div>
+  <!-- Main Tools Grid -->
+  <main class="container" style="max-width: 1100px; margin: 40px auto; padding: 0 20px;">
+    
+    <div style="text-align: center; margin-bottom: 35px;">
+      <h2 style="font-size: 1.8rem; color: #1a202c; margin-bottom: 8px;">Select a Calculation Engine</h2>
+      <p style="color: #718096; font-size: 1rem;">Choose a specialized utility below to model your exact compensation or financing scenario.</p>
+    </div>
 
-<!-- Tools -->
-<div class="sec">
-<div class="sec-lbl">All Financial Tools</div>
-<div class="tgrid">
-  <a href="/salary-calculator/" class="tc tc-row tc-featured">
-    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M14.8 9.3c-.3-.9-1.3-1.5-2.6-1.5-1.6 0-2.7.8-2.7 2s1 1.7 2.5 2c1.7.3 2.8.8 2.8 2.1 0 1.2-1.2 2.1-2.8 2.1-1.3 0-2.4-.6-2.7-1.6"/><path d="M12 6.3v1.3M12 16.4v1.3"/></svg></div>
-    <div class="tc-row-body">
-      <div class="tc-row-h"><h2>Salary Calculator</h2><span class="tc-featured-badge">Most popular</span></div>
-      <p>Full tax breakdown for US (all 50 states), UK, Canada & Australia. Includes 401k, health insurance, and super deductions. Updated 2026 tax rates.</p>
-      <div class="tc-tags"><span class="tag tag-green">US · UK · Canada · AU</span><span class="tag tag-gray">All 50 states</span></div>
-    </div>
-    <span class="tc-featured-cta">Calculate now &rarr;</span>
-  </a>
-  <a href="/mortgage-calculator/" class="tc tc-row">
-    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11.5 12 4l8.5 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-9"/></svg></div>
-    <div class="tc-row-body">
-      <h2>Mortgage Calculator</h2>
-      <p>Monthly payment, total interest cost, and full amortization schedule. Adjust down payment, loan term, and interest rate instantly.</p>
-      <div class="tc-tags"><span class="tag tag-green">Amortization chart</span><span class="tag tag-gray">Instant results</span></div>
-    </div>
-  </a>
-  <a href="/loan-calculator/" class="tc tc-row">
-    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h7l4 4V19a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 19V5A1.5 1.5 0 0 1 7 3.5Z"/><path d="M14 3.5V8h4.5"/><path d="M9 12.5h6M9 16h4"/></svg></div>
-    <div class="tc-row-body">
-      <h2>Loan Calculator</h2>
-      <p>Total interest cost, monthly repayment, and repayment schedule for any personal, auto, or student loan. Compare loan terms side by side.</p>
-      <div class="tc-tags"><span class="tag tag-green">Repayment schedule</span><span class="tag tag-gray">Any loan type</span></div>
-    </div>
-  </a>
-  <a href="/hourly-to-salary/" class="tc tc-row">
-    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8.25"/><path d="M12 8.5V13l3 2"/><path d="M9.5 2.5h5"/></svg></div>
-    <div class="tc-row-body">
-      <h2>Hourly to Salary</h2>
-      <p>Convert any hourly rate to annual, monthly, biweekly, and weekly salary. Supports full-time and part-time schedules with overtime.</p>
-      <div class="tc-tags"><span class="tag tag-green">All pay periods</span><span class="tag tag-gray">Part-time &amp; OT</span></div>
-    </div>
-  </a>
-  <a href="/net-pay-calculator/" class="tc tc-row">
-    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v3.5M16 3v3.5"/><path d="M8 13.5h2M8 17h2M14 13.5h2M14 17h2"/></svg></div>
-    <div class="tc-row-body">
-      <h2>Net Pay Calculator</h2>
-      <p>See your exact net pay per week, biweekly, semi-monthly, and monthly paycheck — after federal, state, and FICA tax. All 50 states.</p>
-      <div class="tc-tags"><span class="tag tag-green">Weekly · Biweekly · Monthly</span><span class="tag tag-gray">All 50 states</span></div>
-    </div>
-  </a>
-  <a href="/tax-withholding-calculator/" class="tc tc-row">
-    <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h7l4 4V19a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 19V5A1.5 1.5 0 0 1 7 3.5Z"/><path d="M14 3.5V8h4.5"/><path d="M9 12.5h6M9 16h4"/></svg></div>
-    <div class="tc-row-body">
-      <h2>Tax Withholding Calculator</h2>
-      <p>Estimate your federal withholding per paycheck based on your W-4: filing status, dependents, other income, and deductions.</p>
-      <div class="tc-tags"><span class="tag tag-green">W-4 based</span><span class="tag tag-gray">2026 rates</span></div>
-    </div>
-  </a>
-</div>
-</div>
-
-<!-- Popular searches -->
-<div class="pop">
-  <div class="sec-lbl">Popular searches</div>
-  <div class="pop-groups">
-    <div class="pop-card pop-card-state">
-      <div class="pop-state-top">
-        <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg> By state &mdash; most searched</div>
-        <a href="/salary-calculator/" class="pop-state-all">View all 50 states &rarr;</a>
+    <!-- Cards Grid -->
+    <div class="calculator-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-bottom: 50px;">
+      
+      <div class="card" style="border: 1px solid #e2e8f0; border-radius: 10px; padding: 25px; background: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.04); transition: transform 0.2s;">
+        <h3 style="margin-top: 0; font-size: 1.3rem;"><a href="/salary-calculator/" style="color: #2b6cb0; text-decoration: none;">Salary Calculator &rarr;</a></h3>
+        <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6;">Calculate annual, monthly, and bi-weekly take-home pay with 2026 federal, state, and FICA tax brackets.</p>
       </div>
-      <div class="pop-state-body">
-        <div class="pop-state-map">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:var(--gold-dark)"><path d="M3 8.5 9 5l6 3 6-3v11l-6 3-6-3-6 3Z"/><circle cx="9" cy="9.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="15" cy="13.5" r="1.1" fill="currentColor" stroke="none"/></svg>
-          <div class="pop-state-map-text"><strong>All 50 states covered</strong>Every state calculator updated for 2026 tax rates</div>
-        </div>
-        <div class="pop-state-grid">
-          <a href="/salary-calculator/california/" class="pop-state-link pop-link-top">California</a>
-          <a href="/salary-calculator/texas/" class="pop-state-link pop-link-top">Texas</a>
-          <a href="/salary-calculator/new-york/" class="pop-state-link">New York</a>
-          <a href="/salary-calculator/florida/" class="pop-state-link">Florida</a>
-          <a href="/salary-calculator/washington/" class="pop-state-link">Washington</a>
-          <a href="/salary-calculator/colorado/" class="pop-state-link">Colorado</a>
+
+      <div class="card" style="border: 1px solid #e2e8f0; border-radius: 10px; padding: 25px; background: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.04); transition: transform 0.2s;">
+        <h3 style="margin-top: 0; font-size: 1.3rem;"><a href="/hourly-to-salary/" style="color: #2b6cb0; text-decoration: none;">Hourly to Salary Calculator &rarr;</a></h3>
+        <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6;">Convert hourly wages into annualized salaries, factoring in standard work hours, overtime, and unpaid days off.</p>
+      </div>
+
+      <div class="card" style="border: 1px solid #e2e8f0; border-radius: 10px; padding: 25px; background: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.04); transition: transform 0.2s;">
+        <h3 style="margin-top: 0; font-size: 1.3rem;"><a href="/net-pay-calculator/" style="color: #2b6cb0; text-decoration: none;">Net Pay Calculator &rarr;</a></h3>
+        <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6;">Precision paycheck estimator taking into account pre-tax deductions (401k, health insurance) and municipal tax rules.</p>
+      </div>
+
+      <div class="card" style="border: 1px solid #e2e8f0; border-radius: 10px; padding: 25px; background: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.04); transition: transform 0.2s;">
+        <h3 style="margin-top: 0; font-size: 1.3rem;"><a href="/mortgage-calculator/" style="color: #2b6cb0; text-decoration: none;">Mortgage Calculator &rarr;</a></h3>
+        <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6;">Estimate monthly mortgage payments including principal, interest, property taxes, homeowner's insurance, and PMI.</p>
+      </div>
+
+      <div class="card" style="border: 1px solid #e2e8f0; border-radius: 10px; padding: 25px; background: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.04); transition: transform 0.2s;">
+        <h3 style="margin-top: 0; font-size: 1.3rem;"><a href="/loan-calculator/" style="color: #2b6cb0; text-decoration: none;">Loan Calculator &rarr;</a></h3>
+        <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6;">Determine total interest costs and monthly amortization schedules for personal, auto, and student loans.</p>
+      </div>
+
+      <div class="card" style="border: 1px solid #e2e8f0; border-radius: 10px; padding: 25px; background: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.04); transition: transform 0.2s;">
+        <h3 style="margin-top: 0; font-size: 1.3rem;"><a href="/tax-withholding-calculator/" style="color: #2b6cb0; text-decoration: none;">Tax Withholding Calculator &rarr;</a></h3>
+        <p style="color: #4a5568; font-size: 0.95rem; line-height: 1.6;">Optimize your IRS Form W-4 to avoid surprise tax bills or excessively large refunds at year-end.</p>
+      </div>
+
+    </div>
+
+    <!-- Quick Long-tail Indexing Pill Links -->
+    <section style="margin-bottom: 50px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 25px;">
+      <h3 style="font-size: 1.15rem; color: #2d3748; margin-top: 0; margin-bottom: 15px;">Popular Benchmarks & Calculations</h3>
+      <div style="margin-bottom: 15px;">
+        <strong style="font-size: 0.9rem; color: #4a5568; display: block; margin-bottom: 8px;">State Tax Comparisons:</strong>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <a href="/salary-calculator/" style="background: #ffffff; border: 1px solid #cbd5e0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: #2b6cb0; text-decoration: none;">California</a>
+          <a href="/salary-calculator/" style="background: #ffffff; border: 1px solid #cbd5e0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: #2b6cb0; text-decoration: none;">Texas</a>
+          <a href="/salary-calculator/" style="background: #ffffff; border: 1px solid #cbd5e0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: #2b6cb0; text-decoration: none;">Florida</a>
+          <a href="/salary-calculator/" style="background: #ffffff; border: 1px solid #cbd5e0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: #2b6cb0; text-decoration: none;">New York</a>
+          <a href="/salary-calculator/" style="background: #ffffff; border: 1px solid #cbd5e0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: #2b6cb0; text-decoration: none;">Illinois</a>
+          <a href="/salary-calculator/" style="background: #ffffff; border: 1px solid #cbd5e0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: #2b6cb0; text-decoration: none;">Washington</a>
+          <a href="/salary-calculator/" style="background: #ffffff; border: 1px solid #cbd5e0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: #2b6cb0; text-decoration: none;">Ohio</a>
         </div>
       </div>
-    </div>
-
-    <div class="pop-card">
-      <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8.25"/><path d="M12 8.5V13l3 2"/><path d="M9.5 2.5h5"/></svg> Hourly wages</div>
-      <p class="pop-card-desc">See the full-time annual salary, monthly pay, and after-tax take-home for any hourly rate.</p>
-      <div class="pop-links">
-        <a href="/hourly-to-salary/15-dollars-an-hour/" class="pop-link">$15 an hour</a>
-        <a href="/hourly-to-salary/20-dollars-an-hour/" class="pop-link pop-link-top">$20 an hour</a>
-        <a href="/hourly-to-salary/25-dollars-an-hour/" class="pop-link pop-link-top">$25 an hour</a>
-        <a href="/hourly-to-salary/30-dollars-an-hour/" class="pop-link">$30 an hour</a>
-        <a href="/hourly-to-salary/40-dollars-an-hour/" class="pop-link">$40 an hour</a>
-        <a href="/hourly-to-salary/50-dollars-an-hour/" class="pop-link">$50 an hour</a>
-      </div>
-    </div>
-
-    <div class="pop-card">
-      <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v3.5M16 3v3.5"/><path d="M8 13.5h2M8 17h2M14 13.5h2M14 17h2"/></svg> Annual salaries</div>
-      <p class="pop-card-desc">Convert any yearly salary into an hourly rate, plus what it actually means for your monthly budget.</p>
-      <div class="pop-links">
-        <a href="/salary-to-hourly/40k-a-year/" class="pop-link">$40k a year</a>
-        <a href="/salary-to-hourly/50k-a-year/" class="pop-link pop-link-top">$50k a year</a>
-        <a href="/salary-to-hourly/60k-a-year/" class="pop-link pop-link-top">$60k a year</a>
-        <a href="/salary-to-hourly/75k-a-year/" class="pop-link">$75k a year</a>
-        <a href="/salary-to-hourly/100k-a-year/" class="pop-link">$100k a year</a>
-        <a href="/salary-to-hourly/120k-a-year/" class="pop-link">$120k a year</a>
-      </div>
-    </div>
-
-    <div class="pop-card">
-      <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.2 2.3 3.4 5.3 3.4 8.5s-1.2 6.2-3.4 8.5c-2.2-2.3-3.4-5.3-3.4-8.5S9.8 5.8 12 3.5Z"/></svg> International</div>
-      <p class="pop-card-desc">Full salary tax breakdowns outside the US, each updated for current 2026 tax brackets and rates.</p>
-      <div class="pop-links-intl">
-        <a href="/salary-calculator/united-kingdom/" class="pop-link pop-link-top pop-link-full">United Kingdom</a>
-        <div class="pop-links pop-links-2col">
-          <a href="/salary-calculator/canada/" class="pop-link">Canada</a>
-          <a href="/salary-calculator/australia/" class="pop-link">Australia</a>
+      <div>
+        <strong style="font-size: 0.9rem; color: #4a5568; display: block; margin-bottom: 8px;">Hourly Wage Scenarios:</strong>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <a href="/hourly-to-salary/" style="background: #ffffff; border: 1px solid #cbd5e0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: #2b6cb0; text-decoration: none;">$20/hr</a>
+          <a href="/blog/25-an-hour-texas.html" style="background: #ffffff; border: 1px solid #cbd5e0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: #2b6cb0; text-decoration: none;">$25/hr Texas</a>
+          <a href="/blog/30-an-hour-after-taxes.html" style="background: #ffffff; border: 1px solid #2b6cb0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: #2b6cb0; font-weight: 700; text-decoration: none;">$30/hr Guide (New)</a>
+          <a href="/hourly-to-salary/" style="background: #ffffff; border: 1px solid #cbd5e0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: #2b6cb0; text-decoration: none;">$35/hr</a>
+          <a href="/hourly-to-salary/" style="background: #ffffff; border: 1px solid #cbd5e0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: #2b6cb0; text-decoration: none;">$40/hr</a>
+          <a href="/hourly-to-salary/" style="background: #ffffff; border: 1px solid #cbd5e0; padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; color: #2b6cb0; text-decoration: none;">$50/hr</a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="pop-card">
-      <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 11.5 12 4l8.5 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-9"/></svg> Mortgage</div>
-      <p class="pop-card-desc">Monthly payment estimates by loan size, based on current 2026 average mortgage rates.</p>
-      <div class="pop-links">
-        <a href="/mortgage-per-month/200k-mortgage/" class="pop-link">$200k</a>
-        <a href="/mortgage-per-month/300k-mortgage/" class="pop-link pop-link-top">$300k</a>
-        <a href="/mortgage-per-month/400k-mortgage/" class="pop-link pop-link-top">$400k</a>
-        <a href="/mortgage-per-month/500k-mortgage/" class="pop-link">$500k</a>
-        <a href="/mortgage-per-month/600k-mortgage/" class="pop-link">$600k</a>
-        <a href="/mortgage-per-month/700k-mortgage/" class="pop-link">$700k</a>
+    <!-- Deep Educational Guide & Calculation Methodology (Solves Thin Content) -->
+    <section class="calculator-educational-guide" style="border-top: 1px solid #e2e8f0; padding-top: 40px; margin-bottom: 50px; line-height: 1.8; color: #2d3748;">
+      
+      <div style="margin-bottom: 40px;">
+        <h2 style="font-size: 1.8rem; color: #1a202c; margin-bottom: 12px;">How Your Take-Home Pay Is Calculated (2026 Tax Rules)</h2>
+        <p>
+          Your net take-home pay is the amount deposited into your bank account after all mandatory payroll taxes, statutory withholdings, and voluntary deductions are subtracted from your gross earnings. While gross pay represents your agreed-upon wage or base salary, statutory deductions can reduce this figure by 15% to over 38% depending on your filing status, tax bracket, and state residency.
+        </p>
+        <div style="background: #f7fafc; border-left: 4px solid #3182ce; padding: 18px; border-radius: 6px; margin: 20px 0;">
+          <h3 style="margin: 0 0 8px; font-size: 1.1rem; color: #2b6cb0;">The Core Net Pay Equation:</h3>
+          <p style="margin: 0; font-family: monospace; font-size: 1.05rem; color: #1a202c;">
+            Net Pay = Gross Pay - (Federal Income Tax + State & Local Income Taxes + FICA Taxes + Pre-Tax Deductions)
+          </p>
+        </div>
+      </div>
+
+      <!-- Deduction Table -->
+      <div style="margin-bottom: 40px;">
+        <h2 style="font-size: 1.5rem; color: #1a202c; margin-bottom: 15px;">Mandatory Payroll Withholdings Explained</h2>
+        <p style="margin-bottom: 20px;">
+          Every legal employee in the United States is subject to standardized payroll withholdings under federal and local legislation. Here is how your paycheck deductions are allocated:
+        </p>
+        
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px; font-size: 0.95rem;">
+            <thead>
+              <tr style="background: #2b6cb0; color: #ffffff; text-align: left;">
+                <th style="padding: 12px 16px; border: 1px solid #e2e8f0;">Deduction Component</th>
+                <th style="padding: 12px 16px; border: 1px solid #e2e8f0;">Statutory Rate</th>
+                <th style="padding: 12px 16px; border: 1px solid #e2e8f0;">Applicable Ceiling / Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background: #ffffff;">
+                <td style="padding: 12px 16px; border: 1px solid #e2e8f0; font-weight: 600;">Federal Income Tax (FIT)</td>
+                <td style="padding: 12px 16px; border: 1px solid #e2e8f0;">Progressive (10% to 37%)</td>
+                <td style="padding: 12px 16px; border: 1px solid #e2e8f0;">Calculated using IRS Form W-4 and Publication 15-T brackets after applying standard deductions.</td>
+              </tr>
+              <tr style="background: #f8fafc;">
+                <td style="padding: 12px 16px; border: 1px solid #e2e8f0; font-weight: 600;">Social Security (OASDI)</td>
+                <td style="padding: 12px 16px; border: 1px solid #e2e8f0;">6.20% (Employee portion)</td>
+                <td style="padding: 12px 16px; border: 1px solid #e2e8f0;">Subject to the annual Social Security wage base cap; income above this threshold is exempt.</td>
+              </tr>
+              <tr style="background: #ffffff;">
+                <td style="padding: 12px 16px; border: 1px solid #e2e8f0; font-weight: 600;">Medicare (Hospital Insurance)</td>
+                <td style="padding: 12px 16px; border: 1px solid #e2e8f0;">1.45% (Base rate)</td>
+                <td style="padding: 12px 16px; border: 1px solid #e2e8f0;">No wage limit. An additional 0.9% surtax applies to wages exceeding $200,000 (single) or $250,000 (married).</td>
+              </tr>
+              <tr style="background: #f8fafc;">
+                <td style="padding: 12px 16px; border: 1px solid #e2e8f0; font-weight: 600;">State & Local Income Tax (SIT)</td>
+                <td style="padding: 12px 16px; border: 1px solid #e2e8f0;">0.00% to 13.30%</td>
+                <td style="padding: 12px 16px; border: 1px solid #e2e8f0;">9 states impose zero individual income tax (e.g., TX, FL, WA, NV, TN). Others use graduated or flat scales.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Real World Benchmark Table -->
+      <div style="margin-bottom: 40px;">
+        <h2 style="font-size: 1.5rem; color: #1a202c; margin-bottom: 15px;">Real-World Benchmark: Net Pay by Income Level</h2>
+        <p>
+          To understand how marginal brackets and payroll taxes impact take-home earnings, examine this standard scenario for a Single filer taking the standard deduction with no dependents:
+        </p>
+        
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 25px; font-size: 0.95rem;">
+            <thead>
+              <tr style="background: #edf2f7; color: #2d3748; text-align: left;">
+                <th style="padding: 10px 14px; border: 1px solid #cbd5e0;">Gross Annual Salary</th>
+                <th style="padding: 10px 14px; border: 1px solid #cbd5e0;">Federal Income Tax</th>
+                <th style="padding: 10px 14px; border: 1px solid #cbd5e0;">FICA (7.65%)</th>
+                <th style="padding: 10px 14px; border: 1px solid #cbd5e0;">Est. Take-Home (No State Tax)</th>
+                <th style="padding: 10px 14px; border: 1px solid #cbd5e0;">Est. Bi-Weekly Paycheck</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0; font-weight: 600;">$40,000 / yr ($19.23/hr)</td>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0;">~$2,680</td>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0;">$3,060</td>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0; font-weight: bold; color: #276749;">$34,260</td>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0;">~$1,317</td>
+              </tr>
+              <tr style="background: #f7fafc;">
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0; font-weight: 600;">$65,000 / yr ($31.25/hr)</td>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0;">~$6,430</td>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0;">$4,972</td>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0; font-weight: bold; color: #276749;">$53,598</td>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0;">~$2,061</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0; font-weight: 600;">$100,000 / yr ($48.08/hr)</td>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0;">~$14,260</td>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0;">$7,650</td>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0; font-weight: bold; color: #276749;">$78,090</td>
+                <td style="padding: 10px 14px; border: 1px solid #cbd5e0;">~$3,003</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div style="margin-bottom: 40px;">
+        <h2 style="font-size: 1.5rem; color: #1a202c; margin-bottom: 18px;">Frequently Asked Questions (FAQ)</h2>
+        <div style="display: grid; gap: 14px;">
+          <details style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px;">
+            <summary style="font-weight: 600; cursor: pointer; color: #2b6cb0;">Why does my paycheck seem lower than my calculated salary?</summary>
+            <p style="margin: 12px 0 0; color: #4a5568; font-size: 0.95rem;">
+              In addition to mandatory federal and state income taxes, employers often subtract non-statutory benefits before depositing funds. Common deductions include employer-sponsored health insurance premiums, dental/vision plans, 401(k) retirement contributions, and Health Savings Account (HSA) allocations.
+            </p>
+          </details>
+
+          <details style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px;">
+            <summary style="font-weight: 600; cursor: pointer; color: #2b6cb0;">What is the difference between a tax deduction and a tax credit?</summary>
+            <p style="margin: 12px 0 0; color: #4a5568; font-size: 0.95rem;">
+              A tax deduction lowers your overall taxable income before tax brackets are applied (e.g., standard deduction, 401k pre-tax contributions). A tax credit, on the other hand, reduces your total tax liability dollar-for-dollar after taxes have been calculated (e.g., Child Tax Credit).
+            </p>
+          </details>
+
+          <details style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px;">
+            <summary style="font-weight: 600; cursor: pointer; color: #2b6cb0;">How does moving to a no-income-tax state affect take-home pay?</summary>
+            <p style="margin: 12px 0 0; color: #4a5568; font-size: 0.95rem;">
+              Relocating from a state with high income taxes (like California or New York) to a state with zero personal income tax (such as Texas or Florida) can increase your net annual take-home pay by 4% to 10% on the same gross salary. However, property taxes and local sales taxes often compensate for the lack of state income taxes.
+            </p>
+          </details>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Latest Guides Section -->
+    <section class="latest-guides" style="margin-bottom: 50px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2 style="font-size: 1.5rem; color: #1a202c; margin: 0;">Featured Research & Guides</h2>
+        <a href="/blog/" style="color: #2b6cb0; font-weight: 600; text-decoration: none;">View All &rarr;</a>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        <article style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; background: #ffffff;">
+          <span style="font-size: 0.8rem; color: #2b6cb0; font-weight: 700;">Take-Home Pay &bull; 7 min read</span>
+          <h3 style="font-size: 1.15rem; margin: 8px 0;"><a href="/blog/30-an-hour-after-taxes.html" style="color: #1a202c; text-decoration: none;">$30 an Hour is How Much a Year After Taxes?</a></h3>
+          <p style="color: #4a5568; font-size: 0.9rem; margin-bottom: 10px;">Full conversion of $30/hr into take-home pay across Texas, California, and Florida.</p>
+          <a href="/blog/30-an-hour-after-taxes.html" style="color: #3182ce; font-weight: 600; font-size: 0.9rem; text-decoration: none;">Read Guide &rarr;</a>
+        </article>
+
+        <article style="border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; background: #ffffff;">
+          <span style="font-size: 0.8rem; color: #718096; font-weight: 600;">State Taxes &bull; 6 min read</span>
+          <h3 style="font-size: 1.15rem; margin: 8px 0;"><a href="/blog/25-an-hour-texas.html" style="color: #1a202c; text-decoration: none;">$25 an Hour in Texas: Net Take-Home Pay</a></h3>
+          <p style="color: #4a5568; font-size: 0.9rem; margin-bottom: 10px;">How zero state income tax impacts your weekly and monthly bottom line.</p>
+          <a href="/blog/25-an-hour-texas.html" style="color: #3182ce; font-weight: 600; font-size: 0.9rem; text-decoration: none;">Read Guide &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h4>PayCalcHub</h4>
+        <p>Free, fast, and privacy-respecting payroll, mortgage, and wage conversion calculators.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Popular Calculators</h4>
+        <ul>
+          <li><a href="/salary-calculator/">Salary Calculator</a></li>
+          <li><a href="/net-pay-calculator/">Net Pay Calculator</a></li>
+          <li><a href="/hourly-to-salary/">Hourly to Salary</a></li>
+          <li><a href="/mortgage-calculator/">Mortgage Calculator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Trust & Legal</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+        </ul>
       </div>
     </div>
-    <div class="pop-card pop-card-wide">
-      <div class="pop-state-top">
-        <div class="pop-group-lbl"><svg width="14" height="14" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20h17"/><path d="m4.5 14.5 4.5-4.5 3.5 3.5L19 6.5"/><path d="M15 6.5h4.5V11"/></svg> Affordability</div>
-        <span class="pop-card-desc-inline">Find your realistic home price range using the 28% rule, by salary level.</span>
-      </div>
-      <div class="pop-links pop-links-6">
-        <a href="/how-much-house-can-i-afford/40k-salary/" class="pop-link">$40k salary</a>
-        <a href="/how-much-house-can-i-afford/60k-salary/" class="pop-link pop-link-top">$60k salary</a>
-        <a href="/how-much-house-can-i-afford/80k-salary/" class="pop-link pop-link-top">$80k salary</a>
-        <a href="/how-much-house-can-i-afford/100k-salary/" class="pop-link">$100k salary</a>
-        <a href="/how-much-house-can-i-afford/120k-salary/" class="pop-link">$120k salary</a>
-        <a href="/how-much-house-can-i-afford/150k-salary/" class="pop-link">$150k salary</a>
-      </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 PayCalcHub. All rights reserved. Calculations are for educational and estimation purposes only.</p>
     </div>
-  </div>
-</div>
+  </footer>
 
-<!-- Visual showcase -->
-<div class="sec">
-  <div class="showcase">
-    <div class="showcase-text">
-      <div class="sec-lbl">See it before you click</div>
-      <h2 class="showcase-h2">Every calculator shows you<br><em>exactly</em> where your money goes</h2>
-      <p class="showcase-p">No walls of numbers. Just a clear breakdown of taxes, deductions, and take-home pay &mdash; built fresh from official 2026 rates every time you calculate.</p>
-    </div>
-    <div class="showcase-chart">
-      <svg viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">
-        <text x="0" y="22" font-family="DM Sans, sans-serif" font-size="13" font-weight="700" fill="#1a1915">$75,000/Year &mdash; Where It Goes</text>
-        <text x="0" y="40" font-family="DM Sans, sans-serif" font-size="11" fill="#6b6960">Single filer &middot; no state tax &middot; effective rate 18.9%</text>
-        <defs>
-          <clipPath id="showcase-clip"><rect x="0" y="64" width="460" height="40" rx="8"/></clipPath>
-        </defs>
-        <g clip-path="url(#showcase-clip)">
-          <rect x="0" y="64" width="460" height="40" fill="#e4e2dc"/>
-          <rect x="0" y="64" width="62" height="40" fill="#c1503f" opacity="0.55"/>
-          <rect x="62" y="64" width="65" height="40" fill="#c1503f" opacity="0.32"/>
-          <rect x="127" y="64" width="333" height="40" fill="#1e6b4a"/>
-        </g>
-        <text x="293" y="89" font-family="DM Mono, monospace" font-size="14" font-weight="600" fill="#fff" text-anchor="middle">$60,825</text>
-        <g font-family="DM Sans, sans-serif" font-size="11.5" fill="#1a1915">
-          <rect x="0" y="124" width="12" height="12" rx="3" fill="#c1503f" opacity="0.55"/>
-          <text x="18" y="134">Federal tax: $7,237</text>
-          <rect x="160" y="124" width="12" height="12" rx="3" fill="#c1503f" opacity="0.32"/>
-          <text x="178" y="134">FICA: $5,738</text>
-          <rect x="290" y="124" width="12" height="12" rx="3" fill="#1e6b4a"/>
-          <text x="308" y="134">Take-home: $60,825</text>
-        </g>
-        <text x="0" y="172" font-family="DM Sans, sans-serif" font-size="10.5" fill="#6b6960">Generated instantly &mdash; try your own number above &uarr;</text>
-      </svg>
-    </div>
-  </div>
-</div>
-
-<!-- Why PayCalcHub -->
-<div class="sec">
-  <div class="sec-lbl">Why PayCalcHub</div>
-  <div class="why-grid">
-    <div class="why-card">
-      <div class="why-icon"><svg width="22" height="22" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.75" fill="currentColor"/></svg></div>
-      <div class="why-h">Accurate 2026 Data</div>
-      <div class="why-sub">Updated January 2026 &middot; 50 states covered</div>
-      <div class="why-p">Official IRS brackets, FICA rates, all 50 state tax schedules, and FHFA conforming loan limits &mdash; verified every year.</div>
-    </div>
-    <div class="why-card">
-      <div class="why-icon"><svg width="22" height="22" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><path d="M12 14.5v3"/></svg></div>
-      <div class="why-h">Private by Design</div>
-      <div class="why-sub">0 bytes of financial data sent to servers</div>
-      <div class="why-p">All calculations run in your browser. Your salary and financial inputs never leave your device &mdash; no accounts, no tracking.</div>
-    </div>
-    <div class="why-card">
-      <div class="why-icon"><svg width="22" height="22" style="color:currentColor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="9.5" width="17" height="11" rx="1.5"/><path d="M3.5 13.5h17"/><path d="M12 9.5v11"/><path d="M12 9.5c-1-3-3-4.5-4.5-4-1.5.5-1.5 3 0 4M12 9.5c1-3 3-4.5 4.5-4 1.5.5 1.5 3 0 4"/></svg></div>
-      <div class="why-h">Always Free</div>
-      <div class="why-sub">No paywalls &middot; No sign-up &middot; No premium tiers</div>
-      <div class="why-p">Every calculator, guide, and data table is free to use. Financial clarity is a right, not a product.</div>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-
-<!-- FAQ Section -->
-<div class="sec">
-  <div class="sec-lbl">Common Questions</div>
-  <div style="margin-top:16px;display:flex;flex-direction:column;gap:8px">
-
-    <div class="fqi">
-      <div class="fqq" onclick="tFaq(this)">
-        <span>How accurate are these calculators?</span>
-        <span class="fqi-icon">+</span>
-      </div>
-      <div class="fqa">All calculators use the latest 2026 federal tax brackets, FICA rates, and standard deductions. State tax rates are updated annually. Results are estimates — your actual take-home pay depends on your specific deductions, filing status, and employer benefits. Use our <a href="/salary-calculator/" style="color:var(--acc)">Salary Calculator</a> for a detailed breakdown including 401k and health insurance.</div>
-    </div>
-
-    <div class="fqi">
-      <div class="fqq" onclick="tFaq(this)">
-        <span>Which calculator should I start with?</span>
-        <span class="fqi-icon">+</span>
-      </div>
-      <div class="fqa">If you earn an hourly wage, start with the <a href="/hourly-to-salary/" style="color:var(--acc)">Hourly to Salary Calculator</a>. For an annual salary take-home estimate, use the <a href="/salary-calculator/" style="color:var(--acc)">Salary Calculator</a> — it covers all 50 US states plus UK, Canada, and Australia. For homebuying, try the <a href="/how-much-house-can-i-afford/" style="color:var(--acc)">Affordability Calculator</a>.</div>
-    </div>
-
-    <div class="fqi">
-      <div class="fqq" onclick="tFaq(this)">
-        <span>How much house can I afford on my salary?</span>
-        <span class="fqi-icon">+</span>
-      </div>
-      <div class="fqa">The standard rule is that housing costs should not exceed 28% of your gross monthly income. On a $60,000 salary that is about $1,400/month — supporting a home price around $184,000–$276,000 depending on your down payment and rate. See our full <a href="/how-much-house-can-i-afford/" style="color:var(--acc)">affordability guide</a> for your exact salary.</div>
-    </div>
-
-    <div class="fqi">
-      <div class="fqq" onclick="tFaq(this)">
-        <span>What is the difference between gross and net salary?</span>
-        <span class="fqi-icon">+</span>
-      </div>
-      <div class="fqa">Gross salary is your total pay before any deductions. Net salary (take-home pay) is what you receive after federal income tax, FICA (Social Security + Medicare), state income tax, and voluntary deductions like 401k or health insurance. For most Americans, net pay is 70–85% of gross pay depending on income level and state.</div>
-    </div>
-
-    <div class="fqi">
-      <div class="fqq" onclick="tFaq(this)">
-        <span>Are these calculators free?</span>
-        <span class="fqi-icon">+</span>
-      </div>
-      <div class="fqa">Yes — every PayCalcHub calculator is completely free. No sign-up, no account required, and no data is ever stored or sent to our servers. All calculations happen entirely in your browser.</div>
-    </div>
-
-  </div>
-</div>
-
-<!-- Blog Section -->
-<div class="sec">
-  <div class="sec-lbl">From the Blog</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
-    <a href="/blog/25-an-hour-after-taxes-texas/" style="background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s,transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc)">Take-Home Pay</div>
-        <div style="font-size:11px;color:var(--mut)">Apr 2026 · 5 min read</div>
-      </div>
-      <div style="font-size:15px;font-weight:600;color:var(--txt);line-height:1.4;margin-bottom:8px">$25 an Hour After Taxes in Texas</div>
-      <div style="font-size:13px;color:var(--mut);line-height:1.6">Exact take-home: $43,821/year, $3,652/month. Full breakdown vs California, New York, and 6 other states.</div>
-    </a>
-    <a href="/blog/30-an-hour-jobs-no-degree/" style="background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s,transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc)">Career &amp; Salary</div>
-        <div style="font-size:11px;color:var(--mut)">May 2026 · 7 min read</div>
-      </div>
-      <div style="font-size:15px;font-weight:600;color:var(--txt);line-height:1.4;margin-bottom:8px">$30/Hour Jobs Without a Degree (2026)</div>
-      <div style="font-size:13px;color:var(--mut);line-height:1.6">15 real jobs paying $30/hr or more — trades, tech, healthcare. Honest timelines and what each path actually requires.</div>
-    </a>
-    <a href="/blog/no-tax-on-overtime-obbba-2026/" style="background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s,transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc)">Tax Law 2026</div>
-        <div style="font-size:11px;color:var(--mut)">Jun 2026 · 8 min read</div>
-      </div>
-      <div style="font-size:15px;font-weight:600;color:var(--txt);line-height:1.4;margin-bottom:8px">No Tax on Overtime (OBBBA): What Workers Actually Get</div>
-      <div style="font-size:13px;color:var(--mut);line-height:1.6">The new federal deduction is real &mdash; but it&rsquo;s not what the headlines say. Here&rsquo;s the full breakdown of who qualifies and what&rsquo;s still taxed.</div>
-    </a>
-    <a href="/blog/million-dollar-salary-after-taxes-by-state/" style="background:var(--sur);border:1px solid var(--bor);border-left:3px solid var(--acc);border-radius:12px;padding:20px;display:block;text-decoration:none;transition:border-color .15s,transform .15s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--acc)">High Income</div>
-        <div style="font-size:11px;color:var(--mut)">Jun 2026 · 8 min read</div>
-      </div>
-      <div style="font-size:15px;font-weight:600;color:var(--txt);line-height:1.4;margin-bottom:8px">$1 Million Salary After Taxes by State</div>
-      <div style="font-size:13px;color:var(--mut);line-height:1.6">A $93,000/year gap between the best and worst state &mdash; plus why the "37% bracket" myth about high earners is wrong.</div>
-    </a>
-  </div>
-  <div style="text-align:center;margin-top:16px">
-    <a href="/blog/" style="display:inline-block;padding:10px 24px;background:var(--alight);color:var(--acc);border:1px solid #c5e0d3;border-radius:99px;font-size:13px;font-weight:600">View all articles &rarr;</a>
-  </div>
-</div>
-
-</main>
-<footer>
-<div class="fi">
-  <div class="fi-brand">
-    <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>
-    <p class="fi-tagline">Free, no-signup U.S. payroll and finance calculators — updated for 2026 tax rates.</p>
-  </div>
-  <div class="fi-col">
-    <h4>Calculators</h4>
-    <a href="/salary-calculator/">Salary Calculator</a>
-    <a href="/hourly-to-salary/">Hourly to Salary</a>
-    <a href="/net-pay-calculator/">Net Pay Calculator</a>
-    <a href="/tax-withholding-calculator/">Tax Withholding</a>
-    <a href="/mortgage-calculator/">Mortgage Calculator</a>
-    <a href="/loan-calculator/">Loan Calculator</a>
-  </div>
-  <div class="fi-col">
-    <h4>Guides</h4>
-    <a href="/salary-to-hourly/">Salary &rarr; Hourly</a>
-    <a href="/how-much-house-can-i-afford/">Affordability Guide</a>
-    <a href="/mortgage-per-month/">Mortgage Guide</a>
-    <a href="/blog/">Blog</a>
-  </div>
-  <div class="fi-col">
-    <h4>Company</h4>
-    <a href="/about/">About</a>
-    <a href="/privacy/">Privacy Policy</a>
-    <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
-    <a href="/contact/">Contact</a>
-    <a href="/es/">Español</a>
-    <a href="/pt/">Português</a>
-  </div>
-</div>
-<div class="fi-bottom">
-  <span class="fi-copy">&copy; 2026 PayCalcHub.com</span>
-  <span class="fi-copy">Not financial advice.</span>
-</div>
-<div class="fi-disclaimer">
-  PayCalcHub provides financial calculators for informational and educational purposes only. All results are estimates based on published tax rates and standard assumptions. Nothing on this site constitutes financial, tax, legal, or investment advice. Always consult a qualified professional before making financial decisions.
-</div>
-</footer>
-
-<script src="/assets/js/tax-data.js"></script>
-<script>
-function syncQSlider(val){var s=document.getElementById('qs-slider');if(s)s.value=Math.min(Math.max(parseInt(val)||0,20000),300000);}
-function syncQInput(val){var i=document.getElementById('qs');if(i)i.value=val;}
-
-function animateValue(el, prefix, suffix, from, to, duration){
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    el.textContent=prefix+Math.round(to).toLocaleString()+suffix;
-    return;
-  }
-  var start=null;
-  function step(ts){
-    if(!start)start=ts;
-    var p=Math.min((ts-start)/duration,1);
-    var eased=1-Math.pow(1-p,3);
-    var cur=from+(to-from)*eased;
-    el.textContent=prefix+Math.round(cur).toLocaleString()+suffix;
-    if(p<1)requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-var qcPrev={net:0,annual:0,fedfica:0,state:0,eff:0};
-
-function qc(){
-  var g=parseFloat(document.getElementById('qs').value)||0;
-  var stRate=parseFloat(document.getElementById('q-state').value)||0;
-  var fil=document.getElementById('q-fil').value;
-  if(!g){
-    ['qr','qa','qf','qst','qe'].forEach(function(id){document.getElementById(id).textContent='—';});
-    qcPrev={net:0,annual:0,fedfica:0,state:0,eff:0};
-    return;
-  }
-  var std=TAX_DATA.STANDARD_DEDUCTION[fil]||TAX_DATA.STANDARD_DEDUCTION.single;
-  var taxable=Math.max(0,g-std);
-  var fed=calcFederalTax(taxable,fil);
-  var fica=g*TAX_DATA.FICA_RATE;
-  var stateTax=g*(stRate/100);
-  var net=g-fed-fica-stateTax;
-  var eff=((fed+fica+stateTax)/g*100);
-
-  var monthly=net/12;
-  animateValue(document.getElementById('qr'),'$','',qcPrev.net,monthly,500);
-  animateValue(document.getElementById('qa'),'$','',qcPrev.annual,net,500);
-  animateValue(document.getElementById('qf'),'$','',qcPrev.fedfica,fed+fica,500);
-  document.getElementById('qst').textContent= stRate>0 ? '$'+Math.round(stateTax).toLocaleString() : '$0';
-  animateValue(document.getElementById('qe'),'','%',qcPrev.eff,eff,500);
-
-  qcPrev={net:monthly,annual:net,fedfica:fed+fica,state:stateTax,eff:eff};
-}
-qc();
-</script>
-
-<script src="/assets/js/site.js"></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 </body>
 </html>

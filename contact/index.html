@@ -1,339 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon_192x192.png">
-  <link rel="apple-touch-icon" href="/favicon_512x512.png">
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-adsense-account" content="ca-pub-7723301737736770">
-  <title>Contact PayCalcHub — Get in Touch</title>
-  <meta name="description" content="Contact PayCalcHub with questions, feedback, or error reports about our free financial calculators. We respond within 2 business days.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact PayCalcHub — Support, Feedback & Inquiries</title>
+  <meta name="description" content="Get in touch with the PayCalcHub team for tool suggestions, tax calculation discrepancies, partnership inquiries, or general support.">
   <link rel="canonical" href="https://paycalchub.com/contact/">
-  <meta property="og:title" content="Contact PayCalcHub">
-  <meta property="og:description" content="Get in touch with the PayCalcHub team. We respond within 2 business days.">
-  <meta property="og:image" content="https://paycalchub.com/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://paycalchub.com/og-image.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@500&display=swap"></noscript>
+  <link rel="stylesheet" href="/css/style.css">
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "PayCalcHub", "item": "https://paycalchub.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://paycalchub.com/contact/"}
-    ]
+    "@type": "ContactPage",
+    "name": "Contact PayCalcHub",
+    "url": "https://paycalchub.com/contact/",
+    "description": "Contact form and support channels for PayCalcHub.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "PayCalcHub",
+      "url": "https://paycalchub.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@paycalchub.com",
+        "contactType": "Customer Support"
+      }
+    }
   }
   </script>
-  <link rel="stylesheet" href="/assets/css/base.css">
-<style>
-  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  :root{--bg:#f7f6f3;--sur:#fff;--bor:#e4e2dc;--txt:#1a1915;--mut:#6b6960;--acc:#1e6b4a;--alight:#e8f4ef;--red:#dc2626;--rad:12px;--f:"DM Sans",sans-serif;--mo:"DM Mono",monospace}
-  body{font-family:var(--f);background:var(--bg);color:var(--txt);line-height:1.6}
-  a{color:inherit;text-decoration:none}
-
-  /* NAV */
-  nav{background:var(--sur);border-bottom:1px solid var(--bor);position:sticky;top:0;z-index:100}
-  .nav-in{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
-  .logo{font-weight:600;font-size:18px}.logo span{color:var(--acc)}
-  .nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}.nav-links a:hover{color:var(--txt)}.nav-links a.active{color:var(--acc);font-weight:500}
-  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
-  .hamburger span{display:block;width:22px;height:2px;background:var(--txt);border-radius:2px}
-  .mobile-menu{display:none;position:absolute;top:56px;left:0;right:0;background:var(--sur);border-bottom:1px solid var(--bor);padding:12px 24px;z-index:99}
-  .mobile-menu a{display:block;padding:10px 0;font-size:15px;color:var(--mut);border-bottom:1px solid var(--bor)}
-  .mobile-menu a:last-child{border-bottom:none}.mobile-menu.open{display:block}
-  @media(max-width:800px){.hamburger{display:flex}.nav-links{display:none!important}}
-
-  /* PAGE */
-  .pg{max-width:720px;margin:0 auto;padding:40px 24px 80px}
-  .bc{font-size:13px;color:var(--mut);margin-bottom:14px}.bc a{color:var(--acc)}
-  h1{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:600;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px}
-  h1 em{font-style:normal;color:var(--acc)}
-  .sub{font-size:15px;color:var(--mut);margin-bottom:32px;line-height:1.65}
-
-  /* CONTACT INFO STRIP */
-  .info-strip{display:flex;gap:12px;margin-bottom:32px;flex-wrap:wrap}
-  .info-chip{display:flex;align-items:center;gap:8px;background:var(--sur);border:1px solid var(--bor);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--mut)}
-  .info-chip strong{color:var(--txt);font-weight:500}
-  .info-chip a{color:var(--acc);font-weight:500}
-
-  /* FORM CARD */
-  .card{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:28px 32px}
-  .fr{margin-bottom:18px}
-  .fr label{display:block;font-size:13px;font-weight:500;color:var(--mut);margin-bottom:5px}
-  .fr label .req{color:var(--red);margin-left:2px}
-  .fr input,.fr select,.fr textarea{width:100%;padding:10px 14px;border:1px solid var(--bor);border-radius:8px;font-size:15px;font-family:var(--f);background:var(--bg);color:var(--txt);outline:none;transition:border-color .15s}
-  .fr input:focus,.fr select:focus,.fr textarea:focus{border-color:var(--acc);background:#fff}
-  .fr input.err,.fr select.err,.fr textarea.err{border-color:var(--red)}
-  .fr textarea{resize:vertical;min-height:130px}
-  .fg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .err-msg{font-size:12px;color:var(--red);margin-top:4px;display:none}
-  .err-msg.show{display:block}
-
-  .submit{width:100%;padding:13px;background:var(--acc);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;font-family:var(--f);cursor:pointer;margin-top:4px;transition:opacity .15s;display:flex;align-items:center;justify-content:center;gap:8px}
-  .submit:hover{opacity:.88}
-  .submit:disabled{opacity:.55;cursor:not-allowed}
-  .spinner{width:16px;height:16px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none}
-  @keyframes spin{to{transform:rotate(360deg)}}
-  .submit.loading .spinner{display:block}
-  .submit.loading .btn-text{display:none}
-
-  /* SUCCESS / ERROR STATES */
-  .result{display:none;border-radius:10px;padding:20px 22px;margin-top:16px;font-size:14px;line-height:1.65}
-  .result.success{background:var(--alight);border:1px solid #c5e0d3;color:#1a5c3a}
-  .result.fail{background:#fff5f5;border:1px solid #fecaca;color:#991b1b}
-  .result-icon{font-size:22px;margin-bottom:6px}
-  .result p{margin-top:4px}
-
-  /* SIDEBAR INFO */
-  .layout{display:grid;grid-template-columns:1fr 280px;gap:24px;align-items:start}
-  .sidebar{display:flex;flex-direction:column;gap:12px}
-  .scard{background:var(--sur);border:1px solid var(--bor);border-radius:var(--rad);padding:18px 20px}
-  .scard h3{font-size:13px;font-weight:600;margin-bottom:10px;color:var(--txt)}
-  .scard p,.scard li{font-size:13px;color:var(--mut);line-height:1.65}
-  .scard ul{padding-left:16px;display:flex;flex-direction:column;gap:5px}
-  .scard a{color:var(--acc)}
-  .resp-badge{display:inline-flex;align-items:center;gap:5px;background:var(--alight);border-radius:6px;padding:4px 10px;font-size:12px;color:var(--acc);font-weight:600;margin-bottom:10px}
-
-  /* FOOTER */
-
-  @media(max-width:800px){.layout{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:1fr 1fr}.fg{grid-template-columns:1fr}.card{padding:20px}}
-  @media(max-width:500px){.sidebar{grid-template-columns:1fr}.info-strip{flex-direction:column}}
-  </style>
 </head>
 <body>
-<nav><div class="nav-in">
-  <a href="/" class="logo">Pay<span>Calc</span>Hub</a>
-  <div class="nav-links">
-    <a href="/salary-calculator/">Salary</a>
-    <a href="/mortgage-calculator/">Mortgage</a>
-    <a href="/loan-calculator/">Loan</a>
-    <a href="/hourly-to-salary/">Hourly</a>
-    <a href="/about/">About</a>
-  </div>
-  <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</div>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="/salary-calculator/">Salary Calculator</a>
-  <a href="/mortgage-calculator/">Mortgage Calculator</a>
-  <a href="/loan-calculator/">Loan Calculator</a>
-  <a href="/hourly-to-salary/">Hourly to Salary</a>
-  <a href="/about/">About</a>
-  <a href="/contact/">Contact</a>
-</div>
-</nav>
-<main>
 
-<div class="pg">
-  <div class="bc"><a href="/">PayCalcHub</a> &rsaquo; Contact</div>
-  <h1>Contact <em>Us</em></h1>
-  <p class="sub">Have a question, found a calculation error, or want to share feedback? Fill out the form below — we read every message.</p>
-
-  <div class="info-strip">
-    <div class="info-chip">📧 Email us directly: <a href="mailto:hello@paycalchub.com">hello@paycalchub.com</a></div>
-    <div class="info-chip">⏱ Response time: <strong>within 2 business days</strong></div>
-  </div>
-
-  <div class="layout">
-    <div>
-      <div class="card">
-        <div class="fg">
-          <div class="fr">
-            <label for="fname">First Name <span class="req">*</span></label>
-            <input type="text" id="fname" placeholder="John" autocomplete="given-name">
-            <div class="err-msg" id="err-fname">Please enter your first name.</div>
-          </div>
-          <div class="fr">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" placeholder="Smith" autocomplete="family-name">
-          </div>
-        </div>
-        <div class="fr">
-          <label for="email">Email Address <span class="req">*</span></label>
-          <input type="email" id="email" placeholder="john@example.com" autocomplete="email">
-          <div class="err-msg" id="err-email">Please enter a valid email address.</div>
-        </div>
-        <div class="fr">
-          <label for="subj">Subject <span class="req">*</span></label>
-          <select id="subj">
-            <option value="">— Select a topic —</option>
-            <option value="General question">General question</option>
-            <option value="Calculator feedback">Calculator feedback</option>
-            <option value="Report a calculation error">Report a calculation error</option>
-            <option value="Data update request">Data update request</option>
-            <option value="Business enquiry">Business enquiry</option>
-            <option value="Other">Other</option>
-          </select>
-          <div class="err-msg" id="err-subj">Please select a subject.</div>
-        </div>
-        <div class="fr">
-          <label for="msg">Message <span class="req">*</span></label>
-          <textarea id="msg" placeholder="Describe your question or feedback in detail..."></textarea>
-          <div class="err-msg" id="err-msg">Please enter a message (at least 10 characters).</div>
-        </div>
-        <!-- Honeypot anti-spam -->
-        <input type="text" id="honeypot" style="display:none" tabindex="-1" autocomplete="off">
-
-        <button class="submit" id="submitBtn" onclick="sendForm()">
-          <span class="btn-text">Send Message &rarr;</span>
-          <span class="spinner"></span>
-        </button>
-
-        <div class="result success" id="resultOk">
-          <div class="result-icon">✅</div>
-          <strong>Message sent successfully!</strong>
-          <p>Thank you for reaching out. We'll get back to you at the email address you provided within 2 business days.</p>
-        </div>
-        <div class="result fail" id="resultFail">
-          <div class="result-icon">⚠️</div>
-          <strong>Something went wrong.</strong>
-          <p>Your message couldn't be sent. Please try again, or email us directly at <a href="mailto:hello@paycalchub.com" style="color:var(--acc)">hello@paycalchub.com</a>.</p>
-        </div>
-      </div>
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="/" class="logo">PayCalc<span>Hub</span></a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/salary-calculator/">Salary Calculator</a>
+        <a href="/hourly-to-salary/">Hourly to Salary</a>
+        <a href="/net-pay-calculator/">Net Pay</a>
+        <a href="/blog/">Blog & Guides</a>
+        <a href="/about/">About</a>
+        <a href="/contact/" class="active">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="sidebar">
-      <div class="scard">
-        <div class="resp-badge">⚡ Typical response</div>
-        <h3>Response Times</h3>
-        <ul>
-          <li>Calculator errors — 1 business day</li>
-          <li>General questions — 1–2 business days</li>
-          <li>Business enquiries — 2–3 business days</li>
+  <!-- Main Content -->
+  <main class="container page-content" style="max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.7; color: #2d3748;">
+    
+    <section style="margin-bottom: 30px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px;">
+      <h1 style="font-size: 2.3rem; margin-bottom: 10px; color: #1a202c; font-weight: 800;">Contact Us</h1>
+      <p style="font-size: 1.1rem; color: #4a5568;">
+        Have a question about our calculations, discovered a statutory rate discrepancy, or want to suggest a new tool? We are here to help.
+      </p>
+    </section>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 40px;">
+      
+      <!-- Direct Support Card -->
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 25px;">
+        <h3 style="margin-top: 0; color: #2b6cb0; font-size: 1.25rem;">Email Support</h3>
+        <p style="color: #4a5568; font-size: 0.95rem;">
+          For calculation inquiries, general feedback, or bug reports:
+        </p>
+        <p style="font-size: 1.1rem; font-weight: 700; color: #1a202c; margin: 15px 0;">
+          <a href="mailto:contact@paycalchub.com" style="color: #2b6cb0; text-decoration: none;">contact@paycalchub.com</a>
+        </p>
+        <p style="font-size: 0.85rem; color: #718096; margin-bottom: 0;">
+          Response time: Typically within 24–48 business hours.
+        </p>
+      </div>
+
+      <!-- Editorial Verification Card -->
+      <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 25px;">
+        <h3 style="margin-top: 0; color: #2b6cb0; font-size: 1.25rem;">Data Corrections</h3>
+        <p style="color: #4a5568; font-size: 0.95rem;">
+          If your state or municipality has recently updated local tax ordinances or withholding brackets, please specify:
+        </p>
+        <ul style="font-size: 0.85rem; color: #718096; padding-left: 18px; margin-bottom: 0;">
+          <li>State / Municipality name</li>
+          <li>Official Department of Revenue link</li>
+          <li>Effective statutory tax year</li>
         </ul>
       </div>
-      <div class="scard">
-        <h3>Common Questions</h3>
-        <p>Before writing in, check our <a href="/about/#faq">FAQ on the About page</a> — many questions about calculator accuracy, data sources, and methodology are answered there.</p>
+
+    </div>
+
+    <!-- Feedback Message Box -->
+    <section style="background: #ebf8ff; border: 1px solid #bee3f8; border-radius: 10px; padding: 25px; margin-bottom: 40px;">
+      <h3 style="margin-top: 0; color: #2b6cb0; font-size: 1.2rem;">Commitment to Open Feedback</h3>
+      <p style="font-size: 0.95rem; color: #2d3748; margin-bottom: 0;">
+        PayCalcHub is continuously evolving. Our quantitative development team reviews user suggestions weekly to enhance our algorithms, implement new deduction models (such as FSA, HSA, and student loan pre-tax limits), and ensure full compliance with official IRS publications.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h4>PayCalcHub</h4>
+        <p>Free, fast, and privacy-respecting payroll, mortgage, and wage conversion calculators.</p>
       </div>
-      <div class="scard">
-        <h3>Report a Data Error</h3>
-        <p>If you've spotted an outdated tax rate, incorrect bracket, or wrong minimum wage figure, please include the specific calculator and state in your message. We take accuracy seriously and review all reports.</p>
+      <div class="footer-col">
+        <h4>Popular Calculators</h4>
+        <ul>
+          <li><a href="/salary-calculator/">Salary Calculator</a></li>
+          <li><a href="/net-pay-calculator/">Net Pay Calculator</a></li>
+          <li><a href="/hourly-to-salary/">Hourly to Salary</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Trust & Legal</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-</div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 PayCalcHub. All rights reserved. Calculations are for educational and estimation purposes only.</p>
+    </div>
+  </footer>
 
-</main>
-<footer>
-<div class="fi">
-  <div class="fi-brand">
-    <a href="/" class="fi-logo">Pay<span>Calc</span>Hub</a>
-    <p class="fi-tagline">Free, no-signup U.S. payroll and finance calculators — updated for 2026 tax rates.</p>
-  </div>
-  <div class="fi-col">
-    <h4>Calculators</h4>
-    <a href="/salary-calculator/">Salary Calculator</a>
-    <a href="/hourly-to-salary/">Hourly to Salary</a>
-    <a href="/net-pay-calculator/">Net Pay Calculator</a>
-    <a href="/tax-withholding-calculator/">Tax Withholding</a>
-    <a href="/mortgage-calculator/">Mortgage Calculator</a>
-    <a href="/loan-calculator/">Loan Calculator</a>
-  </div>
-  <div class="fi-col">
-    <h4>Guides</h4>
-    <a href="/salary-to-hourly/">Salary &rarr; Hourly</a>
-    <a href="/how-much-house-can-i-afford/">Affordability Guide</a>
-    <a href="/mortgage-per-month/">Mortgage Guide</a>
-    <a href="/blog/">Blog</a>
-  </div>
-  <div class="fi-col">
-    <h4>Company</h4>
-    <a href="/about/">About</a>
-    <a href="/privacy/">Privacy Policy</a>
-    <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
-    <a href="/contact/">Contact</a>
-    <a href="/es/">Español</a>
-    <a href="/pt/">Português</a>
-  </div>
-</div>
-<div class="fi-bottom">
-  <span class="fi-copy">&copy; 2026 PayCalcHub.com</span>
-  <span class="fi-copy">Not financial advice.</span>
-</div>
-<div class="fi-disclaimer">
-  PayCalcHub provides financial calculators for informational and educational purposes only. All results are estimates based on published tax rates and standard assumptions. Nothing on this site constitutes financial, tax, legal, or investment advice. Always consult a qualified professional before making financial decisions.
-</div>
-</footer>
-
-<script>
-
-
-function validate(){
-  var ok=true;
-  var fname=document.getElementById('fname').value.trim();
-  var email=document.getElementById('email').value.trim();
-  var subj=document.getElementById('subj').value;
-  var msg=document.getElementById('msg').value.trim();
-
-  // Reset
-  ['fname','email','subj','msg'].forEach(function(id){
-    document.getElementById(id).classList.remove('err');
-    document.getElementById('err-'+id).classList.remove('show');
-  });
-
-  if(!fname){document.getElementById('fname').classList.add('err');document.getElementById('err-fname').classList.add('show');ok=false;}
-  if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){document.getElementById('email').classList.add('err');document.getElementById('err-email').classList.add('show');ok=false;}
-  if(!subj){document.getElementById('subj').classList.add('err');document.getElementById('err-subj').classList.add('show');ok=false;}
-  if(msg.length<10){document.getElementById('msg').classList.add('err');document.getElementById('err-msg').classList.add('show');ok=false;}
-  return ok;
-}
-
-async function sendForm(){
-  // Honeypot check
-  if(document.getElementById('honeypot').value) return;
-  if(!validate()) return;
-
-  var btn=document.getElementById('submitBtn');
-  btn.disabled=true;
-  btn.classList.add('loading');
-  document.getElementById('resultOk').style.display='none';
-  document.getElementById('resultFail').style.display='none';
-
-  var fname=document.getElementById('fname').value.trim();
-  var lname=document.getElementById('lname').value.trim();
-  var email=document.getElementById('email').value.trim();
-  var subj=document.getElementById('subj').value;
-  var msg=document.getElementById('msg').value.trim();
-
-  try {
-    var res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-      body: JSON.stringify({
-        access_key: 'd31750d0-2d70-4f9d-8c24-5e936901d79a',
-        name: fname + (lname ? ' ' + lname : ''),
-        email: email,
-        subject: '[PayCalcHub] ' + subj,
-        message: msg,
-        from_name: 'PayCalcHub Contact Form'
-      })
-    });
-    var data = await res.json();
-    if(data.success){
-      document.getElementById('resultOk').style.display='block';
-      ['fname','lname','email','subj','msg'].forEach(function(id){
-        var el=document.getElementById(id);
-        if(el.tagName==='SELECT') el.selectedIndex=0; else el.value='';
-      });
-    } else {
-      document.getElementById('resultFail').style.display='block';
-    }
-  } catch(e){
-    document.getElementById('resultFail').style.display='block';
-  }
-
-  btn.disabled=false;
-  btn.classList.remove('loading');
-}
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
-<script src="/assets/js/site.js"></script>
 </body>
 </html>
