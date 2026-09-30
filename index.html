@@ -165,6 +165,50 @@
     color: #2563eb !important;
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://paycalchub.com/#website",
+      "url": "https://paycalchub.com/",
+      "name": "PayCalcHub",
+      "description": "Free paycheck, salary, hourly wage, and payroll tax calculation engines based on 2026 IRS statutory guidelines."
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://paycalchub.com/#webapp",
+      "name": "PayCalcHub Paycheck & Salary Calculator",
+      "url": "https://paycalchub.com/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://paycalchub.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How accurate are the paycheck calculations?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Our calculations use statutory formula models incorporating IRS Publication 15-T and standard deduction baselines." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between gross pay and net pay?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Gross pay is total earned income before deductions; net pay is actual take-home money after federal, state, and payroll taxes." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are state and local taxes included in the calculations?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, our engines factor in state income tax schedules across all 50 states including zero-income-tax states." }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -462,4 +506,5 @@
 
 </body>
 </html>
+
 
