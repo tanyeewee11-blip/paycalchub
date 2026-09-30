@@ -209,6 +209,89 @@
   ]
 }
 </script>
+<!-- Export & Print Action Toolbar -->
+<style id="export-toolbar-styles">
+  .calc-action-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin: 1.25rem 0;
+    padding: 0.5rem 0;
+  }
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: #4b5563;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  .action-btn:hover {
+    background: #e5e7eb;
+    color: #111827;
+  }
+  .action-btn.active {
+    background: #dbeafe;
+    color: #1d4ed8;
+    border-color: #bfdbfe;
+  }
+  @media print {
+    header, footer, nav, .ad-banner, .faq, .author-card, .calc-action-bar {
+      display: none !important;
+    }
+    body {
+      background: white !important;
+      color: black !important;
+    }
+    .container {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+</style>
+
+<script id="export-toolbar-script">
+function copyPaycheckSummary() {
+  const resultCard = document.querySelector('.result-card, .results, .calc-output, [class*="result"]') || document.body;
+  const values = Array.from(resultCard.querySelectorAll('div, p, span, h3, h4'))
+    .filter(el => el.children.length === 0 && el.innerText.trim().length > 0 && el.innerText.length < 100)
+    .map(el => el.innerText.trim())
+    .slice(0, 10)
+    .join('\n');
+
+  const summary = "PayCalcHub Calculation Summary:\n" +
+    "----------------------------------------\n" +
+    (values || "Calculation complete on PayCalcHub") +
+    "\n----------------------------------------\n" +
+    "Calculated at: https://paycalchub.com";
+
+  navigator.clipboard.writeText(summary).then(() => {
+    const btn = document.getElementById('copy-pay-btn');
+    if (btn) {
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = '✅ Copied to Clipboard!';
+      btn.classList.add('active');
+      setTimeout(() => {
+        btn.innerHTML = originalHtml;
+        btn.classList.remove('active');
+      }, 2000);
+    }
+  });
+}
+
+function printPaycheckSummary() {
+  window.print();
+}
+</script>
 </head>
 <body>
 
@@ -529,6 +612,7 @@
 
 </body>
 </html>
+
 
 
 
