@@ -72,6 +72,99 @@
   footer a:hover { color: #2563eb; }
   footer h4 { margin-bottom: 0.5rem; color: #111827; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; }
 </style>
+<style id="nav-footer-fix">
+  /* Header & Navigation Fix */
+  header.header {
+    background: #ffffff !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
+    padding: 0 !important;
+  }
+  .nav-container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 1.5rem !important;
+    height: 64px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .nav-container .logo {
+    font-size: 1.35rem !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+    text-decoration: none !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+  }
+  .nav-container .logo span {
+    color: #2563eb !important;
+  }
+  .nav-links {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+  }
+  .nav-links a {
+    text-decoration: none !important;
+    color: #4b5563 !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+    transition: color 0.15s ease !important;
+  }
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #2563eb !important;
+  }
+
+  /* Footer Fix */
+  footer.footer {
+    background: #f9fafb !important;
+    border-top: 1px solid #e5e7eb !important;
+    margin-top: 5rem !important;
+    padding: 3.5rem 1.5rem 2rem !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+  }
+  .footer-content {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    gap: 2.5rem !important;
+  }
+  .footer-col {
+    min-width: 180px !important;
+    flex: 1 !important;
+  }
+  .footer-col h4 {
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    color: #9ca3af !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    margin: 0 0 1rem 0 !important;
+  }
+  .footer-col ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .footer-col ul li {
+    margin-bottom: 0.6rem !important;
+  }
+  .footer-col ul li a {
+    text-decoration: none !important;
+    color: #4b5563 !important;
+    font-size: 0.875rem !important;
+    transition: color 0.15s ease !important;
+  }
+  .footer-col ul li a:hover {
+    color: #2563eb !important;
+  }
+</style>
 </head>
 <body>
 
@@ -369,3 +462,4 @@
 
 </body>
 </html>
+
